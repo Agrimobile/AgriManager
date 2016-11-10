@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "actividadesform",
+        "designer|userClassName": "ActividadesFormViewController"
+    },
+    "designerId": "9572b353-4411-4f52-8023-6772b6229798"
+}

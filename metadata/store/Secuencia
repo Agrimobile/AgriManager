@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Secuencia",
+        "model": "Secuencia",
+        "storeId": "Secuencia"
+    },
+    "name": "Lotes1",
+    "designerId": "a8b9b2ff-92e8-4ab2-882a-10e7d8f45be2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "e8bb5377-68e6-41c3-a8cd-824ec79f6871"
+        }
+    ]
+}

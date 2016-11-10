@@ -1,0 +1,86 @@
+{
+    "name": "AgriManager",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.2.0.103",
+            "frameworkVersion": "6.2.0.981"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:57953/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "installStatus": "Not Installed",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app",
+            "buildPlatform": false
+        }
+    },
+    "xdsVersion": "4.0.2",
+    "xdsBuild": 209,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "8bf667af-506e-4b4d-9b3d-4fab35c22889",
+            "da4e9256-dcb0-45ea-ac9f-4259ab592505",
+            "8c0d0e4f-7048-49ca-9ae5-36417a5700ab",
+            "e5173f9d-31c3-45a5-9332-8e91115a9acc",
+            "846545cf-1cc9-4ee7-8f25-7057cd77e16e",
+            "d8549c80-044d-48d4-95a3-fd4f31c56332",
+            "7b0d0019-7a15-4e98-b0a0-8a820306fee4",
+            "b8486bc4-2a26-49ac-89b7-7f758c989f6f",
+            "a7f35115-ea69-4366-a27c-b3128f3d1413",
+            "e6d755b9-948d-47c1-9761-ec74d2973b1e",
+            "2d8f883f-2815-46ed-a89d-2be4db1e62cb",
+            "e978d393-9314-4716-b681-0667940c11cc",
+            "97804b88-8621-4c35-9050-1333382814b3",
+            "f5e9c88d-de7a-4e3e-af44-244e02c921d0",
+            "e243c575-f8da-47ad-8620-4c2e60e35ddc",
+            "641c2284-1be0-4adf-8f19-a7f9180b04ab",
+            "9572b353-4411-4f52-8023-6772b6229798",
+            "7acee19d-f404-4e64-bd68-fe643300a2d2",
+            "4fa39d2f-e014-4acb-b7f3-9d9100f4eaec",
+            "194943ae-ad3a-4ce3-9e57-1bf90560075c",
+            "774ce9f5-d9e4-46fb-91a2-75ee0c7871c0"
+        ],
+        "store": [
+            "0873f80e-c2d7-4d33-b2d9-d6e1e5f32bd6",
+            "033e4f0c-b414-4764-9ee4-8a99fa3d2d05",
+            "f8994d84-96fb-4ab9-8642-0381d120863f",
+            "5df2599a-b2d8-4f39-a804-c3dee7a35c67",
+            "a8b9b2ff-92e8-4ab2-882a-10e7d8f45be2"
+        ],
+        "controller": [],
+        "model": [
+            "ce5925bb-47d8-44e5-abe1-1bdd7101b021",
+            "0eff1d5e-44c8-444c-b378-80c96d57780c",
+            "f146487d-0889-4a2d-9af5-dd7207c93059",
+            "7502a00a-423d-4c78-9468-e23a0e779123"
+        ],
+        "resource": [
+            "1699dfd1-b5ed-4022-9c08-a92785a01c63",
+            "d01ec8fc-a7e2-420b-83c0-a85c68215197",
+            "4c252326-53a4-4835-ae59-362c44af5fe7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

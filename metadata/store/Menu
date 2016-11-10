@@ -1,0 +1,24 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Menu",
+        "root": [
+            "{",
+            "    expanded: true,",
+            "    children: [",
+            "        { text: 'Establecimientos', leaf: true, iconCls: 'x-fa fa-industry' },",
+            "        { text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },",
+            "        { text: 'Actividades', leaf: true, iconCls: 'x-fa fa-check-square-o' }",
+            "    ]",
+            "}"
+        ],
+        "storeId": "Menu"
+    },
+    "name": "MyTreeStore",
+    "designerId": "0873f80e-c2d7-4d33-b2d9-d6e1e5f32bd6"
+}

@@ -1,0 +1,151 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "establecimientosform",
+        "designer|userClassName": "EstablecimientosForm",
+        "flex": 1,
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "title": "Establecimiento",
+        "width": null
+    },
+    "name": "ActividadesForm1",
+    "designerId": "f5e9c88d-de7a-4e3e-af44-244e02c921d0",
+    "viewControllerInstanceId": "7acee19d-f404-4e64-bd68-fe643300a2d2",
+    "viewModelInstanceId": "641c2284-1be0-4adf-8f19-a7f9180b04ab",
+    "cn": [
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Código",
+                "name": "codigo"
+            },
+            "name": "MyNumberField",
+            "designerId": "949aab15-ca23-4402-94b2-9b41ac1fe571"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Nombre",
+                "layout|flex": null,
+                "name": "nombre"
+            },
+            "name": "MyTextField",
+            "designerId": "2b358406-74fd-477c-a82d-dfe5ea7ffaf9"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "dock": "bottom",
+                "layout": "hbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer",
+            "designerId": "0c40dec1-7e74-48e3-bf59-a14ec29396e2",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-check",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": 10,
+                        "text": "Aceptar"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "1459ff9c-2f8e-4ff4-b80f-521290c1a4d9",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.save_form(this.up('#form'));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "2e9b5a12-3157-4a04-88c7-ce9f2fba2846"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-remove",
+                        "layout|flex": null,
+                        "margin": 10,
+                        "text": "Cancelar"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "f82beda8-3197-485c-bbb9-059073a22798",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.close_form(this.up(\"#form\"));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "0e10f8dc-2275-4918-8651-27d5d551d883"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

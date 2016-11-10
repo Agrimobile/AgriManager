@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "actividadesform",
+        "designer|userClassName": "ActividadesFormViewModel"
+    },
+    "designerId": "e243c575-f8da-47ad-8620-4c2e60e35ddc"
+}

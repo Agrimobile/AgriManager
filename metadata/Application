@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Establecimientos",
+            "Actividades",
+            "Lotes",
+            "Secuencia"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "Menu",
+            "Establecimientos",
+            "Actividades",
+            "Lotes",
+            "Secuencia"
+        ],
+        "views": [
+            "MainContainer",
+            "PanelActividades",
+            "PanelLotes",
+            "PanelEstablecimientos",
+            "ActividadesForm",
+            "LotesForm",
+            "EstablecimientosForm"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

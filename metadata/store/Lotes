@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Lotes",
+        "model": "Lotes",
+        "storeId": "Lotes"
+    },
+    "name": "MyJsonStore",
+    "designerId": "5df2599a-b2d8-4f39-a804-c3dee7a35c67",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "f7fa7d91-8471-41c6-8fb8-307f8f940672"
+        }
+    ]
+}
