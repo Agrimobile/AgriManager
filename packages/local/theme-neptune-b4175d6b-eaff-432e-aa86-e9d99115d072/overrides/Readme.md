@@ -1,0 +1,3 @@
+# theme-neptune-b4175d6b-eaff-432e-aa86-e9d99115d072/overrides
+
+This folder contains overrides which will automatically be required by package users.

@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Actividades",
+        "model": "Actividades",
+        "storeId": "Actividades"
+    },
+    "name": "MyJsonStore",
+    "designerId": "f8994d84-96fb-4ab9-8642-0381d120863f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "6214a7bb-0c2d-4bc3-940f-448261dbae1d"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Establecimientos",
+            "Actividades",
+            "Lotes",
+            "Secuencia",
+            "Lotes_actividades"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "Menu",
+            "Establecimientos",
+            "Actividades",
+            "Lotes",
+            "Secuencia",
+            "Lotes_actividades"
+        ],
+        "views": [
+            "MainContainer",
+            "PanelActividades",
+            "PanelLotes",
+            "PanelEstablecimientos",
+            "ActividadesForm",
+            "LotesForm",
+            "EstablecimientosForm",
+            "PanelLotes_actividades",
+            "PanelAgregarLotes"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

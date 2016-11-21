@@ -1,0 +1,37 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panelestablecimientos",
+        "designer|userClassName": "PanelEstablecimientosViewController"
+    },
+    "designerId": "e978d393-9314-4716-b681-0667940c11cc",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#mygridpanel",
+                "designer|params": [
+                    "rowmodel",
+                    "record",
+                    "index",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelect",
+                "name": "select"
+            },
+            "name": "onGridpanelSelect",
+            "designerId": "45a30c4e-7475-462b-89c6-bcf3b56610de"
+        }
+    ]
+}

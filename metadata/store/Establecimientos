@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Establecimientos",
+        "model": "Establecimientos",
+        "storeId": "Establecimientos"
+    },
+    "name": "MyJsonStore",
+    "designerId": "033e4f0c-b414-4764-9ee4-8a99fa3d2d05",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy",
+            "designerId": "52e67a40-f3bb-40c9-85ae-569b5ffd7540"
+        }
+    ]
+}

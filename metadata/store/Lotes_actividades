@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Lotes_actividades",
+        "model": "Lotes_actividades",
+        "storeId": "Lotes_actividades"
+    },
+    "name": "Lotes1",
+    "designerId": "fd079763-7e79-4c1c-8de7-84c32ee48fed",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "af76c357-5364-447d-a170-701d5589cadc"
+        }
+    ]
+}
