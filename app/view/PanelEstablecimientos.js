@@ -61,50 +61,60 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
             columns: [
                 {
                     xtype: 'gridcolumn',
+                    hidden: true,
                     dataIndex: 'estado_registro',
                     text: 'Estado Registro'
                 },
                 {
                     xtype: 'numbercolumn',
+                    hidden: true,
                     dataIndex: 'id',
                     text: 'ID'
                 },
                 {
                     xtype: 'numbercolumn',
+                    hidden: true,
                     dataIndex: 'uid',
                     text: 'Uid',
                     format: '00'
                 },
                 {
-                    xtype: 'numbercolumn',
-                    dataIndex: 'codigo',
-                    text: 'Codigo',
-                    format: '00'
-                },
-                {
                     xtype: 'gridcolumn',
+                    width: '50%',
                     dataIndex: 'nombre',
                     text: 'Nombre'
                 },
                 {
                     xtype: 'numbercolumn',
+                    width: '50%',
+                    dataIndex: 'codigo',
+                    text: 'Codigo',
+                    format: '00'
+                },
+                {
+                    xtype: 'numbercolumn',
+                    hidden: true,
                     dataIndex: 'zoom',
                     text: 'Zoom',
                     format: '00'
                 },
                 {
                     xtype: 'numbercolumn',
+                    hidden: true,
                     dataIndex: 'latitud',
                     text: 'Latitud'
                 },
                 {
                     xtype: 'numbercolumn',
+                    hidden: true,
                     dataIndex: 'longitud',
                     text: 'Longitud'
                 }
             ],
             listeners: {
-                selectionchange: 'onGridSelectionChange'
+                selectionchange: 'onGridSelectionChange',
+                itemlongpress: 'onGridItemLongpress',
+                itemclick: 'onGridItemClick'
             }
         }
     ],
@@ -112,43 +122,96 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
         {
             xtype: 'form',
             dock: 'bottom',
+            layout: 'column',
             bodyPadding: 10,
             header: false,
             title: 'My Form',
-            layout: {
-                type: 'hbox',
-                align: 'stretch',
-                pack: 'center'
-            },
             items: [
                 {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.form_open(this.up("#gridpanel"),'ADD');
+                    xtype: 'container',
+                    columnWidth: 1,
+                    itemId: 'newBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
                     },
-                    cls: '',
-                    iconCls: 'x-fa fa-plus',
-                    text: 'Nuevo'
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                f_crud.form_open(this.up("#gridpanel"),'ADD');
+                            },
+                            cls: '',
+                            iconCls: 'x-fa fa-plus',
+                            text: 'Nuevo'
+                        }
+                    ]
                 },
                 {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.form_open(this.up('#gridpanel'),'EDIT');
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'editBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
                     },
-                    cls: '',
-                    margin: '0 0 0 10',
-                    iconCls: 'x-fa fa-pencil',
-                    text: 'Editar'
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                f_crud.form_open(this.up('#gridpanel'),'EDIT');
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-pencil',
+                            text: 'Editar'
+                        }
+                    ]
                 },
                 {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.grid_delete(this.up('#gridpanel'));
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'deleteBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
                     },
-                    cls: '',
-                    margin: '0 0 0 10',
-                    iconCls: 'x-fa fa-trash',
-                    text: 'Borrar'
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                var gridPanel = this.up('#gridpanel');
+                                var query = "select * from Lotes where cod_establecimiento=" + gridPanel.record.data.codigo;
+                                f_crud.sql_select(query, function(resultSet){
+                                    if(resultSet === -1 || !Array.isArray(resultSet)) {
+                                        console.log("Query statement: " + query);
+                                        throw "Database error: Check your sql statement or your WebSql instance";
+                                    }
+                                    else{
+                                        if(resultSet.length > 0) {
+                                            Ext.Msg.alert({
+                                                title: 'Establecimiento no vacio',
+                                                message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero',
+                                                iconCls: 'x-fa fa-warning',
+                                                buttons:  Ext.Msg.OK
+                                            });
+                                        }
+                                        else {
+                                            f_crud.grid_delete(gridPanel);
+                                        }
+                                    }
+                                });
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-trash',
+                            text: 'Borrar'
+                        }
+                    ]
                 }
             ]
         }
@@ -172,6 +235,31 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
 
     onGridSelectionChange: function(model, selected, eOpts) {
         this.record = selected[0];
+    },
+
+    onGridItemLongpress: function(dataview, record, item, index, e, eOpts) {
+        var newbox = this.down("#newBox");
+        var editbox = this.down("#editBox");
+        var deletebox = this.down("#deleteBox");
+        newbox.columnWidth = 0.33;
+        newbox.layout.pack = 'end';
+        newbox.hide();
+        newbox.show();
+        editbox.show();
+        deletebox.show();
+        this.longpress = true;
+    },
+
+    onGridItemClick: function(dataview, record, item, index, e, eOpts) {
+        if(!this.longpress) {
+            var panelClass = "MyApp.view.PanelLotes";
+            var newPan = Ext.create(panelClass);
+            newPan.est_code = record.data.codigo;
+            newPan.est_nombre = record.data.nombre;
+            MyApp.main.add(newPan);
+            MyApp.main.getLayout().setActiveItem(newPan);
+        }
+        this.longpress = false;
     }
 
 });

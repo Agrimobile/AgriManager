@@ -5,7 +5,11 @@
 .paneltool {
     left: 0!important;
 }
-/*.x-tree-elbow-img.x-tree-elbow-empty,
-.x-tree-elbow-img.x-tree-elbow-line {
-    display: none;
-}*/
+
+.x-grid-cell-inner {
+    text-align: left!important;
+}
+
+.gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
+    color: transparent;
+}

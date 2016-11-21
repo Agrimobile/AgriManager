@@ -85,7 +85,6 @@
                                             "    }",
                                             "};",
                                             "var recordText = record.get('text');",
-                                            "",
                                             "createPanel(recordText);"
                                         ],
                                         "name": "itemclick",

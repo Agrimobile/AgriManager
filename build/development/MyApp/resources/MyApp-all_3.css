@@ -1,3 +1,12 @@
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:307 */
+.x-tool-collapse-top {
+    font: 16px/1 FontAwesome;
+    background: none;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-tool-collapse-top:before {
+    content: "\f0d8";
+}
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:316 */
 .x-tool-expand-left {
     font: 16px/1 FontAwesome;
@@ -15805,12 +15814,4 @@ div.x-border-layout-ct {
 /* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:325 */
 .fa-bullseye:before {
     content: "\f140" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:326 */
-.fa-ellipsis-h:before {
-    content: "\f141" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:327 */
-.fa-ellipsis-v:before {
-    content: "\f142" !important;
 }

@@ -12,7 +12,7 @@
             "    expanded: true,",
             "    children: [",
             "        { text: 'Establecimientos', leaf: true, iconCls: 'x-fa fa-industry' },",
-            "        { text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },",
+            "        //{ text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },",
             "        { text: 'Actividades', leaf: true, iconCls: 'x-fa fa-check-square-o' }",
             "    ]",
             "}"

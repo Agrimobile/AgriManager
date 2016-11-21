@@ -1,3 +1,11 @@
+/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:326 */
+.fa-ellipsis-h:before {
+    content: "\f141" !important;
+}
+/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:327 */
+.fa-ellipsis-v:before {
+    content: "\f142" !important;
+}
 /* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:328 */
 .fa-rss-square:before {
     content: "\f143" !important;
@@ -1488,6 +1496,14 @@
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:5 */
 .paneltool {
     left: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:9 */
+.x-grid-cell-inner {
+    text-align: left!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:13 */
+.gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
+    color: transparent;
 }
 /* C:/wamp64/www/AgriManager/ext/packages/core/sass/src/util/SizeMonitor.scss:5 */
 .x-size-monitored {
@@ -16037,20 +16053,4 @@ a.x-color-picker-item:hover {
 .x-menu-item-indent-default-menubar.x-rtl {
     margin-left: 0;
     margin-right: 41px;
-}
-/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:493 */
-.x-menu-item-icon-default-menubar {
-    width: 24px;
-    height: 24px;
-    top: 4px;
-    left: 4px;
-    line-height: 24px;
-    font-size: 16px;
-    color: #919191;
-    background-position: center center;
-}
-/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:502 */
-.x-menu-item-focus .x-menu-item-icon-default-menubar,
-.x-menu-item-active .x-menu-item-icon-default-menubar {
-    color: #fff;
 }

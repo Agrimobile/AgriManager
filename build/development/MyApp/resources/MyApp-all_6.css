@@ -1,3 +1,13 @@
+/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:453 */
+.x-btn-default-toolbar-medium-ml,
+.x-btn-default-toolbar-medium-mr {
+    background-image: url(images/btn/btn-default-toolbar-medium-sides.gif);
+    background-repeat: repeat-y;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
+.x-btn-default-toolbar-medium-mc {
+    padding: 8px 8px 8px 8px;
+}
 /* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
 .x-cmd-slicer.x-btn-default-toolbar-medium:before {
     /*<if slicer>*/
@@ -15632,27 +15642,4 @@ div.x-border-layout-ct {
 .x-panel-light-framed-outer-border-r {
     border-right-color: #d0d0d0 !important;
     border-right-width: 2px !important;
-}
-/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
-.x-panel-light-framed-outer-border-rl {
-    border-right-color: #d0d0d0 !important;
-    border-right-width: 2px !important;
-    border-left-color: #d0d0d0 !important;
-    border-left-width: 2px !important;
-}
-/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
-.x-panel-light-framed-outer-border-rb {
-    border-right-color: #d0d0d0 !important;
-    border-right-width: 2px !important;
-    border-bottom-color: #d0d0d0 !important;
-    border-bottom-width: 2px !important;
-}
-/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
-.x-panel-light-framed-outer-border-rbl {
-    border-right-color: #d0d0d0 !important;
-    border-right-width: 2px !important;
-    border-bottom-color: #d0d0d0 !important;
-    border-bottom-width: 2px !important;
-    border-left-color: #d0d0d0 !important;
-    border-left-width: 2px !important;
 }

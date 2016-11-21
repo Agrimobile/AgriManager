@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panelagregarlotes",
+        "designer|userClassName": "PanelAgregarLotesViewModel"
+    },
+    "designerId": "ba5a3ff8-323f-41fa-8164-dd808d2101ea"
+}

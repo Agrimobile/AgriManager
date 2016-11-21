@@ -24,14 +24,16 @@ Ext.application({
         'Establecimientos',
         'Actividades',
         'Lotes',
-        'Secuencia'
+        'Secuencia',
+        'Lotes_actividades'
     ],
     stores: [
         'Menu',
         'Establecimientos',
         'Actividades',
         'Lotes',
-        'Secuencia'
+        'Secuencia',
+        'Lotes_actividades'
     ],
     views: [
         'MainContainer',
@@ -40,7 +42,9 @@ Ext.application({
         'PanelEstablecimientos',
         'ActividadesForm',
         'LotesForm',
-        'EstablecimientosForm'
+        'EstablecimientosForm',
+        'PanelLotes_actividades',
+        'PanelAgregarLotes'
     ],
     name: 'MyApp',
 

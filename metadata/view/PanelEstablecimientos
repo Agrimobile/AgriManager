@@ -126,6 +126,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "estado_registro",
+                        "hidden": true,
                         "text": "Estado Registro"
                     },
                     "name": "MyColumn1",
@@ -140,6 +141,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID"
                     },
                     "name": "MyNumberColumn1",
@@ -155,25 +157,11 @@
                     "userConfig": {
                         "dataIndex": "uid",
                         "format": "00",
+                        "hidden": true,
                         "text": "Uid"
                     },
                     "name": "MyNumberColumn4",
                     "designerId": "6a9dc202-38c5-494b-8c7a-14a7ae876f4d"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo"
-                    },
-                    "name": "MyNumberColumn7",
-                    "designerId": "fd4ffc0e-c575-4d34-bd96-454c7a9baee3"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -184,7 +172,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "nombre",
-                        "text": "Nombre"
+                        "text": "Nombre",
+                        "width": "50%"
                     },
                     "name": "MyColumn6",
                     "designerId": "47f56936-e70d-4a9a-b5c9-565766a8370b"
@@ -197,8 +186,25 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "50%"
+                    },
+                    "name": "MyNumberColumn7",
+                    "designerId": "fd4ffc0e-c575-4d34-bd96-454c7a9baee3"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
                         "dataIndex": "zoom",
                         "format": "00",
+                        "hidden": true,
                         "text": "Zoom"
                     },
                     "name": "MyNumberColumn8",
@@ -213,6 +219,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "latitud",
+                        "hidden": true,
                         "text": "Latitud"
                     },
                     "name": "MyNumberColumn9",
@@ -227,6 +234,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "longitud",
+                        "hidden": true,
                         "text": "Longitud"
                     },
                     "name": "MyNumberColumn11",
@@ -249,6 +257,59 @@
                     },
                     "name": "onGridSelectionChange",
                     "designerId": "7a62a85a-b392-459b-a428-665bfb97f6c0"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridItemLongpress",
+                        "implHandler": [
+                            "var newbox = this.down(\"#newBox\");",
+                            "var editbox = this.down(\"#editBox\");",
+                            "var deletebox = this.down(\"#deleteBox\");",
+                            "newbox.columnWidth = 0.33;",
+                            "newbox.layout.pack = 'end';",
+                            "newbox.hide();",
+                            "newbox.show();",
+                            "editbox.show();",
+                            "deletebox.show();",
+                            "this.longpress = true;"
+                        ],
+                        "name": "itemlongpress",
+                        "scope": "me"
+                    },
+                    "name": "onGridItemLongpress",
+                    "designerId": "de46c469-e53a-4206-bc02-91a5fc528096"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridItemClick",
+                        "implHandler": [
+                            "if(!this.longpress) {",
+                            "    var panelClass = \"MyApp.view.PanelLotes\";",
+                            "    var newPan = Ext.create(panelClass);",
+                            "    newPan.est_code = record.data.codigo;",
+                            "    newPan.est_nombre = record.data.nombre;",
+                            "    MyApp.main.add(newPan);",
+                            "    MyApp.main.getLayout().setActiveItem(newPan);",
+                            "}",
+                            "this.longpress = false;"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "name": "onGridItemClick",
+                    "designerId": "e3d15a6b-5c61-4ea6-9b18-d414d7c9674f"
                 }
             ]
         },
@@ -261,128 +322,205 @@
             "codeClass": null,
             "userConfig": {
                 "bodyPadding": 10,
-                "container|align": "stretch",
-                "container|pack": "center",
                 "designer|displayName": "gridControl",
                 "dock": "bottom",
+                "flex": null,
                 "header": false,
-                "layout": "hbox",
+                "layout": "column",
                 "title": "My Form"
             },
-            "name": "MyForm",
-            "designerId": "ddc19db4-dd79-4bbe-b502-557109ef8e20",
+            "name": "MyForm1",
+            "designerId": "63889ecc-08ac-48b4-9ef4-e86743cbb991",
             "cn": [
                 {
-                    "type": "Ext.button.Button",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-plus",
-                        "text": "Nuevo"
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "itemId": "newBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 1
                     },
-                    "name": "MyButton3",
-                    "designerId": "a879997e-c24f-466e-82c6-0c3bfdafc18a",
+                    "name": "MyContainer2",
+                    "designerId": "e8702c69-2818-4bad-9bae-2d81bd54c67d",
                     "cn": [
                         {
-                            "type": "fixedfunction",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
-                                ]
+                                "cls": "",
+                                "iconCls": "x-fa fa-plus",
+                                "text": "Nuevo"
                             },
-                            "name": "handler",
-                            "designerId": "a7c00851-6f5d-4ddd-8081-22ed7ef3f337"
+                            "name": "MyButton3",
+                            "designerId": "4f5710cf-cea9-4a25-a14b-b4f1767b25ad",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "dde55667-a1ed-4866-a220-31d44f60d1d3"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "type": "Ext.button.Button",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-pencil",
-                        "margin": "0 0 0 10",
-                        "text": "Editar"
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "hidden": true,
+                        "itemId": "editBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
                     },
-                    "name": "MyButton5",
-                    "designerId": "794613ad-4c48-4b2e-a227-b31ed1cd2d3e",
+                    "name": "MyContainer3",
+                    "designerId": "cd309eb2-3c16-461f-a747-d73cace6e169",
                     "cn": [
                         {
-                            "type": "fixedfunction",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
-                                ]
+                                "cls": "",
+                                "iconCls": "x-fa fa-pencil",
+                                "margin": "0 0 0 10",
+                                "text": "Editar"
                             },
-                            "name": "handler",
-                            "designerId": "ba0989b3-a85f-46ac-babf-66962ca3b531"
+                            "name": "MyButton5",
+                            "designerId": "d489b268-0e49-4da6-aced-546903283f75",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "a6ad32d6-c078-4cfd-90eb-e79addecdb0c"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "type": "Ext.button.Button",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-trash",
-                        "layout|flex": null,
-                        "margin": "0 0 0 10",
-                        "text": "Borrar"
+                        "container|align": "stretch",
+                        "hidden": true,
+                        "itemId": "deleteBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
                     },
-                    "name": "MyButton4",
-                    "designerId": "1abe64a6-303b-419f-891a-26225fefae4d",
+                    "name": "MyContainer4",
+                    "designerId": "92103321-24a7-407d-95f8-839ffad43665",
                     "cn": [
                         {
-                            "type": "fixedfunction",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.grid_delete(this.up('#gridpanel'));"
-                                ]
+                                "cls": "",
+                                "iconCls": "x-fa fa-trash",
+                                "layout|flex": null,
+                                "margin": "0 0 0 10",
+                                "text": "Borrar"
                             },
-                            "name": "handler",
-                            "designerId": "ba357a03-27da-4289-8921-b583a11481e8"
+                            "name": "MyButton4",
+                            "designerId": "93f091d0-c493-4b7e-82dc-0707844bea82",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var gridPanel = this.up('#gridpanel');",
+                                            "var query = \"select * from Lotes where cod_establecimiento=\" + gridPanel.record.data.codigo;",
+                                            "f_crud.sql_select(query, function(resultSet){",
+                                            "    if(resultSet === -1 || !Array.isArray(resultSet)) {",
+                                            "        console.log(\"Query statement: \" + query);",
+                                            "        throw \"Database error: Check your sql statement or your WebSql instance\";",
+                                            "    }",
+                                            "    else{",
+                                            "        if(resultSet.length > 0) {",
+                                            "            Ext.Msg.alert({",
+                                            "                title: 'Establecimiento no vacio',",
+                                            "                message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero',",
+                                            "                iconCls: 'x-fa fa-warning',",
+                                            "                buttons:  Ext.Msg.OK",
+                                            "            });",
+                                            "        }",
+                                            "        else {",
+                                            "            f_crud.grid_delete(gridPanel);",
+                                            "        }",
+                                            "    }",
+                                            "});"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "1d468ddd-7d4c-490b-81ca-c66a63095c64"
+                                }
+                            ]
                         }
                     ]
                 }

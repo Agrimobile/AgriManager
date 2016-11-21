@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panellotes_actividades",
+        "designer|userClassName": "PanelLotes_actividadesViewController"
+    },
+    "designerId": "1691b9bb-70e3-456b-b2c7-678582a8aecf"
+}

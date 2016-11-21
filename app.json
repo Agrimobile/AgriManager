@@ -43,6 +43,10 @@
          "x-compile": true
       },
       {
+         "path": "..\\LibJS\\async.js",
+         "x-compile": true
+      },
+      {
          "path": "app.js",
          "bundle": true
       }

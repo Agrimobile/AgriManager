@@ -48,7 +48,10 @@ Ext.define('MyApp.view.LotesForm', {
                 {
                     xtype: 'button',
                     handler: function(button, e) {
-                        f_crud.save_form(this.up('#form'));
+                        var lotesForm = this.up('#form');
+                        lotesForm.form._record.data.cod_establecimiento = f_crud.est_code;
+                        //console.log(lotesForm);
+                        f_crud.save_form(lotesForm);
                     },
                     margins: '',
                     margin: 10,

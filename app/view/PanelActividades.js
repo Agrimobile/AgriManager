@@ -58,82 +58,125 @@ Ext.define('MyApp.view.PanelActividades', {
             columns: [
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'estado_registro',
-                    text: 'Estado Registro'
+                    width: '50%',
+                    dataIndex: 'nombre',
+                    text: 'Nombre'
                 },
                 {
                     xtype: 'numbercolumn',
-                    dataIndex: 'id',
-                    text: 'ID'
-                },
-                {
-                    xtype: 'numbercolumn',
-                    dataIndex: 'uid',
-                    text: 'Uid',
-                    format: '00'
-                },
-                {
-                    xtype: 'numbercolumn',
+                    width: '50%',
                     dataIndex: 'codigo',
                     text: 'Codigo',
                     format: '00'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'nombre',
-                    text: 'Nombre'
+                    hidden: true,
+                    dataIndex: 'estado_registro',
+                    text: 'Estado Registro'
+                },
+                {
+                    xtype: 'numbercolumn',
+                    hidden: true,
+                    dataIndex: 'id',
+                    text: 'ID'
+                },
+                {
+                    xtype: 'numbercolumn',
+                    hidden: true,
+                    dataIndex: 'uid',
+                    text: 'Uid',
+                    format: '00'
                 }
             ],
             listeners: {
-                selectionchange: 'onGridpanelSelectionChange'
+                selectionchange: 'onGridpanelSelectionChange',
+                itemlongpress: 'onGridItemLongpress',
+                itemclick: 'onGridItemClick'
             }
-        }
-    ],
-    dockedItems: [
-        {
-            xtype: 'form',
-            dock: 'bottom',
-            bodyPadding: 10,
-            header: false,
-            title: 'My Form',
-            layout: {
-                type: 'hbox',
-                align: 'stretch',
-                pack: 'center'
-            },
-            items: [
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.form_open(this.up("#gridpanel"),'ADD');
-                    },
-                    iconCls: 'x-fa fa-plus',
-                    text: 'Nuevo'
-                },
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.form_open(this.up('#gridpanel'),'EDIT');
-                    },
-                    margin: '0 0 0 10',
-                    iconCls: 'x-fa fa-pencil',
-                    text: 'Editar'
-                },
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.grid_delete(this.up('#gridpanel'));
-                    },
-                    margin: '0 0 0 10',
-                    iconCls: 'x-fa fa-trash',
-                    text: 'Borrar'
-                }
-            ]
         }
     ],
     listeners: {
         render: 'onPanelRender'
     },
+    dockedItems: [
+        {
+            xtype: 'form',
+            dock: 'bottom',
+            layout: 'column',
+            bodyPadding: 10,
+            header: false,
+            title: 'My Form',
+            items: [
+                {
+                    xtype: 'container',
+                    columnWidth: 1,
+                    itemId: 'newBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                f_crud.form_open(this.up("#gridpanel"),'ADD');
+                            },
+                            cls: '',
+                            iconCls: 'x-fa fa-plus',
+                            text: 'Nuevo'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'editBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                f_crud.form_open(this.up('#gridpanel'),'EDIT');
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-pencil',
+                            text: 'Editar'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'deleteBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                f_crud.grid_delete(this.up('#gridpanel'));
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-trash',
+                            text: 'Borrar'
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
 
     onToolClick: function(tool, e, owner, eOpts) {
         var thisPanel = MyApp.main.getLayout().getActiveItem();
@@ -143,6 +186,31 @@ Ext.define('MyApp.view.PanelActividades', {
 
     onGridpanelSelectionChange: function(model, selected, eOpts) {
         this.record = selected[0];
+    },
+
+    onGridItemLongpress: function(dataview, record, item, index, e, eOpts) {
+        var newbox = this.down("#newBox");
+        var editbox = this.down("#editBox");
+        var deletebox = this.down("#deleteBox");
+        newbox.columnWidth = 0.33;
+        newbox.layout.pack = 'end';
+        newbox.hide();
+        newbox.show();
+        editbox.show();
+        deletebox.show();
+        this.longpress = true;
+    },
+
+    onGridItemClick: function(dataview, record, item, index, e, eOpts) {
+        if(!this.longpress) {
+            var panelClass = "MyApp.view.PanelLotes_actividades";
+            var newPan = Ext.create(panelClass);
+            newPan.act_code = record.data.codigo;
+            newPan.act_nombre = record.data.nombre;
+            MyApp.main.add(newPan);
+            MyApp.main.getLayout().setActiveItem(newPan);
+        }
+        this.longpress = false;
     },
 
     onPanelRender: function(component, eOpts) {

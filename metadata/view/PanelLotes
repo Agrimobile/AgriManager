@@ -111,6 +111,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "estado_registro",
+                        "hidden": true,
                         "text": "Estado Registro"
                     },
                     "name": "MyColumn2",
@@ -125,6 +126,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID"
                     },
                     "name": "MyNumberColumn3",
@@ -140,25 +142,11 @@
                     "userConfig": {
                         "dataIndex": "uid",
                         "format": "00",
+                        "hidden": true,
                         "text": "Uid"
                     },
                     "name": "MyNumberColumn12",
                     "designerId": "e0def7a1-6767-4c45-9b2f-c8fa434c3873"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo"
-                    },
-                    "name": "MyNumberColumn13",
-                    "designerId": "86370a50-4425-4b94-a4e8-ee8e418e98c7"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -169,7 +157,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "nombre",
-                        "text": "Nombre"
+                        "text": "Nombre",
+                        "width": "33%"
                     },
                     "name": "MyColumn7",
                     "designerId": "8560c810-de36-4d89-8d15-05042e5f1936"
@@ -182,7 +171,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "33%"
+                    },
+                    "name": "MyNumberColumn13",
+                    "designerId": "86370a50-4425-4b94-a4e8-ee8e418e98c7"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
                         "dataIndex": "superficie",
+                        "hidden": true,
                         "text": "Superficie"
                     },
                     "name": "MyNumberColumn14",
@@ -202,142 +208,59 @@
                     },
                     "name": "MyNumberColumn15",
                     "designerId": "97821ad2-8315-402b-8942-6e03f92455e3"
-                }
-            ]
-        },
-        {
-            "type": "Ext.form.Panel",
-            "reference": {
-                "name": "dockedItems",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "bodyPadding": 10,
-                "container|align": "stretch",
-                "container|pack": "center",
-                "designer|displayName": "gridControl",
-                "dock": "bottom",
-                "header": false,
-                "layout": "hbox",
-                "title": "My Form"
-            },
-            "name": "MyForm2",
-            "designerId": "97a9b26f-de4c-4863-af41-a4511da201f8",
-            "cn": [
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-plus",
-                        "text": "Nuevo"
-                    },
-                    "name": "MyButton3",
-                    "designerId": "bd1c745e-e6d9-4044-accf-aab849affc32",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "cca53ded-4f8e-4785-b2f4-4d72e1b875e2"
-                        }
-                    ]
                 },
                 {
-                    "type": "Ext.button.Button",
+                    "type": "basiceventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-pencil",
-                        "margin": "0 0 0 10",
-                        "text": "Editar"
+                        "fn": "onGridItemLongpress",
+                        "implHandler": [
+                            "var newbox = this.down(\"#newBox\");",
+                            "var editbox = this.down(\"#editBox\");",
+                            "var deletebox = this.down(\"#deleteBox\");",
+                            "newbox.columnWidth = 0.33;",
+                            "newbox.layout.pack = 'end';",
+                            "newbox.hide();",
+                            "newbox.show();",
+                            "editbox.show();",
+                            "deletebox.show();",
+                            "this.longpress = true;"
+                        ],
+                        "name": "itemlongpress",
+                        "scope": "me"
                     },
-                    "name": "MyButton5",
-                    "designerId": "f963892f-cdad-4d69-8f95-e6cc56e99912",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "6001b6ed-5b3b-4fdc-bdd4-e08df2b71a95"
-                        }
-                    ]
+                    "name": "onGridItemLongpress",
+                    "designerId": "ba966255-b63d-4fb3-82f7-21ca6d5e8ea3"
                 },
                 {
-                    "type": "Ext.button.Button",
+                    "type": "basiceventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
-                        "iconCls": "x-fa fa-trash",
-                        "layout|flex": null,
-                        "margin": "0 0 0 10",
-                        "text": "Borrar"
+                        "fn": "onGridItemClick",
+                        "implHandler": [
+                            "if(!this.longpress) {",
+                            "    /*var panelClass = \"MyApp.view.PanelLotes\";",
+                            "    var newPan = Ext.create(panelClass);",
+                            "    newPan.est_code = record.data.codigo;",
+                            "    MyApp.main.add(newPan);",
+                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
+                            "    console.log('just a clic');",
+                            "}",
+                            "this.longpress = false;"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
                     },
-                    "name": "MyButton4",
-                    "designerId": "26bd68f3-7f5f-44e8-b4c4-c074c85760e2",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "f_crud.grid_delete(this.up('#gridpanel'));"
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "59628c5b-6a90-49ee-963a-368994f20e11"
-                        }
-                    ]
+                    "name": "onGridItemClick",
+                    "designerId": "701d4494-4fca-4a03-bba2-891a7da1596f"
                 }
             ]
         },
@@ -356,14 +279,225 @@
                     "this.form_name  = 'MyApp.view.LotesForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "",
-                    "f_crud.load_store(this.store_name);"
+                    "f_crud.est_code = component.est_code;",
+                    "f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.est_code);"
                 ],
                 "name": "render",
                 "scope": "me"
             },
             "name": "onPanelRender",
             "designerId": "43c5a47e-1bfa-4a04-aeb6-35d84438823f"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "gridControl",
+                "dock": "bottom",
+                "flex": null,
+                "header": false,
+                "layout": "column",
+                "title": "My Form"
+            },
+            "name": "MyForm5",
+            "designerId": "b8d30ce4-c629-4a4f-9dd8-16fe9e183db2",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "itemId": "newBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 1
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "93252fe9-568f-4f4b-86ff-25845094b1d3",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-plus",
+                                "text": "Nuevo"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "138b172a-bc3a-46cb-b4b9-2cfe17588c30",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "c9465ab4-055c-48bc-adcb-9cfa3c2a52a5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "hidden": true,
+                        "itemId": "editBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "f92a5d10-a37e-4fc2-9607-49fff0a18052",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-pencil",
+                                "margin": "0 0 0 10",
+                                "text": "Editar"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "a12b476d-055b-47d9-b177-fa22ad9c8a74",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "6972a96c-690b-4fe7-8674-5a06224ef585"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "hidden": true,
+                        "itemId": "deleteBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
+                    },
+                    "name": "MyContainer4",
+                    "designerId": "adc93c68-c0bd-49f1-ba00-636fc1050262",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-trash",
+                                "layout|flex": null,
+                                "margin": "0 0 0 10",
+                                "text": "Borrar"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "7b0ce947-8210-4e6b-baf6-889e9f22c17b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.grid_delete(this.up('#gridpanel'));"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "18b0ff9f-adfd-4243-b541-83ce2b97a837"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelAfterRender",
+                "implHandler": [
+                    "this.setTitle(\"Lotes en \" + component.est_nombre);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onGridpanelAfterRender",
+            "designerId": "41d10c6e-14f0-4adb-80b1-aae3dbdff809"
         }
     ]
 }

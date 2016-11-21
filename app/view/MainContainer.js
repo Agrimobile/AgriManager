@@ -73,7 +73,6 @@ Ext.define('MyApp.view.MainContainer', {
             }
         };
         var recordText = record.get('text');
-
         createPanel(recordText);
     },
 
