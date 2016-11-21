@@ -77,7 +77,8 @@
                                             "    if(Ext.ClassManager.get(panelClass)) {",
                                             "        var newPan = Ext.create(panelClass);",
                                             "        MyApp.main.add(newPan);",
-                                            "        MyApp.main.getLayout().setActiveItem(newPan);",
+                                            "        //MyApp.main.getLayout().setActiveItem(newPan);",
+                                            "        MyApp.main.getLayout().next();",
                                             "    }",
                                             "    else {",
                                             "        var errorMsg = \"Error: Panel \" + recordText + \" does not exist\";",
@@ -94,6 +95,28 @@
                                     "designerId": "8513213d-3ac5-4486-a8df-a418d5ef887b"
                                 }
                             ]
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTreepanelActivate",
+                                "implHandler": [
+                                    "var prevPanel = MyApp.main.prevCard;",
+                                    "if(prevPanel) {",
+                                    "    prevPanel.close();",
+                                    "    delete MyApp.main.prevCard;",
+                                    "}"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "name": "onTreepanelActivate",
+                            "designerId": "789fa1dc-492a-4b6d-8477-3f6fce4445b1"
                         }
                     ]
                 },

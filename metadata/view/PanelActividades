@@ -49,9 +49,11 @@
                     "userConfig": {
                         "fn": "onToolClick",
                         "implHandler": [
+                            "",
                             "var thisPanel = MyApp.main.getLayout().getActiveItem();",
+                            "MyApp.main.prevCard = thisPanel;",
                             "MyApp.main.getLayout().prev();",
-                            "thisPanel.close();"
+                            ""
                         ],
                         "name": "click",
                         "scope": "me"

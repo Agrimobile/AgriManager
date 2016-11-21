@@ -179,9 +179,11 @@ Ext.define('MyApp.view.PanelActividades', {
     ],
 
     onToolClick: function(tool, e, owner, eOpts) {
+
         var thisPanel = MyApp.main.getLayout().getActiveItem();
+        MyApp.main.prevCard = thisPanel;
         MyApp.main.getLayout().prev();
-        thisPanel.close();
+
     },
 
     onGridpanelSelectionChange: function(model, selected, eOpts) {

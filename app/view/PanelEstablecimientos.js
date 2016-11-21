@@ -38,7 +38,8 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
     defaultListenerScope: true,
 
     listeners: {
-        render: 'onPanelRender'
+        render: 'onPanelRender',
+        activate: 'onGridpanelActivate'
     },
     tools: [
         {
@@ -229,8 +230,8 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
 
     onToolClick: function(tool, e, owner, eOpts) {
         var thisPanel = MyApp.main.getLayout().getActiveItem();
+        MyApp.main.prevCard = thisPanel;
         MyApp.main.getLayout().prev();
-        thisPanel.close();
     },
 
     onGridSelectionChange: function(model, selected, eOpts) {
@@ -258,8 +259,17 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
             newPan.est_nombre = record.data.nombre;
             MyApp.main.add(newPan);
             MyApp.main.getLayout().setActiveItem(newPan);
+            //MyApp.main.getLayout().next();
         }
         this.longpress = false;
+    },
+
+    onGridpanelActivate: function(component, eOpts) {
+        var prevPanel = MyApp.main.prevCard;
+        if(prevPanel) {
+            prevPanel.close();
+            delete MyApp.main.prevCard;
+        }
     }
 
 });
