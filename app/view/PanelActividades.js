@@ -165,7 +165,14 @@ Ext.define('MyApp.view.PanelActividades', {
                         {
                             xtype: 'button',
                             handler: function(button, e) {
-                                f_crud.grid_delete(this.up('#gridpanel'));
+                                var gridPanel = this.up('#gridpanel');
+                                var checkConfig = {
+                                    table: 'Lotes_actividades',
+                                    field: 'cod_actividad',
+                                    msgTitle: 'Actividad asignada',
+                                    message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
+                                };
+                                f_crud.grid_check_delete(gridPanel,checkConfig);
                             },
                             cls: '',
                             margin: '0 0 0 10',
@@ -210,6 +217,7 @@ Ext.define('MyApp.view.PanelActividades', {
             newPan.act_code = record.data.codigo;
             newPan.act_nombre = record.data.nombre;
             MyApp.main.add(newPan);
+            //MyApp.main.getLayout().next();
             MyApp.main.getLayout().setActiveItem(newPan);
         }
         this.longpress = false;

@@ -186,26 +186,13 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
                             xtype: 'button',
                             handler: function(button, e) {
                                 var gridPanel = this.up('#gridpanel');
-                                var query = "select * from Lotes where cod_establecimiento=" + gridPanel.record.data.codigo;
-                                f_crud.sql_select(query, function(resultSet){
-                                    if(resultSet === -1 || !Array.isArray(resultSet)) {
-                                        console.log("Query statement: " + query);
-                                        throw "Database error: Check your sql statement or your WebSql instance";
-                                    }
-                                    else{
-                                        if(resultSet.length > 0) {
-                                            Ext.Msg.alert({
-                                                title: 'Establecimiento no vacio',
-                                                message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero',
-                                                iconCls: 'x-fa fa-warning',
-                                                buttons:  Ext.Msg.OK
-                                            });
-                                        }
-                                        else {
-                                            f_crud.grid_delete(gridPanel);
-                                        }
-                                    }
-                                });
+                                var checkConfig = {
+                                    table: 'Lotes',
+                                    field: 'cod_establecimiento',
+                                    msgTitle: 'Establecimiento no vacio',
+                                    message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero'
+                                };
+                                f_crud.grid_check_delete(gridPanel,checkConfig);
                             },
                             cls: '',
                             margin: '0 0 0 10',

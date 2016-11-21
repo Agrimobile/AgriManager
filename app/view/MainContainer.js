@@ -68,7 +68,6 @@ Ext.define('MyApp.view.MainContainer', {
             if(Ext.ClassManager.get(panelClass)) {
                 var newPan = Ext.create(panelClass);
                 MyApp.main.add(newPan);
-                //MyApp.main.getLayout().setActiveItem(newPan);
                 MyApp.main.getLayout().next();
             }
             else {
