@@ -138,18 +138,15 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
         {
             xtype: 'form',
             dock: 'bottom',
+            layout: 'column',
             bodyPadding: 10,
             header: false,
             title: 'My Form',
-            layout: {
-                type: 'hbox',
-                align: 'stretch',
-                pack: 'center'
-            },
             items: [
                 {
                     xtype: 'container',
-                    itemId: 'MoreBox',
+                    columnWidth: 1,
+                    itemId: 'moreBox',
                     layout: {
                         type: 'hbox',
                         align: 'stretch',
@@ -162,8 +159,56 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
                                 var lotes_actividades_grid = this.up("#gridpanel");
                                 f_crud.form_open(lotes_actividades_grid ,'ADD-MULTIPLE');
                             },
-                            flex: 1,
-                            text: 'Agregar más lotes'
+                            iconCls: 'x-fa fa-plus',
+                            text: 'Agregar'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'editBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                //f_crud.form_open(this.up('#gridpanel'),'EDIT');
+                                console.log("Je suis un mensaje - editar");
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-pencil',
+                            text: 'Editar'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'container',
+                    columnWidth: 0.33,
+                    hidden: true,
+                    itemId: 'deleteBox',
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            handler: function(button, e) {
+                                var gridPanel = this.up('#gridpanel');
+                                console.log(gridPanel);
+                                f_crud.grid_delete(gridPanel);
+                            },
+                            cls: '',
+                            margin: '0 0 0 10',
+                            iconCls: 'x-fa fa-trash',
+                            text: 'Borrar'
                         }
                     ]
                 }
@@ -187,7 +232,16 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
     },
 
     onGridpanelItemLongpress: function(dataview, record, item, index, e, eOpts) {
-        console.log('Should show ABM buttons in the future');
+        var morebox = this.down("#moreBox");
+        morebox.columnWidth = 0.33;
+        morebox.layout.pack = 'end';
+        morebox.hide();
+        morebox.show();
+
+        var editbox = this.down("#editBox");
+        var deletebox = this.down("#deleteBox");
+        editbox.show();
+        deletebox.show();
         this.longpress = true;
     },
 
