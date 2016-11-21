@@ -50,6 +50,9 @@ Ext.define('MyApp.view.MainContainer', {
                         listeners: {
                             itemclick: 'onViewItemClick'
                         }
+                    },
+                    listeners: {
+                        activate: 'onTreepanelActivate'
                     }
                 }
             ],
@@ -65,7 +68,7 @@ Ext.define('MyApp.view.MainContainer', {
             if(Ext.ClassManager.get(panelClass)) {
                 var newPan = Ext.create(panelClass);
                 MyApp.main.add(newPan);
-                MyApp.main.getLayout().setActiveItem(newPan);
+                MyApp.main.getLayout().next();
             }
             else {
                 var errorMsg = "Error: Panel " + recordText + " does not exist";
@@ -74,6 +77,14 @@ Ext.define('MyApp.view.MainContainer', {
         };
         var recordText = record.get('text');
         createPanel(recordText);
+    },
+
+    onTreepanelActivate: function(component, eOpts) {
+        var prevPanel = MyApp.main.prevCard;
+        if(prevPanel) {
+            prevPanel.close();
+            delete MyApp.main.prevCard;
+        }
     },
 
     onPanelRender: function(component, eOpts) {

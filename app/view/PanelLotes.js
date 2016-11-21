@@ -176,7 +176,15 @@ Ext.define('MyApp.view.PanelLotes', {
                         {
                             xtype: 'button',
                             handler: function(button, e) {
-                                f_crud.grid_delete(this.up('#gridpanel'));
+                                var gridPanel = this.up('#gridpanel');
+                                var checkConfig = {
+                                    table: 'Lotes_actividades',
+                                    field: 'cod_lote',
+                                    msgTitle: 'Lote con actividades',
+                                    message: 'No puede borrar un lote con actividades asignadas, <br> borre las actividades primero'
+                                };
+                                f_crud.grid_check_delete(gridPanel,checkConfig);
+
                             },
                             cls: '',
                             margin: '0 0 0 10',
@@ -191,8 +199,8 @@ Ext.define('MyApp.view.PanelLotes', {
 
     onToolClick: function(tool, e, owner, eOpts) {
         var thisPanel = MyApp.main.getLayout().getActiveItem();
+        MyApp.main.prevCard = thisPanel;
         MyApp.main.getLayout().prev();
-        thisPanel.close();
     },
 
     onGridSelectionChange: function(model, selected, eOpts) {

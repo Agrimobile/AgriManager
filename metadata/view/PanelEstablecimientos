@@ -80,8 +80,8 @@
                         "fn": "onToolClick",
                         "implHandler": [
                             "var thisPanel = MyApp.main.getLayout().getActiveItem();",
-                            "MyApp.main.getLayout().prev();",
-                            "thisPanel.close();"
+                            "MyApp.main.prevCard = thisPanel;",
+                            "MyApp.main.getLayout().prev();"
                         ],
                         "name": "click",
                         "scope": "me"
@@ -302,6 +302,7 @@
                             "    newPan.est_nombre = record.data.nombre;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);",
+                            "    //MyApp.main.getLayout().next();",
                             "}",
                             "this.longpress = false;"
                         ],
@@ -495,26 +496,13 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var gridPanel = this.up('#gridpanel');",
-                                            "var query = \"select * from Lotes where cod_establecimiento=\" + gridPanel.record.data.codigo;",
-                                            "f_crud.sql_select(query, function(resultSet){",
-                                            "    if(resultSet === -1 || !Array.isArray(resultSet)) {",
-                                            "        console.log(\"Query statement: \" + query);",
-                                            "        throw \"Database error: Check your sql statement or your WebSql instance\";",
-                                            "    }",
-                                            "    else{",
-                                            "        if(resultSet.length > 0) {",
-                                            "            Ext.Msg.alert({",
-                                            "                title: 'Establecimiento no vacio',",
-                                            "                message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero',",
-                                            "                iconCls: 'x-fa fa-warning',",
-                                            "                buttons:  Ext.Msg.OK",
-                                            "            });",
-                                            "        }",
-                                            "        else {",
-                                            "            f_crud.grid_delete(gridPanel);",
-                                            "        }",
-                                            "    }",
-                                            "});"
+                                            "var checkConfig = {",
+                                            "    table: 'Lotes',",
+                                            "    field: 'cod_establecimiento',",
+                                            "    msgTitle: 'Establecimiento no vacio',",
+                                            "    message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero'",
+                                            "};",
+                                            "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]
                                     },
                                     "name": "handler",
@@ -525,6 +513,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelActivate",
+                "implHandler": [
+                    "var prevPanel = MyApp.main.prevCard;",
+                    "if(prevPanel) {",
+                    "    prevPanel.close();",
+                    "    delete MyApp.main.prevCard;",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onGridpanelActivate",
+            "designerId": "d51e720a-4900-4671-8125-cbbccea0d3e0"
         }
     ]
 }
