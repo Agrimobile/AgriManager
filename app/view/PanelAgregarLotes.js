@@ -51,7 +51,7 @@ Ext.define('MyApp.view.PanelAgregarLotes', {
     {
       xtype: 'gridpanel',
       cls: 'gridAddLotes',
-      itemId: 'lotesgrid',
+      itemId: 'addinggrid',
       title: 'Lotes a agregar',
       store: 'Lotes',
       columns: [
@@ -141,7 +141,11 @@ Ext.define('MyApp.view.PanelAgregarLotes', {
               xtype: 'button',
               handler: function(button, e) {
                 var lotesToAdd = this.up("#form");
-                f_crud.save_multiple_records(lotesToAdd);
+                var config = {
+                  gridRecordPK: 'cod_lote',
+                  pivotPK: 'cod_actividad'
+                };
+                f_crud.save_several_records(lotesToAdd, config);
               },
               flex: 1,
               text: 'Agregar Lotes Seleccionados'

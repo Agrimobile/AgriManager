@@ -217,7 +217,6 @@ Ext.define('MyApp.view.PanelActividades', {
         newPan.pivot_code = record.data.codigo;
         newPan.pivot_nombre = record.data.nombre;
         MyApp.main.add(newPan);
-        //MyApp.main.getLayout().next();
         MyApp.main.getLayout().setActiveItem(newPan);
     }
     this.longpress = false;
