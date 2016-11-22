@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panellabores",
+        "designer|userClassName": "PanelLotesViewModel1"
+    },
+    "name": "PanelLotesViewModel1",
+    "designerId": "1a17537e-12ce-4788-9505-b562e9dbb18a"
+}

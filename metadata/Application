@@ -11,7 +11,8 @@
             "Actividades",
             "Lotes",
             "Secuencia",
-            "Lotes_actividades"
+            "Lotes_actividades",
+            "Labores"
         ],
         "name": "MyApp",
         "stores": [
@@ -20,7 +21,8 @@
             "Actividades",
             "Lotes",
             "Secuencia",
-            "Lotes_actividades"
+            "Lotes_actividades",
+            "Labores"
         ],
         "views": [
             "MainContainer",
@@ -32,7 +34,8 @@
             "EstablecimientosForm",
             "PanelLotes_actividades",
             "PanelAgregarLotes",
-            "Lotes_ActividadesForm"
+            "Lotes_ActividadesForm",
+            "PanelLabores"
         ]
     },
     "name": "Application",
