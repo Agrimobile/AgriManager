@@ -73,7 +73,7 @@
                     "this.form_name  = 'MyApp.view.PanelAgregarLotes';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name, 'cod_actividad = ' + component.act_code);"
+                    "f_crud.load_store(this.store_name, 'cod_actividad = ' + component.pivot_code);"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -348,7 +348,7 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Lotes dedicados a \" + component.act_nombre);"
+                    "this.setTitle(\"Lotes dedicados a \" + component.pivot_nombre);"
                 ],
                 "name": "afterrender",
                 "scope": "me"
@@ -422,7 +422,8 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var lotes_actividades_grid = this.up(\"#gridpanel\");",
-                                            "f_crud.form_open(lotes_actividades_grid ,'ADD-MULTIPLE');"
+                                            "//f_crud.form_open(lotes_actividades_grid ,'ADD-MULTIPLE');",
+                                            "f_crud.form_open(lotes_actividades_grid);"
                                         ]
                                     },
                                     "name": "handler",

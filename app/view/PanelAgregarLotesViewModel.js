@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.PanelAgregarLotesViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.panelagregarlotes'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.panelagregarlotes'
 
 });

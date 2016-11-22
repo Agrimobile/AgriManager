@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.MainContainerViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.maincontainer'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.maincontainer'
 });

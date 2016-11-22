@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.PanelLotesViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.panellotes'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.panellotes'
 });

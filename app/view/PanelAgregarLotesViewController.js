@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.PanelAgregarLotesViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.panelagregarlotes'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.panelagregarlotes'
 });

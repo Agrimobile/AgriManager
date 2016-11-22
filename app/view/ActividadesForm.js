@@ -14,72 +14,72 @@
  */
 
 Ext.define('MyApp.view.ActividadesForm', {
-    extend: 'Ext.form.Panel',
-    alias: 'widget.actividadesform',
+  extend: 'Ext.form.Panel',
+  alias: 'widget.actividadesform',
 
-    requires: [
-        'MyApp.view.ActividadesFormViewModel',
-        'Ext.form.field.Number',
-        'Ext.container.Container',
-        'Ext.button.Button'
-    ],
+  requires: [
+    'MyApp.view.ActividadesFormViewModel',
+    'Ext.form.field.Number',
+    'Ext.container.Container',
+    'Ext.button.Button'
+  ],
 
-    viewModel: {
-        type: 'actividadesform'
+  viewModel: {
+    type: 'actividadesform'
+  },
+  flex: 1,
+  itemId: 'form',
+  bodyPadding: 10,
+  title: 'Actividad',
+
+  layout: {
+    type: 'vbox',
+    align: 'stretch'
+  },
+  items: [
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Código',
+      name: 'codigo'
     },
-    flex: 1,
-    itemId: 'form',
-    bodyPadding: 10,
-    title: 'Actividad',
-
-    layout: {
-        type: 'vbox',
-        align: 'stretch'
-    },
-    items: [
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Nombre',
+      name: 'nombre'
+    }
+  ],
+  dockedItems: [
+    {
+      xtype: 'container',
+      flex: 1,
+      dock: 'bottom',
+      layout: {
+        type: 'hbox',
+        align: 'stretch',
+        pack: 'center'
+      },
+      items: [
         {
-            xtype: 'numberfield',
-            fieldLabel: 'Código',
-            name: 'codigo'
+          xtype: 'button',
+          handler: function(button, e) {
+            f_crud.save_form(this.up('#form'));
+          },
+          margins: '',
+          margin: 10,
+          iconCls: 'x-fa fa-check',
+          text: 'Aceptar'
         },
         {
-            xtype: 'textfield',
-            fieldLabel: 'Nombre',
-            name: 'nombre'
+          xtype: 'button',
+          handler: function(button, e) {
+            f_crud.close_form(this.up("#form"));
+          },
+          margin: 10,
+          iconCls: 'x-fa fa-remove',
+          text: 'Cancelar'
         }
-    ],
-    dockedItems: [
-        {
-            xtype: 'container',
-            flex: 1,
-            dock: 'bottom',
-            layout: {
-                type: 'hbox',
-                align: 'stretch',
-                pack: 'center'
-            },
-            items: [
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.save_form(this.up('#form'));
-                    },
-                    margins: '',
-                    margin: 10,
-                    iconCls: 'x-fa fa-check',
-                    text: 'Aceptar'
-                },
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.close_form(this.up("#form"));
-                    },
-                    margin: 10,
-                    iconCls: 'x-fa fa-remove',
-                    text: 'Cancelar'
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 
 });

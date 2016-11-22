@@ -321,7 +321,7 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var lotesToAdd = this.up(\"#form\");",
-                                            "f_crud.save_form(lotesToAdd);"
+                                            "f_crud.save_multiple_records(lotesToAdd);"
                                         ]
                                     },
                                     "name": "handler",

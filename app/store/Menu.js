@@ -14,29 +14,29 @@
  */
 
 Ext.define('MyApp.store.Menu', {
-    extend: 'Ext.data.TreeStore',
+  extend: 'Ext.data.TreeStore',
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({
-            storeId: 'Menu',
-            root: {
-                expanded: true,
-                children: [
-                    {
-                        text: 'Establecimientos',
-                        leaf: true,
-                        iconCls: 'x-fa fa-industry'
-                    },
-                    //{ text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },
-                    {
-                        text: 'Actividades',
-                        leaf: true,
-                        iconCls: 'x-fa fa-check-square-o'
-                    }
-                ]
-            }
-        }, cfg)]);
-    }
+  constructor: function(cfg) {
+    var me = this;
+    cfg = cfg || {};
+    me.callParent([Ext.apply({
+      storeId: 'Menu',
+      root: {
+        expanded: true,
+        children: [
+          {
+            text: 'Establecimientos',
+            leaf: true,
+            iconCls: 'x-fa fa-industry'
+          },
+          //{ text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },
+          {
+            text: 'Actividades',
+            leaf: true,
+            iconCls: 'x-fa fa-check-square-o'
+          }
+        ]
+      }
+    }, cfg)]);
+  }
 });

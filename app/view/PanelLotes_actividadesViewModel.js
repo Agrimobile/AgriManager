@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.PanelLotes_actividadesViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.panellotes_actividades'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.panellotes_actividades'
 
 });

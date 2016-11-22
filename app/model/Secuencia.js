@@ -14,19 +14,19 @@
  */
 
 Ext.define('MyApp.model.Secuencia', {
-    extend: 'Ext.data.Model',
+  extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.field.Integer'
-    ],
+  requires: [
+    'Ext.data.field.Integer'
+  ],
 
-    fields: [
-        {
-            name: 'id'
-        },
-        {
-            type: 'int',
-            name: 'secuencia'
-        }
-    ]
+  fields: [
+    {
+      name: 'id'
+    },
+    {
+      type: 'int',
+      name: 'secuencia'
+    }
+  ]
 });

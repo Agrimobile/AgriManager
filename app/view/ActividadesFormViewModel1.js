@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.ActividadesFormViewModel1', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.establecimientosform'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.establecimientosform'
 
 });
