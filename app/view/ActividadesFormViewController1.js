@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.ActividadesFormViewController1', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.establecimientosform'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.establecimientosform'
 });

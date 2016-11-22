@@ -14,17 +14,17 @@
  */
 
 Ext.define('MyApp.view.PanelEstablecimientosViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.panelestablecimientos',
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.panelestablecimientos',
 
-    control: {
-        "#mygridpanel": {
-            select: 'onGridpanelSelect'
-        }
-    },
-
-    onGridpanelSelect: function(rowmodel, record, index, eOpts) {
-
+  control: {
+    "#mygridpanel": {
+      select: 'onGridpanelSelect'
     }
+  },
+
+  onGridpanelSelect: function(rowmodel, record, index, eOpts) {
+
+  }
 
 });

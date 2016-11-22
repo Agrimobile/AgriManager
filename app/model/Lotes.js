@@ -14,41 +14,41 @@
  */
 
 Ext.define('MyApp.model.Lotes', {
-    extend: 'Ext.data.Model',
+  extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.field.String',
-        'Ext.data.field.Number'
-    ],
+  requires: [
+    'Ext.data.field.String',
+    'Ext.data.field.Number'
+  ],
 
-    fields: [
-        {
-            type: 'string',
-            name: 'estado_registro'
-        },
-        {
-            type: 'int',
-            name: 'id'
-        },
-        {
-            type: 'int',
-            name: 'uid'
-        },
-        {
-            type: 'int',
-            name: 'codigo'
-        },
-        {
-            type: 'string',
-            name: 'nombre'
-        },
-        {
-            type: 'float',
-            name: 'superficie'
-        },
-        {
-            type: 'int',
-            name: 'cod_establecimiento'
-        }
-    ]
+  fields: [
+    {
+      type: 'string',
+      name: 'estado_registro'
+    },
+    {
+      type: 'int',
+      name: 'id'
+    },
+    {
+      type: 'int',
+      name: 'uid'
+    },
+    {
+      type: 'int',
+      name: 'codigo'
+    },
+    {
+      type: 'string',
+      name: 'nombre'
+    },
+    {
+      type: 'float',
+      name: 'superficie'
+    },
+    {
+      type: 'int',
+      name: 'cod_establecimiento'
+    }
+  ]
 });

@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.PanelEstablecimientosViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.panelestablecimientos'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.panelestablecimientos'
 
 });

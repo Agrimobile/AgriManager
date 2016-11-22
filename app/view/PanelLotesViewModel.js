@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.PanelLotesViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.panellotes'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.panellotes'
 
 });

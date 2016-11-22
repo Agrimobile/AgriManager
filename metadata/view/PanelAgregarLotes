@@ -69,7 +69,7 @@
                 "cls": [
                     "gridAddLotes"
                 ],
-                "itemId": "lotesgrid",
+                "itemId": "addinggrid",
                 "store": "Lotes",
                 "title": "Lotes a agregar"
             },
@@ -321,7 +321,11 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var lotesToAdd = this.up(\"#form\");",
-                                            "f_crud.save_form(lotesToAdd);"
+                                            "var config = {",
+                                            "  gridRecordPK: 'cod_lote',",
+                                            "  pivotPK: 'cod_actividad'",
+                                            "};",
+                                            "f_crud.save_several_records(lotesToAdd, config);"
                                         ]
                                     },
                                     "name": "handler",

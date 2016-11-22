@@ -14,58 +14,58 @@
  */
 
 Ext.define('MyApp.model.Lotes_actividades', {
-    extend: 'Ext.data.Model',
+  extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.field.String',
-        'Ext.data.field.Integer',
-        'Ext.data.field.Date'
-    ],
+  requires: [
+    'Ext.data.field.String',
+    'Ext.data.field.Integer',
+    'Ext.data.field.Date'
+  ],
 
-    fields: [
-        {
-            type: 'string',
-            name: 'estado_registro'
-        },
-        {
-            type: 'int',
-            name: 'id'
-        },
-        {
-            type: 'int',
-            name: 'uid'
-        },
-        {
-            type: 'int',
-            name: 'codigo'
-        },
-        {
-            type: 'string',
-            field_alias: 'descripcion',
-            name: 'nombre'
-        },
-        {
-            type: 'int',
-            name: 'cod_lote'
-        },
-        {
-            type: 'int',
-            name: 'cod_actividad'
-        },
-        {
-            type: 'int',
-            sincronizar: false,
-            name: 'cod_periodo'
-        },
-        {
-            type: 'date',
-            field_alias: 'fecha_desde',
-            name: 'desde'
-        },
-        {
-            type: 'date',
-            field_alias: 'fecha_hasta',
-            name: 'hasta'
-        }
-    ]
+  fields: [
+    {
+      type: 'string',
+      name: 'estado_registro'
+    },
+    {
+      type: 'int',
+      name: 'id'
+    },
+    {
+      type: 'int',
+      name: 'uid'
+    },
+    {
+      type: 'int',
+      name: 'codigo'
+    },
+    {
+      type: 'string',
+      field_alias: 'descripcion',
+      name: 'nombre'
+    },
+    {
+      type: 'int',
+      name: 'cod_lote'
+    },
+    {
+      type: 'int',
+      name: 'cod_actividad'
+    },
+    {
+      type: 'int',
+      sincronizar: false,
+      name: 'cod_periodo'
+    },
+    {
+      type: 'date',
+      field_alias: 'fecha_desde',
+      name: 'desde'
+    },
+    {
+      type: 'date',
+      field_alias: 'fecha_hasta',
+      name: 'hasta'
+    }
+  ]
 });

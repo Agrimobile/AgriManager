@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.MainContainerViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.maincontainer'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.maincontainer'
 
 });

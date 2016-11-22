@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.LotesFormViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.lotesform'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.lotesform'
 });

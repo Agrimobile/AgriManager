@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.PanelActividadesViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.panelactividades'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.panelactividades'
 });

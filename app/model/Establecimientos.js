@@ -14,45 +14,45 @@
  */
 
 Ext.define('MyApp.model.Establecimientos', {
-    extend: 'Ext.data.Model',
+  extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.field.String',
-        'Ext.data.field.Number'
-    ],
+  requires: [
+    'Ext.data.field.String',
+    'Ext.data.field.Number'
+  ],
 
-    fields: [
-        {
-            type: 'string',
-            name: 'estado_registro'
-        },
-        {
-            type: 'int',
-            name: 'id'
-        },
-        {
-            type: 'int',
-            name: 'uid'
-        },
-        {
-            type: 'int',
-            name: 'codigo'
-        },
-        {
-            type: 'string',
-            name: 'nombre'
-        },
-        {
-            type: 'int',
-            name: 'zoom'
-        },
-        {
-            type: 'float',
-            name: 'latitud'
-        },
-        {
-            type: 'float',
-            name: 'longitud'
-        }
-    ]
+  fields: [
+    {
+      type: 'string',
+      name: 'estado_registro'
+    },
+    {
+      type: 'int',
+      name: 'id'
+    },
+    {
+      type: 'int',
+      name: 'uid'
+    },
+    {
+      type: 'int',
+      name: 'codigo'
+    },
+    {
+      type: 'string',
+      name: 'nombre'
+    },
+    {
+      type: 'int',
+      name: 'zoom'
+    },
+    {
+      type: 'float',
+      name: 'latitud'
+    },
+    {
+      type: 'float',
+      name: 'longitud'
+    }
+  ]
 });

@@ -14,35 +14,35 @@
  */
 
 Ext.define('MyApp.model.Actividades', {
-    extend: 'Ext.data.Model',
+  extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.field.String',
-        'Ext.data.field.Integer'
-    ],
+  requires: [
+    'Ext.data.field.String',
+    'Ext.data.field.Integer'
+  ],
 
-    identifier: 'uuid',
+  identifier: 'uuid',
 
-    fields: [
-        {
-            type: 'string',
-            name: 'estado_registro'
-        },
-        {
-            type: 'int',
-            name: 'id'
-        },
-        {
-            type: 'int',
-            name: 'uid'
-        },
-        {
-            type: 'int',
-            name: 'codigo'
-        },
-        {
-            type: 'string',
-            name: 'nombre'
-        }
-    ]
+  fields: [
+    {
+      type: 'string',
+      name: 'estado_registro'
+    },
+    {
+      type: 'int',
+      name: 'id'
+    },
+    {
+      type: 'int',
+      name: 'uid'
+    },
+    {
+      type: 'int',
+      name: 'codigo'
+    },
+    {
+      type: 'string',
+      name: 'nombre'
+    }
+  ]
 });

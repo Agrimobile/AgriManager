@@ -14,72 +14,72 @@
  */
 
 Ext.define('MyApp.view.Lotes_ActividadesForm', {
-    extend: 'Ext.form.Panel',
-    alias: 'widget.lotes_actividadesform',
+  extend: 'Ext.form.Panel',
+  alias: 'widget.lotes_actividadesform',
 
-    requires: [
-        'MyApp.view.LotesFormViewModel1',
-        'Ext.container.Container',
-        'Ext.button.Button',
-        'Ext.form.field.Number'
-    ],
+  requires: [
+    'MyApp.view.LotesFormViewModel1',
+    'Ext.container.Container',
+    'Ext.button.Button',
+    'Ext.form.field.Number'
+  ],
 
-    viewModel: {
-        type: 'lotes_actividadesform'
-    },
-    itemId: 'form',
-    bodyPadding: 10,
-    title: 'Actividad en un Lote',
+  viewModel: {
+    type: 'lotes_actividadesform'
+  },
+  itemId: 'form',
+  bodyPadding: 10,
+  title: 'Actividad en un Lote',
 
-    layout: {
-        type: 'vbox',
-        align: 'stretch'
-    },
-    dockedItems: [
+  layout: {
+    type: 'vbox',
+    align: 'stretch'
+  },
+  dockedItems: [
+    {
+      xtype: 'container',
+      dock: 'bottom',
+      layout: {
+        type: 'hbox',
+        align: 'stretch',
+        pack: 'center'
+      },
+      items: [
         {
-            xtype: 'container',
-            dock: 'bottom',
-            layout: {
-                type: 'hbox',
-                align: 'stretch',
-                pack: 'center'
-            },
-            items: [
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        var lotes_actividadesForm = this.up('#form');
-                        //lotesForm.form._record.data.cod_establecimiento = f_crud.est_code;
-                        f_crud.save_form(lotes_actividadesForm);
-                    },
-                    margins: '',
-                    margin: 10,
-                    iconCls: 'x-fa fa-check',
-                    text: 'Aceptar'
-                },
-                {
-                    xtype: 'button',
-                    handler: function(button, e) {
-                        f_crud.close_form(this.up("#form"));
-                    },
-                    margin: 10,
-                    iconCls: 'x-fa fa-remove',
-                    text: 'Cancelar'
-                }
-            ]
-        }
-    ],
-    items: [
-        {
-            xtype: 'numberfield',
-            fieldLabel: 'Codigo',
-            name: 'codigo'
+          xtype: 'button',
+          handler: function(button, e) {
+            var lotes_actividadesForm = this.up('#form');
+            //lotesForm.form._record.data.cod_establecimiento = f_crud.est_code;
+            f_crud.save_form(lotes_actividadesForm);
+          },
+          margins: '',
+          margin: 10,
+          iconCls: 'x-fa fa-check',
+          text: 'Aceptar'
         },
         {
-            xtype: 'textfield',
-            fieldLabel: 'Nombre',
-            name: 'nombre'
+          xtype: 'button',
+          handler: function(button, e) {
+            f_crud.close_form(this.up("#form"));
+          },
+          margin: 10,
+          iconCls: 'x-fa fa-remove',
+          text: 'Cancelar'
         }
-    ]
+      ]
+    }
+  ],
+  items: [
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Codigo',
+      name: 'codigo'
+    },
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Nombre',
+      name: 'nombre'
+    }
+  ]
 
 });

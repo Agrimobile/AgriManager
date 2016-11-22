@@ -14,22 +14,22 @@
  */
 
 Ext.define('MyApp.store.Establecimientos', {
-    extend: 'Ext.data.Store',
+  extend: 'Ext.data.Store',
 
-    requires: [
-        'MyApp.model.Establecimientos',
-        'Ext.data.proxy.LocalStorage'
-    ],
+  requires: [
+    'MyApp.model.Establecimientos',
+    'Ext.data.proxy.LocalStorage'
+  ],
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({
-            storeId: 'Establecimientos',
-            model: 'MyApp.model.Establecimientos',
-            proxy: {
-                type: 'localstorage'
-            }
-        }, cfg)]);
-    }
+  constructor: function(cfg) {
+    var me = this;
+    cfg = cfg || {};
+    me.callParent([Ext.apply({
+      storeId: 'Establecimientos',
+      model: 'MyApp.model.Establecimientos',
+      proxy: {
+        type: 'localstorage'
+      }
+    }, cfg)]);
+  }
 });

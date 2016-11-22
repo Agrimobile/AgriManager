@@ -14,6 +14,6 @@
  */
 
 Ext.define('MyApp.view.PanelLotes_actividadesViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.panellotes_actividades'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.panellotes_actividades'
 });

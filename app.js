@@ -20,37 +20,37 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    models: [
-        'Establecimientos',
-        'Actividades',
-        'Lotes',
-        'Secuencia',
-        'Lotes_actividades'
-    ],
-    stores: [
-        'Menu',
-        'Establecimientos',
-        'Actividades',
-        'Lotes',
-        'Secuencia',
-        'Lotes_actividades'
-    ],
-    views: [
-        'MainContainer',
-        'PanelActividades',
-        'PanelLotes',
-        'PanelEstablecimientos',
-        'ActividadesForm',
-        'LotesForm',
-        'EstablecimientosForm',
-        'PanelLotes_actividades',
-        'PanelAgregarLotes',
-        'Lotes_ActividadesForm'
-    ],
-    name: 'MyApp',
+  models: [
+    'Establecimientos',
+    'Actividades',
+    'Lotes',
+    'Secuencia',
+    'Lotes_actividades'
+  ],
+  stores: [
+    'Menu',
+    'Establecimientos',
+    'Actividades',
+    'Lotes',
+    'Secuencia',
+    'Lotes_actividades'
+  ],
+  views: [
+    'MainContainer',
+    'PanelActividades',
+    'PanelLotes',
+    'PanelEstablecimientos',
+    'ActividadesForm',
+    'LotesForm',
+    'EstablecimientosForm',
+    'PanelLotes_actividades',
+    'PanelAgregarLotes',
+    'Lotes_ActividadesForm'
+  ],
+  name: 'MyApp',
 
-    launch: function() {
-        Ext.create('MyApp.view.MainContainer');
-    }
+  launch: function() {
+    Ext.create('MyApp.view.MainContainer');
+  }
 
 });

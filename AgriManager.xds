@@ -17,7 +17,7 @@
             }
         },
         "exportPath": "",
-        "spacesToIndent": 4,
+        "spacesToIndent": 2,
         "sdkPath": "",
         "lineEnding": "CRLF",
         "genTimestamps": false,

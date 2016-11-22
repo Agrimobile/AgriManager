@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.LotesFormViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.lotesform'
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.lotesform'
 
 });
