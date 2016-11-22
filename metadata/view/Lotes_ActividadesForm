@@ -1,0 +1,153 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "lotes_actividadesform",
+        "designer|userClassName": "Lotes_ActividadesForm",
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "title": "Actividad en un Lote",
+        "width": null
+    },
+    "name": "LotesForm1",
+    "designerId": "d5645b8a-c62e-403c-8f26-6506faf86778",
+    "viewControllerInstanceId": "f0cf0089-ffa3-4055-9eb1-6cb23f6437ac",
+    "viewModelInstanceId": "a51272a7-7dec-4250-82d1-366969d6346f",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "dock": "bottom",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "name": "MyContainer1",
+            "designerId": "3f8d54bc-81ef-4ec3-be22-3db31fe42d24",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-check",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": 10,
+                        "text": "Aceptar"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "15533194-bcb5-4019-8d46-f0ee2fdd4dd3",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var lotes_actividadesForm = this.up('#form');",
+                                    "//lotesForm.form._record.data.cod_establecimiento = f_crud.est_code;",
+                                    "f_crud.save_form(lotes_actividadesForm);"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "15f394cc-f56e-4743-9cc7-abda4b1d4fa1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-remove",
+                        "layout|flex": null,
+                        "margin": 10,
+                        "text": "Cancelar"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "b55f6b30-1585-48eb-9cc9-f25c5faedd67",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.close_form(this.up(\"#form\"));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "e8893957-7449-4b7e-843c-b94b36b28345"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
+                "name": "codigo"
+            },
+            "name": "MyNumberField1",
+            "designerId": "0a4c20c2-5b87-49e5-b796-8c8ead830a08"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Nombre",
+                "layout|flex": null,
+                "name": "nombre"
+            },
+            "name": "MyTextField1",
+            "designerId": "e84d9d81-94db-495c-9aa5-769a811330a3"
+        }
+    ]
+}
