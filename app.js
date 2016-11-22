@@ -44,7 +44,8 @@ Ext.application({
         'LotesForm',
         'EstablecimientosForm',
         'PanelLotes_actividades',
-        'PanelAgregarLotes'
+        'PanelAgregarLotes',
+        'Lotes_ActividadesForm'
     ],
     name: 'MyApp',
 

@@ -178,8 +178,9 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
                         {
                             xtype: 'button',
                             handler: function(button, e) {
-                                //f_crud.form_open(this.up('#gridpanel'),'EDIT');
-                                console.log("Je suis un mensaje - editar");
+                                var grid = this.up('#gridpanel');
+                                grid.form_name = 'MyApp.view.Lotes_ActividadesForm';
+                                f_crud.form_open(grid,'EDIT');
                             },
                             cls: '',
                             margin: '0 0 0 10',
@@ -202,7 +203,6 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
                             xtype: 'button',
                             handler: function(button, e) {
                                 var gridPanel = this.up('#gridpanel');
-                                console.log(gridPanel);
                                 f_crud.grid_delete(gridPanel);
                             },
                             cls: '',
