@@ -68,7 +68,7 @@
             "userConfig": {
                 "header": false,
                 "itemId": "grid",
-                "store": "Lotes",
+                "store": "Labores",
                 "title": "Labores"
             },
             "name": "MyGridPanel2",
@@ -101,113 +101,6 @@
                     },
                     "name": "onGridSelectionChange",
                     "designerId": "6e05c757-57f5-4248-9a53-adb8a14e694c"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "estado_registro",
-                        "hidden": true,
-                        "text": "Estado Registro"
-                    },
-                    "name": "MyColumn2",
-                    "designerId": "e5441c74-b12a-426f-97bc-6a41cfbfc029"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "id",
-                        "hidden": true,
-                        "text": "ID"
-                    },
-                    "name": "MyNumberColumn3",
-                    "designerId": "1fb65b62-8b03-47a2-86cd-43f597b80677"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "uid",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Uid"
-                    },
-                    "name": "MyNumberColumn12",
-                    "designerId": "4735d176-711e-4598-96a7-6e3e6c03f6d7"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "nombre",
-                        "text": "Nombre",
-                        "width": "33%"
-                    },
-                    "name": "MyColumn7",
-                    "designerId": "a0e54f0a-cfc3-4848-b3f4-c33abd56a671"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo",
-                        "width": "33%"
-                    },
-                    "name": "MyNumberColumn13",
-                    "designerId": "871f382e-d6c1-482b-a8c2-ffba212ae3a8"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "superficie",
-                        "hidden": true,
-                        "text": "Superficie"
-                    },
-                    "name": "MyNumberColumn14",
-                    "designerId": "cde41d60-c2fb-4d99-94c8-3f32166ff6cf"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_establecimiento",
-                        "format": "00",
-                        "text": "Cod Establecimiento"
-                    },
-                    "name": "MyNumberColumn15",
-                    "designerId": "eaecca4b-8019-40d9-a5f9-a4d7a04a415c"
                 },
                 {
                     "type": "basiceventbinding",
@@ -261,6 +154,230 @@
                     },
                     "name": "onGridItemClick",
                     "designerId": "5255ef6a-192a-4527-815d-d46603a1c1b7"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "uid",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Uid"
+                    },
+                    "name": "MyNumberColumn",
+                    "designerId": "37d99d7b-4a17-49bc-8bbe-ed0003610422"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "hidden": true,
+                        "text": "ID"
+                    },
+                    "name": "MyNumberColumn26",
+                    "designerId": "75e3693b-e4b3-4bdb-9e7e-d4747eab79a7"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id_origen",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Id Origen"
+                    },
+                    "name": "MyNumberColumn27",
+                    "designerId": "d4ce967e-c062-4831-a897-25a7ca237c2f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "estado_registro",
+                        "hidden": true,
+                        "text": "Estado Registro"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "9ac60d55-2879-45d4-a5f2-d1b60fc187fc"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "fecha",
+                        "format": "m/j/Y",
+                        "text": "Fecha"
+                    },
+                    "name": "MyDateColumn",
+                    "designerId": "babd8e0f-3366-439c-b91f-4bada917a1b5"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_lote_actividad",
+                        "format": "00",
+                        "text": "Cod Lote Actividad"
+                    },
+                    "name": "MyNumberColumn28",
+                    "designerId": "8762b678-135a-4be4-82a0-ed34d9bd32f9"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_lote",
+                        "format": "00",
+                        "text": "Cod Lote"
+                    },
+                    "name": "MyNumberColumn29",
+                    "designerId": "ce237ae4-3fec-49b5-8274-b1a4e6ba1751"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_area",
+                        "format": "00",
+                        "text": "Cod Area"
+                    },
+                    "name": "MyNumberColumn30",
+                    "designerId": "f9129e84-9946-4ffd-bdcc-1c04eb401cee"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_establecimiento",
+                        "format": "00",
+                        "text": "Cod Establecimiento"
+                    },
+                    "name": "MyNumberColumn31",
+                    "designerId": "a72188db-fee2-4087-aa69-61cedb73e6bd"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_periodo",
+                        "format": "00",
+                        "text": "Cod Periodo"
+                    },
+                    "name": "MyNumberColumn32",
+                    "designerId": "79710ec8-e313-40bb-b30d-01975f2c97cb"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_tarea",
+                        "format": "00",
+                        "text": "Cod Tarea"
+                    },
+                    "name": "MyNumberColumn33",
+                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cantidad",
+                        "text": "Cantidad"
+                    },
+                    "name": "MyColumn11",
+                    "designerId": "21ab5a72-e0e8-4aa3-9a6b-21132608f31b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "precio",
+                        "text": "Precio"
+                    },
+                    "name": "MyColumn12",
+                    "designerId": "dd9b00d3-dfd7-4cd1-b508-0f3ab960dbb6"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "propia",
+                        "text": "Propia"
+                    },
+                    "name": "MyColumn13",
+                    "designerId": "8de57a61-0d22-4c9c-bc84-fd3763e74d25"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_contratista",
+                        "format": "00",
+                        "text": "Cod Contratista"
+                    },
+                    "name": "MyNumberColumn34",
+                    "designerId": "5b9db788-e04d-4ed4-930b-3aaefd6e88b2"
                 }
             ]
         },
@@ -278,11 +395,10 @@
                     "this.model_name = 'MyApp.model.Labores';",
                     "this.form_name  = 'MyApp.view.Labores';",
                     "var store = Ext.getStore(this.store_name);",
-                    "console.log(store);/*",
                     "this.form_store_array = [store];",
-                    "f_crud.est_code = component.est_code;",
-                    "f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.est_code);",
-                    "*/"
+                    "// f_crud.cod_lote_actividad = component.cod_lote_actividad;",
+                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.cod_lote_actividad);",
+                    ""
                 ],
                 "name": "render",
                 "scope": "me"
@@ -504,7 +620,7 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "//this.setTitle(\"Lotes en \" + component.est_nombre);"
+                    "this.setTitle(\"Labores en  \" + component.nombre_lote_actividad);"
                 ],
                 "name": "afterrender",
                 "scope": "me"

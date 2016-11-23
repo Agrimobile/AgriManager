@@ -252,12 +252,15 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
 
   onGridpanelItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.PanelLotes";
+        var panelClass = "MyApp.view.PanelLabores";
         var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
+        newPan.cod_lote_actividad = record.data.codigo;
+        newPan.cod_lote = record.data.cod_lote;
+        newPan.nombre_lote_actividad = record.data.nombre;
+        newPan.cod_periodo = record.data.cod_periodo;
         MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
-        console.log('Should do something in the future');
+        MyApp.main.getLayout().setActiveItem(newPan);
+        //MyApp.main.getLayout().next();
     }
     this.longpress = false;
   },

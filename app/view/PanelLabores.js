@@ -23,6 +23,7 @@ Ext.define('MyApp.view.PanelLabores', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
+    'Ext.grid.column.Date',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -52,7 +53,7 @@ Ext.define('MyApp.view.PanelLabores', {
       itemId: 'grid',
       header: false,
       title: 'Labores',
-      store: 'Lotes',
+      store: 'Labores',
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
@@ -60,10 +61,11 @@ Ext.define('MyApp.view.PanelLabores', {
       },
       columns: [
         {
-          xtype: 'gridcolumn',
+          xtype: 'numbercolumn',
           hidden: true,
-          dataIndex: 'estado_registro',
-          text: 'Estado Registro'
+          dataIndex: 'uid',
+          text: 'Uid',
+          format: '00'
         },
         {
           xtype: 'numbercolumn',
@@ -74,33 +76,77 @@ Ext.define('MyApp.view.PanelLabores', {
         {
           xtype: 'numbercolumn',
           hidden: true,
-          dataIndex: 'uid',
-          text: 'Uid',
+          dataIndex: 'id_origen',
+          text: 'Id Origen',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          width: '33%',
-          dataIndex: 'nombre',
-          text: 'Nombre'
+          hidden: true,
+          dataIndex: 'estado_registro',
+          text: 'Estado Registro'
+        },
+        {
+          xtype: 'datecolumn',
+          dataIndex: 'fecha',
+          text: 'Fecha',
+          format: 'm/j/Y'
         },
         {
           xtype: 'numbercolumn',
-          width: '33%',
-          dataIndex: 'codigo',
-          text: 'Codigo',
+          dataIndex: 'cod_lote_actividad',
+          text: 'Cod Lote Actividad',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
-          dataIndex: 'superficie',
-          text: 'Superficie'
+          dataIndex: 'cod_lote',
+          text: 'Cod Lote',
+          format: '00'
+        },
+        {
+          xtype: 'numbercolumn',
+          dataIndex: 'cod_area',
+          text: 'Cod Area',
+          format: '00'
         },
         {
           xtype: 'numbercolumn',
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
+          format: '00'
+        },
+        {
+          xtype: 'numbercolumn',
+          dataIndex: 'cod_periodo',
+          text: 'Cod Periodo',
+          format: '00'
+        },
+        {
+          xtype: 'numbercolumn',
+          dataIndex: 'cod_tarea',
+          text: 'Cod Tarea',
+          format: '00'
+        },
+        {
+          xtype: 'gridcolumn',
+          dataIndex: 'cantidad',
+          text: 'Cantidad'
+        },
+        {
+          xtype: 'gridcolumn',
+          dataIndex: 'precio',
+          text: 'Precio'
+        },
+        {
+          xtype: 'gridcolumn',
+          dataIndex: 'propia',
+          text: 'Propia'
+        },
+        {
+          xtype: 'numbercolumn',
+          dataIndex: 'cod_contratista',
+          text: 'Cod Contratista',
           format: '00'
         }
       ]
@@ -240,15 +286,14 @@ Ext.define('MyApp.view.PanelLabores', {
     this.model_name = 'MyApp.model.Labores';
     this.form_name  = 'MyApp.view.Labores';
     var store = Ext.getStore(this.store_name);
-    console.log(store);/*
     this.form_store_array = [store];
-    f_crud.est_code = component.est_code;
-    f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.est_code);
-    */
+    // f_crud.cod_lote_actividad = component.cod_lote_actividad;
+    f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.cod_lote_actividad);
+
   },
 
   onGridpanelAfterRender: function(component, eOpts) {
-    //this.setTitle("Lotes en " + component.est_nombre);
+    this.setTitle("Labores en  " + component.nombre_lote_actividad);
   }
 
 });
