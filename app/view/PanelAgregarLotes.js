@@ -108,7 +108,7 @@ Ext.define('MyApp.view.PanelAgregarLotes', {
         }
       ],
       listeners: {
-        selectionchange: 'onGridpanelSelectionChange'
+        itemclick: 'onAddinggridItemClick'
       }
     }
   ],
@@ -162,10 +162,10 @@ Ext.define('MyApp.view.PanelAgregarLotes', {
     thisPanel.close();
   },
 
-  onGridpanelSelectionChange: function(model, selected, eOpts) {
-    console.log('item-selected');
-    //console.log(selected);
-    //console.log(selected.addToActivity);
+  onAddinggridItemClick: function(dataview, record, item, index, e, eOpts) {
+    // console.log(record.data.agregar);
+    // TODO: no basta con cambiar el valor de agregar, porque no se cambiar el
+    // tilde: hay que hacer un trabajito de 2-way-dataBinding.-
   },
 
   onPanelRender: function(component, eOpts) {
@@ -174,6 +174,7 @@ Ext.define('MyApp.view.PanelAgregarLotes', {
     //var store = Ext.getStore(this.store_name);
     //var store = Ext.getStore('Lotes_actividades');
     //this.form_store_array = [store];
+
     f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
   }
 

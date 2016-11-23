@@ -195,26 +195,6 @@
                     "designerId": "1808ff3b-8634-48b9-949f-5da4323b06de"
                 },
                 {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onGridpanelSelectionChange",
-                        "implHandler": [
-                            "console.log('item-selected');",
-                            "//console.log(selected);",
-                            "//console.log(selected.addToActivity);"
-                        ],
-                        "name": "selectionchange",
-                        "scope": "me"
-                    },
-                    "name": "onGridpanelSelectionChange",
-                    "designerId": "ca157c7c-0eb5-48a3-ae18-de88712772e9"
-                },
-                {
                     "type": "Ext.grid.column.Check",
                     "reference": {
                         "name": "columns",
@@ -229,6 +209,26 @@
                     },
                     "name": "MyCheck2",
                     "designerId": "a6ee212d-70a9-4a9b-9623-61133cf84442"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAddinggridItemClick",
+                        "implHandler": [
+                            "// console.log(record.data.agregar); ",
+                            "// TODO: no basta con cambiar el valor de agregar, porque no se cambiar el ",
+                            "// tilde: hay que hacer un trabajito de 2-way-dataBinding.-"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "name": "onAddinggridItemClick",
+                    "designerId": "7685da65-efea-4b87-9ce7-f72b291d58bb"
                 }
             ]
         },
@@ -247,6 +247,7 @@
                     "//var store = Ext.getStore(this.store_name);",
                     "//var store = Ext.getStore('Lotes_actividades');",
                     "//this.form_store_array = [store];",
+                    "",
                     "f_crud.load_store(this.store_name,'',\"select *,'' as agregar from Lotes\");"
                 ],
                 "name": "render",

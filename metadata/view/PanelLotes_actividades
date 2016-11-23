@@ -73,7 +73,7 @@
                     "this.form_name  = 'MyApp.view.PanelAgregarLotes';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name, 'cod_actividad = ' + component.pivot_code);"
+                    "f_crud.load_store(this.store_name, 'cod_actividad = ' + component.parent.codigo);"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -323,15 +323,11 @@
                             "if(!this.longpress) {",
                             "    var panelClass = \"MyApp.view.PanelLabores\";",
                             "    var newPan = Ext.create(panelClass);",
-                            "    newPan.cod_lote_actividad = record.data.codigo;",
-                            "    newPan.cod_lote = record.data.cod_lote;",
-                            "    newPan.nombre_lote_actividad = record.data.nombre;",
-                            "    newPan.cod_periodo = record.data.cod_periodo;",
+                            "    newPan.parent = record.data;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);",
-                            "    //MyApp.main.getLayout().next();",
                             "}",
-                            "this.longpress = false; "
+                            "this.longpress = false;"
                         ],
                         "name": "itemclick",
                         "scope": "me"
@@ -351,7 +347,7 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Lotes dedicados a \" + component.pivot_nombre);"
+                    "this.setTitle(\"Lotes dedicados a \" + component.parent.nombre);"
                 ],
                 "name": "afterrender",
                 "scope": "me"
@@ -425,7 +421,6 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var lotes_actividades_grid = this.up(\"#gridpanel\");",
-                                            "//f_crud.form_open(lotes_actividades_grid ,'ADD-MULTIPLE');",
                                             "f_crud.form_open(lotes_actividades_grid);"
                                         ]
                                     },
@@ -484,8 +479,8 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "var grid = this.up('#gridpanel');",
-                                            "grid.form_name = 'MyApp.view.Lotes_ActividadesForm';",
+                                            "var lotes_actividades_grid = this.up('#gridpanel');",
+                                            "lotes_actividades_grid.form_name = 'MyApp.view.Lotes_ActividadesForm';",
                                             "f_crud.form_open(grid,'EDIT');"
                                         ]
                                     },

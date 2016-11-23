@@ -242,11 +242,11 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
     if(!this.longpress) {
         var panelClass = "MyApp.view.PanelLotes";
         var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
-        newPan.est_nombre = record.data.nombre;
+        /*newPan.est_code = record.data.codigo;
+        newPan.est_nombre = record.data.nombre;*/
+        newPan.parent = record.data;
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);
-        //MyApp.main.getLayout().next();
     }
     this.longpress = false;
   },
