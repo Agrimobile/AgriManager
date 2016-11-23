@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Establecimientos"
+        "designer|userClassName": "Establecimientos",
+        "identifier": null
     },
     "name": "MyModel",
     "designerId": "ce5925bb-47d8-44e5-abe1-1bdd7101b021",
