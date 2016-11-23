@@ -238,12 +238,12 @@ Ext.define('MyApp.view.PanelLotes', {
     this.form_name  = 'MyApp.view.LotesForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.est_code = component.est_code;
-    f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.est_code);
+    f_crud.est_code = component.parent.codigo;
+    f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.parent.codigo);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {
-    this.setTitle("Lotes en " + component.est_nombre);
+    this.setTitle("Lotes en " + component.parent.nombre);
   }
 
 });

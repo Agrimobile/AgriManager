@@ -157,7 +157,6 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
               xtype: 'button',
               handler: function(button, e) {
                 var lotes_actividades_grid = this.up("#gridpanel");
-                //f_crud.form_open(lotes_actividades_grid ,'ADD-MULTIPLE');
                 f_crud.form_open(lotes_actividades_grid);
               },
               iconCls: 'x-fa fa-plus',
@@ -179,8 +178,8 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                var grid = this.up('#gridpanel');
-                grid.form_name = 'MyApp.view.Lotes_ActividadesForm';
+                var lotes_actividades_grid = this.up('#gridpanel');
+                lotes_actividades_grid.form_name = 'MyApp.view.Lotes_ActividadesForm';
                 f_crud.form_open(grid,'EDIT');
               },
               cls: '',
@@ -229,7 +228,7 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
     this.form_name  = 'MyApp.view.PanelAgregarLotes';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.load_store(this.store_name, 'cod_actividad = ' + component.pivot_code);
+    f_crud.load_store(this.store_name, 'cod_actividad = ' + component.parent.codigo);
   },
 
   onGridpanelItemLongpress: function(dataview, record, item, index, e, eOpts) {
@@ -254,19 +253,15 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
     if(!this.longpress) {
         var panelClass = "MyApp.view.PanelLabores";
         var newPan = Ext.create(panelClass);
-        newPan.cod_lote_actividad = record.data.codigo;
-        newPan.cod_lote = record.data.cod_lote;
-        newPan.nombre_lote_actividad = record.data.nombre;
-        newPan.cod_periodo = record.data.cod_periodo;
+        newPan.parent = record.data;
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);
-        //MyApp.main.getLayout().next();
     }
     this.longpress = false;
   },
 
   onGridpanelAfterRender: function(component, eOpts) {
-    this.setTitle("Lotes dedicados a " + component.pivot_nombre);
+    this.setTitle("Lotes dedicados a " + component.parent.nombre);
   }
 
 });

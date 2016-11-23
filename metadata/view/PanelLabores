@@ -140,12 +140,12 @@
                         "fn": "onGridItemClick",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.PanelLotes\";",
+                            "    /*var panelClass = \"MyApp.view.PanelLaboresForm\";",
                             "    var newPan = Ext.create(panelClass);",
-                            "    newPan.est_code = record.data.codigo;",
+                            "    newPan.parent = record.data;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);*/",
-                            "    console.log('just a clic');",
+                            "    console.log('Should bring the user to a single-labor view');",
                             "}",
                             "this.longpress = false;"
                         ],
@@ -180,8 +180,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
-                        "hidden": true,
-                        "text": "ID"
+                        "text": "ID",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn26",
                     "designerId": "75e3693b-e4b3-4bdb-9e7e-d4747eab79a7"
@@ -227,6 +227,7 @@
                     "userConfig": {
                         "dataIndex": "fecha",
                         "format": "m/j/Y",
+                        "hidden": true,
                         "text": "Fecha"
                     },
                     "name": "MyDateColumn",
@@ -242,7 +243,8 @@
                     "userConfig": {
                         "dataIndex": "cod_lote_actividad",
                         "format": "00",
-                        "text": "Cod Lote Actividad"
+                        "text": "Cod Lote Actividad",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn28",
                     "designerId": "8762b678-135a-4be4-82a0-ed34d9bd32f9"
@@ -257,7 +259,8 @@
                     "userConfig": {
                         "dataIndex": "cod_lote",
                         "format": "00",
-                        "text": "Cod Lote"
+                        "text": "Cod Lote",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn29",
                     "designerId": "ce237ae4-3fec-49b5-8274-b1a4e6ba1751"
@@ -272,6 +275,7 @@
                     "userConfig": {
                         "dataIndex": "cod_area",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Area"
                     },
                     "name": "MyNumberColumn30",
@@ -287,7 +291,8 @@
                     "userConfig": {
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
-                        "text": "Cod Establecimiento"
+                        "text": "Cod Establecimiento",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn31",
                     "designerId": "a72188db-fee2-4087-aa69-61cedb73e6bd"
@@ -302,6 +307,7 @@
                     "userConfig": {
                         "dataIndex": "cod_periodo",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Periodo"
                     },
                     "name": "MyNumberColumn32",
@@ -317,6 +323,7 @@
                     "userConfig": {
                         "dataIndex": "cod_tarea",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Tarea"
                     },
                     "name": "MyNumberColumn33",
@@ -331,6 +338,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "cantidad",
+                        "hidden": true,
                         "text": "Cantidad"
                     },
                     "name": "MyColumn11",
@@ -345,6 +353,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
+                        "hidden": true,
                         "text": "Precio"
                     },
                     "name": "MyColumn12",
@@ -359,6 +368,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "propia",
+                        "hidden": true,
                         "text": "Propia"
                     },
                     "name": "MyColumn13",
@@ -374,6 +384,7 @@
                     "userConfig": {
                         "dataIndex": "cod_contratista",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Contratista"
                     },
                     "name": "MyNumberColumn34",
@@ -396,9 +407,7 @@
                     "this.form_name  = 'MyApp.view.Labores';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "// f_crud.cod_lote_actividad = component.cod_lote_actividad;",
-                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.cod_lote_actividad);",
-                    ""
+                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -620,7 +629,7 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Labores en  \" + component.nombre_lote_actividad);"
+                    "this.setTitle(\"Labores en  \" + component.parent.nombre);"
                 ],
                 "name": "afterrender",
                 "scope": "me"

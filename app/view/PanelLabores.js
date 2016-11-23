@@ -69,7 +69,7 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          width: '20%',
           dataIndex: 'id',
           text: 'ID'
         },
@@ -88,63 +88,74 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'datecolumn',
+          hidden: true,
           dataIndex: 'fecha',
           text: 'Fecha',
           format: 'm/j/Y'
         },
         {
           xtype: 'numbercolumn',
+          width: '20%',
           dataIndex: 'cod_lote_actividad',
           text: 'Cod Lote Actividad',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          width: '20%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_area',
           text: 'Cod Area',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          width: '20%',
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_periodo',
           text: 'Cod Periodo',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_tarea',
           text: 'Cod Tarea',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'precio',
           text: 'Precio'
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'propia',
           text: 'Propia'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_contratista',
           text: 'Cod Contratista',
           format: '00'
@@ -271,12 +282,12 @@ Ext.define('MyApp.view.PanelLabores', {
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.PanelLotes";
+        /*var panelClass = "MyApp.view.PanelLaboresForm";
         var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
+        newPan.parent = record.data;
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);*/
-        console.log('just a clic');
+        console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
   },
@@ -287,13 +298,11 @@ Ext.define('MyApp.view.PanelLabores', {
     this.form_name  = 'MyApp.view.Labores';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    // f_crud.cod_lote_actividad = component.cod_lote_actividad;
-    f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.cod_lote_actividad);
-
+    f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {
-    this.setTitle("Labores en  " + component.nombre_lote_actividad);
+    this.setTitle("Labores en  " + component.parent.nombre);
   }
 
 });
