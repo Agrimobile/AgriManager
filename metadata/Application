@@ -36,7 +36,11 @@
             "PanelAgregarLotes",
             "Lotes_ActividadesForm",
             "PanelLabores",
-            "LaboresForm"
+            "LaboresForm",
+            "VPDebug",
+            "Pan1",
+            "Pan3",
+            "Pan2"
         ]
     },
     "name": "Application",

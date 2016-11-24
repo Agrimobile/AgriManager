@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "pan2",
+        "designer|userClassName": "Pan1ViewModel2"
+    },
+    "name": "Pan1ViewModel2",
+    "designerId": "c4a71235-4691-48d2-a5bb-a9eb7b790ac7"
+}

@@ -6,12 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|align": "stretch",
-        "designer|initialView": true,
         "designer|userAlias": "maincontainer",
         "designer|userClassName": "MainContainer",
         "flex": 1,
-        "layout": "vbox"
+        "layout": "card"
     },
     "name": "MyViewport",
     "designerId": "8bf667af-506e-4b4d-9b3d-4fab35c22889",
@@ -29,7 +27,6 @@
                 "flex": null,
                 "header": false,
                 "layout": "card",
-                "layout|flex": 1,
                 "title": "MainPanel"
             },
             "name": "MyPanel",
@@ -140,6 +137,24 @@
                     "designerId": "3ce50405-423e-4349-bb2c-15039c4b82dc"
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportRender",
+                "implHandler": [
+                    "MyApp.vp = component;"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onViewportRender",
+            "designerId": "034d5935-d1a6-492a-9831-bcdfce4d739f"
         }
     ]
 }

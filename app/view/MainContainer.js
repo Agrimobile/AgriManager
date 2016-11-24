@@ -27,16 +27,12 @@ Ext.define('MyApp.view.MainContainer', {
     type: 'maincontainer'
   },
   flex: 1,
+  layout: 'card',
   defaultListenerScope: true,
 
-  layout: {
-    type: 'vbox',
-    align: 'stretch'
-  },
   items: [
     {
       xtype: 'panel',
-      flex: 1,
       layout: 'card',
       header: false,
       title: 'MainPanel',
@@ -61,6 +57,9 @@ Ext.define('MyApp.view.MainContainer', {
       }
     }
   ],
+  listeners: {
+    render: 'onViewportRender'
+  },
 
   onViewItemClick: function(dataview, record, item, index, e, eOpts) {
     var createPanel = function(recordText) {
@@ -90,6 +89,10 @@ Ext.define('MyApp.view.MainContainer', {
   onPanelRender: function(component, eOpts) {
     MyApp.main = component;
     MyApp.archivo_base = 'AgriManager';
+  },
+
+  onViewportRender: function(component, eOpts) {
+    MyApp.vp = component;
   }
 
 });

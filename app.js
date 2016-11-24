@@ -49,12 +49,16 @@ Ext.application({
     'PanelAgregarLotes',
     'Lotes_ActividadesForm',
     'PanelLabores',
-    'LaboresForm'
+    'LaboresForm',
+    'VPDebug',
+    'Pan1',
+    'Pan3',
+    'Pan2'
   ],
   name: 'MyApp',
 
   launch: function() {
-    Ext.create('MyApp.view.MainContainer');
+    Ext.create('MyApp.view.VPDebug');
   }
 
 });
