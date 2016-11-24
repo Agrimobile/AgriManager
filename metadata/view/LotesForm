@@ -135,21 +135,6 @@
             "designerId": "0e3047c6-6d3a-4989-8bbd-f530868385c8"
         },
         {
-            "type": "Ext.form.field.Number",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fieldLabel": "ID",
-                "layout|flex": null,
-                "name": "id"
-            },
-            "name": "MyNumberField2",
-            "designerId": "b4094304-ea51-4bab-bf04-07a0361296c0"
-        },
-        {
             "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",

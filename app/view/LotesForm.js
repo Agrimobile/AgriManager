@@ -76,11 +76,6 @@ Ext.define('MyApp.view.LotesForm', {
       name: 'codigo'
     },
     {
-      xtype: 'numberfield',
-      fieldLabel: 'ID',
-      name: 'id'
-    },
-    {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
       name: 'nombre'
