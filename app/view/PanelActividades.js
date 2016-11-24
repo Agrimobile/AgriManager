@@ -215,8 +215,6 @@ Ext.define('MyApp.view.PanelActividades', {
         var panelClass = "MyApp.view.PanelLotes_actividades";
         var newPan = Ext.create(panelClass);
         newPan.parent = record.data;
-        /*newPan.pivot_code = record.data.codigo;
-        newPan.pivot_nombre = record.data.nombre;*/
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);
     }

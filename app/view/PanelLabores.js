@@ -189,8 +189,7 @@ Ext.define('MyApp.view.PanelLabores', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                //f_crud.form_open(this.up("#gridpanel"),'ADD');
-                console.log('new labor! - just a dummy message');
+                f_crud.form_open(this.up("#gridpanel"),'ADD');
               },
               cls: '',
               iconCls: 'x-fa fa-plus',
@@ -212,8 +211,7 @@ Ext.define('MyApp.view.PanelLabores', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                //f_crud.form_open(this.up('#gridpanel'),'EDIT');
-                console.log('edit labor! - just a dummy message');
+                f_crud.form_open(this.up('#gridpanel'),'EDIT');
               },
               cls: '',
               margin: '0 0 0 10',
@@ -244,7 +242,8 @@ Ext.define('MyApp.view.PanelLabores', {
                 };
                 f_crud.grid_check_delete(gridPanel,checkConfig);
                 */
-                console.log('delete labor! - just a dummy message');
+                var gridPanel = this.up('#gridpanel');
+                f_crud.grid_delete(gridPanel);
               },
               cls: '',
               margin: '0 0 0 10',
@@ -295,7 +294,7 @@ Ext.define('MyApp.view.PanelLabores', {
   onPanelRender: function(component, eOpts) {
     this.store_name = 'Labores';
     this.model_name = 'MyApp.model.Labores';
-    this.form_name  = 'MyApp.view.Labores';
+    this.form_name  = 'MyApp.view.LaboresForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
     f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);

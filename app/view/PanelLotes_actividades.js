@@ -203,7 +203,14 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('#gridpanel');
-                f_crud.grid_delete(gridPanel);
+                var checkConfig = {
+                  table: 'Labores',
+                  field: 'cod_lote_actividad',
+                  msgTitle: 'Actividad con labores asignadas',
+                  message: 'No puede borrar una actividad con labores asignadas, <br> borre esas labores primero'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
+
               },
               cls: '',
               margin: '0 0 0 10',

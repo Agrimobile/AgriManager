@@ -8,18 +8,18 @@
     "userConfig": {
         "bodyPadding": 10,
         "container|align": "stretch",
-        "designer|userAlias": "lotesform",
-        "designer|userClassName": "LotesForm",
+        "designer|userAlias": "laboresform",
+        "designer|userClassName": "LaboresForm",
         "height": null,
         "itemId": "form",
         "layout": "vbox",
         "title": "Lote",
         "width": null
     },
-    "name": "MyForm3",
-    "designerId": "4fa39d2f-e014-4acb-b7f3-9d9100f4eaec",
-    "viewControllerInstanceId": "774ce9f5-d9e4-46fb-91a2-75ee0c7871c0",
-    "viewModelInstanceId": "194943ae-ad3a-4ce3-9e57-1bf90560075c",
+    "name": "LotesForm1",
+    "designerId": "453c1b30-fd97-44c1-ae24-fc416a960b30",
+    "viewControllerInstanceId": "75280da8-1cc2-4707-9747-6b9aa27a2cbc",
+    "viewModelInstanceId": "e80f7944-bd48-4244-a91e-1f8c037891cc",
     "cn": [
         {
             "type": "Ext.container.Container",
@@ -36,7 +36,7 @@
                 "layout|flex": null
             },
             "name": "MyContainer1",
-            "designerId": "b7256583-2347-4f39-8e0c-0f4ffcc1964d",
+            "designerId": "76b6852b-a94f-412c-ba8d-bf25e8caae75",
             "cn": [
                 {
                     "type": "Ext.button.Button",
@@ -53,7 +53,7 @@
                         "text": "Aceptar"
                     },
                     "name": "MyButton6",
-                    "designerId": "3322062e-f2fd-43f3-9a29-41f44306ec6a",
+                    "designerId": "0db42d38-3b3d-4cc2-abac-852ebbe2ff39",
                     "cn": [
                         {
                             "type": "fixedfunction",
@@ -69,13 +69,27 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var lotesForm = this.up('#form');",
-                                    "lotesForm.form._record.data.cod_establecimiento = lotesForm.parent.codigo;",
-                                    "f_crud.save_form(lotesForm);"
+                                    "var laboresForm = this.up('#form');",
+                                    "laboresForm.form._record.data.cod_lote_actividad = laboresForm.parent.codigo;",
+                                    "laboresForm.form._record.data.cod_lote = laboresForm.parent.cod_lote;",
+                                    "laboresForm.form._record.data.cod_periodo = laboresForm.parent.cod_periodo;",
+                                    "var query = \"select cod_establecimiento from Lotes where codigo = \" + laboresForm.parent.cod_lote;",
+                                    "console.log(\"Query statement: \" + query);",
+                                    "f_crud.sql_select(query, function(resultSet){",
+                                    "\tif(resultSet === -1 || !Array.isArray(resultSet)) {",
+                                    "  \tconsole.log(\"Query statement: \" + query);",
+                                    "  \tthrow \"Database error: Check your sql statement or your WebSql instance\";",
+                                    "\t}",
+                                    "  else {",
+                                    "    laboresForm.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;",
+                                    "    //console.log(laboresForm);",
+                                    "    f_crud.save_form(laboresForm);",
+                                    "  }",
+                                    "});"
                                 ]
                             },
                             "name": "handler",
-                            "designerId": "f02d3e1b-6610-4087-bf01-c92d08493b14"
+                            "designerId": "3b6f3ec4-b372-4402-bd37-1e4186f31dcb"
                         }
                     ]
                 },
@@ -93,7 +107,7 @@
                         "text": "Cancelar"
                     },
                     "name": "MyButton7",
-                    "designerId": "19110df4-4063-4bd4-91d3-9bb2675e556e",
+                    "designerId": "f90646ca-1c2b-4b87-963c-2782cacdce23",
                     "cn": [
                         {
                             "type": "fixedfunction",
@@ -113,7 +127,7 @@
                                 ]
                             },
                             "name": "handler",
-                            "designerId": "3c399979-7ebb-4fcd-a39a-e314d6613fb9"
+                            "designerId": "70b649be-9d6d-4a21-a36d-9c41d926d8c4"
                         }
                     ]
                 }
@@ -127,42 +141,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "Codigo",
-                "layout|flex": null,
-                "name": "codigo"
-            },
-            "name": "MyNumberField1",
-            "designerId": "0e3047c6-6d3a-4989-8bbd-f530868385c8"
-        },
-        {
-            "type": "Ext.form.field.Number",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "fieldLabel": "ID",
                 "layout|flex": null,
                 "name": "id"
             },
-            "name": "MyNumberField2",
-            "designerId": "b4094304-ea51-4bab-bf04-07a0361296c0"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fieldLabel": "Nombre",
-                "layout|flex": null,
-                "name": "nombre"
-            },
-            "name": "MyTextField1",
-            "designerId": "0f39f90e-5ca4-4ad9-9d9b-096c738b27ec"
+            "name": "MyNumberField1",
+            "designerId": "38e63333-abef-4c24-af71-9cec51a0b9d7"
         }
     ]
 }

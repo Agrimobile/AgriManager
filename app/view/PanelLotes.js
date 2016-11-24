@@ -238,7 +238,6 @@ Ext.define('MyApp.view.PanelLotes', {
     this.form_name  = 'MyApp.view.LotesForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.est_code = component.parent.codigo;
     f_crud.load_store(this.store_name, 'cod_establecimiento = ' + component.parent.codigo);
   },
 
