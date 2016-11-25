@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tareasform",
+        "designer|userClassName": "LotesFormViewModel3"
+    },
+    "name": "LotesFormViewModel3",
+    "designerId": "a5be5582-7363-474e-8310-70e79a8621c4"
+}

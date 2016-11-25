@@ -12,7 +12,8 @@
             "Lotes",
             "Secuencia",
             "Lotes_actividades",
-            "Labores"
+            "Labores",
+            "Tareas"
         ],
         "name": "MyApp",
         "stores": [
@@ -22,7 +23,8 @@
             "Lotes",
             "Secuencia",
             "Lotes_actividades",
-            "Labores"
+            "Labores",
+            "Tareas"
         ],
         "views": [
             "MainContainer",
@@ -36,7 +38,9 @@
             "PanelAgregarLotes",
             "Lotes_ActividadesForm",
             "PanelLabores",
-            "LaboresForm"
+            "LaboresForm",
+            "PanelTareas",
+            "TareasForm"
         ]
     },
     "name": "Application",

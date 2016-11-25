@@ -1,0 +1,197 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "tareasform",
+        "designer|userClassName": "TareasForm",
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "title": "Lote",
+        "width": null
+    },
+    "name": "LotesForm2",
+    "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
+    "viewControllerInstanceId": "08264892-f640-4121-8bb3-93c0a4780258",
+    "viewModelInstanceId": "a5be5582-7363-474e-8310-70e79a8621c4",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "dock": "bottom",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "name": "MyContainer1",
+            "designerId": "7310ee82-c1ac-452b-b34f-adcc58ee5ae3",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-check",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": 10,
+                        "text": "Aceptar"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "50e97c76-0402-48ae-a84b-d232d65d6047",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var lotesForm = this.up('#form');",
+                                    "f_crud.save_form(lotesForm);"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "dca5265c-6840-4df5-bb62-a7687154308c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-remove",
+                        "layout|flex": null,
+                        "margin": 10,
+                        "text": "Cancelar"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "3312cd46-ce5b-4be8-802f-1b6797281505",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.close_form(this.up(\"#form\"));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "b14f6f67-d0d1-410e-b447-5ecb7cbf5c09"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
+                "name": "codigo"
+            },
+            "name": "MyNumberField1",
+            "designerId": "a30119ce-4686-4b77-b947-5f5ba4749ff5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Descripcion",
+                "layout|flex": null,
+                "name": "descripcion"
+            },
+            "name": "MyTextField1",
+            "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Tipo",
+                "layout|flex": null,
+                "name": "tipo"
+            },
+            "name": "MyTextField2",
+            "designerId": "5f73ef38-e590-41ee-83c3-74fdf75cc230"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Unidad de medida",
+                "layout|flex": null,
+                "name": "um"
+            },
+            "name": "MyTextField3",
+            "designerId": "1a1282f3-b867-44db-a1dc-a4c457905e94"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Precio",
+                "layout|flex": null,
+                "name": "precio"
+            },
+            "name": "MyNumberField3",
+            "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tareas"
+    },
+    "name": "MyModel",
+    "designerId": "1cecb3ee-236a-4994-b076-e2d2a4e867fa",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "estado_registro"
+            },
+            "name": "MyString12",
+            "designerId": "da820118-9311-4ce6-b33f-caeb971e4805"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger28",
+            "designerId": "8b813eff-9fea-41f4-8c61-2d6a5d7a54af"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "uid"
+            },
+            "name": "MyInteger29",
+            "designerId": "3adc587b-c0d6-4fba-917f-3389d806712a"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "codigo"
+            },
+            "name": "MyInteger30",
+            "designerId": "49c98c8f-eeac-4b66-abd4-4a88cf131114"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "descripcion",
+                "sqlAlias": "descrip"
+            },
+            "name": "MyString15",
+            "designerId": "dd2114c3-e7ca-4a48-afdc-ef0da0f90f69",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sqlAlias",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "precio",
+                "sqlAlias": "valor"
+            },
+            "name": "MyNumber3",
+            "designerId": "f81094e5-c5b1-453b-9a83-a1241e97d7b8",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sqlAlias",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tipo"
+            },
+            "name": "MyString13",
+            "designerId": "32ceeb84-52eb-4692-81ec-13f3b1e6a151"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "um",
+                "sqlAlias": "uni_medida"
+            },
+            "name": "MyString14",
+            "designerId": "a60a722d-2ef2-44fe-a303-ac61caf32d3f",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sqlAlias",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

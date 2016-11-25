@@ -62,20 +62,20 @@ Ext.define('MyApp.view.MainContainer', {
   },
 
   onViewItemClick: function(dataview, record, item, index, e, eOpts) {
-    var createPanel = function(recordText) {
-        var panelClass = "MyApp.view.Panel" + recordText;
-        if(Ext.ClassManager.get(panelClass)) {
-            var newPan = Ext.create(panelClass);
+    var createPanel = function(panelClass) {
+        var cardClass = "MyApp.view." + panelClass;
+        if(Ext.ClassManager.get(cardClass)) {
+            var newPan = Ext.create(cardClass);
             MyApp.main.add(newPan);
             MyApp.main.getLayout().next();
         }
         else {
-            var errorMsg = "Error: Panel " + recordText + " does not exist";
+            var errorMsg = "Error: Panel " + panelClass + " does not exist";
             throw errorMsg;
         }
     };
-    var recordText = record.get('text');
-    createPanel(recordText);
+    var panelClass = record.get('panelClass');
+    createPanel(panelClass);
   },
 
   onTreepanelActivate: function(component, eOpts) {
