@@ -32,6 +32,7 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
   viewModel: {
     type: 'panelestablecimientos'
   },
+  cls: 'gridpanel',
   itemId: 'gridpanel',
   title: 'Establecimientos',
   titleAlign: 'center',
@@ -142,6 +143,7 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
               xtype: 'button',
               handler: function(button, e) {
                 f_crud.form_open(this.up("#gridpanel"),'ADD');
+                //console.log(this.up("[cls=gridpanel]"));
               },
               cls: '',
               iconCls: 'x-fa fa-plus',
@@ -242,8 +244,6 @@ Ext.define('MyApp.view.PanelEstablecimientos', {
     if(!this.longpress) {
         var panelClass = "MyApp.view.PanelLotes";
         var newPan = Ext.create(panelClass);
-        /*newPan.est_code = record.data.codigo;
-        newPan.est_nombre = record.data.nombre;*/
         newPan.parent = record.data;
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);

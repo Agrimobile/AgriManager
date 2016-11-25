@@ -7,6 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "closeToolText": null,
+        "cls": [
+            "gridpanel"
+        ],
         "designer|userAlias": "panelestablecimientos",
         "designer|userClassName": "PanelEstablecimientos",
         "height": null,
@@ -298,8 +301,6 @@
                             "if(!this.longpress) {",
                             "    var panelClass = \"MyApp.view.PanelLotes\";",
                             "    var newPan = Ext.create(panelClass);",
-                            "    /*newPan.est_code = record.data.codigo;",
-                            "    newPan.est_nombre = record.data.nombre;*/",
                             "    newPan.parent = record.data;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);",
@@ -379,7 +380,8 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
+                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');",
+                                            "//console.log(this.up(\"[cls=gridpanel]\"));"
                                         ]
                                     },
                                     "name": "handler",
