@@ -13,7 +13,7 @@
         "height": null,
         "itemId": "form",
         "layout": "vbox",
-        "title": "Lote",
+        "title": "Labor",
         "width": null
     },
     "name": "LotesForm1",
@@ -70,19 +70,18 @@
                                 "fn": "handler",
                                 "implHandler": [
                                     "var laboresForm = this.up('#form');",
+                                    "var tarea_cod = this.up('#form').down(\"#fieldTarea\").value;",
+                                    "var query = \"select cod_establecimiento from Lotes where codigo = \" + laboresForm.parent.cod_lote;",
                                     "laboresForm.form._record.data.cod_lote_actividad = laboresForm.parent.codigo;",
                                     "laboresForm.form._record.data.cod_lote = laboresForm.parent.cod_lote;",
                                     "laboresForm.form._record.data.cod_periodo = laboresForm.parent.cod_periodo;",
-                                    "var query = \"select cod_establecimiento from Lotes where codigo = \" + laboresForm.parent.cod_lote;",
-                                    "console.log(\"Query statement: \" + query);",
                                     "f_crud.sql_select(query, function(resultSet){",
-                                    "\tif(resultSet === -1 || !Array.isArray(resultSet)) {",
+                                    "  if(resultSet === -1 || !Array.isArray(resultSet)) {",
                                     "  \tconsole.log(\"Query statement: \" + query);",
                                     "  \tthrow \"Database error: Check your sql statement or your WebSql instance\";",
-                                    "\t}",
+                                    "  }",
                                     "  else {",
                                     "    laboresForm.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;",
-                                    "    //console.log(laboresForm);",
                                     "    f_crud.save_form(laboresForm);",
                                     "  }",
                                     "});"
@@ -147,6 +146,55 @@
             },
             "name": "MyNumberField1",
             "designerId": "38e63333-abef-4c24-af71-9cec51a0b9d7"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultListenerScope": true,
+                "displayField": "descripcion",
+                "fieldLabel": "Tarea",
+                "forceSelection": true,
+                "itemId": "fieldTarea",
+                "layout|flex": null,
+                "name": "cod_tarea",
+                "queryMode": "local",
+                "store": "Tareas",
+                "valueField": "codigo"
+            },
+            "name": "MyComboBox",
+            "designerId": "99707727-edd1-4edb-bdc3-6c3fb6059295"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nueva ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "66048c04-d7ac-41b6-ba1c-284e806bcdbb"
         }
     ]
 }

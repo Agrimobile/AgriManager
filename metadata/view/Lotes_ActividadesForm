@@ -147,6 +147,36 @@
             },
             "name": "MyTextField1",
             "designerId": "e84d9d81-94db-495c-9aa5-769a811330a3"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Desde",
+                "layout|flex": null,
+                "name": "desde"
+            },
+            "name": "MyDateField",
+            "designerId": "2f3d701b-2a88-4254-a326-4c9b6c5ed67f"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "hasta",
+                "layout|flex": null,
+                "name": "hasta"
+            },
+            "name": "MyDateField1",
+            "designerId": "f195f663-1aad-4f0d-9fdf-bbdb5fd2d72a"
         }
     ]
 }

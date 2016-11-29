@@ -116,7 +116,7 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'numbercolumn',
-          width: '20%',
+          hidden: true,
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'
@@ -130,7 +130,7 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          width: '20%',
           dataIndex: 'cod_tarea',
           text: 'Cod Tarea',
           format: '00'
@@ -298,6 +298,7 @@ Ext.define('MyApp.view.PanelLabores', {
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
     f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);
+    f_crud.load_store('Tareas');
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

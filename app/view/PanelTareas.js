@@ -79,11 +79,10 @@ Ext.define('MyApp.view.PanelTareas', {
           format: '00'
         },
         {
-          xtype: 'numbercolumn',
+          xtype: 'gridcolumn',
           width: '25%',
           dataIndex: 'descripcion',
-          text: 'Descripcion',
-          format: '00'
+          text: 'Descripcion'
         },
         {
           xtype: 'numbercolumn',
@@ -100,7 +99,6 @@ Ext.define('MyApp.view.PanelTareas', {
         },
         {
           xtype: 'gridcolumn',
-          hidden: true,
           dataIndex: 'tipo',
           text: 'Tipo'
         },

@@ -31,6 +31,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   itemId: 'form',
   bodyPadding: 10,
   title: 'Establecimiento',
+  defaultListenerScope: true,
 
   layout: {
     type: 'vbox',
@@ -80,6 +81,22 @@ Ext.define('MyApp.view.EstablecimientosForm', {
         }
       ]
     }
-  ]
+  ],
+  listeners: {
+    activate: 'onFormActivate'
+  },
+
+  onFormActivate: function(component, eOpts) {
+    var item = component.header.title.text;
+    if(component.action === 'ADD') {
+      component.setTitle('Nuevo ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  }
 
 });

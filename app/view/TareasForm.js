@@ -29,7 +29,8 @@ Ext.define('MyApp.view.TareasForm', {
   },
   itemId: 'form',
   bodyPadding: 10,
-  title: 'Lote',
+  title: 'Tarea',
+  defaultListenerScope: true,
 
   layout: {
     type: 'vbox',
@@ -94,6 +95,22 @@ Ext.define('MyApp.view.TareasForm', {
       fieldLabel: 'Precio',
       name: 'precio'
     }
-  ]
+  ],
+  listeners: {
+    activate: 'onFormActivate'
+  },
+
+  onFormActivate: function(component, eOpts) {
+    var item = component.header.title.text;
+    if(component.action === 'ADD') {
+      component.setTitle('Nueva ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  }
 
 });

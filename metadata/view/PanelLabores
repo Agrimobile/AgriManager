@@ -294,8 +294,9 @@
                     "userConfig": {
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Establecimiento",
-                        "width": "20%"
+                        "width": null
                     },
                     "name": "MyNumberColumn31",
                     "designerId": "a72188db-fee2-4087-aa69-61cedb73e6bd"
@@ -326,8 +327,8 @@
                     "userConfig": {
                         "dataIndex": "cod_tarea",
                         "format": "00",
-                        "hidden": true,
-                        "text": "Cod Tarea"
+                        "text": "Cod Tarea",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn33",
                     "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70"
@@ -410,7 +411,8 @@
                     "this.form_name  = 'MyApp.view.LaboresForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);"
+                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);",
+                    "f_crud.load_store('Tareas');"
                 ],
                 "name": "render",
                 "scope": "me"

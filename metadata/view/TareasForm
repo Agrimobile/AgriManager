@@ -13,7 +13,7 @@
         "height": null,
         "itemId": "form",
         "layout": "vbox",
-        "title": "Lote",
+        "title": "Tarea",
         "width": null
     },
     "name": "LotesForm2",
@@ -192,6 +192,33 @@
             },
             "name": "MyNumberField3",
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nueva ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "454f4d8b-3c59-46c4-a89a-55d994ef2ae4"
         }
     ]
 }

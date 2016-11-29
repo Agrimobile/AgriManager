@@ -21,7 +21,8 @@ Ext.define('MyApp.view.LaboresForm', {
     'MyApp.view.LotesFormViewModel2',
     'Ext.container.Container',
     'Ext.button.Button',
-    'Ext.form.field.Number'
+    'Ext.form.field.Number',
+    'Ext.form.field.ComboBox'
   ],
 
   viewModel: {
@@ -29,7 +30,8 @@ Ext.define('MyApp.view.LaboresForm', {
   },
   itemId: 'form',
   bodyPadding: 10,
-  title: 'Lote',
+  title: 'Labor',
+  defaultListenerScope: true,
 
   layout: {
     type: 'vbox',
@@ -49,11 +51,11 @@ Ext.define('MyApp.view.LaboresForm', {
           xtype: 'button',
           handler: function(button, e) {
             var laboresForm = this.up('#form');
+            var tarea_cod = this.up('#form').down("#fieldTarea").value;
+            var query = "select cod_establecimiento from Lotes where codigo = " + laboresForm.parent.cod_lote;
             laboresForm.form._record.data.cod_lote_actividad = laboresForm.parent.codigo;
             laboresForm.form._record.data.cod_lote = laboresForm.parent.cod_lote;
             laboresForm.form._record.data.cod_periodo = laboresForm.parent.cod_periodo;
-            var query = "select cod_establecimiento from Lotes where codigo = " + laboresForm.parent.cod_lote;
-            console.log("Query statement: " + query);
             f_crud.sql_select(query, function(resultSet){
               if(resultSet === -1 || !Array.isArray(resultSet)) {
                 console.log("Query statement: " + query);
@@ -61,7 +63,6 @@ Ext.define('MyApp.view.LaboresForm', {
               }
               else {
                 laboresForm.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;
-                //console.log(laboresForm);
                 f_crud.save_form(laboresForm);
               }
             });
@@ -88,7 +89,35 @@ Ext.define('MyApp.view.LaboresForm', {
       xtype: 'numberfield',
       fieldLabel: 'ID',
       name: 'id'
+    },
+    {
+      xtype: 'combobox',
+      defaultListenerScope: true,
+      itemId: 'fieldTarea',
+      fieldLabel: 'Tarea',
+      name: 'cod_tarea',
+      displayField: 'descripcion',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'Tareas',
+      valueField: 'codigo'
     }
-  ]
+  ],
+  listeners: {
+    activate: 'onFormActivate'
+  },
+
+  onFormActivate: function(component, eOpts) {
+    var item = component.header.title.text;
+    if(component.action === 'ADD') {
+      component.setTitle('Nueva ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  }
 
 });

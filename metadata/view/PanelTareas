@@ -205,7 +205,7 @@
                     "designerId": "610534ee-d403-4df1-9193-5da3b04735c9"
                 },
                 {
-                    "type": "Ext.grid.column.Number",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -213,11 +213,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "descripcion",
-                        "format": "00",
                         "text": "Descripcion",
                         "width": "25%"
                     },
-                    "name": "MyNumberColumn38",
+                    "name": "MyColumn17",
                     "designerId": "15c48ee5-d6c7-480d-8d33-54bc680fda0f"
                 },
                 {
@@ -260,7 +259,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "tipo",
-                        "hidden": true,
                         "text": "Tipo"
                     },
                     "name": "MyColumn15",

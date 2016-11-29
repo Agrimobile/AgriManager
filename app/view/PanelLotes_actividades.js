@@ -180,7 +180,7 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
               handler: function(button, e) {
                 var lotes_actividades_grid = this.up('[cls=gridpanel]');
                 lotes_actividades_grid.form_name = 'MyApp.view.Lotes_ActividadesForm';
-                f_crud.form_open(grid,'EDIT');
+                f_crud.form_open(lotes_actividades_grid,'EDIT');
               },
               cls: '',
               margin: '0 0 0 10',
