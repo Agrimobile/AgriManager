@@ -8,18 +8,18 @@
     "userConfig": {
         "bodyPadding": 10,
         "container|align": "stretch",
-        "designer|userAlias": "lotes_actividadesform",
-        "designer|userClassName": "Lotes_ActividadesForm",
+        "designer|userAlias": "tareasform",
+        "designer|userClassName": "TareasForm",
         "height": null,
         "itemId": "form",
         "layout": "vbox",
-        "title": "Actividad en un Lote",
+        "title": "Tarea",
         "width": null
     },
-    "name": "LotesForm1",
-    "designerId": "d5645b8a-c62e-403c-8f26-6506faf86778",
-    "viewControllerInstanceId": "f0cf0089-ffa3-4055-9eb1-6cb23f6437ac",
-    "viewModelInstanceId": "a51272a7-7dec-4250-82d1-366969d6346f",
+    "name": "LotesForm2",
+    "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
+    "viewControllerInstanceId": "08264892-f640-4121-8bb3-93c0a4780258",
+    "viewModelInstanceId": "a5be5582-7363-474e-8310-70e79a8621c4",
     "cn": [
         {
             "type": "Ext.container.Container",
@@ -36,7 +36,7 @@
                 "layout|flex": null
             },
             "name": "MyContainer1",
-            "designerId": "3f8d54bc-81ef-4ec3-be22-3db31fe42d24",
+            "designerId": "7310ee82-c1ac-452b-b34f-adcc58ee5ae3",
             "cn": [
                 {
                     "type": "Ext.button.Button",
@@ -53,7 +53,7 @@
                         "text": "Aceptar"
                     },
                     "name": "MyButton6",
-                    "designerId": "15533194-bcb5-4019-8d46-f0ee2fdd4dd3",
+                    "designerId": "50e97c76-0402-48ae-a84b-d232d65d6047",
                     "cn": [
                         {
                             "type": "fixedfunction",
@@ -69,12 +69,12 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var lotes_actividadesForm = this.up('#form');",
-                                    "f_crud.save_form(lotes_actividadesForm);"
+                                    "var lotesForm = this.up('#form');",
+                                    "f_crud.save_form(lotesForm);"
                                 ]
                             },
                             "name": "handler",
-                            "designerId": "15f394cc-f56e-4743-9cc7-abda4b1d4fa1"
+                            "designerId": "dca5265c-6840-4df5-bb62-a7687154308c"
                         }
                     ]
                 },
@@ -92,7 +92,7 @@
                         "text": "Cancelar"
                     },
                     "name": "MyButton7",
-                    "designerId": "b55f6b30-1585-48eb-9cc9-f25c5faedd67",
+                    "designerId": "3312cd46-ce5b-4be8-802f-1b6797281505",
                     "cn": [
                         {
                             "type": "fixedfunction",
@@ -112,7 +112,7 @@
                                 ]
                             },
                             "name": "handler",
-                            "designerId": "e8893957-7449-4b7e-843c-b94b36b28345"
+                            "designerId": "b14f6f67-d0d1-410e-b447-5ecb7cbf5c09"
                         }
                     ]
                 }
@@ -131,7 +131,7 @@
                 "name": "codigo"
             },
             "name": "MyNumberField1",
-            "designerId": "0a4c20c2-5b87-49e5-b796-8c8ead830a08"
+            "designerId": "a30119ce-4686-4b77-b947-5f5ba4749ff5"
         },
         {
             "type": "Ext.form.field.Text",
@@ -141,42 +141,84 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Descripcion",
                 "layout|flex": null,
-                "name": "nombre"
+                "name": "descripcion"
             },
             "name": "MyTextField1",
-            "designerId": "e84d9d81-94db-495c-9aa5-769a811330a3"
+            "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
         },
         {
-            "type": "Ext.form.field.Date",
+            "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "Desde",
+                "fieldLabel": "Tipo",
                 "layout|flex": null,
-                "name": "desde"
+                "name": "tipo"
             },
-            "name": "MyDateField",
-            "designerId": "2f3d701b-2a88-4254-a326-4c9b6c5ed67f"
+            "name": "MyTextField2",
+            "designerId": "5f73ef38-e590-41ee-83c3-74fdf75cc230"
         },
         {
-            "type": "Ext.form.field.Date",
+            "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "hasta",
+                "fieldLabel": "Unidad de medida",
                 "layout|flex": null,
-                "name": "hasta"
+                "name": "um"
             },
-            "name": "MyDateField1",
-            "designerId": "f195f663-1aad-4f0d-9fdf-bbdb5fd2d72a"
+            "name": "MyTextField3",
+            "designerId": "1a1282f3-b867-44db-a1dc-a4c457905e94"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Precio",
+                "layout|flex": null,
+                "name": "precio"
+            },
+            "name": "MyNumberField3",
+            "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nueva ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "454f4d8b-3c59-46c4-a89a-55d994ef2ae4"
         }
     ]
 }

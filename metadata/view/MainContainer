@@ -6,12 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|align": "stretch",
         "designer|initialView": true,
         "designer|userAlias": "maincontainer",
         "designer|userClassName": "MainContainer",
         "flex": 1,
-        "layout": "vbox"
+        "layout": "card"
     },
     "name": "MyViewport",
     "designerId": "8bf667af-506e-4b4d-9b3d-4fab35c22889",
@@ -29,7 +28,6 @@
                 "flex": null,
                 "header": false,
                 "layout": "card",
-                "layout|flex": 1,
                 "title": "MainPanel"
             },
             "name": "MyPanel",
@@ -73,20 +71,20 @@
                                     "userConfig": {
                                         "fn": "onViewItemClick",
                                         "implHandler": [
-                                            "var createPanel = function(recordText) {",
-                                            "    var panelClass = \"MyApp.view.Panel\" + recordText;",
-                                            "    if(Ext.ClassManager.get(panelClass)) {",
-                                            "        var newPan = Ext.create(panelClass);",
+                                            "var createPanel = function(panelClass) {",
+                                            "    var cardClass = \"MyApp.view.\" + panelClass;",
+                                            "    if(Ext.ClassManager.get(cardClass)) {",
+                                            "        var newPan = Ext.create(cardClass);",
                                             "        MyApp.main.add(newPan);",
                                             "        MyApp.main.getLayout().next();",
                                             "    }",
                                             "    else {",
-                                            "        var errorMsg = \"Error: Panel \" + recordText + \" does not exist\";",
+                                            "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
                                             "        throw errorMsg;",
                                             "    }",
                                             "};",
-                                            "var recordText = record.get('text');",
-                                            "createPanel(recordText);"
+                                            "var panelClass = record.get('panelClass');",
+                                            "createPanel(panelClass);"
                                         ],
                                         "name": "itemclick",
                                         "scope": "me"
@@ -140,6 +138,24 @@
                     "designerId": "3ce50405-423e-4349-bb2c-15039c4b82dc"
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportRender",
+                "implHandler": [
+                    "MyApp.vp = component;"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onViewportRender",
+            "designerId": "034d5935-d1a6-492a-9831-bcdfce4d739f"
         }
     ]
 }

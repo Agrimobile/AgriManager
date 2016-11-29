@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "closeToolText": null,
+        "cls": [
+            "gridpanel"
+        ],
         "designer|userAlias": "panelestablecimientos",
         "designer|userClassName": "PanelEstablecimientos",
         "height": null,
         "heythere": null,
-        "itemId": "gridpanel",
+        "itemId": null,
         "title": "Establecimientos",
         "titleAlign": "center",
         "width": null
@@ -298,8 +301,6 @@
                             "if(!this.longpress) {",
                             "    var panelClass = \"MyApp.view.PanelLotes\";",
                             "    var newPan = Ext.create(panelClass);",
-                            "    /*newPan.est_code = record.data.codigo;",
-                            "    newPan.est_nombre = record.data.nombre;*/",
                             "    newPan.parent = record.data;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);",
@@ -379,7 +380,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
+                                            "f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD');"
                                         ]
                                     },
                                     "name": "handler",
@@ -437,7 +438,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
+                                            "f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');"
                                         ]
                                     },
                                     "name": "handler",
@@ -495,7 +496,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "var gridPanel = this.up('#gridpanel');",
+                                            "var gridPanel = this.up('[cls=gridpanel]');",
                                             "var checkConfig = {",
                                             "    table: 'Lotes',",
                                             "    field: 'cod_establecimiento',",

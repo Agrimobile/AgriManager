@@ -21,7 +21,8 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
     'MyApp.view.LotesFormViewModel1',
     'Ext.container.Container',
     'Ext.button.Button',
-    'Ext.form.field.Number'
+    'Ext.form.field.Number',
+    'Ext.form.field.Date'
   ],
 
   viewModel: {
@@ -78,6 +79,16 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
       name: 'nombre'
+    },
+    {
+      xtype: 'datefield',
+      fieldLabel: 'Desde',
+      name: 'desde'
+    },
+    {
+      xtype: 'datefield',
+      fieldLabel: 'hasta',
+      name: 'hasta'
     }
   ]
 

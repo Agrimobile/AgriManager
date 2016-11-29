@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "paneltareas",
+        "designer|userClassName": "PanelLotesViewController2"
+    },
+    "name": "PanelLotesViewController2",
+    "designerId": "68e4c265-cd9d-44ab-affd-c90a52dcab69"
+}

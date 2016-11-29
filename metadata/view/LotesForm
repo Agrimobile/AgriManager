@@ -135,21 +135,6 @@
             "designerId": "0e3047c6-6d3a-4989-8bbd-f530868385c8"
         },
         {
-            "type": "Ext.form.field.Number",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fieldLabel": "ID",
-                "layout|flex": null,
-                "name": "id"
-            },
-            "name": "MyNumberField2",
-            "designerId": "b4094304-ea51-4bab-bf04-07a0361296c0"
-        },
-        {
             "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
@@ -163,6 +148,33 @@
             },
             "name": "MyTextField1",
             "designerId": "0f39f90e-5ca4-4ad9-9d9b-096c738b27ec"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nuevo ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "f20e68af-c9b1-44b9-bcf0-856b07c8892a"
         }
     ]
 }

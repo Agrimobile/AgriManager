@@ -27,13 +27,20 @@ Ext.define('MyApp.store.Menu', {
           {
             text: 'Establecimientos',
             leaf: true,
-            iconCls: 'x-fa fa-industry'
+            iconCls: 'x-fa fa-industry',
+            panelClass: 'PanelEstablecimientos'
           },
-          //{ text: 'Lotes', leaf: true, iconCls: 'x-fa fa-leaf' },
           {
             text: 'Actividades',
             leaf: true,
-            iconCls: 'x-fa fa-check-square-o'
+            iconCls: 'x-fa fa-pagelines',
+            panelClass: 'PanelActividades'
+          },
+          {
+            text: 'Tareas',
+            leaf: true,
+            iconCls: 'x-fa fa-check-square-o',
+            panelClass: 'PanelTareas'
           }
         ]
       }

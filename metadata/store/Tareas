@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tareas",
+        "model": "Tareas",
+        "storeId": "Tareas"
+    },
+    "name": "Lotes2",
+    "designerId": "c16feb58-bae9-49d6-90d6-b1abf39e5adc",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "622d1e21-b2ed-4793-a53e-47f7860452d4"
+        }
+    ]
+}

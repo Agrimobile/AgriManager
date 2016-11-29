@@ -26,7 +26,8 @@ Ext.application({
     'Lotes',
     'Secuencia',
     'Lotes_actividades',
-    'Labores'
+    'Labores',
+    'Tareas'
   ],
   stores: [
     'Menu',
@@ -35,7 +36,8 @@ Ext.application({
     'Lotes',
     'Secuencia',
     'Lotes_actividades',
-    'Labores'
+    'Labores',
+    'Tareas'
   ],
   views: [
     'MainContainer',
@@ -49,7 +51,9 @@ Ext.application({
     'PanelAgregarLotes',
     'Lotes_ActividadesForm',
     'PanelLabores',
-    'LaboresForm'
+    'LaboresForm',
+    'PanelTareas',
+    'TareasForm'
   ],
   name: 'MyApp',
 

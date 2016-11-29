@@ -9,19 +9,19 @@
         "cls": [
             "gridpanel"
         ],
-        "designer|userAlias": "panellabores",
-        "designer|userClassName": "PanelLabores",
+        "designer|userAlias": "paneltareas",
+        "designer|userClassName": "PanelTareas",
         "flex": 1,
         "height": null,
         "itemId": null,
-        "title": "Labores",
+        "title": "Lotes",
         "titleAlign": "center",
         "width": null
     },
-    "name": "PanelLotes1",
-    "designerId": "af5af80e-d104-4365-90bc-605778956738",
-    "viewControllerInstanceId": "df2ebb8e-e5df-4f2e-a509-1b9f872aeed6",
-    "viewModelInstanceId": "1a17537e-12ce-4788-9505-b562e9dbb18a",
+    "name": "PanelLotes2",
+    "designerId": "f30891b3-61ad-4d88-b1f9-ea88b0dd7bed",
+    "viewControllerInstanceId": "68e4c265-cd9d-44ab-affd-c90a52dcab69",
+    "viewModelInstanceId": "63402f13-1f1b-496b-a0f7-a9d5304f62cc",
     "cn": [
         {
             "type": "Ext.panel.Tool",
@@ -37,7 +37,7 @@
                 "iconCls": "x-fa fa-arrow-left"
             },
             "name": "MyTool2",
-            "designerId": "49e49bf9-b5e3-4b03-afa7-2c20b1de3301",
+            "designerId": "d81487c4-00f7-45ff-ab9a-f175e265adbf",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -57,7 +57,7 @@
                         "scope": "me"
                     },
                     "name": "onToolClick",
-                    "designerId": "8bafedaf-70b5-4048-a304-17e9c2db7396"
+                    "designerId": "ed4b48ca-8e74-42ad-b481-a330f74ae81f"
                 }
             ]
         },
@@ -71,11 +71,11 @@
             "userConfig": {
                 "header": false,
                 "itemId": "grid",
-                "store": "Labores",
-                "title": "Labores"
+                "store": "Tareas",
+                "title": "Lotes"
             },
             "name": "MyGridPanel2",
-            "designerId": "ae9c937e-3f3b-422c-b225-a31a7ee71f6c",
+            "designerId": "caf85340-7903-45ec-87e1-acf9bc0be30d",
             "cn": [
                 {
                     "type": "Ext.view.Table",
@@ -85,7 +85,7 @@
                     },
                     "codeClass": null,
                     "name": "MyTable2",
-                    "designerId": "8bc53684-96d3-4b5e-a33a-f2a7046220ba"
+                    "designerId": "3d8ce2f8-30a8-4145-a39a-332c10aafa4d"
                 },
                 {
                     "type": "basiceventbinding",
@@ -103,7 +103,7 @@
                         "scope": "me"
                     },
                     "name": "onGridSelectionChange",
-                    "designerId": "6e05c757-57f5-4248-9a53-adb8a14e694c"
+                    "designerId": "cb813ce4-0394-4cbd-9a18-860183c817ed"
                 },
                 {
                     "type": "basiceventbinding",
@@ -130,7 +130,7 @@
                         "scope": "me"
                     },
                     "name": "onGridItemLongpress",
-                    "designerId": "f7762557-2863-4195-87fc-8bb85460d20a"
+                    "designerId": "1f1365e4-63f3-4341-a3e4-eb1d6a5e1125"
                 },
                 {
                     "type": "basiceventbinding",
@@ -143,12 +143,12 @@
                         "fn": "onGridItemClick",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.PanelLaboresForm\";",
+                            "    /*var panelClass = \"MyApp.view.PanelLotes\";",
                             "    var newPan = Ext.create(panelClass);",
-                            "    newPan.parent = record.data;",
+                            "    newPan.est_code = record.data.codigo;",
                             "    MyApp.main.add(newPan);",
                             "    MyApp.main.getLayout().setActiveItem(newPan);*/",
-                            "    console.log('Should bring the user to a single-labor view');",
+                            "    console.log('just a clic');",
                             "}",
                             "this.longpress = false;"
                         ],
@@ -156,7 +156,37 @@
                         "scope": "me"
                     },
                     "name": "onGridItemClick",
-                    "designerId": "5255ef6a-192a-4527-815d-d46603a1c1b7"
+                    "designerId": "fc997404-e2b0-4ae6-a682-0e5d3f92775a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "estado_registro",
+                        "hidden": true,
+                        "text": "Estado Registro"
+                    },
+                    "name": "MyColumn14",
+                    "designerId": "20cbb697-ade3-40c2-b3a3-e56452dd150b"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "hidden": true,
+                        "text": "ID"
+                    },
+                    "name": "MyNumberColumn35",
+                    "designerId": "348a4468-da79-4d9a-9b80-8bd67c766774"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -171,39 +201,8 @@
                         "hidden": true,
                         "text": "Uid"
                     },
-                    "name": "MyNumberColumn",
-                    "designerId": "37d99d7b-4a17-49bc-8bbe-ed0003610422"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "id",
-                        "text": "ID",
-                        "width": "20%"
-                    },
-                    "name": "MyNumberColumn26",
-                    "designerId": "75e3693b-e4b3-4bdb-9e7e-d4747eab79a7"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "id_origen",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Id Origen"
-                    },
-                    "name": "MyNumberColumn27",
-                    "designerId": "d4ce967e-c062-4831-a897-25a7ca237c2f"
+                    "name": "MyNumberColumn36",
+                    "designerId": "610534ee-d403-4df1-9193-5da3b04735c9"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -213,28 +212,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "estado_registro",
-                        "hidden": true,
-                        "text": "Estado Registro"
+                        "dataIndex": "descripcion",
+                        "text": "Descripcion",
+                        "width": "25%"
                     },
-                    "name": "MyColumn",
-                    "designerId": "9ac60d55-2879-45d4-a5f2-d1b60fc187fc"
-                },
-                {
-                    "type": "Ext.grid.column.Date",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "fecha",
-                        "format": "m/j/Y",
-                        "hidden": true,
-                        "text": "Fecha"
-                    },
-                    "name": "MyDateColumn",
-                    "designerId": "babd8e0f-3366-439c-b91f-4bada917a1b5"
+                    "name": "MyColumn17",
+                    "designerId": "15c48ee5-d6c7-480d-8d33-54bc680fda0f"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -244,112 +227,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "cod_lote_actividad",
+                        "dataIndex": "codigo",
                         "format": "00",
-                        "text": "Cod Lote Actividad",
-                        "width": "20%"
+                        "text": "Codigo",
+                        "width": "25%"
                     },
-                    "name": "MyNumberColumn28",
-                    "designerId": "8762b678-135a-4be4-82a0-ed34d9bd32f9"
+                    "name": "MyNumberColumn37",
+                    "designerId": "e779216e-1f9d-414c-a594-4843de7bf4c1"
                 },
                 {
                     "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_lote",
-                        "format": "00",
-                        "text": "Cod Lote",
-                        "width": "20%"
-                    },
-                    "name": "MyNumberColumn29",
-                    "designerId": "ce237ae4-3fec-49b5-8274-b1a4e6ba1751"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_area",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Cod Area"
-                    },
-                    "name": "MyNumberColumn30",
-                    "designerId": "f9129e84-9946-4ffd-bdcc-1c04eb401cee"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_establecimiento",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Cod Establecimiento",
-                        "width": null
-                    },
-                    "name": "MyNumberColumn31",
-                    "designerId": "a72188db-fee2-4087-aa69-61cedb73e6bd"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_periodo",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Cod Periodo"
-                    },
-                    "name": "MyNumberColumn32",
-                    "designerId": "79710ec8-e313-40bb-b30d-01975f2c97cb"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_tarea",
-                        "format": "00",
-                        "text": "Cod Tarea",
-                        "width": "20%"
-                    },
-                    "name": "MyNumberColumn33",
-                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cantidad",
-                        "hidden": true,
-                        "text": "Cantidad"
-                    },
-                    "name": "MyColumn11",
-                    "designerId": "21ab5a72-e0e8-4aa3-9a6b-21132608f31b"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -357,11 +244,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
-                        "hidden": true,
-                        "text": "Precio"
+                        "text": "Precio",
+                        "width": "25%"
                     },
-                    "name": "MyColumn12",
-                    "designerId": "dd9b00d3-dfd7-4cd1-b508-0f3ab960dbb6"
+                    "name": "MyNumberColumn39",
+                    "designerId": "897f363c-d789-4c0b-ab48-80dc8956d55e"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -371,28 +258,26 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "propia",
-                        "hidden": true,
-                        "text": "Propia"
+                        "dataIndex": "tipo",
+                        "text": "Tipo"
                     },
-                    "name": "MyColumn13",
-                    "designerId": "8de57a61-0d22-4c9c-bc84-fd3763e74d25"
+                    "name": "MyColumn15",
+                    "designerId": "a8c77789-1b9c-4df5-ad66-02c5217d9115"
                 },
                 {
-                    "type": "Ext.grid.column.Number",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "cod_contratista",
-                        "format": "00",
+                        "dataIndex": "um",
                         "hidden": true,
-                        "text": "Cod Contratista"
+                        "text": "Um"
                     },
-                    "name": "MyNumberColumn34",
-                    "designerId": "5b9db788-e04d-4ed4-930b-3aaefd6e88b2"
+                    "name": "MyColumn16",
+                    "designerId": "17239dfe-a828-4400-aeb0-9ca27d5d6307"
                 }
             ]
         },
@@ -406,19 +291,18 @@
             "userConfig": {
                 "fn": "onPanelRender",
                 "implHandler": [
-                    "this.store_name = 'Labores';",
-                    "this.model_name = 'MyApp.model.Labores';",
-                    "this.form_name  = 'MyApp.view.LaboresForm';",
+                    "this.store_name = 'Tareas';",
+                    "this.model_name = 'MyApp.model.Tareas';",
+                    "this.form_name  = 'MyApp.view.TareasForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);",
-                    "f_crud.load_store('Tareas');"
+                    "f_crud.load_store(this.store_name);"
                 ],
                 "name": "render",
                 "scope": "me"
             },
             "name": "onPanelRender",
-            "designerId": "77ca2440-8fe3-4e9e-b453-f3c17dc782cc"
+            "designerId": "212bdc66-0caf-48ee-bb22-7cbf281dce7d"
         },
         {
             "type": "Ext.form.Panel",
@@ -437,7 +321,7 @@
                 "title": "My Form"
             },
             "name": "MyForm5",
-            "designerId": "6c7c27f2-5213-480c-94e1-456fa236b4fb",
+            "designerId": "812ddb85-8304-4434-b192-8681fef91aee",
             "cn": [
                 {
                     "type": "Ext.container.Container",
@@ -454,7 +338,7 @@
                         "layout|columnWidth": 1
                     },
                     "name": "MyContainer2",
-                    "designerId": "ae47c671-3b84-4cf7-a07f-f78a235fd70e",
+                    "designerId": "a86334b1-9d20-419a-b04a-0edd3fbf6aa1",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -469,7 +353,7 @@
                                 "text": "Nuevo"
                             },
                             "name": "MyButton3",
-                            "designerId": "c9be9380-92b7-464d-9c9e-80bc46304090",
+                            "designerId": "ef23192a-ca1c-4140-b81f-cd08c543b578",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -489,7 +373,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "8d9f2ce8-2413-4dc6-b9a5-7ae1962ceeb7"
+                                    "designerId": "829b6ee4-bc02-4f5a-a136-fe3820fb6c10"
                                 }
                             ]
                         }
@@ -511,7 +395,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer3",
-                    "designerId": "4ff21300-8b02-41e6-a794-df983c8b25e8",
+                    "designerId": "cd3e7023-45b3-424c-80f3-7baec44769c2",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -527,7 +411,7 @@
                                 "text": "Editar"
                             },
                             "name": "MyButton5",
-                            "designerId": "f33218e4-2ca4-4414-8a2f-5b29b4e25c44",
+                            "designerId": "70950b28-3573-4a2f-a774-bb98ab410971",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -547,7 +431,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "5388fedb-ae2d-4288-970d-d9f1c43de924"
+                                    "designerId": "91ab7141-360d-4745-8346-182b9be0ccf2"
                                 }
                             ]
                         }
@@ -568,7 +452,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer4",
-                    "designerId": "f391bb1e-f325-402a-80f9-2b4115a12026",
+                    "designerId": "fdecc105-f754-46e8-a13b-80411e7d6872",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -585,7 +469,7 @@
                                 "text": "Borrar"
                             },
                             "name": "MyButton4",
-                            "designerId": "d069866a-87d6-4059-9846-d250de4260ad",
+                            "designerId": "c9a962f8-f7fd-463c-b000-07d7ca022ca0",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -601,21 +485,18 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "/*var gridPanel = this.up('[cls=gridpanel]');",
-                                            "var checkConfig = {",
-                                            "    table: 'Lotes_actividades',",
-                                            "    field: 'cod_lote',",
-                                            "    msgTitle: 'Lote con actividades',",
-                                            "    message: 'No puede borrar un lote con actividades asignadas, <br> borre las actividades primero'",
-                                            "};",
-                                            "f_crud.grid_check_delete(gridPanel,checkConfig);",
-                                            "*/",
                                             "var gridPanel = this.up('[cls=gridpanel]');",
-                                            "f_crud.grid_delete(gridPanel);"
+                                            "var checkConfig = {",
+                                            "    table: 'Labores',",
+                                            "    field: 'cod_tarea',",
+                                            "    msgTitle: 'Tarea asignada',",
+                                            "    message: 'Esta tarea fue asignada en al menos una labor<br> cambie la tarea en esas labores, o borrelas primero'",
+                                            "};",
+                                            "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "c4df325c-ef39-48a2-81b3-3898e52c6ef6"
+                                    "designerId": "fc5c69bb-95ee-431a-b5e9-1605c6afab51"
                                 }
                             ]
                         }
@@ -633,13 +514,13 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Labores en  \" + component.parent.nombre);"
+                    "this.setTitle(\"Tareas\");"
                 ],
                 "name": "afterrender",
                 "scope": "me"
             },
             "name": "onGridpanelAfterRender",
-            "designerId": "05192d10-5c6e-4775-aa39-162e2cc77fd9"
+            "designerId": "e32e0ee7-2cc5-4980-904c-9949a363e1ac"
         }
     ]
 }

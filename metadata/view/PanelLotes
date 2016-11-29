@@ -6,11 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "gridpanel"
+        ],
         "designer|userAlias": "panellotes",
         "designer|userClassName": "PanelLotes",
         "flex": 1,
         "height": null,
-        "itemId": "gridpanel",
+        "itemId": null,
         "title": "Lotes",
         "titleAlign": "center",
         "width": null
@@ -352,7 +355,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "f_crud.form_open(this.up(\"#gridpanel\"),'ADD');"
+                                            "f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD');"
                                         ]
                                     },
                                     "name": "handler",
@@ -410,7 +413,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "f_crud.form_open(this.up('#gridpanel'),'EDIT');"
+                                            "f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');"
                                         ]
                                     },
                                     "name": "handler",
@@ -468,7 +471,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "var gridPanel = this.up('#gridpanel');",
+                                            "var gridPanel = this.up('[cls=gridpanel]');",
                                             "var checkConfig = {",
                                             "    table: 'Lotes_actividades',",
                                             "    field: 'cod_lote',",

@@ -31,8 +31,8 @@ Ext.define('MyApp.view.PanelLabores', {
   viewModel: {
     type: 'panellabores'
   },
+  cls: 'gridpanel',
   flex: 1,
-  itemId: 'gridpanel',
   title: 'Labores',
   titleAlign: 'center',
   defaultListenerScope: true,
@@ -116,7 +116,7 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'numbercolumn',
-          width: '20%',
+          hidden: true,
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'
@@ -130,7 +130,7 @@ Ext.define('MyApp.view.PanelLabores', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          width: '20%',
           dataIndex: 'cod_tarea',
           text: 'Cod Tarea',
           format: '00'
@@ -189,7 +189,7 @@ Ext.define('MyApp.view.PanelLabores', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                f_crud.form_open(this.up("#gridpanel"),'ADD');
+                f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
               },
               cls: '',
               iconCls: 'x-fa fa-plus',
@@ -211,7 +211,7 @@ Ext.define('MyApp.view.PanelLabores', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                f_crud.form_open(this.up('#gridpanel'),'EDIT');
+                f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
               },
               cls: '',
               margin: '0 0 0 10',
@@ -233,7 +233,7 @@ Ext.define('MyApp.view.PanelLabores', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                /*var gridPanel = this.up('#gridpanel');
+                /*var gridPanel = this.up('[cls=gridpanel]');
                 var checkConfig = {
                 table: 'Lotes_actividades',
                 field: 'cod_lote',
@@ -242,7 +242,7 @@ Ext.define('MyApp.view.PanelLabores', {
                 };
                 f_crud.grid_check_delete(gridPanel,checkConfig);
                 */
-                var gridPanel = this.up('#gridpanel');
+                var gridPanel = this.up('[cls=gridpanel]');
                 f_crud.grid_delete(gridPanel);
               },
               cls: '',
@@ -298,6 +298,7 @@ Ext.define('MyApp.view.PanelLabores', {
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
     f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);
+    f_crud.load_store('Tareas');
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

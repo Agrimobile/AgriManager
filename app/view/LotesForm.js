@@ -30,6 +30,7 @@ Ext.define('MyApp.view.LotesForm', {
   itemId: 'form',
   bodyPadding: 10,
   title: 'Lote',
+  defaultListenerScope: true,
 
   layout: {
     type: 'vbox',
@@ -76,15 +77,26 @@ Ext.define('MyApp.view.LotesForm', {
       name: 'codigo'
     },
     {
-      xtype: 'numberfield',
-      fieldLabel: 'ID',
-      name: 'id'
-    },
-    {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
       name: 'nombre'
     }
-  ]
+  ],
+  listeners: {
+    activate: 'onFormActivate'
+  },
+
+  onFormActivate: function(component, eOpts) {
+    var item = component.header.title.text;
+    if(component.action === 'ADD') {
+      component.setTitle('Nuevo ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  }
 
 });

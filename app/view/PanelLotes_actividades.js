@@ -31,8 +31,8 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
   viewModel: {
     type: 'panellotes_actividades'
   },
+  cls: 'gridpanel',
   flex: 1,
-  itemId: 'gridpanel',
   title: 'Lotes en Actividad',
   titleAlign: 'center',
   defaultListenerScope: true,
@@ -156,7 +156,7 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                var lotes_actividades_grid = this.up("#gridpanel");
+                var lotes_actividades_grid = this.up("[cls=gridpanel]");
                 f_crud.form_open(lotes_actividades_grid);
               },
               iconCls: 'x-fa fa-plus',
@@ -178,9 +178,9 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                var lotes_actividades_grid = this.up('#gridpanel');
+                var lotes_actividades_grid = this.up('[cls=gridpanel]');
                 lotes_actividades_grid.form_name = 'MyApp.view.Lotes_ActividadesForm';
-                f_crud.form_open(grid,'EDIT');
+                f_crud.form_open(lotes_actividades_grid,'EDIT');
               },
               cls: '',
               margin: '0 0 0 10',
@@ -202,7 +202,7 @@ Ext.define('MyApp.view.PanelLotes_actividades', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                var gridPanel = this.up('#gridpanel');
+                var gridPanel = this.up('[cls=gridpanel]');
                 var checkConfig = {
                   table: 'Labores',
                   field: 'cod_lote_actividad',
