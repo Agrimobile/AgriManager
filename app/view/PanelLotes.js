@@ -199,8 +199,8 @@ Ext.define('MyApp.view.PanelLotes', {
 
   onToolClick: function(tool, e, owner, eOpts) {
     var thisPanel = MyApp.main.getLayout().getActiveItem();
-    MyApp.main.prevCard = thisPanel;
     MyApp.main.getLayout().prev();
+    thisPanel.close();
   },
 
   onGridSelectionChange: function(model, selected, eOpts) {
@@ -227,7 +227,7 @@ Ext.define('MyApp.view.PanelLotes', {
         newPan.est_code = record.data.codigo;
         MyApp.main.add(newPan);
         MyApp.main.getLayout().setActiveItem(newPan);*/
-        console.log('just a clic');
+        console.log('just a clic - You should add behavior here');
     }
     this.longpress = false;
   },

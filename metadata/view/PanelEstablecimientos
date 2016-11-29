@@ -83,8 +83,8 @@
                         "fn": "onToolClick",
                         "implHandler": [
                             "var thisPanel = MyApp.main.getLayout().getActiveItem();",
-                            "MyApp.main.prevCard = thisPanel;",
-                            "MyApp.main.getLayout().prev();"
+                            "MyApp.main.getLayout().prev();",
+                            "thisPanel.close();"
                         ],
                         "name": "click",
                         "scope": "me"
@@ -514,28 +514,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onGridpanelActivate",
-                "implHandler": [
-                    "var prevPanel = MyApp.main.prevCard;",
-                    "if(prevPanel) {",
-                    "    prevPanel.close();",
-                    "    delete MyApp.main.prevCard;",
-                    "}"
-                ],
-                "name": "activate",
-                "scope": "me"
-            },
-            "name": "onGridpanelActivate",
-            "designerId": "d51e720a-4900-4671-8125-cbbccea0d3e0"
         }
     ]
 }

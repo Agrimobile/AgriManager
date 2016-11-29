@@ -186,11 +186,9 @@ Ext.define('MyApp.view.PanelActividades', {
   ],
 
   onToolClick: function(tool, e, owner, eOpts) {
-
     var thisPanel = MyApp.main.getLayout().getActiveItem();
-    MyApp.main.prevCard = thisPanel;
     MyApp.main.getLayout().prev();
-
+    thisPanel.close();
   },
 
   onGridpanelSelectionChange: function(model, selected, eOpts) {
@@ -227,7 +225,6 @@ Ext.define('MyApp.view.PanelActividades', {
     this.form_name  = 'MyApp.view.ActividadesForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-
     f_crud.load_store(this.store_name);
   }
 
