@@ -33,6 +33,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
   },
   flex: 1,
   itemId: 'form',
+  scrollable: true,
   title: 'Asignar Lotes',
   titleAlign: 'center',
   defaultListenerScope: true,

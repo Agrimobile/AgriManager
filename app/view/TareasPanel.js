@@ -32,6 +32,7 @@ Ext.define('MyApp.view.TareasPanel', {
   },
   cls: 'gridpanel',
   flex: 1,
+  scrollable: true,
   title: 'Lotes',
   titleAlign: 'center',
   defaultListenerScope: true,

@@ -15,6 +15,7 @@
         "height": null,
         "iconCls": "",
         "itemId": null,
+        "scrollable": true,
         "title": "Actividades",
         "titleAlign": "center",
         "width": null

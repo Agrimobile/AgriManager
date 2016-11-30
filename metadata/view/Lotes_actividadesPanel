@@ -15,6 +15,7 @@
         "flex": 1,
         "height": null,
         "itemId": null,
+        "scrollable": true,
         "title": "Lotes en Actividad",
         "titleAlign": "center",
         "width": null
@@ -94,7 +95,10 @@
             "codeClass": null,
             "userConfig": {
                 "header": false,
+                "hideHeaders": false,
                 "itemId": "grid",
+                "overlapHeader": false,
+                "scrollable": null,
                 "store": "Lotes_actividades",
                 "title": "Lotes en Actividad"
             },

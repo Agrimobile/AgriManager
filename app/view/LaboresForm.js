@@ -29,6 +29,7 @@ Ext.define('MyApp.view.LaboresForm', {
     type: 'laboresform'
   },
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Labor',
   defaultListenerScope: true,

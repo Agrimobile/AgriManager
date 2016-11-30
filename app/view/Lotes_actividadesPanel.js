@@ -33,6 +33,7 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
   },
   cls: 'gridpanel',
   flex: 1,
+  scrollable: true,
   title: 'Lotes en Actividad',
   titleAlign: 'center',
   defaultListenerScope: true,
@@ -56,7 +57,9 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
       xtype: 'gridpanel',
       itemId: 'grid',
       header: false,
+      overlapHeader: false,
       title: 'Lotes en Actividad',
+      hideHeaders: false,
       store: 'Lotes_actividades',
       columns: [
         {

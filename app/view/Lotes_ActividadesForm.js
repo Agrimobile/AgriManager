@@ -30,6 +30,7 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
     type: 'lotes_actividadesform'
   },
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Actividad en un Lote',
 

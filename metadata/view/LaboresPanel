@@ -14,6 +14,7 @@
         "flex": 1,
         "height": null,
         "itemId": null,
+        "scrollable": true,
         "title": "Labores",
         "titleAlign": "center",
         "width": null

@@ -29,6 +29,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   },
   flex: 1,
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Establecimiento',
   defaultListenerScope: true,

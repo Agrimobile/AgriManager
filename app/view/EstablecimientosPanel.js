@@ -33,6 +33,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
     type: 'establecimientospanel'
   },
   cls: 'gridpanel',
+  scrollable: true,
   title: 'Establecimientos',
   titleAlign: 'center',
   defaultListenerScope: true,

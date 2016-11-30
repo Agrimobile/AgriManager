@@ -28,6 +28,7 @@ Ext.define('MyApp.view.TareasForm', {
     type: 'tareasform'
   },
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Tarea',
   defaultListenerScope: true,

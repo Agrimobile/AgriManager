@@ -15,6 +15,7 @@
         "height": null,
         "heythere": null,
         "itemId": null,
+        "scrollable": true,
         "title": "Establecimientos",
         "titleAlign": "center",
         "width": null
@@ -104,6 +105,7 @@
             "userConfig": {
                 "header": false,
                 "itemId": "grid",
+                "scrollable": null,
                 "store": "Establecimientos",
                 "title": "Establecimientos"
             },

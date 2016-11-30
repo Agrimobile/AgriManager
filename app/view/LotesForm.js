@@ -28,6 +28,7 @@ Ext.define('MyApp.view.LotesForm', {
     type: 'lotesform'
   },
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Lote',
   defaultListenerScope: true,

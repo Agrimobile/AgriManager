@@ -13,6 +13,7 @@
         "height": null,
         "itemId": "form",
         "layout": "vbox",
+        "scrollable": true,
         "title": "Tarea",
         "width": null
     },
