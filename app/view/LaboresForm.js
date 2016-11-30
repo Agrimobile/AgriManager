@@ -50,20 +50,23 @@ Ext.define('MyApp.view.LaboresForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var laboresForm = this.up('#form');
+            var formWrapper = this.up('#form');
             var tarea_cod = this.up('#form').down("#fieldTarea").value;
-            var query = "select cod_establecimiento from Lotes where codigo = " + laboresForm.parent.cod_lote;
-            laboresForm.form._record.data.cod_lote_actividad = laboresForm.parent.codigo;
-            laboresForm.form._record.data.cod_lote = laboresForm.parent.cod_lote;
-            laboresForm.form._record.data.cod_periodo = laboresForm.parent.cod_periodo;
+            var query = "select cod_establecimiento from Lotes where codigo = " + formWrapper.parent.cod_lote;
+            formWrapper.form._record.data.cod_lote_actividad = formWrapper.parent.codigo;
+            formWrapper.form._record.data.cod_lote = formWrapper.parent.cod_lote;
+            formWrapper.form._record.data.cod_periodo = formWrapper.parent.cod_periodo;
             f_crud.sql_select(query, function(resultSet){
               if(resultSet === -1 || !Array.isArray(resultSet)) {
                 console.log("Query statement: " + query);
                 throw "Database error: Check your sql statement or your WebSql instance";
               }
               else {
-                laboresForm.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;
-                f_crud.save_form(laboresForm);
+                formWrapper.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;
+                //f_crud.save_form(formWrapper);
+                if(formWrapper.getForm().isValid()) {
+                  f_crud.save_form(formWrapper);
+                }
               }
             });
           },
@@ -88,7 +91,9 @@ Ext.define('MyApp.view.LaboresForm', {
     {
       xtype: 'numberfield',
       fieldLabel: 'ID',
-      name: 'id'
+      name: 'id',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'combobox',
@@ -96,6 +101,8 @@ Ext.define('MyApp.view.LaboresForm', {
       itemId: 'fieldTarea',
       fieldLabel: 'Tarea',
       name: 'cod_tarea',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
       displayField: 'descripcion',
       forceSelection: true,
       queryMode: 'local',

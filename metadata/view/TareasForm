@@ -69,8 +69,10 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var lotesForm = this.up('#form');",
-                                    "f_crud.save_form(lotesForm);"
+                                    "var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()){",
+                                    "  f_crud.save_form(formWrapper);",
+                                    "}"
                                 ]
                             },
                             "name": "handler",
@@ -126,6 +128,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Codigo",
                 "layout|flex": null,
                 "name": "codigo"
@@ -141,6 +145,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Descripcion",
                 "layout|flex": null,
                 "name": "descripcion"
@@ -156,6 +162,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Tipo",
                 "layout|flex": null,
                 "name": "tipo"
@@ -171,6 +179,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Unidad de medida",
                 "layout|flex": null,
                 "name": "um"
@@ -186,6 +196,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Precio",
                 "layout|flex": null,
                 "name": "precio"

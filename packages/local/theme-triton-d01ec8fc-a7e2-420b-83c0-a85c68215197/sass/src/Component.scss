@@ -13,3 +13,8 @@
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
+
+.warning-message .x-form-display-field-default {
+    color: #cf4c35;
+    font-weight: 600;
+}

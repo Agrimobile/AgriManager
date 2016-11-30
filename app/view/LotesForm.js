@@ -49,9 +49,11 @@ Ext.define('MyApp.view.LotesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var lotesForm = this.up('#form');
-            lotesForm.form._record.data.cod_establecimiento = lotesForm.parent.codigo;
-            f_crud.save_form(lotesForm);
+            var formWrapper = this.up('#form');
+            formWrapper.form._record.data.cod_establecimiento = formWrapper.parent.codigo;
+            if(formWrapper.getForm().isValid()) {
+              f_crud.save_form(formWrapper);
+            }
           },
           margins: '',
           margin: 10,
@@ -74,12 +76,16 @@ Ext.define('MyApp.view.LotesForm', {
     {
       xtype: 'numberfield',
       fieldLabel: 'Codigo',
-      name: 'codigo'
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
-      name: 'nombre'
+      name: 'nombre',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     }
   ],
   listeners: {

@@ -11,6 +11,7 @@
         ],
         "designer|userAlias": "lotes_actividadespanel",
         "designer|userClassName": "Lotes_actividadesPanel",
+        "dock": null,
         "flex": 1,
         "height": null,
         "itemId": null,

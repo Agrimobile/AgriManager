@@ -69,20 +69,23 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var laboresForm = this.up('#form');",
+                                    "var formWrapper = this.up('#form');",
                                     "var tarea_cod = this.up('#form').down(\"#fieldTarea\").value;",
-                                    "var query = \"select cod_establecimiento from Lotes where codigo = \" + laboresForm.parent.cod_lote;",
-                                    "laboresForm.form._record.data.cod_lote_actividad = laboresForm.parent.codigo;",
-                                    "laboresForm.form._record.data.cod_lote = laboresForm.parent.cod_lote;",
-                                    "laboresForm.form._record.data.cod_periodo = laboresForm.parent.cod_periodo;",
+                                    "var query = \"select cod_establecimiento from Lotes where codigo = \" + formWrapper.parent.cod_lote;",
+                                    "formWrapper.form._record.data.cod_lote_actividad = formWrapper.parent.codigo;",
+                                    "formWrapper.form._record.data.cod_lote = formWrapper.parent.cod_lote;",
+                                    "formWrapper.form._record.data.cod_periodo = formWrapper.parent.cod_periodo;",
                                     "f_crud.sql_select(query, function(resultSet){",
                                     "  if(resultSet === -1 || !Array.isArray(resultSet)) {",
                                     "  \tconsole.log(\"Query statement: \" + query);",
                                     "  \tthrow \"Database error: Check your sql statement or your WebSql instance\";",
                                     "  }",
                                     "  else {",
-                                    "    laboresForm.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;",
-                                    "    f_crud.save_form(laboresForm);",
+                                    "    formWrapper.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;",
+                                    "    //f_crud.save_form(formWrapper);",
+                                    "    if(formWrapper.getForm().isValid()) {",
+                                    "      f_crud.save_form(formWrapper);",
+                                    "    }",
                                     "  }",
                                     "});"
                                 ]
@@ -140,6 +143,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "ID",
                 "layout|flex": null,
                 "name": "id"
@@ -155,6 +160,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal",
                 "defaultListenerScope": true,
                 "displayField": "descripcion",
                 "fieldLabel": "Tarea",
