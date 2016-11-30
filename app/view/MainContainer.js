@@ -46,9 +46,6 @@ Ext.define('MyApp.view.MainContainer', {
             listeners: {
               itemclick: 'onViewItemClick'
             }
-          },
-          listeners: {
-            activate: 'onTreepanelActivate'
           }
         }
       ],
@@ -76,14 +73,6 @@ Ext.define('MyApp.view.MainContainer', {
     };
     var panelClass = record.get('panelClass');
     createPanel(panelClass);
-  },
-
-  onTreepanelActivate: function(component, eOpts) {
-    var prevPanel = MyApp.main.prevCard;
-    if(prevPanel) {
-        prevPanel.close();
-        delete MyApp.main.prevCard;
-    }
   },
 
   onPanelRender: function(component, eOpts) {

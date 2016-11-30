@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "agregarlotespanel",
+        "designer|userClassName": "AgregarLotesPanelViewController"
+    },
+    "designerId": "f4ff5ed2-68df-498d-8ece-c58bc9481dfe"
+}

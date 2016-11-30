@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "actividadespanel",
+        "designer|userClassName": "ActividadesPanelViewController"
+    },
+    "designerId": "d8549c80-044d-48d4-95a3-fd4f31c56332"
+}
