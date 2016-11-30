@@ -15,5 +15,5 @@
 
 Ext.define('MyApp.view.PanelLotesViewController2', {
   extend: 'Ext.app.ViewController',
-  alias: 'controller.paneltareas'
+  alias: 'controller.tareaspanel'
 });

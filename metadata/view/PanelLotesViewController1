@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "panellabores",
+        "designer|userAlias": "laborespanel",
         "designer|userClassName": "PanelLotesViewController1"
     },
     "name": "PanelLotesViewController1",
