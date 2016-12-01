@@ -33,6 +33,7 @@ Ext.define('MyApp.view.LaboresPanel', {
   },
   cls: 'gridpanel',
   flex: 1,
+  scrollable: true,
   title: 'Labores',
   titleAlign: 'center',
   defaultListenerScope: true,

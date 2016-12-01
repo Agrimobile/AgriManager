@@ -33,6 +33,7 @@ Ext.define('MyApp.view.MainContainer', {
   items: [
     {
       xtype: 'panel',
+      scrollable: true,
       layout: 'card',
       header: false,
       title: 'MainPanel',

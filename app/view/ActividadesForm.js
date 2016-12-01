@@ -41,12 +41,16 @@ Ext.define('MyApp.view.ActividadesForm', {
     {
       xtype: 'numberfield',
       fieldLabel: 'Código',
-      name: 'codigo'
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
-      name: 'nombre'
+      name: 'nombre',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     }
   ],
   dockedItems: [
@@ -63,7 +67,11 @@ Ext.define('MyApp.view.ActividadesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.save_form(this.up('#form'));
+            var formWrapper = this.up('#form');
+            if(formWrapper.getForm().isValid()) {
+              f_crud.save_form(formWrapper);
+            }
+
           },
           margins: '',
           margin: 10,

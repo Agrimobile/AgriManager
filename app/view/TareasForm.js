@@ -28,6 +28,7 @@ Ext.define('MyApp.view.TareasForm', {
     type: 'tareasform'
   },
   itemId: 'form',
+  scrollable: true,
   bodyPadding: 10,
   title: 'Tarea',
   defaultListenerScope: true,
@@ -49,8 +50,10 @@ Ext.define('MyApp.view.TareasForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var lotesForm = this.up('#form');
-            f_crud.save_form(lotesForm);
+            var formWrapper = this.up('#form');
+            if(formWrapper.getForm().isValid()){
+              f_crud.save_form(formWrapper);
+            }
           },
           margins: '',
           margin: 10,
@@ -73,27 +76,37 @@ Ext.define('MyApp.view.TareasForm', {
     {
       xtype: 'numberfield',
       fieldLabel: 'Codigo',
-      name: 'codigo'
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Descripcion',
-      name: 'descripcion'
+      name: 'descripcion',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Tipo',
-      name: 'tipo'
+      name: 'tipo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Unidad de medida',
-      name: 'um'
+      name: 'um',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'numberfield',
       fieldLabel: 'Precio',
-      name: 'precio'
+      name: 'precio',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
     }
   ],
   listeners: {

@@ -32,6 +32,7 @@ Ext.define('MyApp.view.ActividadesPanel', {
   },
   cls: 'gridpanel',
   flex: 1,
+  scrollable: true,
   iconCls: '',
   title: 'Actividades',
   titleAlign: 'center',

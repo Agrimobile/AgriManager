@@ -14,6 +14,7 @@
         "height": null,
         "itemId": "form",
         "layout": "vbox",
+        "scrollable": true,
         "title": "Establecimiento",
         "width": null
     },
@@ -30,6 +31,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
@@ -44,6 +47,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
@@ -99,7 +104,10 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.save_form(this.up('#form'));"
+                                    "var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()) {",
+                                    "  f_crud.save_form(formWrapper);",
+                                    "}"
                                 ]
                             },
                             "name": "handler",
