@@ -133,48 +133,6 @@
                     "type": "string"
                 }
             ]
-        },
-        {
-            "type": "Ext.data.field.Date",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "field_alias": "fecha_desde",
-                "name": "desde"
-            },
-            "name": "MyDate",
-            "designerId": "75005132-3518-46e1-b4b8-fb2e8eb32f6a",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "field_alias",
-                    "type": "string"
-                }
-            ]
-        },
-        {
-            "type": "Ext.data.field.Date",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "field_alias": "fecha_hasta",
-                "name": "hasta"
-            },
-            "name": "MyDate1",
-            "designerId": "75c71d8d-3c6f-428e-a388-0db36b023b7f",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "field_alias",
-                    "type": "string"
-                }
-            ]
         }
     ]
 }

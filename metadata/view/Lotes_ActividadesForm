@@ -70,18 +70,9 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form'),",
-                                    "desde = formWrapper.down(\"#desde\").value,",
-                                    "hasta = formWrapper.down(\"#hasta\").value,",
-                                    "warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
-                                    "if(desde <= hasta){",
-                                    "  formWrapper.down(\"[cls=warning-message]\").setValue(\"\");",
-                                    "  if(formWrapper.getForm().isValid()) {",
-                                    "    f_crud.save_form(formWrapper);",
-                                    "  }",
-                                    "}",
-                                    "else {",
-                                    "  formWrapper.down(\"[cls=warning-message]\").setValue(warning);",
+                                    "var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()) {",
+                                    "  f_crud.save_form(formWrapper);",
                                     "}"
                                 ]
                             },
@@ -163,63 +154,6 @@
             },
             "name": "MyTextField1",
             "designerId": "e84d9d81-94db-495c-9aa5-769a811330a3"
-        },
-        {
-            "type": "Ext.form.field.Date",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Desde",
-                "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
-                "itemId": "desde",
-                "layout|flex": null,
-                "name": "desde"
-            },
-            "name": "MyDateField",
-            "designerId": "2f3d701b-2a88-4254-a326-4c9b6c5ed67f"
-        },
-        {
-            "type": "Ext.form.field.Date",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "hasta",
-                "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
-                "itemId": "hasta",
-                "layout|flex": null,
-                "name": "hasta"
-            },
-            "name": "MyDateField1",
-            "designerId": "f195f663-1aad-4f0d-9fdf-bbdb5fd2d72a"
-        },
-        {
-            "type": "Ext.form.field.Display",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "warning-message"
-                ],
-                "fieldLabel": null,
-                "itemId": "warning-message",
-                "layout|flex": null,
-                "value": ""
-            },
-            "name": "MyDisplayField",
-            "designerId": "af54733f-c4b3-403a-bc3b-3c9d9728aff6"
         }
     ]
 }

@@ -23,6 +23,7 @@ Ext.define('MyApp.view.ActividadesPanel', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
+    'Ext.grid.column.Date',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -56,20 +57,12 @@ Ext.define('MyApp.view.ActividadesPanel', {
       header: false,
       title: 'Actividades',
       store: 'Actividades',
+      listeners: {
+        selectionchange: 'onGridpanelSelectionChange',
+        itemlongpress: 'onGridItemLongpress',
+        itemclick: 'onGridItemClick'
+      },
       columns: [
-        {
-          xtype: 'gridcolumn',
-          width: '50%',
-          dataIndex: 'nombre',
-          text: 'Nombre'
-        },
-        {
-          xtype: 'numbercolumn',
-          width: '50%',
-          dataIndex: 'codigo',
-          text: 'Codigo',
-          format: '00'
-        },
         {
           xtype: 'gridcolumn',
           hidden: true,
@@ -88,13 +81,35 @@ Ext.define('MyApp.view.ActividadesPanel', {
           dataIndex: 'uid',
           text: 'Uid',
           format: '00'
+        },
+        {
+          xtype: 'numbercolumn',
+          width: '25%',
+          dataIndex: 'codigo',
+          text: 'Codigo',
+          format: '00'
+        },
+        {
+          xtype: 'gridcolumn',
+          width: '25%',
+          dataIndex: 'nombre',
+          text: 'Nombre'
+        },
+        {
+          xtype: 'datecolumn',
+          width: '25%',
+          dataIndex: 'desde',
+          text: 'Desde',
+          format: 'j/m/Y'
+        },
+        {
+          xtype: 'datecolumn',
+          width: '25%',
+          dataIndex: 'hasta',
+          text: 'Hasta',
+          format: 'j/m/Y'
         }
-      ],
-      listeners: {
-        selectionchange: 'onGridpanelSelectionChange',
-        itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
-      }
+      ]
     }
   ],
   listeners: {
