@@ -60,7 +60,8 @@
             "LaboresForm",
             "RubrosPanel",
             "RubrosForm",
-            "InsumosPanel"
+            "InsumosPanel",
+            "InsumosForm"
         ]
     },
     "name": "Application",

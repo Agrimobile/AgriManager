@@ -73,7 +73,8 @@ Ext.application({
     'LaboresForm',
     'RubrosPanel',
     'RubrosForm',
-    'InsumosPanel'
+    'InsumosPanel',
+    'InsumosForm'
   ],
   name: 'MyApp',
 

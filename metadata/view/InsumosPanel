@@ -77,7 +77,8 @@
                     "this.form_name  = 'MyApp.view.InsumosForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name);"
+                    "f_crud.load_store(this.store_name);",
+                    "f_crud.load_store('Rubros');"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -94,7 +95,7 @@
             "codeClass": null,
             "userConfig": {
                 "header": false,
-                "itemId": "grid1",
+                "itemId": "grid",
                 "store": "Insumos",
                 "title": "Labores"
             },

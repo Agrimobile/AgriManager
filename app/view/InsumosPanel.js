@@ -54,7 +54,7 @@ Ext.define('MyApp.view.InsumosPanel', {
   items: [
     {
       xtype: 'gridpanel',
-      itemId: 'grid1',
+      itemId: 'grid',
       header: false,
       title: 'Labores',
       store: 'Insumos',
@@ -212,6 +212,7 @@ Ext.define('MyApp.view.InsumosPanel', {
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
     f_crud.load_store(this.store_name);
+    f_crud.load_store('Rubros');
   },
 
   onGridSelectionChange1: function(model, selected, eOpts) {
