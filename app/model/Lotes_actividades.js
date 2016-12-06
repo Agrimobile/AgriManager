@@ -18,8 +18,7 @@ Ext.define('MyApp.model.Lotes_actividades', {
 
   requires: [
     'Ext.data.field.String',
-    'Ext.data.field.Integer',
-    'Ext.data.field.Date'
+    'Ext.data.field.Integer'
   ],
 
   fields: [
@@ -56,16 +55,6 @@ Ext.define('MyApp.model.Lotes_actividades', {
       type: 'int',
       sincronizar: false,
       name: 'cod_periodo'
-    },
-    {
-      type: 'date',
-      field_alias: 'fecha_desde',
-      name: 'desde'
-    },
-    {
-      type: 'date',
-      field_alias: 'fecha_hasta',
-      name: 'hasta'
     }
   ]
 });

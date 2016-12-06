@@ -27,7 +27,10 @@ Ext.application({
     'Secuencia',
     'Lotes_actividades',
     'Labores',
-    'Tareas'
+    'Tareas',
+    'Labores_insumos',
+    'Labores_maquinaria',
+    'Labores_personal'
   ],
   stores: [
     'Menu',
@@ -37,7 +40,10 @@ Ext.application({
     'Secuencia',
     'Lotes_actividades',
     'Labores',
-    'Tareas'
+    'Tareas',
+    'Labores_insumos',
+    'Labores_maquinaria',
+    'Labores_personal'
   ],
   views: [
     'MainContainer',
@@ -51,9 +57,9 @@ Ext.application({
     'AgregarLotesPanel',
     'Lotes_ActividadesForm',
     'LaboresPanel',
-    'LaboresForm',
     'TareasPanel',
-    'TareasForm'
+    'TareasForm',
+    'LaboresForm'
   ],
   name: 'MyApp',
 

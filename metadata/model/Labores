@@ -79,7 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "Y-m-d",
+                "dateFormat": null,
                 "name": "fecha"
             },
             "name": "MyDate2",

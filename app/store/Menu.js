@@ -41,6 +41,44 @@ Ext.define('MyApp.store.Menu', {
             leaf: true,
             iconCls: 'x-fa fa-check-square-o',
             panelClass: 'TareasPanel'
+          },
+          {
+            text: 'Contratistas',
+            leaf: true,
+            iconCls: 'x-fa fa-user',
+            // fa-user-circle-o fa-address-card
+            panelClass: 'ContratistasPanel'
+          },
+          {
+            text: 'Insumos',
+            leaf: true,
+            iconCls: 'x-fa fa-cubes',
+            // fa-envira
+            panelClass: 'InsumosPanel'
+          },
+          {
+            text: 'Personal',
+            leaf: true,
+            iconCls: 'x-fa fa-users',
+            panelClass: 'PersonalPanel'
+          },
+          {
+            text: 'Maquinaria',
+            leaf: true,
+            iconCls: 'x-fa fa-gears',
+            panelClass: 'MaquinariasPanel'
+          },
+          {
+            text: 'Rubros',
+            leaf: true,
+            iconCls: 'x-fa fa-tags',
+            panelClass: 'RubrosPanel'
+          },
+          {
+            text: 'Depositos',
+            leaf: true,
+            iconCls: 'x-fa fa-inbox',
+            panelClass: 'DepositosPanel'
           }
         ]
       }
