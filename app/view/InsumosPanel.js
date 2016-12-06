@@ -77,16 +77,19 @@ Ext.define('MyApp.view.InsumosPanel', {
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'estado_registro',
           text: 'Estado Registro'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'id',
           text: 'ID'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'uid',
           text: 'Uid',
           format: '00'

@@ -220,6 +220,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "estado_registro",
+                        "hidden": true,
                         "text": "Estado Registro"
                     },
                     "name": "MyColumn26",
@@ -234,6 +235,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID"
                     },
                     "name": "MyNumberColumn64",
@@ -249,6 +251,7 @@
                     "userConfig": {
                         "dataIndex": "uid",
                         "format": "00",
+                        "hidden": true,
                         "text": "Uid"
                     },
                     "name": "MyNumberColumn65",
