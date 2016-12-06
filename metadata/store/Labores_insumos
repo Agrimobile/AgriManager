@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Labores_insumos",
+        "model": "Labores_insumos",
+        "storeId": "Labores_insumos"
+    },
+    "name": "Lotes_actividades1",
+    "designerId": "dc65fb78-94cd-4d36-a8f9-e863fb63f892",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "1dbe16fa-f229-4932-a879-9fcefb667baa"
+        }
+    ]
+}

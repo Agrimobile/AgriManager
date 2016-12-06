@@ -1,0 +1,101 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Labores_maquinaria"
+    },
+    "name": "MyModel",
+    "designerId": "e8b250ad-7bce-4f1e-9751-e75bad75bbbf",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "estado_registro"
+            },
+            "name": "MyString18",
+            "designerId": "0ebd6b5a-813a-4ef9-a92e-fc903c97d272"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger35",
+            "designerId": "a6737b2f-00b4-429e-a936-f85d0026aedd"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id_labores"
+            },
+            "name": "MyInteger36",
+            "designerId": "e4203daa-dbba-46f7-9252-2f3594905235"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "uid"
+            },
+            "name": "MyInteger37",
+            "designerId": "0a2ed236-1776-4a25-9edc-08b41d9df6f0"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cod_maquina"
+            },
+            "name": "MyInteger38",
+            "designerId": "b8b83a6c-2e09-47a2-bcd3-55a08818c241"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "horas_maquina",
+                "name": "cantidad"
+            },
+            "name": "MyNumber6",
+            "designerId": "172dfecd-cb7e-4ff8-a662-e8347dea7162",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}
