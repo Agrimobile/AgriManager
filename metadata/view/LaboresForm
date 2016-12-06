@@ -265,7 +265,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "header": false,
-                                "store": "Labores_insumos",
+                                "store": null,
                                 "title": "InsumosGrid"
                             },
                             "name": "MyGridPanel5",

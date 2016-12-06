@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Labores_insumos"
+        "designer|userClassName": "Labores_insumos",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
     },
     "name": "MyModel",
     "designerId": "2b674a56-0a8b-4814-b137-4fc891e3737f",

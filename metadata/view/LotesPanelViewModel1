@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rubrospanel",
+        "designer|userClassName": "LotesPanelViewModel1"
+    },
+    "name": "LotesPanelViewModel1",
+    "designerId": "6fcc07fe-f86b-4426-90c9-9683cefbebc5"
+}

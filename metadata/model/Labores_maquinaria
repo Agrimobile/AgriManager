@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Labores_maquinaria"
+        "designer|userClassName": "Labores_maquinaria",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
     },
     "name": "MyModel",
     "designerId": "e8b250ad-7bce-4f1e-9751-e75bad75bbbf",

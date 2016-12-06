@@ -8172,3 +8172,11 @@
     color: #cf4c35;
     font-weight: 600;
 }
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:22 */
+.custom-contratistas-icon-style:before {
+    border: 1px solid;
+    border-radius: 35px;
+    padding: 0 2px;
+    left: -1px;
+    position: relative;
+}

@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Rubros",
+        "model": "Rubros",
+        "storeId": "Rubros"
+    },
+    "name": "Lotes1",
+    "designerId": "71fcf697-645b-4da0-9060-64d47f57f4c9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "06969220-44db-4005-b457-c1c27c3b456c"
+        }
+    ]
+}

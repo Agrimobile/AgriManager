@@ -30,7 +30,13 @@ Ext.application({
     'Tareas',
     'Labores_insumos',
     'Labores_maquinaria',
-    'Labores_personal'
+    'Labores_personal',
+    'Rubros',
+    'Personal',
+    'Maquinaria',
+    'Contratistas',
+    'Depositos',
+    'Insumos'
   ],
   stores: [
     'Menu',
@@ -41,9 +47,14 @@ Ext.application({
     'Lotes_actividades',
     'Labores',
     'Tareas',
-    'Labores_insumos',
     'Labores_maquinaria',
-    'Labores_personal'
+    'Labores_personal',
+    'Rubros',
+    'Personal',
+    'Maquinaria',
+    'Contratistas',
+    'Depositos',
+    'Insumos'
   ],
   views: [
     'MainContainer',
@@ -59,7 +70,10 @@ Ext.application({
     'LaboresPanel',
     'TareasPanel',
     'TareasForm',
-    'LaboresForm'
+    'LaboresForm',
+    'RubrosPanel',
+    'RubrosForm',
+    'InsumosPanel'
   ],
   name: 'MyApp',
 

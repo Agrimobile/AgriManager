@@ -1,0 +1,91 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Maquinaria",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
+    },
+    "name": "MyModel",
+    "designerId": "d9fe371e-d5e3-4043-aa55-3ae4d84a28cf",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "estado_registro"
+            },
+            "name": "MyString25",
+            "designerId": "d1981d5c-73ee-4e9e-90b1-cb79ae9cab30"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger52",
+            "designerId": "275f496a-2564-4c7b-9811-7d90ab25e114"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "uid"
+            },
+            "name": "MyInteger53",
+            "designerId": "61893f53-aeab-4d8a-9450-81e53e7799a4"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "codigo"
+            },
+            "name": "MyInteger54",
+            "designerId": "801485cf-c23f-4f01-8644-ddbc6f11380a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "descrip",
+                "name": "nombre"
+            },
+            "name": "MyString26",
+            "designerId": "8b8873ab-b374-4c2d-8c78-9e076415b72b",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

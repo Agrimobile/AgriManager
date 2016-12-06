@@ -32,7 +32,7 @@
             "    {",
             "      text: 'Contratistas',",
             "      leaf: true,",
-            "      iconCls: 'x-fa fa-user', // fa-user-circle-o fa-address-card",
+            "      iconCls: 'x-fa fa-user custom-contratistas-icon-style', // fa-user-circle-o fa-address-card",
             "      panelClass: 'ContratistasPanel'",
             "    },",
             "    {",

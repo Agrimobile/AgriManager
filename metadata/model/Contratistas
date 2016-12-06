@@ -1,0 +1,93 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Contratistas",
+        "identifier": [
+            "{",
+            "            type: 'uuid'",
+            "        }"
+        ]
+    },
+    "name": "MyModel",
+    "designerId": "e1c53a32-f73c-44ce-b932-a132aab745c6",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "estado_registro"
+            },
+            "name": "MyString27",
+            "designerId": "9a002dcd-6b7a-4d90-bd98-6cc7fdf67e34"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger55",
+            "designerId": "5bfb3216-596a-4674-bf52-f8960713981b"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "uid"
+            },
+            "name": "MyInteger56",
+            "designerId": "0a7831b1-48d9-414a-9a8b-5a2863d74d60"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "cod_proveedor",
+                "name": "codigo"
+            },
+            "name": "MyInteger57",
+            "designerId": "c21a61cb-bb4a-483b-b04c-2cd489746361",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nombre"
+            },
+            "name": "MyString28",
+            "designerId": "44feaa24-9ed7-46d1-b17d-97ea5f566745"
+        }
+    ]
+}

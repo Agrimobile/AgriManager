@@ -22,7 +22,9 @@ Ext.define('MyApp.model.Actividades', {
     'Ext.data.field.Date'
   ],
 
-  identifier: 'uuid',
+  identifier: {
+    type: 'uuid'
+  },
 
   fields: [
     {

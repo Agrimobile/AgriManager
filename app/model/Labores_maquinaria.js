@@ -21,6 +21,10 @@ Ext.define('MyApp.model.Labores_maquinaria', {
     'Ext.data.field.Number'
   ],
 
+  identifier: {
+    type: 'uuid'
+  },
+
   fields: [
     {
       type: 'string',

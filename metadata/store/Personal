@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Labores_insumos",
-        "model": "Labores_insumos",
-        "storeId": "Labores_insumos"
+        "designer|userClassName": "Personal",
+        "model": "Personal",
+        "storeId": "Personal"
     },
-    "name": "Lotes_actividades1",
-    "designerId": "dc65fb78-94cd-4d36-a8f9-e863fb63f892",
+    "name": "Rubros2",
+    "designerId": "ddf2776b-f299-414c-a078-c65569ea6c2b",
     "cn": [
         {
             "type": "Ext.data.proxy.LocalStorage",
@@ -21,7 +21,7 @@
             },
             "codeClass": null,
             "name": "MyLocalStorageProxy1",
-            "designerId": "1dbe16fa-f229-4932-a879-9fcefb667baa"
+            "designerId": "6e9bb16f-b051-433d-aed3-8ffddc45ee62"
         }
     ]
 }

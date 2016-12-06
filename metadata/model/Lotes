@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Lotes"
+        "designer|userClassName": "Lotes",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
     },
     "name": "MyModel",
     "designerId": "f146487d-0889-4a2d-9af5-dd7207c93059",

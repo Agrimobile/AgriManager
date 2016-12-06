@@ -16,7 +16,13 @@
             "Tareas",
             "Labores_insumos",
             "Labores_maquinaria",
-            "Labores_personal"
+            "Labores_personal",
+            "Rubros",
+            "Personal",
+            "Maquinaria",
+            "Contratistas",
+            "Depositos",
+            "Insumos"
         ],
         "name": "MyApp",
         "stores": [
@@ -28,9 +34,14 @@
             "Lotes_actividades",
             "Labores",
             "Tareas",
-            "Labores_insumos",
             "Labores_maquinaria",
-            "Labores_personal"
+            "Labores_personal",
+            "Rubros",
+            "Personal",
+            "Maquinaria",
+            "Contratistas",
+            "Depositos",
+            "Insumos"
         ],
         "views": [
             "MainContainer",
@@ -46,7 +57,10 @@
             "LaboresPanel",
             "TareasPanel",
             "TareasForm",
-            "LaboresForm"
+            "LaboresForm",
+            "RubrosPanel",
+            "RubrosForm",
+            "InsumosPanel"
         ]
     },
     "name": "Application",

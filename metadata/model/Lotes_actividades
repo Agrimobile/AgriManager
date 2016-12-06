@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Lotes_actividades"
+        "designer|userClassName": "Lotes_actividades",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
     },
     "name": "MyModel1",
     "designerId": "eb8b5c0f-9249-4190-8a9d-7fd85bcc24a5",

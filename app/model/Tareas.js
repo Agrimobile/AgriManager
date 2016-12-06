@@ -21,6 +21,10 @@ Ext.define('MyApp.model.Tareas', {
     'Ext.data.field.Number'
   ],
 
+  identifier: {
+    type: 'uuid'
+  },
+
   fields: [
     {
       type: 'string',

@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "Actividades",
         "identifier": [
-            "uuid"
+            "{type: 'uuid'}"
         ]
     },
     "name": "MyModel",

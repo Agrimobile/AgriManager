@@ -45,7 +45,7 @@ Ext.define('MyApp.store.Menu', {
           {
             text: 'Contratistas',
             leaf: true,
-            iconCls: 'x-fa fa-user',
+            iconCls: 'x-fa fa-user custom-contratistas-icon-style',
             // fa-user-circle-o fa-address-card
             panelClass: 'ContratistasPanel'
           },
