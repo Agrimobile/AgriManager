@@ -44,7 +44,7 @@ Ext.define('MyApp.model.Personal', {
     },
     {
       type: 'string',
-      name: 'descripcion'
+      name: 'nombre'
     }
   ]
 });

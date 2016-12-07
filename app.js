@@ -78,7 +78,11 @@ Ext.application({
     'ContratistasPanel',
     'ContratistasForm',
     'DepositosPanel',
-    'DepositosForm'
+    'DepositosForm',
+    'PersonalPanel',
+    'PersonalForm',
+    'MaquinariaPanel',
+    'MaquinariaForm'
   ],
   name: 'MyApp',
 

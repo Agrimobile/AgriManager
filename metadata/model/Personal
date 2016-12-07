@@ -82,7 +82,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "descripcion"
+                "name": "nombre"
             },
             "name": "MyString20",
             "designerId": "8d6f6e4d-35fa-484f-80cf-160e6dd1e700"

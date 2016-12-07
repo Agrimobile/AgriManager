@@ -66,7 +66,7 @@ Ext.define('MyApp.store.Menu', {
             text: 'Maquinaria',
             leaf: true,
             iconCls: 'x-fa fa-gears',
-            panelClass: 'MaquinariasPanel'
+            panelClass: 'MaquinariaPanel'
           },
           {
             text: 'Rubros',
