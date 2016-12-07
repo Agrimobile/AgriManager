@@ -56,7 +56,7 @@ Ext.define('MyApp.view.InsumosPanel', {
       xtype: 'gridpanel',
       itemId: 'grid',
       header: false,
-      title: 'Labores',
+      title: 'Insumos',
       store: 'Insumos',
       listeners: {
         selectionchange: 'onGridSelectionChange1',

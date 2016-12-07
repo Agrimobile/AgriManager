@@ -9,20 +9,20 @@
         "cls": [
             "gridpanel"
         ],
-        "designer|userAlias": "insumospanel",
-        "designer|userClassName": "InsumosPanel",
+        "designer|userAlias": "depositospanel",
+        "designer|userClassName": "DepositosPanel",
         "flex": 1,
         "height": null,
         "itemId": null,
         "scrollable": true,
-        "title": "Insumos",
+        "title": "Depositos",
         "titleAlign": "center",
         "width": null
     },
-    "name": "LotesPanel2",
-    "designerId": "7afd589d-0e29-47aa-b401-cbd520123fb8",
-    "viewControllerInstanceId": "f2280b7d-685c-4917-bfe9-5c6dc9107577",
-    "viewModelInstanceId": "bb7a5524-1db9-4880-9638-07954b24c1c8",
+    "name": "ContratistasPanel1",
+    "designerId": "6f09fe6f-2fc2-4488-ae69-1880c7e26424",
+    "viewControllerInstanceId": "e0f97c95-a67a-46fe-a9b1-8337f95934ef",
+    "viewModelInstanceId": "9a4c574a-df10-4ede-a257-55a042ce351c",
     "cn": [
         {
             "type": "Ext.panel.Tool",
@@ -38,7 +38,7 @@
                 "iconCls": "x-fa fa-arrow-left"
             },
             "name": "MyTool2",
-            "designerId": "46a7d234-6b86-4ac5-83d0-8b56423510cf",
+            "designerId": "81d5adb2-acaf-4302-b0bc-76b1bd86b97b",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -58,7 +58,7 @@
                         "scope": "me"
                     },
                     "name": "onToolClick",
-                    "designerId": "93318276-f0a7-41e3-afab-49d5f40055d8"
+                    "designerId": "e36ca3cc-9de7-40b2-9abd-bd8482d9b1c4"
                 }
             ]
         },
@@ -72,19 +72,18 @@
             "userConfig": {
                 "fn": "onPanelRender",
                 "implHandler": [
-                    "this.store_name = 'Insumos';",
-                    "this.model_name = 'MyApp.model.Insumos';",
-                    "this.form_name  = 'MyApp.view.InsumosForm';",
+                    "this.store_name = 'Depositos';",
+                    "this.model_name = 'MyApp.model.Depositos';",
+                    "this.form_name  = 'MyApp.view.DepositosForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name);",
-                    "f_crud.load_store('Rubros');"
+                    "f_crud.load_store(this.store_name);"
                 ],
                 "name": "render",
                 "scope": "me"
             },
             "name": "onPanelRender",
-            "designerId": "668045ac-30f4-414b-b4e5-fdb0e24b5647"
+            "designerId": "e0ec6743-9d4a-498e-a658-c2953684d3c4"
         },
         {
             "type": "Ext.grid.Panel",
@@ -96,11 +95,11 @@
             "userConfig": {
                 "header": false,
                 "itemId": "grid",
-                "store": "Insumos",
-                "title": "Insumos"
+                "store": "Depositos",
+                "title": "Depositos"
             },
             "name": "MyGridPanel8",
-            "designerId": "dca78197-1cfe-41c3-bf06-e4ddb6152165",
+            "designerId": "5913489c-c75f-4750-9218-85ee67368290",
             "cn": [
                 {
                     "type": "Ext.view.Table",
@@ -110,7 +109,7 @@
                     },
                     "codeClass": null,
                     "name": "MyTable2",
-                    "designerId": "63aed0f0-67fb-42ae-a437-0a8cb1ec74c5"
+                    "designerId": "2c65e261-c94a-44c5-8a41-bcba579561e2"
                 },
                 {
                     "type": "basiceventbinding",
@@ -128,7 +127,7 @@
                         "scope": "me"
                     },
                     "name": "onGridSelectionChange1",
-                    "designerId": "b9c7e54b-6ffb-4d4d-9540-596ec7da44df"
+                    "designerId": "3793f419-f6c4-4c7a-9251-54d99a9436d1"
                 },
                 {
                     "type": "basiceventbinding",
@@ -155,7 +154,7 @@
                         "scope": "me"
                     },
                     "name": "onGridItemLongpress1",
-                    "designerId": "c8acfea4-3857-4ec2-a548-7800b6d5a836"
+                    "designerId": "313b96c3-a431-461d-b90e-8e1c3cef0e04"
                 },
                 {
                     "type": "basiceventbinding",
@@ -181,36 +180,7 @@
                         "scope": "me"
                     },
                     "name": "onGridItemClick1",
-                    "designerId": "f7c4d753-f20e-4494-9c76-43e709754c90"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo"
-                    },
-                    "name": "MyNumberColumn62",
-                    "designerId": "7e6e1dee-31d3-41c1-ab7a-0ff632631fc4"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "descripcion",
-                        "text": "Descripcion"
-                    },
-                    "name": "MyColumn24",
-                    "designerId": "9ccbed90-3031-431c-9dbd-eb8d02630f2b"
+                    "designerId": "d4f263f9-839d-406d-a07a-9f4ba07a3d74"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -224,8 +194,8 @@
                         "hidden": true,
                         "text": "Estado Registro"
                     },
-                    "name": "MyColumn26",
-                    "designerId": "b1d7a044-920b-4958-b193-cd2aac36328f"
+                    "name": "MyColumn28",
+                    "designerId": "3d9b8a1f-5dd0-4a4f-8615-698f313e5f2e"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -239,8 +209,8 @@
                         "hidden": true,
                         "text": "ID"
                     },
-                    "name": "MyNumberColumn64",
-                    "designerId": "4e8ca95f-a2de-45f9-b36c-07db5b2d4c46"
+                    "name": "MyNumberColumn68",
+                    "designerId": "8908663c-6711-4aeb-a191-a3254d630d23"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -255,8 +225,8 @@
                         "hidden": true,
                         "text": "Uid"
                     },
-                    "name": "MyNumberColumn65",
-                    "designerId": "196dc9b0-b2d6-42db-814a-27996afc31dc"
+                    "name": "MyNumberColumn72",
+                    "designerId": "a540ffe8-1c2d-44a1-ab35-0e727a5786c0"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -266,11 +236,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "precio",
-                        "text": "Precio"
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "50%"
                     },
-                    "name": "MyNumberColumn69",
-                    "designerId": "b7963b4e-11e6-4e5a-9deb-c0c4aba02293"
+                    "name": "MyNumberColumn73",
+                    "designerId": "d1a3c7b1-71bf-41da-b944-076a589e6829"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -280,41 +252,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "um",
-                        "text": "Um"
+                        "dataIndex": "nombre",
+                        "text": "Nombre",
+                        "width": "50%"
                     },
-                    "name": "MyColumn29",
-                    "designerId": "8c1b0d3e-b330-48db-a808-f400b99e9c32"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_rubro",
-                        "format": "00",
-                        "text": "Cod Rubro"
-                    },
-                    "name": "MyNumberColumn70",
-                    "designerId": "bd56f5ec-9b9f-488a-8369-d2564174129a"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "dias_carencia",
-                        "format": "00",
-                        "text": "Dias Carencia"
-                    },
-                    "name": "MyNumberColumn71",
-                    "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"
+                    "name": "MyColumn30",
+                    "designerId": "3728543f-376c-47a0-807b-e785f172b271"
                 }
             ]
         },
@@ -335,7 +278,7 @@
                 "title": "My Form"
             },
             "name": "MyForm5",
-            "designerId": "debb84ca-408d-4d76-b4e0-2a1f9eb6ec1a",
+            "designerId": "bc97671a-3ebc-4791-84b7-cd1b38eba2f7",
             "cn": [
                 {
                     "type": "Ext.container.Container",
@@ -352,7 +295,7 @@
                         "layout|columnWidth": 1
                     },
                     "name": "MyContainer2",
-                    "designerId": "8ed84cfa-aca8-4e51-b7db-97d5b77b14f3",
+                    "designerId": "a0f96610-2efb-4809-837f-00887767ae60",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -367,7 +310,7 @@
                                 "text": "Nuevo"
                             },
                             "name": "MyButton3",
-                            "designerId": "17f42798-f940-4630-a704-e4db86794907",
+                            "designerId": "7d18c3a4-5808-4171-99d9-e2ef4ab52563",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -387,7 +330,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "792d9c8a-8afa-41d2-a133-4f8b235441c0"
+                                    "designerId": "fdd86cf9-59ae-41a2-9d07-276f7fe7ba48"
                                 }
                             ]
                         }
@@ -409,7 +352,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer3",
-                    "designerId": "1c4ee88c-d844-41df-a22b-f07a12b6e4a2",
+                    "designerId": "843d8b31-89f3-417f-bab0-d206e488aa3f",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -425,7 +368,7 @@
                                 "text": "Editar"
                             },
                             "name": "MyButton5",
-                            "designerId": "71417bd5-6b14-46d4-bf66-6274035ca28e",
+                            "designerId": "4beb3d17-602f-4d21-8374-3a267308e11a",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -445,7 +388,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "874127b9-e7ab-49a4-8170-035fa90b6014"
+                                    "designerId": "f2edab03-144b-4722-95cd-f5bc90832601"
                                 }
                             ]
                         }
@@ -466,7 +409,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer4",
-                    "designerId": "4e4f0ab0-0bdf-4091-97a4-3c772ce630d4",
+                    "designerId": "b50c3d25-9ef8-40d7-8b42-caabb63fc7e2",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -483,7 +426,7 @@
                                 "text": "Borrar"
                             },
                             "name": "MyButton4",
-                            "designerId": "6fe3b88b-d99c-42b2-960d-e322e095e114",
+                            "designerId": "d263282a-4d47-4cd5-85e8-c226bd3dca92",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -504,7 +447,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "ec470b51-f9c2-4a6f-a92f-17fbf52651a7"
+                                    "designerId": "e4dc6dc7-9e59-4b4e-9057-46ff209f0a69"
                                 }
                             ]
                         }
@@ -522,13 +465,13 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Insumos\");"
+                    "this.setTitle(\"Depositos\");"
                 ],
                 "name": "afterrender",
                 "scope": "me"
             },
             "name": "onGridpanelAfterRender",
-            "designerId": "0df015fe-3900-473a-9533-2b577e89da07"
+            "designerId": "20c0a2b2-a6e4-4cc6-9c4f-a9f05664fb81"
         }
     ]
 }

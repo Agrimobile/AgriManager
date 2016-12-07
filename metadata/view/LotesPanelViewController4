@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "contratistaspanel",
+        "designer|userClassName": "LotesPanelViewController4"
+    },
+    "name": "LotesPanelViewController4",
+    "designerId": "d2c06a2d-6749-4400-8acd-f3168c5ae996"
+}

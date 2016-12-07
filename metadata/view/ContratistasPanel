@@ -9,20 +9,20 @@
         "cls": [
             "gridpanel"
         ],
-        "designer|userAlias": "insumospanel",
-        "designer|userClassName": "InsumosPanel",
+        "designer|userAlias": "contratistaspanel",
+        "designer|userClassName": "ContratistasPanel",
         "flex": 1,
         "height": null,
         "itemId": null,
         "scrollable": true,
-        "title": "Insumos",
+        "title": "Contratistas",
         "titleAlign": "center",
         "width": null
     },
-    "name": "LotesPanel2",
-    "designerId": "7afd589d-0e29-47aa-b401-cbd520123fb8",
-    "viewControllerInstanceId": "f2280b7d-685c-4917-bfe9-5c6dc9107577",
-    "viewModelInstanceId": "bb7a5524-1db9-4880-9638-07954b24c1c8",
+    "name": "InsumosPanel1",
+    "designerId": "210a3aac-e0c3-43a6-baa4-231e7e47d86d",
+    "viewControllerInstanceId": "d2c06a2d-6749-4400-8acd-f3168c5ae996",
+    "viewModelInstanceId": "99f15071-35a7-482b-a841-3b3c6b7f16b8",
     "cn": [
         {
             "type": "Ext.panel.Tool",
@@ -38,7 +38,7 @@
                 "iconCls": "x-fa fa-arrow-left"
             },
             "name": "MyTool2",
-            "designerId": "46a7d234-6b86-4ac5-83d0-8b56423510cf",
+            "designerId": "56879dbf-840d-4f74-a1d6-255a4576ec78",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -58,7 +58,7 @@
                         "scope": "me"
                     },
                     "name": "onToolClick",
-                    "designerId": "93318276-f0a7-41e3-afab-49d5f40055d8"
+                    "designerId": "e193f13e-49ec-4eba-ace5-b23ac1e6876e"
                 }
             ]
         },
@@ -72,19 +72,18 @@
             "userConfig": {
                 "fn": "onPanelRender",
                 "implHandler": [
-                    "this.store_name = 'Insumos';",
-                    "this.model_name = 'MyApp.model.Insumos';",
-                    "this.form_name  = 'MyApp.view.InsumosForm';",
+                    "this.store_name = 'Contratistas';",
+                    "this.model_name = 'MyApp.model.Contratistas';",
+                    "this.form_name  = 'MyApp.view.ContratistasForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name);",
-                    "f_crud.load_store('Rubros');"
+                    "f_crud.load_store(this.store_name);"
                 ],
                 "name": "render",
                 "scope": "me"
             },
             "name": "onPanelRender",
-            "designerId": "668045ac-30f4-414b-b4e5-fdb0e24b5647"
+            "designerId": "54aca10e-224c-4a5c-bd80-4eb262c816c5"
         },
         {
             "type": "Ext.grid.Panel",
@@ -96,11 +95,11 @@
             "userConfig": {
                 "header": false,
                 "itemId": "grid",
-                "store": "Insumos",
-                "title": "Insumos"
+                "store": "Contratistas",
+                "title": "Contratistas"
             },
             "name": "MyGridPanel8",
-            "designerId": "dca78197-1cfe-41c3-bf06-e4ddb6152165",
+            "designerId": "9a4da226-487f-47da-bb1b-5297eee9260b",
             "cn": [
                 {
                     "type": "Ext.view.Table",
@@ -110,7 +109,7 @@
                     },
                     "codeClass": null,
                     "name": "MyTable2",
-                    "designerId": "63aed0f0-67fb-42ae-a437-0a8cb1ec74c5"
+                    "designerId": "010f9219-7b9f-40f6-b67d-c0146c41d0e5"
                 },
                 {
                     "type": "basiceventbinding",
@@ -128,7 +127,7 @@
                         "scope": "me"
                     },
                     "name": "onGridSelectionChange1",
-                    "designerId": "b9c7e54b-6ffb-4d4d-9540-596ec7da44df"
+                    "designerId": "efe7a69c-a6cc-495f-b1e8-6e4ff9ab97ac"
                 },
                 {
                     "type": "basiceventbinding",
@@ -155,7 +154,7 @@
                         "scope": "me"
                     },
                     "name": "onGridItemLongpress1",
-                    "designerId": "c8acfea4-3857-4ec2-a548-7800b6d5a836"
+                    "designerId": "78cde762-b4f1-4c77-90f6-2ff7f6a750d6"
                 },
                 {
                     "type": "basiceventbinding",
@@ -181,36 +180,7 @@
                         "scope": "me"
                     },
                     "name": "onGridItemClick1",
-                    "designerId": "f7c4d753-f20e-4494-9c76-43e709754c90"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo"
-                    },
-                    "name": "MyNumberColumn62",
-                    "designerId": "7e6e1dee-31d3-41c1-ab7a-0ff632631fc4"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "descripcion",
-                        "text": "Descripcion"
-                    },
-                    "name": "MyColumn24",
-                    "designerId": "9ccbed90-3031-431c-9dbd-eb8d02630f2b"
+                    "designerId": "462113e1-7364-4042-8467-ea975648dc80"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -224,8 +194,8 @@
                         "hidden": true,
                         "text": "Estado Registro"
                     },
-                    "name": "MyColumn26",
-                    "designerId": "b1d7a044-920b-4958-b193-cd2aac36328f"
+                    "name": "MyColumn25",
+                    "designerId": "1727ddd3-8504-4e04-b4f9-5daebb453f29"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -239,8 +209,8 @@
                         "hidden": true,
                         "text": "ID"
                     },
-                    "name": "MyNumberColumn64",
-                    "designerId": "4e8ca95f-a2de-45f9-b36c-07db5b2d4c46"
+                    "name": "MyNumberColumn63",
+                    "designerId": "f0507d20-d743-4863-a2fe-883b8cdf833c"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -255,8 +225,8 @@
                         "hidden": true,
                         "text": "Uid"
                     },
-                    "name": "MyNumberColumn65",
-                    "designerId": "196dc9b0-b2d6-42db-814a-27996afc31dc"
+                    "name": "MyNumberColumn66",
+                    "designerId": "de6cc9b2-e351-413f-8c70-07a7bae92444"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -266,11 +236,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "precio",
-                        "text": "Precio"
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "50%"
                     },
-                    "name": "MyNumberColumn69",
-                    "designerId": "b7963b4e-11e6-4e5a-9deb-c0c4aba02293"
+                    "name": "MyNumberColumn67",
+                    "designerId": "2c2dafc0-7b0b-40d9-ac86-6183550d854e"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -280,41 +252,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "um",
-                        "text": "Um"
+                        "dataIndex": "nombre",
+                        "text": "Nombre",
+                        "width": "50%"
                     },
-                    "name": "MyColumn29",
-                    "designerId": "8c1b0d3e-b330-48db-a808-f400b99e9c32"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_rubro",
-                        "format": "00",
-                        "text": "Cod Rubro"
-                    },
-                    "name": "MyNumberColumn70",
-                    "designerId": "bd56f5ec-9b9f-488a-8369-d2564174129a"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "dias_carencia",
-                        "format": "00",
-                        "text": "Dias Carencia"
-                    },
-                    "name": "MyNumberColumn71",
-                    "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"
+                    "name": "MyColumn27",
+                    "designerId": "bc9d8635-eb4c-4aa3-9565-c223be909f5b"
                 }
             ]
         },
@@ -335,7 +278,7 @@
                 "title": "My Form"
             },
             "name": "MyForm5",
-            "designerId": "debb84ca-408d-4d76-b4e0-2a1f9eb6ec1a",
+            "designerId": "565e5146-ffe0-4d49-96d8-79cd3c5d3b32",
             "cn": [
                 {
                     "type": "Ext.container.Container",
@@ -352,7 +295,7 @@
                         "layout|columnWidth": 1
                     },
                     "name": "MyContainer2",
-                    "designerId": "8ed84cfa-aca8-4e51-b7db-97d5b77b14f3",
+                    "designerId": "1b26cf73-e681-4e71-b348-902a61e0c325",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -367,7 +310,7 @@
                                 "text": "Nuevo"
                             },
                             "name": "MyButton3",
-                            "designerId": "17f42798-f940-4630-a704-e4db86794907",
+                            "designerId": "c0a0cca8-0276-4c4e-ac4c-5dce24347877",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -387,7 +330,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "792d9c8a-8afa-41d2-a133-4f8b235441c0"
+                                    "designerId": "cf12bc21-12f3-44b4-b412-b846323593ae"
                                 }
                             ]
                         }
@@ -409,7 +352,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer3",
-                    "designerId": "1c4ee88c-d844-41df-a22b-f07a12b6e4a2",
+                    "designerId": "5f9ee4b6-5769-4f66-9bad-3e459fa42ce0",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -425,7 +368,7 @@
                                 "text": "Editar"
                             },
                             "name": "MyButton5",
-                            "designerId": "71417bd5-6b14-46d4-bf66-6274035ca28e",
+                            "designerId": "9936cd47-92fc-47ec-975c-a4c53e3b3bd5",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -445,7 +388,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "874127b9-e7ab-49a4-8170-035fa90b6014"
+                                    "designerId": "5708c0f9-7b03-4c02-bd87-d8ac9125c45c"
                                 }
                             ]
                         }
@@ -466,7 +409,7 @@
                         "layout|columnWidth": 0.33
                     },
                     "name": "MyContainer4",
-                    "designerId": "4e4f0ab0-0bdf-4091-97a4-3c772ce630d4",
+                    "designerId": "907b7b29-7ce3-4065-bc40-5a41274c2e4f",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -483,7 +426,7 @@
                                 "text": "Borrar"
                             },
                             "name": "MyButton4",
-                            "designerId": "6fe3b88b-d99c-42b2-960d-e322e095e114",
+                            "designerId": "d53f1d33-6e0d-4170-9c60-acf5cb0595be",
                             "cn": [
                                 {
                                     "type": "fixedfunction",
@@ -504,7 +447,7 @@
                                         ]
                                     },
                                     "name": "handler",
-                                    "designerId": "ec470b51-f9c2-4a6f-a92f-17fbf52651a7"
+                                    "designerId": "c3b26c47-1a0e-493b-9f3e-d95a70d54cba"
                                 }
                             ]
                         }
@@ -522,13 +465,13 @@
             "userConfig": {
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
-                    "this.setTitle(\"Insumos\");"
+                    "this.setTitle(\"Contratistas\");"
                 ],
                 "name": "afterrender",
                 "scope": "me"
             },
             "name": "onGridpanelAfterRender",
-            "designerId": "0df015fe-3900-473a-9533-2b577e89da07"
+            "designerId": "4aa79ec5-973c-41aa-bca2-7c044f0e7536"
         }
     ]
 }

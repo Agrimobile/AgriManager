@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "depositosform",
+        "designer|userClassName": "LotesFormViewController13"
+    },
+    "name": "LotesFormViewController13",
+    "designerId": "449c0b1b-52ca-4bbd-82cf-ebb2bf2cedca"
+}

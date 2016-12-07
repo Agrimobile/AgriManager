@@ -102,14 +102,15 @@ Ext.define('MyApp.view.LaboresForm', {
             {
               xtype: 'combobox',
               defaultListenerScope: true,
+              itemId: 'fieldContratista',
               width: '100%',
               fieldLabel: 'Contratista',
               name: 'cod_contratista',
-              blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Contratistas del menu principal',
-              displayField: 'descripcion',
+              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+              displayField: 'nombre',
               forceSelection: true,
               queryMode: 'local',
-              store: 'Tareas',
+              store: 'Contratistas',
               valueField: 'codigo'
             }
           ]
