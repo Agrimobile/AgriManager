@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Tareas"
+        "designer|userClassName": "Tareas",
+        "identifier": [
+            "{type: 'uuid'}"
+        ]
     },
     "name": "MyModel",
     "designerId": "1cecb3ee-236a-4994-b076-e2d2a4e867fa",

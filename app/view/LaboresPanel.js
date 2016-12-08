@@ -156,7 +156,6 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
           dataIndex: 'cod_contratista',
           text: 'Cod Contratista',
           format: '00'
@@ -297,9 +296,15 @@ Ext.define('MyApp.view.LaboresPanel', {
     this.model_name = 'MyApp.model.Labores';
     this.form_name  = 'MyApp.view.LaboresForm';
     var store = Ext.getStore(this.store_name);
-    this.form_store_array = [store];
     f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);
     f_crud.load_store('Tareas');
+    f_crud.load_store('Contratistas');
+    var st_insumos    = Ext.getStore('Labores_insumos');
+    var st_personal   = Ext.getStore('Labores_personal');
+    var st_maquinaria = Ext.getStore('Labores_maquinaria');
+    //this.form_store_array = [store,st_insumos,st_personal,st_maquinaria];
+    this.form_store_array = [store];
+
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

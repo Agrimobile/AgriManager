@@ -1,0 +1,169 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Insumos",
+        "identifier": [
+            "{",
+            "            type: 'uuid'",
+            "        }"
+        ]
+    },
+    "name": "MyModel",
+    "designerId": "747d37ab-2acd-4b8c-86d0-db0084212871",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "cod_articulo",
+                "name": "codigo"
+            },
+            "name": "MyInteger66",
+            "designerId": "a7480693-e74c-4185-a6ed-1b000d644e42",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "descripcion"
+            },
+            "name": "MyString34",
+            "designerId": "bb3ceef6-0294-4c39-b74b-6cdc079e263a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "estado_registro"
+            },
+            "name": "MyString35",
+            "designerId": "1e82031b-432c-4756-94dd-8bda6e080182"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger67",
+            "designerId": "d603ff07-2a7a-488c-9cc5-13cafd31f4ee"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "uid"
+            },
+            "name": "MyInteger68",
+            "designerId": "f458a5d9-6484-4027-89ea-e0cf3ebea159"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "precio_compra",
+                "name": "precio"
+            },
+            "name": "MyNumber12",
+            "designerId": "5ce73346-3826-40ed-83f9-a536de9bd2b0",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "uni_medida",
+                "name": "um"
+            },
+            "name": "MyString36",
+            "designerId": "d1f87b1f-2be0-421f-9465-031a7a058f40",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cod_rubro"
+            },
+            "name": "MyInteger69",
+            "designerId": "9a1250d5-05ee-4280-b689-01c5e6cf02fd"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "carencia",
+                "name": "dias_carencia"
+            },
+            "name": "MyInteger70",
+            "designerId": "05149d25-8192-4113-885b-e1135c7f60e2",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

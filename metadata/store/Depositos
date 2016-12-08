@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Depositos",
+        "model": "Depositos",
+        "storeId": "Depositos"
+    },
+    "name": "Actividades3",
+    "designerId": "9bc27a53-36a2-4ed6-ab00-a0bcab6493fb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "673df80e-cdcd-41bb-ad71-5985aafdcd37"
+        }
+    ]
+}

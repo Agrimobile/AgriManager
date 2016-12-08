@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "maquinariapanel",
+        "designer|userClassName": "LotesPanelViewController7"
+    },
+    "name": "LotesPanelViewController7",
+    "designerId": "3d2c599b-4aa1-4d2c-85c3-ab43984422ac"
+}

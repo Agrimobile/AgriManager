@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Personal",
+        "model": "Personal",
+        "storeId": "Personal"
+    },
+    "name": "Rubros2",
+    "designerId": "ddf2776b-f299-414c-a078-c65569ea6c2b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "6e9bb16f-b051-433d-aed3-8ffddc45ee62"
+        }
+    ]
+}

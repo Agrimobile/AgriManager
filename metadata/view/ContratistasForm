@@ -1,0 +1,186 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "contratistasform",
+        "designer|userClassName": "ContratistasForm",
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Contratista",
+        "width": null
+    },
+    "name": "RubrosForm1",
+    "designerId": "94b847d6-3e3c-4ee2-878d-b27c93af816a",
+    "viewControllerInstanceId": "252c49a9-8fce-44d8-8429-f87aec9138a6",
+    "viewModelInstanceId": "b3696974-9c7c-46c1-8933-4d307a56d0db",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "dock": "bottom",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "name": "MyContainer1",
+            "designerId": "33c1ed21-67e7-420a-94a6-91f6d3ba1ce3",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-check",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": 10,
+                        "text": "Aceptar"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "a14eaa7e-5c4e-4f6e-919c-19b32299d796",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()) {",
+                                    "  f_crud.save_form(formWrapper);",
+                                    "}"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "bcc4de22-4758-4f2a-bf11-2393d63feecd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-remove",
+                        "layout|flex": null,
+                        "margin": 10,
+                        "text": "Cancelar"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "7cd8dcd2-f794-401e-9c58-24bd062a867d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.close_form(this.up(\"#form\"));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "38241a5b-c2e1-4fdf-8f76-673ba8f87b93"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
+                "name": "codigo"
+            },
+            "name": "MyNumberField1",
+            "designerId": "eda65e10-1c91-4950-9180-cff5e6e0ffb1"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Nombre",
+                "layout|flex": null,
+                "name": "nombre"
+            },
+            "name": "MyTextField1",
+            "designerId": "a26835f8-7390-447d-a391-328a2d1c744b"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nuevo ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "76a5070f-1a7f-4029-887b-95b0f48a111f"
+        }
+    ]
+}

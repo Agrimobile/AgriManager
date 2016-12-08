@@ -18,11 +18,16 @@ Ext.define('MyApp.view.LaboresForm', {
   alias: 'widget.laboresform',
 
   requires: [
-    'MyApp.view.LotesFormViewModel2',
-    'Ext.container.Container',
-    'Ext.button.Button',
+    'MyApp.view.LotesFormViewModel4',
+    'Ext.tab.Panel',
+    'Ext.tab.Tab',
     'Ext.form.field.Number',
-    'Ext.form.field.ComboBox'
+    'Ext.form.field.ComboBox',
+    'Ext.form.field.Date',
+    'Ext.grid.Panel',
+    'Ext.view.Table',
+    'Ext.grid.column.Number',
+    'Ext.form.Panel'
   ],
 
   viewModel: {
@@ -38,6 +43,494 @@ Ext.define('MyApp.view.LaboresForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  listeners: {
+    activate: 'onFormActivate'
+  },
+  items: [
+    {
+      xtype: 'tabpanel',
+      flex: 0,
+      bodyPadding: 10,
+      activeTab: 0,
+      items: [
+        {
+          xtype: 'panel',
+          title: 'Datos',
+          items: [
+            {
+              xtype: 'numberfield',
+              hidden: true,
+              fieldLabel: 'ID',
+              name: 'id',
+              allowBlank: false,
+              blankText: 'Este campo es obligatorio'
+            },
+            {
+              xtype: 'combobox',
+              defaultListenerScope: true,
+              itemId: 'fieldTarea',
+              width: '100%',
+              fieldLabel: 'Tarea',
+              name: 'cod_tarea',
+              allowBlank: false,
+              blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
+              displayField: 'descripcion',
+              forceSelection: true,
+              queryMode: 'local',
+              store: 'Tareas',
+              valueField: 'codigo'
+            },
+            {
+              xtype: 'datefield',
+              itemId: 'fecha',
+              width: '100%',
+              fieldLabel: 'Fecha',
+              name: 'fecha'
+            },
+            {
+              xtype: 'numberfield',
+              width: '100%',
+              fieldLabel: 'Cantidad',
+              name: 'cantidad'
+            },
+            {
+              xtype: 'numberfield',
+              width: '100%',
+              fieldLabel: 'Precio',
+              name: 'precio'
+            },
+            {
+              xtype: 'combobox',
+              defaultListenerScope: true,
+              itemId: 'fieldContratista',
+              width: '100%',
+              fieldLabel: 'Contratista',
+              name: 'cod_contratista',
+              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+              displayField: 'nombre',
+              forceSelection: true,
+              queryMode: 'local',
+              store: 'Contratistas',
+              valueField: 'codigo'
+            }
+          ]
+        },
+        {
+          xtype: 'panel',
+          title: 'Insumos',
+          items: [
+            {
+              xtype: 'gridpanel',
+              header: false,
+              title: 'InsumosGrid',
+              columns: [
+                {
+                  xtype: 'gridcolumn',
+                  hidden: true,
+                  dataIndex: 'estado_registro',
+                  text: 'Estado Registro'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id',
+                  text: 'ID'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id_labores',
+                  text: 'Id Labores',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'uid',
+                  text: 'Uid',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'cod_insumo',
+                  text: 'Cod Insumo',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'dosis',
+                  text: 'Dosis'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'cantidad',
+                  text: 'Cantidad'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'cod_deposito',
+                  text: 'Cod Deposito',
+                  format: '00'
+                },
+                {
+                  xtype: 'gridcolumn',
+                  hidden: true,
+                  dataIndex: 'tipo',
+                  text: 'Tipo'
+                }
+              ]
+            }
+          ],
+          dockedItems: [
+            {
+              xtype: 'form',
+              dock: 'bottom',
+              layout: 'column',
+              bodyPadding: 10,
+              header: false,
+              title: 'My Form',
+              items: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  itemId: 'newBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
+                      },
+                      cls: '',
+                      iconCls: 'x-fa fa-plus',
+                      text: ''
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-pencil',
+                      text: ''
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        /* var gridPanel = this.up('[cls=gridpanel]');
+                        var checkConfig = {
+                        table: 'Lotes_actividades',
+                        field: 'cod_actividad',
+                        msgTitle: 'Actividad asignada',
+                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
+                        };
+                        f_crud.grid_check_delete(gridPanel,checkConfig); */
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-trash',
+                      text: ''
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          xtype: 'panel',
+          title: 'Personal',
+          dockedItems: [
+            {
+              xtype: 'form',
+              dock: 'bottom',
+              layout: 'column',
+              bodyPadding: 10,
+              header: false,
+              title: '',
+              items: [
+                {
+                  xtype: 'container',
+                  columnWidth: 0.33,
+                  itemId: 'newBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'end'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
+                      },
+                      cls: '',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Agregar'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 0.33,
+                  itemId: 'editBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-pencil',
+                      text: 'Editar'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 0.33,
+                  itemId: 'deleteBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        /* var gridPanel = this.up('[cls=gridpanel]');
+                        var checkConfig = {
+                        table: 'Lotes_actividades',
+                        field: 'cod_actividad',
+                        msgTitle: 'Actividad asignada',
+                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
+                        };
+                        f_crud.grid_check_delete(gridPanel,checkConfig); */
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-trash',
+                      text: 'Borrar'
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          items: [
+            {
+              xtype: 'gridpanel',
+              header: false,
+              title: 'PersonalGrid',
+              store: 'Labores_personal',
+              columns: [
+                {
+                  xtype: 'gridcolumn',
+                  hidden: true,
+                  dataIndex: 'estado_registro',
+                  text: 'Estado Registro'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id',
+                  text: 'ID'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id_labores',
+                  text: 'Id Labores',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'uid',
+                  text: 'Uid',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'cod_personal',
+                  text: 'Cod Personal',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'cod_concepto',
+                  text: 'Cod Concepto',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'cantidad',
+                  text: 'Cantidad'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'precio',
+                  text: 'Precio'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'importe',
+                  text: 'Importe'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          xtype: 'panel',
+          title: 'Maquinaria',
+          dockedItems: [
+            {
+              xtype: 'form',
+              dock: 'bottom',
+              layout: 'column',
+              bodyPadding: 10,
+              header: false,
+              title: 'My Form',
+              items: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  itemId: 'newBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
+                      },
+                      cls: '',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Agregar'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 0.33,
+                  hidden: true,
+                  itemId: 'editBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-pencil',
+                      text: ''
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 0.33,
+                  hidden: true,
+                  itemId: 'deleteBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        /* var gridPanel = this.up('[cls=gridpanel]');
+                        var checkConfig = {
+                        table: 'Lotes_actividades',
+                        field: 'cod_actividad',
+                        msgTitle: 'Actividad asignada',
+                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
+                        };
+                        f_crud.grid_check_delete(gridPanel,checkConfig); */
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-trash',
+                      text: ''
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          items: [
+            {
+              xtype: 'gridpanel',
+              header: false,
+              title: 'MaquinariaGrid',
+              store: 'Labores_maquinaria',
+              columns: [
+                {
+                  xtype: 'gridcolumn',
+                  hidden: true,
+                  dataIndex: 'estado_registro',
+                  text: 'Estado Registro'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id',
+                  text: 'ID'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'id_labores',
+                  text: 'Id Labores',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  hidden: true,
+                  dataIndex: 'uid',
+                  text: 'Uid',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'cod_maquina',
+                  text: 'Cod Maquina',
+                  format: '00'
+                },
+                {
+                  xtype: 'numbercolumn',
+                  dataIndex: 'cantidad',
+                  text: 'Cantidad'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -88,44 +581,49 @@ Ext.define('MyApp.view.LaboresForm', {
       ]
     }
   ],
-  items: [
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'ID',
-      name: 'id',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'combobox',
-      defaultListenerScope: true,
-      itemId: 'fieldTarea',
-      fieldLabel: 'Tarea',
-      name: 'cod_tarea',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
-      displayField: 'descripcion',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'Tareas',
-      valueField: 'codigo'
-    }
-  ],
-  listeners: {
-    activate: 'onFormActivate'
-  },
 
   onFormActivate: function(component, eOpts) {
     var item = component.header.title.text;
+    var form = this;
+    var record = form.getRecord();
     if(component.action === 'ADD') {
       component.setTitle('Nueva ' + item);
+      var today = new Date();
+      this.down('#fecha').setValue(today);
+      // Genero el id de cabecera - Why would I generate the id if it is correctly
+      // generated by form_open method in f_crud lib?
+
+      /* f_crud.secuencia(function(rtn){
+        if (rtn !== -1){
+          record.set('id',rtn);
+        }
+      });*/
     }
     else if(component.action === 'EDIT') {
       component.setTitle('Editar ' + item);
+
+      var id = record.get('id');
     }
     else {
       component.setTitle(item);
     }
+
+    /*if (this.action=='ADD'){
+
+
+        record.set('cod_lote_actividad',codigo);
+        record.set('cod_lote',form_panel.cod_lote);
+        record.set('cod_area',form_panel.cod_actividad);
+        record.set('cod_establecimiento',form_panel.cod_estab);
+        record.set('cod_periodo',form_panel.cod_periodo);
+        record.set('propia','P');
+
+        this.down('#cod_lote_actividad').setValue(codigo);
+        this.down('#cantidad').setValue(form_panel.superficie);
+    }
+    else {
+
+    }*/
   }
 
 });

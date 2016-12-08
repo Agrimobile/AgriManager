@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "maquinariaform",
+        "designer|userClassName": "LotesFormViewController15"
+    },
+    "name": "LotesFormViewController15",
+    "designerId": "6cf90c80-f4b4-4e27-8632-ca765002516e"
+}

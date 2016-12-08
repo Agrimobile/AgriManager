@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Insumos",
+        "model": "Insumos",
+        "storeId": "Insumos"
+    },
+    "name": "Actividades1",
+    "designerId": "d058d573-db5b-4159-90e6-59edd30631cd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "aa72a033-52f0-4229-817c-66cb8ff28277"
+        }
+    ]
+}

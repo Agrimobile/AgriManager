@@ -56,6 +56,63 @@
             "designerId": "217bec27-e085-48cd-8eaa-29f85c424c1f"
         },
         {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Desde",
+                "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
+                "itemId": "desde",
+                "layout|flex": null,
+                "name": "desde"
+            },
+            "name": "MyDateField",
+            "designerId": "e1f219ad-67f3-446c-8a81-cda5a9a70650"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "hasta",
+                "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
+                "itemId": "hasta",
+                "layout|flex": null,
+                "name": "hasta"
+            },
+            "name": "MyDateField1",
+            "designerId": "6bcf2a7f-5570-4359-8df3-c65e8f053c99"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "warning-message"
+                ],
+                "fieldLabel": null,
+                "itemId": "warning-message",
+                "layout|flex": null,
+                "value": ""
+            },
+            "name": "MyDisplayField",
+            "designerId": "e582fb26-882a-4976-87c1-dfcfbb7f869b"
+        },
+        {
             "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
@@ -103,9 +160,23 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "/*var formWrapper = this.up('#form');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
+                                    "}",
+                                    "*/",
+                                    "var formWrapper = this.up('#form'),",
+                                    "desde = formWrapper.down(\"#desde\").value,",
+                                    "hasta = formWrapper.down(\"#hasta\").value,",
+                                    "warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
+                                    "if(desde <= hasta){",
+                                    "  formWrapper.down(\"[cls=warning-message]\").setValue(\"\");",
+                                    "  if(formWrapper.getForm().isValid()) {",
+                                    "    f_crud.save_form(formWrapper);",
+                                    "  }",
+                                    "}",
+                                    "else {",
+                                    "  formWrapper.down(\"[cls=warning-message]\").setValue(warning);",
                                     "}",
                                     ""
                                 ]

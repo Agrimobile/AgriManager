@@ -18,10 +18,13 @@ Ext.define('MyApp.model.Actividades', {
 
   requires: [
     'Ext.data.field.String',
-    'Ext.data.field.Integer'
+    'Ext.data.field.Integer',
+    'Ext.data.field.Date'
   ],
 
-  identifier: 'uuid',
+  identifier: {
+    type: 'uuid'
+  },
 
   fields: [
     {
@@ -43,6 +46,16 @@ Ext.define('MyApp.model.Actividades', {
     {
       type: 'string',
       name: 'nombre'
+    },
+    {
+      type: 'date',
+      field_alias: 'fecha_desde',
+      name: 'desde'
+    },
+    {
+      type: 'date',
+      field_alias: 'fecha_hasta',
+      name: 'hasta'
     }
   ]
 });

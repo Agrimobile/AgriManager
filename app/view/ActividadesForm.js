@@ -20,6 +20,8 @@ Ext.define('MyApp.view.ActividadesForm', {
   requires: [
     'MyApp.view.ActividadesFormViewModel',
     'Ext.form.field.Number',
+    'Ext.form.field.Date',
+    'Ext.form.field.Display',
     'Ext.container.Container',
     'Ext.button.Button'
   ],
@@ -51,6 +53,30 @@ Ext.define('MyApp.view.ActividadesForm', {
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
+    },
+    {
+      xtype: 'datefield',
+      itemId: 'desde',
+      fieldLabel: 'Desde',
+      name: 'desde',
+      invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
+    },
+    {
+      xtype: 'datefield',
+      itemId: 'hasta',
+      fieldLabel: 'hasta',
+      name: 'hasta',
+      invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
+    },
+    {
+      xtype: 'displayfield',
+      cls: 'warning-message',
+      itemId: 'warning-message',
+      value: ''
     }
   ],
   dockedItems: [
@@ -67,9 +93,23 @@ Ext.define('MyApp.view.ActividadesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            /*var formWrapper = this.up('#form');
             if(formWrapper.getForm().isValid()) {
-              f_crud.save_form(formWrapper);
+            f_crud.save_form(formWrapper);
+            }
+            */
+            var formWrapper = this.up('#form'),
+              desde = formWrapper.down("#desde").value,
+              hasta = formWrapper.down("#hasta").value,
+              warning = "<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>";
+            if(desde <= hasta){
+              formWrapper.down("[cls=warning-message]").setValue("");
+              if(formWrapper.getForm().isValid()) {
+                f_crud.save_form(formWrapper);
+              }
+            }
+            else {
+              formWrapper.down("[cls=warning-message]").setValue(warning);
             }
 
           },

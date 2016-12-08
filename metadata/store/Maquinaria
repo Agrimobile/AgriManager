@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Maquinaria",
+        "model": "Maquinaria",
+        "storeId": "Maquinaria"
+    },
+    "name": "Insumos1",
+    "designerId": "9a152f32-0b92-4085-996c-123b009d4cfd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "ded183c6-a49d-4049-bd2c-61a72aba2eff"
+        }
+    ]
+}

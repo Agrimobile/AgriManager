@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Contratistas",
+        "model": "Contratistas",
+        "storeId": "Contratistas"
+    },
+    "name": "Actividades2",
+    "designerId": "9edb2758-03b3-4600-9524-d998881fe442",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "dfd8e25f-dce6-407c-b835-b6ad637eef93"
+        }
+    ]
+}
