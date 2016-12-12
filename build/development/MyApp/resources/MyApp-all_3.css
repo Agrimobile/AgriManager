@@ -1,3 +1,30 @@
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:280 */
+.x-tool-expand-bottom {
+    font: 16px/1 FontAwesome;
+    background: none;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-tool-expand-bottom:before {
+    content: "\f0d7";
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:289 */
+.x-tool-collapse-bottom {
+    font: 16px/1 FontAwesome;
+    background: none;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-tool-collapse-bottom:before {
+    content: "\f0d7";
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:298 */
+.x-tool-expand-top {
+    font: 16px/1 FontAwesome;
+    background: none;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-tool-expand-top:before {
+    content: "\f0d8";
+}
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Tool.scss:307 */
 .x-tool-collapse-top {
     font: 16px/1 FontAwesome;
@@ -15790,28 +15817,4 @@ div.x-border-layout-ct {
 /* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:319 */
 .fa-chevron-circle-up:before {
     content: "\f139" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:320 */
-.fa-chevron-circle-down:before {
-    content: "\f13a" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:321 */
-.fa-html5:before {
-    content: "\f13b" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:322 */
-.fa-css3:before {
-    content: "\f13c" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:323 */
-.fa-anchor:before {
-    content: "\f13d" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:324 */
-.fa-unlock-alt:before {
-    content: "\f13e" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:325 */
-.fa-bullseye:before {
-    content: "\f140" !important;
 }

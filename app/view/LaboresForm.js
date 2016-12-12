@@ -123,6 +123,7 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'gridpanel',
               header: false,
               title: 'InsumosGrid',
+              store: 'la',
               columns: [
                 {
                   xtype: 'gridcolumn',

@@ -22,7 +22,8 @@
             "Maquinaria",
             "Contratistas",
             "Depositos",
-            "Insumos"
+            "Insumos",
+            "Campanias"
         ],
         "name": "MyApp",
         "stores": [
@@ -41,7 +42,8 @@
             "Maquinaria",
             "Contratistas",
             "Depositos",
-            "Insumos"
+            "Insumos",
+            "Campanias"
         ],
         "views": [
             "MainContainer",
@@ -69,7 +71,9 @@
             "PersonalPanel",
             "PersonalForm",
             "MaquinariaPanel",
-            "MaquinariaForm"
+            "MaquinariaForm",
+            "CampaniasPanel",
+            "CampaniasForm"
         ]
     },
     "name": "Application",
