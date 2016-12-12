@@ -55,7 +55,7 @@ Ext.define('MyApp.view.LaboresForm', {
       items: [
         {
           xtype: 'panel',
-          title: 'Datos',
+          title: 'Labor',
           items: [
             {
               xtype: 'numberfield',
@@ -123,7 +123,7 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'gridpanel',
               header: false,
               title: 'InsumosGrid',
-              store: 'la',
+              store: 'Labores_insumos',
               columns: [
                 {
                   xtype: 'gridcolumn',
@@ -163,20 +163,17 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
-                  hidden: true,
                   dataIndex: 'cantidad',
                   text: 'Cantidad'
                 },
                 {
                   xtype: 'numbercolumn',
-                  hidden: true,
                   dataIndex: 'cod_deposito',
                   text: 'Cod Deposito',
                   format: '00'
                 },
                 {
                   xtype: 'gridcolumn',
-                  hidden: true,
                   dataIndex: 'tipo',
                   text: 'Tipo'
                 }
@@ -205,7 +202,20 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
+                        var form_panel = this.up('#form');
+                        debugger;
+                        console.log(form_panel.getRecord().get('id'));
+                        /*var store = Ext.getStore('Labores_insumos');
+                        var newrecord = Ext.create('MyApp.model.Labores_insumos');
+                        f_crud.secuencia(function(rtn){
+                        if (rtn !== -1){
+                        newrecord.set('id',rtn);
+                        var id_labores  = form_panel.getRecord().get('id');
+                        newrecord.set('id_labores', id_labores);
+                        newrecord.set('tipo','T');
+                        store.add(newrecord);
+                        }
+                        });*/
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
@@ -215,6 +225,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       xtype: 'button',
                       handler: function(button, e) {
                         //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                        console.log("Should edit the row in someway");
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -224,14 +235,18 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        /* var gridPanel = this.up('[cls=gridpanel]');
-                        var checkConfig = {
-                        table: 'Lotes_actividades',
-                        field: 'cod_actividad',
-                        msgTitle: 'Actividad asignada',
-                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
-                        };
-                        f_crud.grid_check_delete(gridPanel,checkConfig); */
+                        console.log('Delete certain record from the grid-store');
+                        /*
+                        var gridedit = this.up('#gridedit');
+                        var grid = gridedit.grid;
+                        var form = gridedit.down('#form');
+                        grid.getStore().remove(form.getRecord());
+                        gridedit.hide();
+                        // This is how the old version deletes a row from the grid and Store
+                        // it had previously opened a form; when the user press delete
+                        // it will remove the current record..
+
+                        */
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -247,89 +262,6 @@ Ext.define('MyApp.view.LaboresForm', {
         {
           xtype: 'panel',
           title: 'Personal',
-          dockedItems: [
-            {
-              xtype: 'form',
-              dock: 'bottom',
-              layout: 'column',
-              bodyPadding: 10,
-              header: false,
-              title: '',
-              items: [
-                {
-                  xtype: 'container',
-                  columnWidth: 0.33,
-                  itemId: 'newBox',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'end'
-                  },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
-                      },
-                      cls: '',
-                      iconCls: 'x-fa fa-plus',
-                      text: 'Agregar'
-                    }
-                  ]
-                },
-                {
-                  xtype: 'container',
-                  columnWidth: 0.33,
-                  itemId: 'editBox',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
-                  },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
-                      },
-                      cls: '',
-                      margin: '0 0 0 10',
-                      iconCls: 'x-fa fa-pencil',
-                      text: 'Editar'
-                    }
-                  ]
-                },
-                {
-                  xtype: 'container',
-                  columnWidth: 0.33,
-                  itemId: 'deleteBox',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch'
-                  },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        /* var gridPanel = this.up('[cls=gridpanel]');
-                        var checkConfig = {
-                        table: 'Lotes_actividades',
-                        field: 'cod_actividad',
-                        msgTitle: 'Actividad asignada',
-                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
-                        };
-                        f_crud.grid_check_delete(gridPanel,checkConfig); */
-                      },
-                      cls: '',
-                      margin: '0 0 0 10',
-                      iconCls: 'x-fa fa-trash',
-                      text: 'Borrar'
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           items: [
             {
               xtype: 'gridpanel',
@@ -392,11 +324,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 }
               ]
             }
-          ]
-        },
-        {
-          xtype: 'panel',
-          title: 'Maquinaria',
+          ],
           dockedItems: [
             {
               xtype: 'form',
@@ -419,59 +347,53 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD');
+                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD'); - old stuff
+                        /*
+                        var form_panel = this.up('#form');
+                        var store = Ext.getStore('Labores_personal');
+                        var newrecord = Ext.create('MyApp.model.Labores_personal');
+                        f_crud.secuencia(function(rtn){
+                        if (rtn !== -1){
+                        newrecord.set('id',rtn);
+                        var id_labores  = form_panel.getRecord().get('id');
+                        newrecord.set('id_labores', id_labores);
+                        newrecord.set('tipo','T');
+                        store.add(newrecord);
+                        }
+                        });
+                        */
+                        console.log('Create empty record and append it to the grid');
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
-                      text: 'Agregar'
-                    }
-                  ]
-                },
-                {
-                  xtype: 'container',
-                  columnWidth: 0.33,
-                  hidden: true,
-                  itemId: 'editBox',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
-                  },
-                  items: [
+                      text: ''
+                    },
                     {
                       xtype: 'button',
                       handler: function(button, e) {
                         //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                        console.log("Should edit the row in someway");
                       },
                       cls: '',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-pencil',
                       text: ''
-                    }
-                  ]
-                },
-                {
-                  xtype: 'container',
-                  columnWidth: 0.33,
-                  hidden: true,
-                  itemId: 'deleteBox',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
-                  },
-                  items: [
+                    },
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        /* var gridPanel = this.up('[cls=gridpanel]');
-                        var checkConfig = {
-                        table: 'Lotes_actividades',
-                        field: 'cod_actividad',
-                        msgTitle: 'Actividad asignada',
-                        message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'
-                        };
-                        f_crud.grid_check_delete(gridPanel,checkConfig); */
+                        console.log('Delete certain record from the grid-store');
+                        /*
+                        var gridedit = this.up('#gridedit');
+                        var grid = gridedit.grid;
+                        var form = gridedit.down('#form');
+                        grid.getStore().remove(form.getRecord());
+                        gridedit.hide();
+                        // This is how the old version deletes a row from the grid and Store
+                        // it had previously opened a form; when the user press delete
+                        // it will remove the current record..
+
+                        */
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -482,7 +404,11 @@ Ext.define('MyApp.view.LaboresForm', {
                 }
               ]
             }
-          ],
+          ]
+        },
+        {
+          xtype: 'panel',
+          title: 'Maquinaria',
           items: [
             {
               xtype: 'gridpanel',
@@ -524,6 +450,86 @@ Ext.define('MyApp.view.LaboresForm', {
                   xtype: 'numbercolumn',
                   dataIndex: 'cantidad',
                   text: 'Cantidad'
+                }
+              ]
+            }
+          ],
+          dockedItems: [
+            {
+              xtype: 'form',
+              dock: 'bottom',
+              layout: 'column',
+              bodyPadding: 10,
+              header: false,
+              title: 'My Form',
+              items: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  itemId: 'newBox',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD'); - old stuff
+                        /*
+                        var form_panel = this.up('#form');
+                        var store = Ext.getStore('Labores_maquinaria');
+                        var newrecord = Ext.create('MyApp.model.Labores_maquinaria');
+                        f_crud.secuencia(function(rtn){
+                        if (rtn !== -1){
+                        newrecord.set('id',rtn);
+                        var id_labores  = form_panel.getRecord().get('id');
+                        newrecord.set('id_labores', id_labores);
+                        newrecord.set('tipo','T');
+                        store.add(newrecord);
+                        }
+                        });
+                        */
+                        console.log('Create empty record and append it to the grid');
+                      },
+                      cls: '',
+                      iconCls: 'x-fa fa-plus',
+                      text: ''
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
+                        console.log("Should edit the row in someway");
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-pencil',
+                      text: ''
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        console.log('Delete certain record from the grid-store');
+                        /*
+                        var gridedit = this.up('#gridedit');
+                        var grid = gridedit.grid;
+                        var form = gridedit.down('#form');
+                        grid.getStore().remove(form.getRecord());
+                        gridedit.hide();
+                        // This is how the old version deletes a row from the grid and Store
+                        // it had previously opened a form; when the user press delete
+                        // it will remove the current record..
+
+                        */
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-trash',
+                      text: ''
+                    }
+                  ]
                 }
               ]
             }
@@ -584,6 +590,10 @@ Ext.define('MyApp.view.LaboresForm', {
   ],
 
   onFormActivate: function(component, eOpts) {
+    var form_panel = this;
+    var id_labores  = form_panel.getRecord().get('id');
+    debugger;
+
     var item = component.header.title.text;
     var form = this;
     var record = form.getRecord();

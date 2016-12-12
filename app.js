@@ -56,7 +56,8 @@ Ext.application({
     'Contratistas',
     'Depositos',
     'Insumos',
-    'Campanias'
+    'Campanias',
+    'Labores_insumos'
   ],
   views: [
     'MainContainer',
