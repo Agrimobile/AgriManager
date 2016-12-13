@@ -302,8 +302,8 @@ Ext.define('MyApp.view.LaboresPanel', {
     var st_insumos    = Ext.getStore('Labores_insumos');
     var st_personal   = Ext.getStore('Labores_personal');
     var st_maquinaria = Ext.getStore('Labores_maquinaria');
-    //this.form_store_array = [store,st_insumos,st_personal,st_maquinaria];
-    this.form_store_array = [store];
+    this.form_store_array = [store,st_insumos,st_personal,st_maquinaria];
+    // this.form_store_array = [store];
 
   },
 

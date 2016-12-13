@@ -117,10 +117,12 @@ Ext.define('MyApp.view.LaboresForm', {
         },
         {
           xtype: 'panel',
+          itemId: 'labores_insumos_tab',
           title: 'Insumos',
           items: [
             {
               xtype: 'gridpanel',
+              itemId: 'labores_insumos_grid',
               header: false,
               title: 'InsumosGrid',
               store: 'Labores_insumos',
@@ -177,7 +179,10 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'tipo',
                   text: 'Tipo'
                 }
-              ]
+              ],
+              listeners: {
+                selectionchange: 'onGridpanelSelectionChange'
+              }
             }
           ],
           dockedItems: [
@@ -203,19 +208,17 @@ Ext.define('MyApp.view.LaboresForm', {
                       xtype: 'button',
                       handler: function(button, e) {
                         var form_panel = this.up('#form');
-                        debugger;
-                        console.log(form_panel.getRecord().get('id'));
-                        /*var store = Ext.getStore('Labores_insumos');
+                        var id_labores  =  form_panel.getRecord().get('id');
+                        var store = Ext.getStore('Labores_insumos');
                         var newrecord = Ext.create('MyApp.model.Labores_insumos');
                         f_crud.secuencia(function(rtn){
-                        if (rtn !== -1){
-                        newrecord.set('id',rtn);
-                        var id_labores  = form_panel.getRecord().get('id');
-                        newrecord.set('id_labores', id_labores);
-                        newrecord.set('tipo','T');
-                        store.add(newrecord);
-                        }
-                        });*/
+                          if (rtn !== -1){
+                            newrecord.set('id',rtn);
+                            newrecord.set('id_labores', id_labores);
+                            newrecord.set('tipo','T');
+                            store.add(newrecord);
+                          }
+                        });
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
@@ -235,16 +238,18 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        console.log('Delete certain record from the grid-store');
+                        var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid");
+                        var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);
+                        debugger;
                         /*
+                        // old implementation
+
                         var gridedit = this.up('#gridedit');
                         var grid = gridedit.grid;
                         var form = gridedit.down('#form');
                         grid.getStore().remove(form.getRecord());
                         gridedit.hide();
-                        // This is how the old version deletes a row from the grid and Store
-                        // it had previously opened a form; when the user press delete
-                        // it will remove the current record..
 
                         */
                       },
@@ -261,10 +266,12 @@ Ext.define('MyApp.view.LaboresForm', {
         },
         {
           xtype: 'panel',
+          itemId: 'labores_personal_tab',
           title: 'Personal',
           items: [
             {
               xtype: 'gridpanel',
+              itemId: 'labores_personal_grid',
               header: false,
               title: 'PersonalGrid',
               store: 'Labores_personal',
@@ -322,7 +329,10 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'importe',
                   text: 'Importe'
                 }
-              ]
+              ],
+              listeners: {
+                selectionchange: 'onGridpanelSelectionChange1'
+              }
             }
           ],
           dockedItems: [
@@ -347,22 +357,18 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD'); - old stuff
-                        /*
                         var form_panel = this.up('#form');
+                        var id_labores  =  form_panel.getRecord().get('id');
                         var store = Ext.getStore('Labores_personal');
                         var newrecord = Ext.create('MyApp.model.Labores_personal');
                         f_crud.secuencia(function(rtn){
-                        if (rtn !== -1){
-                        newrecord.set('id',rtn);
-                        var id_labores  = form_panel.getRecord().get('id');
-                        newrecord.set('id_labores', id_labores);
-                        newrecord.set('tipo','T');
-                        store.add(newrecord);
-                        }
+                          if (rtn !== -1){
+                            newrecord.set('id',rtn);
+                            newrecord.set('id_labores', id_labores);
+                            newrecord.set('tipo','T');
+                            store.add(newrecord);
+                          }
                         });
-                        */
-                        console.log('Create empty record and append it to the grid');
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
@@ -408,10 +414,12 @@ Ext.define('MyApp.view.LaboresForm', {
         },
         {
           xtype: 'panel',
+          itemId: 'labores_maquinaria_tab',
           title: 'Maquinaria',
           items: [
             {
               xtype: 'gridpanel',
+              itemId: 'labores_maquinaria_grid',
               header: false,
               title: 'MaquinariaGrid',
               store: 'Labores_maquinaria',
@@ -451,7 +459,10 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad'
                 }
-              ]
+              ],
+              listeners: {
+                selectionchange: 'onGridpanelSelectionChange2'
+              }
             }
           ],
           dockedItems: [
@@ -476,22 +487,18 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up("[cls=gridpanel]"),'ADD'); - old stuff
-                        /*
                         var form_panel = this.up('#form');
+                        var id_labores  =  form_panel.getRecord().get('id');
                         var store = Ext.getStore('Labores_maquinaria');
                         var newrecord = Ext.create('MyApp.model.Labores_maquinaria');
                         f_crud.secuencia(function(rtn){
-                        if (rtn !== -1){
-                        newrecord.set('id',rtn);
-                        var id_labores  = form_panel.getRecord().get('id');
-                        newrecord.set('id_labores', id_labores);
-                        newrecord.set('tipo','T');
-                        store.add(newrecord);
-                        }
+                          if (rtn !== -1){
+                            newrecord.set('id',rtn);
+                            newrecord.set('id_labores', id_labores);
+                            newrecord.set('tipo','T');
+                            store.add(newrecord);
+                          }
                         });
-                        */
-                        console.log('Create empty record and append it to the grid');
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
@@ -591,12 +598,13 @@ Ext.define('MyApp.view.LaboresForm', {
 
   onFormActivate: function(component, eOpts) {
     var form_panel = this;
-    var id_labores  = form_panel.getRecord().get('id');
-    debugger;
-
     var item = component.header.title.text;
-    var form = this;
-    var record = form.getRecord();
+    var record = form_panel.getRecord();
+
+    for (var i=1 ; i < form_panel.store_array.length ;i++){
+      f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
+    }
+
     if(component.action === 'ADD') {
       component.setTitle('Nueva ' + item);
       var today = new Date();
@@ -612,8 +620,10 @@ Ext.define('MyApp.view.LaboresForm', {
     }
     else if(component.action === 'EDIT') {
       component.setTitle('Editar ' + item);
-
       var id = record.get('id');
+      f_crud.load_store('Labores_insumos','id_labores=' + id);
+      f_crud.load_store('Labores_personal','id_labores=' + id);
+      f_crud.load_store('Labores_maquinaria','id_labores=' + id);
     }
     else {
       component.setTitle(item);
@@ -635,6 +645,18 @@ Ext.define('MyApp.view.LaboresForm', {
     else {
 
     }*/
+  },
+
+  onGridpanelSelectionChange: function(model, selected, eOpts) {
+    this.down("#labores_insumos_grid").record = selected[0];
+  },
+
+  onGridpanelSelectionChange1: function(model, selected, eOpts) {
+    this.down("#labores_personal_grid").record = selected[0];
+  },
+
+  onGridpanelSelectionChange2: function(model, selected, eOpts) {
+    this.down("#labores_maquinaria_grid").record = selected[0];
   }
 
 });

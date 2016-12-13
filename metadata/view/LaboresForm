@@ -33,12 +33,13 @@
                 "fn": "onFormActivate",
                 "implHandler": [
                     "var form_panel = this;",
-                    "var id_labores  = form_panel.getRecord().get('id');",
-                    "debugger;",
-                    "",
                     "var item = component.header.title.text;",
-                    "var form = this;",
-                    "var record = form.getRecord();",
+                    "var record = form_panel.getRecord();",
+                    "",
+                    "for (var i=1 ; i < form_panel.store_array.length ;i++){",
+                    "  f_crud.load_store(form_panel.store_array[i],'id_labores = -1');",
+                    "}",
+                    "",
                     "if(component.action === 'ADD') {",
                     "  component.setTitle('Nueva ' + item);",
                     "  var today = new Date();",
@@ -54,8 +55,10 @@
                     "}",
                     "else if(component.action === 'EDIT') {",
                     "  component.setTitle('Editar ' + item);",
-                    "",
                     "  var id = record.get('id');",
+                    "  f_crud.load_store('Labores_insumos','id_labores=' + id);",
+                    "  f_crud.load_store('Labores_personal','id_labores=' + id);",
+                    "  f_crud.load_store('Labores_maquinaria','id_labores=' + id);",
                     "}",
                     "else {",
                     "  component.setTitle(item);",
@@ -245,6 +248,7 @@
                     "userConfig": {
                         "bodyPadding": null,
                         "html": null,
+                        "itemId": "labores_insumos_tab",
                         "title": "Insumos"
                     },
                     "name": "MyPanel1",
@@ -269,6 +273,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "header": false,
+                                "itemId": "labores_insumos_grid",
                                 "store": "Labores_insumos",
                                 "title": "InsumosGrid"
                             },
@@ -417,6 +422,24 @@
                                     },
                                     "name": "MyColumn38",
                                     "designerId": "eb03066a-0b35-4abb-8ab8-cd70996799ac"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange",
+                                        "implHandler": [
+                                            "this.down(\"#labores_insumos_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange",
+                                    "designerId": "bb0d85db-8814-4e04-830d-54fdf4258d17"
                                 }
                             ]
                         },
@@ -486,19 +509,17 @@
                                                         "fn": "handler",
                                                         "implHandler": [
                                                             "var form_panel = this.up('#form');",
-                                                            "debugger;",
-                                                            "console.log(form_panel.getRecord().get('id'));",
-                                                            "/*var store = Ext.getStore('Labores_insumos');",
+                                                            "var id_labores  =  form_panel.getRecord().get('id');",
+                                                            "var store = Ext.getStore('Labores_insumos');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_insumos');",
                                                             "f_crud.secuencia(function(rtn){",
                                                             "  if (rtn !== -1){",
                                                             "    newrecord.set('id',rtn);",
-                                                            "    var id_labores  = form_panel.getRecord().get('id');",
                                                             "    newrecord.set('id_labores', id_labores);",
                                                             "    newrecord.set('tipo','T');",
                                                             "    store.add(newrecord);",
                                                             "  }",
-                                                            "});*/"
+                                                            "});"
                                                         ]
                                                     },
                                                     "name": "handler",
@@ -577,18 +598,20 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "console.log('Delete certain record from the grid-store');",
-                                                            "/* ",
+                                                            "var grid = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\");",
+                                                            "var gridSeletedRecord = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\").record;",
+                                                            "grid.getStore().remove(gridSeletedRecord);",
+                                                            "debugger;",
+                                                            "/*",
+                                                            "// old implementation",
+                                                            "",
                                                             "var gridedit = this.up('#gridedit');",
                                                             "var grid = gridedit.grid;",
                                                             "var form = gridedit.down('#form');",
                                                             "grid.getStore().remove(form.getRecord());",
-                                                            "gridedit.hide(); ",
-                                                            "// This is how the old version deletes a row from the grid and Store",
-                                                            "// it had previously opened a form; when the user press delete",
-                                                            "// it will remove the current record..",
+                                                            "gridedit.hide();",
                                                             "",
-                                                            "*/ "
+                                                            "*/"
                                                         ]
                                                     },
                                                     "name": "handler",
@@ -610,6 +633,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "labores_personal_tab",
                         "title": "Personal"
                     },
                     "name": "MyPanel2",
@@ -634,6 +658,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "header": false,
+                                "itemId": "labores_personal_grid",
                                 "store": "Labores_personal",
                                 "title": "PersonalGrid"
                             },
@@ -783,6 +808,24 @@
                                     },
                                     "name": "MyNumberColumn56",
                                     "designerId": "d025bc1a-6982-4add-90ed-c7e7bd562a76"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange1",
+                                        "implHandler": [
+                                            "this.down(\"#labores_personal_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange1",
+                                    "designerId": "e0fcafcf-0cb0-49e5-83a5-dfeffb774e03"
                                 }
                             ]
                         },
@@ -851,22 +894,18 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "//f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD'); - old stuff",
-                                                            "/*",
                                                             "var form_panel = this.up('#form');",
+                                                            "var id_labores  =  form_panel.getRecord().get('id');",
                                                             "var store = Ext.getStore('Labores_personal');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_personal');",
                                                             "f_crud.secuencia(function(rtn){",
                                                             "  if (rtn !== -1){",
                                                             "    newrecord.set('id',rtn);",
-                                                            "    var id_labores  = form_panel.getRecord().get('id');",
                                                             "    newrecord.set('id_labores', id_labores);",
                                                             "    newrecord.set('tipo','T');",
                                                             "    store.add(newrecord);",
                                                             "  }",
-                                                            "});",
-                                                            "*/",
-                                                            "console.log('Create empty record and append it to the grid');"
+                                                            "});"
                                                         ]
                                                     },
                                                     "name": "handler",
@@ -978,6 +1017,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "labores_maquinaria_tab",
                         "title": "Maquinaria"
                     },
                     "name": "MyPanel3",
@@ -1002,6 +1042,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "header": false,
+                                "itemId": "labores_maquinaria_grid",
                                 "store": "Labores_maquinaria",
                                 "title": "MaquinariaGrid"
                             },
@@ -1106,6 +1147,24 @@
                                     },
                                     "name": "MyNumberColumn59",
                                     "designerId": "641dc618-cf07-4ac6-82a8-996dc2e18fa4"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange2",
+                                        "implHandler": [
+                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange2",
+                                    "designerId": "6cf1a7b7-7abb-4ab6-b1d5-fa2660febbb2"
                                 }
                             ]
                         },
@@ -1174,22 +1233,18 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "//f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD'); - old stuff",
-                                                            "/*",
                                                             "var form_panel = this.up('#form');",
+                                                            "var id_labores  =  form_panel.getRecord().get('id');",
                                                             "var store = Ext.getStore('Labores_maquinaria');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_maquinaria');",
                                                             "f_crud.secuencia(function(rtn){",
                                                             "  if (rtn !== -1){",
                                                             "    newrecord.set('id',rtn);",
-                                                            "    var id_labores  = form_panel.getRecord().get('id');",
                                                             "    newrecord.set('id_labores', id_labores);",
                                                             "    newrecord.set('tipo','T');",
                                                             "    store.add(newrecord);",
                                                             "  }",
-                                                            "});",
-                                                            "*/",
-                                                            "console.log('Create empty record and append it to the grid');"
+                                                            "});"
                                                         ]
                                                     },
                                                     "name": "handler",
