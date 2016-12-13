@@ -241,17 +241,6 @@ Ext.define('MyApp.view.LaboresForm', {
                         var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid");
                         var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
                         grid.getStore().remove(gridSeletedRecord);
-                        debugger;
-                        /*
-                        // old implementation
-
-                        var gridedit = this.up('#gridedit');
-                        var grid = gridedit.grid;
-                        var form = gridedit.down('#form');
-                        grid.getStore().remove(form.getRecord());
-                        gridedit.hide();
-
-                        */
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -388,18 +377,9 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        console.log('Delete certain record from the grid-store');
-                        /*
-                        var gridedit = this.up('#gridedit');
-                        var grid = gridedit.grid;
-                        var form = gridedit.down('#form');
-                        grid.getStore().remove(form.getRecord());
-                        gridedit.hide();
-                        // This is how the old version deletes a row from the grid and Store
-                        // it had previously opened a form; when the user press delete
-                        // it will remove the current record..
-
-                        */
+                        var grid = this.up('#labores_personal_tab').down("#labores_personal_grid");
+                        var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -518,18 +498,9 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        console.log('Delete certain record from the grid-store');
-                        /*
-                        var gridedit = this.up('#gridedit');
-                        var grid = gridedit.grid;
-                        var form = gridedit.down('#form');
-                        grid.getStore().remove(form.getRecord());
-                        gridedit.hide();
-                        // This is how the old version deletes a row from the grid and Store
-                        // it had previously opened a form; when the user press delete
-                        // it will remove the current record..
-
-                        */
+                        var grid = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid");
+                        var gridSeletedRecord = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);
                       },
                       cls: '',
                       margin: '0 0 0 10',
