@@ -1,0 +1,477 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "gridpanel"
+        ],
+        "designer|userAlias": "campaniaspanel",
+        "designer|userClassName": "CampaniasPanel",
+        "flex": 1,
+        "height": null,
+        "itemId": null,
+        "scrollable": true,
+        "title": "Campañas",
+        "titleAlign": "center",
+        "width": null
+    },
+    "name": "ContratistasPanel1",
+    "designerId": "47d0b115-f0d9-4f66-ad83-a5afd376c3dd",
+    "viewControllerInstanceId": "df629f43-5a80-4110-a300-ee679fa23e38",
+    "viewModelInstanceId": "d6986f62-77f4-4537-8a83-1ddd2975f00b",
+    "cn": [
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "paneltool"
+                ],
+                "iconCls": "x-fa fa-arrow-left"
+            },
+            "name": "MyTool2",
+            "designerId": "7679c2ff-64d6-4ad3-8311-6c7c73c542a8",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onToolClick",
+                        "implHandler": [
+                            "var thisPanel = MyApp.main.getLayout().getActiveItem();",
+                            "MyApp.main.getLayout().prev();",
+                            "thisPanel.close();"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "name": "onToolClick",
+                    "designerId": "71bd47cd-25d4-4741-80f1-3f4686c4d592"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelRender",
+                "implHandler": [
+                    "this.store_name = 'Campanias';",
+                    "this.model_name = 'MyApp.model.Campanias';",
+                    "this.form_name  = 'MyApp.view.CampaniasForm';",
+                    "var store = Ext.getStore(this.store_name);",
+                    "this.form_store_array = [store];",
+                    "f_crud.load_store(this.store_name);"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onPanelRender",
+            "designerId": "d80d3f22-157b-402b-845a-3c9e20fce61f"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "header": false,
+                "itemId": "grid",
+                "store": "Campanias",
+                "title": "Campañas"
+            },
+            "name": "MyGridPanel8",
+            "designerId": "9c2bd083-5d6a-4151-8a7a-9076f8073e30",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable2",
+                    "designerId": "b9e6d3f2-1b19-4e7b-8392-7e601a34bc9c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridSelectionChange1",
+                        "implHandler": [
+                            "this.record = selected[0];"
+                        ],
+                        "name": "selectionchange",
+                        "scope": "me"
+                    },
+                    "name": "onGridSelectionChange1",
+                    "designerId": "1cb6f22b-df80-4acc-8cd4-b3ac11c94d76"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridItemLongpress1",
+                        "implHandler": [
+                            "var newbox = this.down(\"#newBox\");",
+                            "var editbox = this.down(\"#editBox\");",
+                            "var deletebox = this.down(\"#deleteBox\");",
+                            "newbox.columnWidth = 0.33;",
+                            "newbox.layout.pack = 'end';",
+                            "newbox.hide();",
+                            "newbox.show();",
+                            "editbox.show();",
+                            "deletebox.show();",
+                            "this.longpress = true;"
+                        ],
+                        "name": "itemlongpress",
+                        "scope": "me"
+                    },
+                    "name": "onGridItemLongpress1",
+                    "designerId": "ebe0881a-4192-4e14-af8d-a76df5cc7ee1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridItemClick1",
+                        "implHandler": [
+                            "if(!this.longpress) {",
+                            "    /*var panelClass = \"MyApp.view.\";",
+                            "    var newPan = Ext.create(panelClass);",
+                            "    newPan.parent = record.data;",
+                            "    MyApp.main.add(newPan);",
+                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
+                            "    console.log('Should bring the user to a single-labor view');",
+                            "}",
+                            "this.longpress = false;"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "name": "onGridItemClick1",
+                    "designerId": "a4afe221-bf44-4013-9af7-1f86dd9bdb6d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "estado_registro",
+                        "hidden": true,
+                        "text": "Estado Registro"
+                    },
+                    "name": "MyColumn35",
+                    "designerId": "66f8e9ac-d7d3-4ea9-8bf0-2857b6016c4a"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "hidden": true,
+                        "text": "ID"
+                    },
+                    "name": "MyNumberColumn80",
+                    "designerId": "c7cb4ab9-13e0-4d3a-a794-79505f7b09a3"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "uid",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Uid"
+                    },
+                    "name": "MyNumberColumn81",
+                    "designerId": "8e8ee04a-ab6d-4e5b-888d-bf6ad64e63dc"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "50%"
+                    },
+                    "name": "MyNumberColumn82",
+                    "designerId": "ce32edbb-de5f-47c6-9e84-b144da7d9360"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "descripcion",
+                        "text": "Descripcion",
+                        "width": "50%"
+                    },
+                    "name": "MyColumn36",
+                    "designerId": "a95c5810-4f8d-487b-b37c-e11bb8560d16"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "gridControl",
+                "dock": "bottom",
+                "flex": null,
+                "header": false,
+                "layout": "column",
+                "title": "My Form"
+            },
+            "name": "MyForm5",
+            "designerId": "10fc6791-3d66-4add-9f57-c771386cb6e7",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "itemId": "newBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 1
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "bc042f77-cc9a-4346-9fc8-f7abead76e3e",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-plus",
+                                "text": "Nuevo"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "d924b65a-59db-41cb-b983-9671ee8e3df2",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "4a6f8db2-1305-4301-8238-1102ea0e127b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "hidden": true,
+                        "itemId": "editBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "f9adb92e-3b88-4268-9dde-93bf210c34d3",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-pencil",
+                                "margin": "0 0 0 10",
+                                "text": "Editar"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "ffbe12cf-9a4a-4556-9916-6cccf6a677c7",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b3478b64-4114-4baa-aad4-3dcf7a81f018"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "hidden": true,
+                        "itemId": "deleteBox",
+                        "layout": "hbox",
+                        "layout|columnWidth": 0.33
+                    },
+                    "name": "MyContainer4",
+                    "designerId": "398c40fa-7abe-408a-b008-bb26c5de92c5",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "",
+                                "iconCls": "x-fa fa-trash",
+                                "layout|flex": null,
+                                "margin": "0 0 0 10",
+                                "text": "Borrar"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "92028b70-6b74-4c76-b730-7ba16a3c7793",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var gridPanel = this.up('[cls=gridpanel]');",
+                                            "f_crud.grid_delete(gridPanel);"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "424c8353-aac0-4a24-b608-1ef3d8e229cd"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelAfterRender",
+                "implHandler": [
+                    "this.setTitle(\"Campañas\");"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onGridpanelAfterRender",
+            "designerId": "56117b35-def3-47b7-87d6-349bc948deff"
+        }
+    ]
+}

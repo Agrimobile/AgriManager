@@ -79,6 +79,12 @@ Ext.define('MyApp.store.Menu', {
             leaf: true,
             iconCls: 'x-fa fa-inbox',
             panelClass: 'DepositosPanel'
+          },
+          {
+            text: 'Campañas',
+            leaf: true,
+            iconCls: 'x-fa fa-calendar-o fa-calendar-custom',
+            panelClass: 'CampaniasPanel'
           }
         ]
       }

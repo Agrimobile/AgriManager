@@ -1,28 +1,43 @@
 .x-grid-cell-inner-treecolumn {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .paneltool {
-    left: 0!important;
+  left: 0!important;
 }
 
 .x-grid-cell-inner {
-    text-align: left!important;
+  text-align: left!important;
 }
 
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
-    color: transparent;
+  color: transparent;
 }
 
 .warning-message .x-form-display-field-default {
-    color: #cf4c35;
-    font-weight: 600;
+  color: #cf4c35;
+  font-weight: 600;
 }
 
 .custom-contratistas-icon-style:before {
-    border: 1px solid;
-    border-radius: 35px;
-    padding: 0 2px;
-    left: -1px;
-    position: relative;
+  border: 1px solid;
+  border-radius: 35px;
+  padding: 0 2px;
+  left: -1px;
+  position: relative;
+}
+
+.fa-calendar-custom.fa-calendar-o:after {
+  left: -14px;
+  content: "\f133" !important;
+}
+
+.fa-calendar-custom.fa-calendar-o:after, .fa-calendar-custom.fa-calendar-o:before {
+  background: white;
+  position: relative;
+}
+
+.fa-calendar-custom.fa-calendar-o:before {
+  top: -6px;
+  left: -4px;
 }

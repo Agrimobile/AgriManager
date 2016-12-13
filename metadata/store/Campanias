@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Campanias",
+        "model": "Campanias",
+        "storeId": "Campanias"
+    },
+    "name": "Contratistas1",
+    "designerId": "65ddb75a-5aba-42fb-bb84-a7600919de88",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "4594b44c-fa93-4059-9695-bd228dc22809"
+        }
+    ]
+}

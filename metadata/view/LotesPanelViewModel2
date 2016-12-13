@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "campaniaspanel",
+        "designer|userClassName": "LotesPanelViewModel2"
+    },
+    "name": "LotesPanelViewModel2",
+    "designerId": "d6986f62-77f4-4537-8a83-1ddd2975f00b"
+}

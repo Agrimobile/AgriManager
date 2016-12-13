@@ -36,7 +36,8 @@ Ext.application({
     'Maquinaria',
     'Contratistas',
     'Depositos',
-    'Insumos'
+    'Insumos',
+    'Campanias'
   ],
   stores: [
     'Menu',
@@ -54,7 +55,9 @@ Ext.application({
     'Maquinaria',
     'Contratistas',
     'Depositos',
-    'Insumos'
+    'Insumos',
+    'Campanias',
+    'Labores_insumos'
   ],
   views: [
     'MainContainer',
@@ -82,7 +85,9 @@ Ext.application({
     'PersonalPanel',
     'PersonalForm',
     'MaquinariaPanel',
-    'MaquinariaForm'
+    'MaquinariaForm',
+    'CampaniasPanel',
+    'CampaniasForm'
   ],
   name: 'MyApp',
 
