@@ -27,6 +27,8 @@ Ext.define('MyApp.view.LaboresForm', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
+    'Ext.form.field.Display',
+    'Ext.grid.plugin.CellEditing',
     'Ext.form.Panel'
   ],
 
@@ -126,63 +128,118 @@ Ext.define('MyApp.view.LaboresForm', {
               header: false,
               title: 'InsumosGrid',
               store: 'Labores_insumos',
+              listeners: {
+                selectionchange: 'onGridpanelSelectionChange'
+              },
               columns: [
                 {
                   xtype: 'gridcolumn',
                   hidden: true,
                   dataIndex: 'estado_registro',
-                  text: 'Estado Registro'
+                  text: 'Estado Registro',
+                  editor: {
+                    xtype: 'textfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id',
-                  text: 'ID'
+                  text: 'ID',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   hidden: true,
                   dataIndex: 'uid',
                   text: 'Uid',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
+                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                    var st = Ext.getStore("Insumos"), cod, displayValue;
+                    cod = st.find("codigo",value);
+                    displayValue = st.getAt(cod).get('descripcion');
+                    return displayValue;
+                  },
                   dataIndex: 'cod_insumo',
                   text: 'Cod Insumo',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'combobox',
+                    displayField: 'descripcion',
+                    forceSelection: true,
+                    queryMode: 'local',
+                    store: 'Insumos',
+                    valueField: 'codigo'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
-                  hidden: true,
                   dataIndex: 'dosis',
-                  text: 'Dosis'
+                  text: 'Dosis',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'cantidad',
-                  text: 'Cantidad'
+                  text: 'Cantidad',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
+                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                    var st = Ext.getStore("Depositos"), cod, displayValue;
+                    cod = st.find("codigo",value);
+                    displayValue = st.getAt(cod).get('nombre');
+                    return displayValue;
+                  },
                   dataIndex: 'cod_deposito',
                   text: 'Cod Deposito',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'combobox',
+                    displayField: 'nombre',
+                    forceSelection: true,
+                    queryMode: 'local',
+                    store: 'Depositos',
+                    valueField: 'codigo'
+                  }
                 },
                 {
                   xtype: 'gridcolumn',
                   dataIndex: 'tipo',
-                  text: 'Tipo'
+                  text: 'Tipo',
+                  editor: {
+                    xtype: 'textfield'
+                  }
                 }
               ],
-              listeners: {
-                selectionchange: 'onGridpanelSelectionChange'
-              }
+              plugins: [
+                {
+                  ptype: 'cellediting'
+                }
+              ]
             }
           ],
           dockedItems: [
@@ -227,17 +284,6 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
-                        console.log("Should edit the row in someway");
-                      },
-                      cls: '',
-                      margin: '0 0 0 10',
-                      iconCls: 'x-fa fa-pencil',
-                      text: ''
-                    },
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
                         var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid");
                         var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
                         grid.getStore().remove(gridSeletedRecord);
@@ -264,64 +310,107 @@ Ext.define('MyApp.view.LaboresForm', {
               header: false,
               title: 'PersonalGrid',
               store: 'Labores_personal',
+              listeners: {
+                selectionchange: 'onGridpanelSelectionChange1'
+              },
               columns: [
                 {
                   xtype: 'gridcolumn',
                   hidden: true,
                   dataIndex: 'estado_registro',
-                  text: 'Estado Registro'
+                  text: 'Estado Registro',
+                  editor: {
+                    xtype: 'textfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id',
-                  text: 'ID'
+                  text: 'ID',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   hidden: true,
                   dataIndex: 'uid',
                   text: 'Uid',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
+                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                    var st = Ext.getStore("Personal"), cod, displayValue;
+                    cod = st.find("codigo",value);
+                    displayValue = st.getAt(cod).get('nombre');
+                    return displayValue;
+                  },
                   dataIndex: 'cod_personal',
                   text: 'Cod Personal',
-                  format: '00'
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'cod_concepto',
-                  text: 'Cod Concepto',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'combobox',
+                    displayField: 'nombre',
+                    queryMode: 'local',
+                    store: 'Personal',
+                    valueField: 'codigo'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   hidden: true,
+                  dataIndex: 'cod_concepto',
+                  text: 'Cod Concepto',
+                  format: '00',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
+                },
+                {
+                  xtype: 'numbercolumn',
                   dataIndex: 'cantidad',
-                  text: 'Cantidad'
+                  text: 'Cantidad',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'precio',
-                  text: 'Precio'
+                  text: 'Precio',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
-                  hidden: true,
                   dataIndex: 'importe',
-                  text: 'Importe'
+                  text: 'Importe',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 }
               ],
-              listeners: {
-                selectionchange: 'onGridpanelSelectionChange1'
-              }
+              plugins: [
+                {
+                  ptype: 'cellediting'
+                }
+              ]
             }
           ],
           dockedItems: [
@@ -366,17 +455,6 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
-                        console.log("Should edit the row in someway");
-                      },
-                      cls: '',
-                      margin: '0 0 0 10',
-                      iconCls: 'x-fa fa-pencil',
-                      text: ''
-                    },
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
                         var grid = this.up('#labores_personal_tab').down("#labores_personal_grid");
                         var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
                         grid.getStore().remove(gridSeletedRecord);
@@ -401,48 +479,80 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'gridpanel',
               itemId: 'labores_maquinaria_grid',
               header: false,
-              title: 'MaquinariaGrid',
+              title: 'My Grid Panel',
               store: 'Labores_maquinaria',
               columns: [
                 {
                   xtype: 'gridcolumn',
                   hidden: true,
                   dataIndex: 'estado_registro',
-                  text: 'Estado Registro'
+                  text: 'Estado Registro',
+                  editor: {
+                    xtype: 'textfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id',
-                  text: 'ID'
+                  text: 'ID',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'displayfield',
+                    value: 'Display Field'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   hidden: true,
                   dataIndex: 'uid',
                   text: 'Uid',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
+                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                    var st = Ext.getStore("Maquinaria"), cod, displayValue;
+                    cod = st.find("codigo",value);
+                    displayValue = st.getAt(cod).get('nombre');
+                    return displayValue;
+                  },
                   dataIndex: 'cod_maquina',
                   text: 'Cod Maquina',
-                  format: '00'
+                  format: '00',
+                  editor: {
+                    xtype: 'combobox',
+                    displayField: 'nombre',
+                    queryMode: 'local',
+                    store: 'Maquinaria',
+                    valueField: 'codigo'
+                  }
                 },
                 {
                   xtype: 'numbercolumn',
                   dataIndex: 'cantidad',
-                  text: 'Cantidad'
+                  text: 'Cantidad',
+                  editor: {
+                    xtype: 'numberfield'
+                  }
                 }
               ],
-              listeners: {
-                selectionchange: 'onGridpanelSelectionChange2'
-              }
+              plugins: [
+                {
+                  ptype: 'cellediting'
+                }
+              ]
             }
           ],
           dockedItems: [
@@ -482,17 +592,6 @@ Ext.define('MyApp.view.LaboresForm', {
                       },
                       cls: '',
                       iconCls: 'x-fa fa-plus',
-                      text: ''
-                    },
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        //f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');
-                        console.log("Should edit the row in someway");
-                      },
-                      cls: '',
-                      margin: '0 0 0 10',
-                      iconCls: 'x-fa fa-pencil',
                       text: ''
                     },
                     {
@@ -572,50 +671,31 @@ Ext.define('MyApp.view.LaboresForm', {
     var item = component.header.title.text;
     var record = form_panel.getRecord();
 
-    for (var i=1 ; i < form_panel.store_array.length ;i++){
+    //empty labores_ tables
+    for (var i=1; i < form_panel.store_array.length; i++){
       f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
     }
+
+    f_crud.load_store('Depositos');
+    f_crud.load_store('Insumos');
+    f_crud.load_store('Personal');
+    f_crud.load_store('Maquinaria');
 
     if(component.action === 'ADD') {
       component.setTitle('Nueva ' + item);
       var today = new Date();
       this.down('#fecha').setValue(today);
-      // Genero el id de cabecera - Why would I generate the id if it is correctly
-      // generated by form_open method in f_crud lib?
-
-      /* f_crud.secuencia(function(rtn){
-        if (rtn !== -1){
-          record.set('id',rtn);
-        }
-      });*/
     }
     else if(component.action === 'EDIT') {
       component.setTitle('Editar ' + item);
       var id = record.get('id');
-      f_crud.load_store('Labores_insumos','id_labores=' + id);
-      f_crud.load_store('Labores_personal','id_labores=' + id);
-      f_crud.load_store('Labores_maquinaria','id_labores=' + id);
+      for (var i=1; i < form_panel.store_array.length; i++){
+        f_crud.load_store(form_panel.store_array[i],'id_labores = ' + id);
+      }
     }
     else {
       component.setTitle(item);
     }
-
-    /*if (this.action=='ADD'){
-
-
-        record.set('cod_lote_actividad',codigo);
-        record.set('cod_lote',form_panel.cod_lote);
-        record.set('cod_area',form_panel.cod_actividad);
-        record.set('cod_establecimiento',form_panel.cod_estab);
-        record.set('cod_periodo',form_panel.cod_periodo);
-        record.set('propia','P');
-
-        this.down('#cod_lote_actividad').setValue(codigo);
-        this.down('#cantidad').setValue(form_panel.superficie);
-    }
-    else {
-
-    }*/
   },
 
   onGridpanelSelectionChange: function(model, selected, eOpts) {
@@ -624,10 +704,6 @@ Ext.define('MyApp.view.LaboresForm', {
 
   onGridpanelSelectionChange1: function(model, selected, eOpts) {
     this.down("#labores_personal_grid").record = selected[0];
-  },
-
-  onGridpanelSelectionChange2: function(model, selected, eOpts) {
-    this.down("#labores_maquinaria_grid").record = selected[0];
   }
 
 });
