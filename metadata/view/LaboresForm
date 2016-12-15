@@ -1829,7 +1829,7 @@
                                     "userConfig": {
                                         "fn": "onLabores_maquinaria_gridSelectionChange",
                                         "implHandler": [
-                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];"
+                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];   "
                                         ],
                                         "name": "selectionchange",
                                         "scope": "me"
