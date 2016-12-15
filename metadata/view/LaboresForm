@@ -1818,6 +1818,24 @@
                                     "codeClass": null,
                                     "name": "MyCellEditingPlugin",
                                     "designerId": "0b8e09d3-9a53-4b24-86d0-71122bc502f8"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLabores_maquinaria_gridSelectionChange",
+                                        "implHandler": [
+                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onLabores_maquinaria_gridSelectionChange",
+                                    "designerId": "a4b65195-59fb-4e07-8ce2-333f9486152d"
                                 }
                             ]
                         },

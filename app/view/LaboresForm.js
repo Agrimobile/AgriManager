@@ -681,7 +681,10 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   ptype: 'cellediting'
                 }
-              ]
+              ],
+              listeners: {
+                selectionchange: 'onLabores_maquinaria_gridSelectionChange'
+              }
             }
           ],
           dockedItems: [
@@ -833,6 +836,10 @@ Ext.define('MyApp.view.LaboresForm', {
 
   onGridpanelSelectionChange1: function(model, selected, eOpts) {
     this.down("#labores_personal_grid").record = selected[0];
+  },
+
+  onLabores_maquinaria_gridSelectionChange: function(model, selected, eOpts) {
+    this.down("#labores_maquinaria_grid").record = selected[0];
   }
 
 });
