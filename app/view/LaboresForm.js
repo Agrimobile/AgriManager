@@ -173,6 +173,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                    var st = Ext.getStore("Insumos"), cod, displayValue;
                     cod = st.find("codigo",value);
                     if(cod > -1) {
                       displayValue = st.getAt(cod).get('descripcion');

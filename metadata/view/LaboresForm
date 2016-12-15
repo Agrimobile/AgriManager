@@ -449,6 +449,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
+                                                    "var st = Ext.getStore(\"Insumos\"), cod, displayValue;",
                                                     "cod = st.find(\"codigo\",value);",
                                                     "if(cod > -1) {",
                                                     "  displayValue = st.getAt(cod).get('descripcion');",
