@@ -449,7 +449,6 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Insumos\"), cod, displayValue;",
                                                     "cod = st.find(\"codigo\",value);",
                                                     "if(cod > -1) {",
                                                     "  displayValue = st.getAt(cod).get('descripcion');",
@@ -1829,7 +1828,7 @@
                                     "userConfig": {
                                         "fn": "onLabores_maquinaria_gridSelectionChange",
                                         "implHandler": [
-                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];"
+                                            "this.down(\"#labores_maquinaria_grid\").record = selected[0];   "
                                         ],
                                         "name": "selectionchange",
                                         "scope": "me"
