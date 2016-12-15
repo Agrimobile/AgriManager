@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GridEditingField"
+    },
+    "name": "GridEditing1",
+    "designerId": "c8481da1-a969-42c0-8894-0329eac114ac",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldString"
+            },
+            "name": "MyString23",
+            "designerId": "559611dc-d8c1-4329-ba67-4ee9675809f0"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldInt"
+            },
+            "name": "MyInteger47",
+            "designerId": "95115f9f-7d41-4af5-bd60-e6a245e7da7d"
+        }
+    ]
+}

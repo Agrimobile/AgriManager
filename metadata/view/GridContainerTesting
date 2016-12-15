@@ -1,0 +1,229 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "gridcontainertesting",
+        "designer|userClassName": "GridContainerTesting",
+        "flex": 1,
+        "layout": "card",
+        "scrollable": null
+    },
+    "name": "MainContainer2",
+    "designerId": "258be2f3-52e7-466a-ba3f-07bba3831bbb",
+    "viewControllerInstanceId": "f6f9b1e7-7b66-44c0-a5b7-2b985a8d3b9b",
+    "viewModelInstanceId": "a770ae7f-e1db-4fef-b809-bbbad6c05edc",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "GridEditing"
+            },
+            "name": "MyPanel5",
+            "designerId": "716590bf-6647-4caf-96da-06db0c6a260e",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "store": "GridEditing",
+                        "title": "My Grid Panel"
+                    },
+                    "name": "MyGridPanel9",
+                    "designerId": "350c7a78-d9d1-43f1-8de9-a0e32080f03d",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable6",
+                            "designerId": "09951865-4a6f-41ec-a51e-8339be1a1818"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fieldString",
+                                "text": "Field String"
+                            },
+                            "name": "MyColumn21",
+                            "designerId": "671367c6-f5a1-4985-a23d-1201866a8112",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField5",
+                                    "designerId": "a9415ca5-7191-4b24-9df0-00d4b2d2db0f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fieldInt",
+                                "format": "00",
+                                "text": "Field Int"
+                            },
+                            "name": "MyNumberColumn44",
+                            "designerId": "21be4620-5cd8-46a7-af3b-cbc4c6486b4a",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyNumberField7",
+                                    "designerId": "30b94821-0f35-4f56-aeca-bf388849d1a3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fieldDate",
+                                "format": "m/j/Y",
+                                "text": "Field Date"
+                            },
+                            "name": "MyDateColumn6",
+                            "designerId": "069df631-e0fa-4d1e-bcfd-c32f55742e07",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyDateField3",
+                                    "designerId": "cbdee4c5-0c70-4d3a-a9ba-e6f0a1990f86"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fieldComboboxString",
+                                "text": "Field Combobox String"
+                            },
+                            "name": "MyColumn39",
+                            "designerId": "e8d45aae-d293-48e0-802e-30c7f92dff32",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField6",
+                                    "designerId": "552cbfac-7bf0-4aa4-b6d4-0294fc94611f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fieldComboboxInt",
+                                "format": "00",
+                                "text": "Field Combobox Int"
+                            },
+                            "name": "MyNumberColumn45",
+                            "designerId": "8e44c4fc-2c6e-45b2-85b2-defddb8610f1",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "fieldString",
+                                        "store": "GridEditingField",
+                                        "valueField": "fieldInt"
+                                    },
+                                    "name": "MyComboBox3",
+                                    "designerId": "d3bd75ae-7dcb-434b-8e61-ce431de4cf5b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.CellEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyCellEditingPlugin4",
+                            "designerId": "48bcd7d7-df14-463d-b599-e25ff35ac2b4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportRender",
+                "implHandler": [
+                    "f_crud.load_store('GridEditing');",
+                    "f_crud.load_store('GridEditingField');"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onViewportRender",
+            "designerId": "fb75f842-0373-46dc-8c56-7e4712e81ab7"
+        }
+    ]
+}

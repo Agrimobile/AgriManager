@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GridEditing"
+    },
+    "name": "MyModel",
+    "designerId": "d346671b-5007-4116-a893-d1664e2f6852",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldString"
+            },
+            "name": "MyString23",
+            "designerId": "d973f0cd-6aaf-4e50-a6b2-0b2c59069c6d"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldInt"
+            },
+            "name": "MyInteger47",
+            "designerId": "a8a16c44-e90e-4ed0-98b3-e0c09590a449"
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldDate"
+            },
+            "name": "MyDate3",
+            "designerId": "99f27a3d-9b0e-4acc-a3cd-f825b21c75ac"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldComboboxString"
+            },
+            "name": "MyString22",
+            "designerId": "19b9c971-853a-45ab-8ab3-676771869a35"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fieldComboboxInt"
+            },
+            "name": "MyInteger48",
+            "designerId": "06e5b30b-3daf-4254-b700-e9b8cd059eb5"
+        }
+    ]
+}
