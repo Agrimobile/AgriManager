@@ -231,7 +231,6 @@
                     "userConfig": {
                         "dataIndex": "fecha",
                         "format": "m/j/Y",
-                        "hidden": true,
                         "text": "Fecha"
                     },
                     "name": "MyDateColumn",
@@ -247,6 +246,7 @@
                     "userConfig": {
                         "dataIndex": "cod_lote_actividad",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Lote Actividad",
                         "width": "20%"
                     },
@@ -263,6 +263,7 @@
                     "userConfig": {
                         "dataIndex": "cod_lote",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Lote",
                         "width": "20%"
                     },
@@ -328,6 +329,7 @@
                     "userConfig": {
                         "dataIndex": "cod_tarea",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Tarea",
                         "width": "20%"
                     },
@@ -343,7 +345,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "cantidad",
-                        "hidden": true,
                         "text": "Cantidad"
                     },
                     "name": "MyColumn11",
@@ -358,7 +359,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
-                        "hidden": true,
                         "text": "Precio"
                     },
                     "name": "MyColumn12",
@@ -389,6 +389,7 @@
                     "userConfig": {
                         "dataIndex": "cod_contratista",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Contratista"
                     },
                     "name": "MyNumberColumn34",

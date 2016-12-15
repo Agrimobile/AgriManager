@@ -89,13 +89,13 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'datecolumn',
-          hidden: true,
           dataIndex: 'fecha',
           text: 'Fecha',
           format: 'm/j/Y'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_lote_actividad',
           text: 'Cod Lote Actividad',
@@ -103,6 +103,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
@@ -131,6 +132,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_tarea',
           text: 'Cod Tarea',
@@ -138,13 +140,11 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'gridcolumn',
-          hidden: true,
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
-          hidden: true,
           dataIndex: 'precio',
           text: 'Precio'
         },
@@ -156,6 +156,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_contratista',
           text: 'Cod Contratista',
           format: '00'

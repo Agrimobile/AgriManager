@@ -96,6 +96,7 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '25%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
@@ -103,6 +104,7 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '',
           dataIndex: 'cod_actividad',
           text: 'Cod Actividad',

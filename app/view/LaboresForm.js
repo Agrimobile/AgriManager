@@ -152,6 +152,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -184,7 +185,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     return displayValue;
                   },
                   dataIndex: 'cod_insumo',
-                  text: 'Cod Insumo',
+                  text: 'Insumo',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -225,7 +226,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     return displayValue;
                   },
                   dataIndex: 'cod_deposito',
-                  text: 'Cod Deposito',
+                  text: 'Deposito',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -238,115 +239,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'gridcolumn',
-                  dataIndex: 'tipo',
-                  text: 'Tipo',
-                  editor: {
-                    xtype: 'textfield'
-                  }
-                }
-              ],
-              plugins: [
-                {
-                  ptype: 'cellediting'
-                }
-              ]
-            },
-            {
-              xtype: 'gridpanel',
-              hidden: true,
-              itemId: 'labores_insumos_grid-test',
-              title: 'My Grid Panel',
-              store: 'Labores_insumos',
-              columns: [
-                {
-                  xtype: 'gridcolumn',
-                  dataIndex: 'estado_registro',
-                  text: 'Estado Registro',
-                  editor: {
-                    xtype: 'textfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'id',
-                  text: 'ID',
-                  editor: {
-                    xtype: 'displayfield',
-                    value: 'Display Field'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'id_labores',
-                  text: 'Id Labores',
-                  format: '00',
-                  editor: {
-                    xtype: 'displayfield',
-                    value: 'Display Field'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'uid',
-                  text: 'Uid',
-                  format: '00',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    console.log("friendly message");
-                    debugger;
-                    var st = Ext.getStore("Insumos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('descripcion');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
-                  },
-                  dataIndex: 'cod_insumo',
-                  text: 'Cod Insumo',
-                  format: '00',
-                  editor: {
-                    xtype: 'combobox',
-                    displayField: 'descripcion',
-                    queryMode: 'local',
-                    store: 'Insumos',
-                    valueField: 'codigo'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'dosis',
-                  text: 'Dosis',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'cantidad',
-                  text: 'Cantidad',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'cod_deposito',
-                  text: 'Cod Deposito',
-                  format: '00',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'gridcolumn',
+                  hidden: true,
                   dataIndex: 'tipo',
                   text: 'Tipo',
                   editor: {
@@ -453,6 +346,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -485,7 +379,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     return displayValue;
                   },
                   dataIndex: 'cod_personal',
-                  text: 'Cod Personal',
+                  text: 'Personal',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -499,7 +393,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   xtype: 'numbercolumn',
                   hidden: true,
                   dataIndex: 'cod_concepto',
-                  text: 'Cod Concepto',
+                  text: 'Concepto',
                   format: '00',
                   editor: {
                     xtype: 'numberfield'
@@ -658,7 +552,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     return displayValue;
                   },
                   dataIndex: 'cod_maquina',
-                  text: 'Cod Maquina',
+                  text: 'Maquina',
                   format: '00',
                   editor: {
                     xtype: 'combobox',

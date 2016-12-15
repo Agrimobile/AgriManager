@@ -66,12 +66,14 @@ Ext.define('MyApp.view.InsumosPanel', {
       columns: [
         {
           xtype: 'numbercolumn',
+          width: '20%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          width: '20%',
           dataIndex: 'descripcion',
           text: 'Descripcion'
         },
@@ -96,22 +98,26 @@ Ext.define('MyApp.view.InsumosPanel', {
         },
         {
           xtype: 'numbercolumn',
+          width: '20%',
           dataIndex: 'precio',
           text: 'Precio'
         },
         {
           xtype: 'gridcolumn',
+          width: '20%',
           dataIndex: 'um',
-          text: 'Um'
+          text: 'Unidad Medida'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_rubro',
-          text: 'Cod Rubro',
+          text: 'Rubro',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          width: '19%',
           dataIndex: 'dias_carencia',
           text: 'Dias Carencia',
           format: '00'

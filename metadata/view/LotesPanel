@@ -208,6 +208,7 @@
                     "userConfig": {
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Establecimiento"
                     },
                     "name": "MyNumberColumn15",

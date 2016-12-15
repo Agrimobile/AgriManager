@@ -193,7 +193,8 @@
                     "userConfig": {
                         "dataIndex": "codigo",
                         "format": "00",
-                        "text": "Codigo"
+                        "text": "Codigo",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn62",
                     "designerId": "7e6e1dee-31d3-41c1-ab7a-0ff632631fc4"
@@ -207,7 +208,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "descripcion",
-                        "text": "Descripcion"
+                        "text": "Descripcion",
+                        "width": "20%"
                     },
                     "name": "MyColumn24",
                     "designerId": "9ccbed90-3031-431c-9dbd-eb8d02630f2b"
@@ -267,7 +269,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
-                        "text": "Precio"
+                        "text": "Precio",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn69",
                     "designerId": "b7963b4e-11e6-4e5a-9deb-c0c4aba02293"
@@ -281,7 +284,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "um",
-                        "text": "Um"
+                        "text": "Unidad Medida",
+                        "width": "20%"
                     },
                     "name": "MyColumn29",
                     "designerId": "8c1b0d3e-b330-48db-a808-f400b99e9c32"
@@ -296,7 +300,8 @@
                     "userConfig": {
                         "dataIndex": "cod_rubro",
                         "format": "00",
-                        "text": "Cod Rubro"
+                        "hidden": true,
+                        "text": "Rubro"
                     },
                     "name": "MyNumberColumn70",
                     "designerId": "bd56f5ec-9b9f-488a-8369-d2564174129a"
@@ -311,7 +316,8 @@
                     "userConfig": {
                         "dataIndex": "dias_carencia",
                         "format": "00",
-                        "text": "Dias Carencia"
+                        "text": "Dias Carencia",
+                        "width": "19%"
                     },
                     "name": "MyNumberColumn71",
                     "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"

@@ -62,28 +62,33 @@ Ext.define('MyApp.view.RubrosPanel', {
       columns: [
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'estado_registro',
           text: 'Estado Registro'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'id',
           text: 'ID'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'uid',
           text: 'Uid',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          width: '50%',
           dataIndex: 'descripcion',
           text: 'Descripcion'
         }

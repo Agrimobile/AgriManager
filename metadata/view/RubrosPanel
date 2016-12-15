@@ -168,6 +168,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "estado_registro",
+                        "hidden": true,
                         "text": "Estado Registro"
                     },
                     "name": "MyColumn3",
@@ -182,6 +183,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID"
                     },
                     "name": "MyNumberColumn2",
@@ -197,6 +199,7 @@
                     "userConfig": {
                         "dataIndex": "uid",
                         "format": "00",
+                        "hidden": true,
                         "text": "Uid"
                     },
                     "name": "MyNumberColumn60",
@@ -212,7 +215,8 @@
                     "userConfig": {
                         "dataIndex": "codigo",
                         "format": "00",
-                        "text": "Codigo"
+                        "text": "Codigo",
+                        "width": "50%"
                     },
                     "name": "MyNumberColumn61",
                     "designerId": "eaf2c1d4-87c4-4522-922a-c3140010474b"
@@ -226,7 +230,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "descripcion",
-                        "text": "Descripcion"
+                        "text": "Descripcion",
+                        "width": "50%"
                     },
                     "name": "MyColumn23",
                     "designerId": "108c5c0f-707d-4a7d-adde-56e908c02f6e"

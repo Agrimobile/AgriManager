@@ -100,6 +100,7 @@ Ext.define('MyApp.view.LotesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'

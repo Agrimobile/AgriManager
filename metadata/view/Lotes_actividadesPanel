@@ -202,6 +202,7 @@
                     "userConfig": {
                         "dataIndex": "cod_lote",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Lote",
                         "width": "25%"
                     },
@@ -218,6 +219,7 @@
                     "userConfig": {
                         "dataIndex": "cod_actividad",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Actividad",
                         "width": ""
                     },
