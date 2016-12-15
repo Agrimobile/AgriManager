@@ -49,9 +49,12 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id_origen",
-                "sincronizar": "false"
+                "sincronizar": false
             },
             "name": "MyInteger20",
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
             "designerId": "1ffe2844-d434-46ca-a11d-8c160b1dca07",
             "customConfigs": [
                 {
@@ -187,10 +190,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "aliasSQL": "precio_tarea",
                 "name": "precio"
             },
             "name": "MyString9",
-            "designerId": "d71031c9-8f38-4b36-bb42-7d16ba9ddad4"
+            "designerId": "d71031c9-8f38-4b36-bb42-7d16ba9ddad4",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.String",

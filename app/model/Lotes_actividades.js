@@ -44,7 +44,7 @@ Ext.define('MyApp.model.Lotes_actividades', {
     },
     {
       type: 'string',
-      field_alias: 'descripcion',
+      aliasSQL: 'descripcion',
       name: 'nombre'
     },
     {

@@ -44,6 +44,7 @@ Ext.define('MyApp.model.Lotes', {
     },
     {
       type: 'string',
+      aliasSQL: 'descrip',
       name: 'nombre'
     },
     {
