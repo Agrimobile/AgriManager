@@ -114,6 +114,20 @@ Ext.define('MyApp.view.LaboresForm', {
               queryMode: 'local',
               store: 'Contratistas',
               valueField: 'codigo'
+            },
+            {
+              xtype: 'combobox',
+              defaultListenerScope: true,
+              itemId: 'fieldCampania',
+              width: '100%',
+              fieldLabel: 'Campaña',
+              name: 'cod_periodo',
+              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+              displayField: 'descripcion',
+              forceSelection: true,
+              queryMode: 'local',
+              store: 'Campanias',
+              valueField: 'codigo'
             }
           ]
         },
@@ -143,6 +157,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -184,6 +199,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     }
                     return displayValue;
                   },
+                  width: '20%',
                   dataIndex: 'cod_insumo',
                   text: 'Insumo',
                   format: '00',
@@ -198,6 +214,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'dosis',
                   text: 'Dosis',
                   editor: {
@@ -206,6 +223,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
@@ -225,6 +243,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     }
                     return displayValue;
                   },
+                  width: '20%',
                   dataIndex: 'cod_deposito',
                   text: 'Deposito',
                   format: '00',
@@ -337,6 +356,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -378,6 +398,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     }
                     return displayValue;
                   },
+                  width: '20%',
                   dataIndex: 'cod_personal',
                   text: 'Personal',
                   format: '00',
@@ -401,6 +422,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
@@ -409,6 +431,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'precio',
                   text: 'Precio',
                   editor: {
@@ -417,6 +440,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'importe',
                   text: 'Importe',
                   editor: {
@@ -511,6 +535,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '33%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -520,6 +545,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -551,6 +577,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     }
                     return displayValue;
                   },
+                  width: '33%',
                   dataIndex: 'cod_maquina',
                   text: 'Maquina',
                   format: '00',
@@ -564,6 +591,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '33%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {

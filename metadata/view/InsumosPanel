@@ -78,7 +78,7 @@
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
                     "f_crud.load_store(this.store_name);",
-                    "f_crud.load_store('Rubros');"
+                    "//f_crud.load_store('Rubros');"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -168,11 +168,6 @@
                         "fn": "onGridItemClick1",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.\";",
-                            "    var newPan = Ext.create(panelClass);",
-                            "    newPan.parent = record.data;",
-                            "    MyApp.main.add(newPan);",
-                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
                             "    console.log('Should bring the user to a single-labor view');",
                             "}",
                             "this.longpress = false;"
@@ -194,7 +189,7 @@
                         "dataIndex": "codigo",
                         "format": "00",
                         "text": "Codigo",
-                        "width": "20%"
+                        "width": "16.66%"
                     },
                     "name": "MyNumberColumn62",
                     "designerId": "7e6e1dee-31d3-41c1-ab7a-0ff632631fc4"
@@ -209,7 +204,7 @@
                     "userConfig": {
                         "dataIndex": "descripcion",
                         "text": "Descripcion",
-                        "width": "20%"
+                        "width": "16.66%"
                     },
                     "name": "MyColumn24",
                     "designerId": "9ccbed90-3031-431c-9dbd-eb8d02630f2b"
@@ -270,7 +265,7 @@
                     "userConfig": {
                         "dataIndex": "precio",
                         "text": "Precio",
-                        "width": "20%"
+                        "width": "16.66%"
                     },
                     "name": "MyNumberColumn69",
                     "designerId": "b7963b4e-11e6-4e5a-9deb-c0c4aba02293"
@@ -285,7 +280,7 @@
                     "userConfig": {
                         "dataIndex": "um",
                         "text": "Unidad Medida",
-                        "width": "20%"
+                        "width": "16.66%"
                     },
                     "name": "MyColumn29",
                     "designerId": "8c1b0d3e-b330-48db-a808-f400b99e9c32"
@@ -298,13 +293,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "cod_rubro",
+                        "dataIndex": "dias_carencia",
                         "format": "00",
-                        "hidden": true,
-                        "text": "Rubro"
+                        "text": "Dias Carencia",
+                        "width": "16.66%"
                     },
-                    "name": "MyNumberColumn70",
-                    "designerId": "bd56f5ec-9b9f-488a-8369-d2564174129a"
+                    "name": "MyNumberColumn71",
+                    "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -314,13 +309,42 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "dias_carencia",
+                        "dataIndex": "cod_rubro",
                         "format": "00",
-                        "text": "Dias Carencia",
-                        "width": "19%"
+                        "text": "Rubro",
+                        "width": "16.66%"
                     },
-                    "name": "MyNumberColumn71",
-                    "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"
+                    "name": "MyNumberColumn70",
+                    "designerId": "bd56f5ec-9b9f-488a-8369-d2564174129a",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value, metaData, record, rowIndex, colIndex, store"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "var st = Ext.getStore(\"Rubros\"), cod, displayValue;",
+                                    "cod = st.find(\"codigo\",value);",
+                                    "if(cod > -1) {",
+                                    "  displayValue = st.getAt(cod).get('descripcion');",
+                                    "}",
+                                    "else {",
+                                    "  displayValue = '';",
+                                    "}",
+                                    "return displayValue;"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "defc3a1b-5ee8-4509-91e6-e4671351118d"
+                        }
+                    ]
                 }
             ]
         },

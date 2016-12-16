@@ -162,7 +162,7 @@
                     "userConfig": {
                         "dataIndex": "nombre",
                         "text": "Nombre",
-                        "width": "33%"
+                        "width": "50%"
                     },
                     "name": "MyColumn7",
                     "designerId": "8560c810-de36-4d89-8d15-05042e5f1936"
@@ -178,7 +178,7 @@
                         "dataIndex": "codigo",
                         "format": "00",
                         "text": "Codigo",
-                        "width": "33%"
+                        "width": "50%"
                     },
                     "name": "MyNumberColumn13",
                     "designerId": "86370a50-4425-4b94-a4e8-ee8e418e98c7"
@@ -209,7 +209,8 @@
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
                         "hidden": true,
-                        "text": "Cod Establecimiento"
+                        "text": "Cod Establecimiento",
+                        "width": null
                     },
                     "name": "MyNumberColumn15",
                     "designerId": "97821ad2-8315-402b-8942-6e03f92455e3"
@@ -252,11 +253,6 @@
                         "fn": "onGridItemClick",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.\";",
-                            "    var newPan = Ext.create(panelClass);",
-                            "    newPan.est_code = record.data.codigo;",
-                            "    MyApp.main.add(newPan);",
-                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
                             "    console.log('just a clic - You should add behavior here');",
                             "}",
                             "this.longpress = false;"

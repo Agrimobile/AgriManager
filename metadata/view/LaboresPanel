@@ -185,7 +185,7 @@
                     "userConfig": {
                         "dataIndex": "id",
                         "text": "ID",
-                        "width": "20%"
+                        "width": "10%"
                     },
                     "name": "MyNumberColumn26",
                     "designerId": "75e3693b-e4b3-4bdb-9e7e-d4747eab79a7"
@@ -231,7 +231,8 @@
                     "userConfig": {
                         "dataIndex": "fecha",
                         "format": "m/j/Y",
-                        "text": "Fecha"
+                        "text": "Fecha",
+                        "width": "15%"
                     },
                     "name": "MyDateColumn",
                     "designerId": "babd8e0f-3366-439c-b91f-4bada917a1b5"
@@ -313,11 +314,40 @@
                     "userConfig": {
                         "dataIndex": "cod_periodo",
                         "format": "00",
-                        "hidden": true,
-                        "text": "Cod Periodo"
+                        "text": "Campaña",
+                        "width": "20%"
                     },
                     "name": "MyNumberColumn32",
-                    "designerId": "79710ec8-e313-40bb-b30d-01975f2c97cb"
+                    "designerId": "79710ec8-e313-40bb-b30d-01975f2c97cb",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value, metaData, record, rowIndex, colIndex, store"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "var st = Ext.getStore(\"Campanias\"), cod, displayValue;",
+                                    "cod = st.find(\"codigo\",value);",
+                                    "if(cod > -1) {",
+                                    "  displayValue = st.getAt(cod).get('descripcion');",
+                                    "}",
+                                    "else {",
+                                    "  displayValue = '';",
+                                    "}",
+                                    "return displayValue;"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "5c118824-e98f-43b8-ba96-53d7e9650f1f"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -329,12 +359,40 @@
                     "userConfig": {
                         "dataIndex": "cod_tarea",
                         "format": "00",
-                        "hidden": true,
-                        "text": "Cod Tarea",
+                        "text": "Tarea",
                         "width": "20%"
                     },
                     "name": "MyNumberColumn33",
-                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70"
+                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value, metaData, record, rowIndex, colIndex, store"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "var st = Ext.getStore(\"Tareas\"), cod, displayValue;",
+                                    "cod = st.find(\"codigo\",value);",
+                                    "if(cod > -1) {",
+                                    "  displayValue = st.getAt(cod).get('descripcion');",
+                                    "}",
+                                    "else {",
+                                    "  displayValue = '';",
+                                    "}",
+                                    "return displayValue;"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "8dc93736-98fd-4c2d-98da-288b2a20c3ca"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -345,7 +403,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "cantidad",
-                        "text": "Cantidad"
+                        "text": "Cantidad",
+                        "width": "15%"
                     },
                     "name": "MyColumn11",
                     "designerId": "21ab5a72-e0e8-4aa3-9a6b-21132608f31b"
@@ -359,7 +418,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
-                        "text": "Precio"
+                        "text": "Precio",
+                        "width": "19%"
                     },
                     "name": "MyColumn12",
                     "designerId": "dd9b00d3-dfd7-4cd1-b508-0f3ab960dbb6"

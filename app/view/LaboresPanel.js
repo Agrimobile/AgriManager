@@ -70,7 +70,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '20%',
+          width: '10%',
           dataIndex: 'id',
           text: 'ID'
         },
@@ -89,6 +89,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'datecolumn',
+          width: '15%',
           dataIndex: 'fecha',
           text: 'Fecha',
           format: 'm/j/Y'
@@ -125,26 +126,49 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            var st = Ext.getStore("Campanias"), cod, displayValue;
+            cod = st.find("codigo",value);
+            if(cod > -1) {
+              displayValue = st.getAt(cod).get('descripcion');
+            }
+            else {
+              displayValue = '';
+            }
+            return displayValue;
+          },
+          width: '20%',
           dataIndex: 'cod_periodo',
-          text: 'Cod Periodo',
+          text: 'Campaña',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            var st = Ext.getStore("Tareas"), cod, displayValue;
+            cod = st.find("codigo",value);
+            if(cod > -1) {
+              displayValue = st.getAt(cod).get('descripcion');
+            }
+            else {
+              displayValue = '';
+            }
+            return displayValue;
+          },
           width: '20%',
           dataIndex: 'cod_tarea',
-          text: 'Cod Tarea',
+          text: 'Tarea',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          width: '15%',
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
+          width: '19%',
           dataIndex: 'precio',
           text: 'Precio'
         },

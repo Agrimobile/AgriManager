@@ -249,7 +249,7 @@
                         "dataIndex": "desde",
                         "format": "j/m/Y",
                         "text": "Desde",
-                        "width": "25%"
+                        "width": "23%"
                     },
                     "name": "MyDateColumn3",
                     "designerId": "7a8060b4-6dd5-4c8f-a6c1-9b5e751d33e1"

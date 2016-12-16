@@ -216,6 +216,29 @@
                             },
                             "name": "MyComboBox1",
                             "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
+                                "defaultListenerScope": true,
+                                "displayField": "descripcion",
+                                "fieldLabel": "Campaña",
+                                "forceSelection": true,
+                                "itemId": "fieldCampania",
+                                "name": "cod_periodo",
+                                "queryMode": "local",
+                                "store": "Campanias",
+                                "valueField": "codigo",
+                                "width": "100%"
+                            },
+                            "name": "MyComboBox3",
+                            "designerId": "73065e48-70b8-49d1-9700-bd644eca4b9b"
                         }
                     ]
                 },
@@ -325,7 +348,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn43",
                                     "designerId": "c3c953c2-174a-4698-a90a-94347b8637f8",
@@ -415,7 +439,8 @@
                                         "dataIndex": "cod_insumo",
                                         "designer|displayName": "Insumo",
                                         "format": "00",
-                                        "text": "Insumo"
+                                        "text": "Insumo",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn48",
                                     "designerId": "6152b93a-a4d6-4ced-ac01-f958fbe4801f",
@@ -475,7 +500,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "dosis",
-                                        "text": "Dosis"
+                                        "text": "Dosis",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn49",
                                     "designerId": "e633819d-dd17-4c94-b96e-628eae88d603",
@@ -501,7 +527,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn90",
                                     "designerId": "f08d509a-a3c6-4b24-8f2f-bfc783100432",
@@ -529,7 +556,8 @@
                                         "dataIndex": "cod_deposito",
                                         "designer|displayName": "Deposito",
                                         "format": "00",
-                                        "text": "Deposito"
+                                        "text": "Deposito",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn91",
                                     "designerId": "3907ddef-b8c8-4391-8d90-31dc79836ba1",
@@ -854,7 +882,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn83",
                                     "designerId": "1890c776-dc65-4de8-a5b3-668abed9572e",
@@ -944,7 +973,8 @@
                                         "dataIndex": "cod_personal",
                                         "designer|displayName": "Personal",
                                         "format": "00",
-                                        "text": "Personal"
+                                        "text": "Personal",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn86",
                                     "designerId": "dc18c44d-f8e8-4814-84c5-8b729cde3ee1",
@@ -1031,7 +1061,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn88",
                                     "designerId": "f8de9048-8396-4582-9f21-3d7419a3ba2d",
@@ -1057,7 +1088,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "precio",
-                                        "text": "Precio"
+                                        "text": "Precio",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn89",
                                     "designerId": "277546e5-505c-4278-b95b-d488fd12978e",
@@ -1083,7 +1115,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "importe",
-                                        "text": "Importe"
+                                        "text": "Importe",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn92",
                                     "designerId": "f51f62a9-895d-48b7-983f-2d166f670506",
@@ -1329,7 +1362,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn6",
                                     "designerId": "eab491c1-f36b-4760-a432-092af87794da",
@@ -1359,6 +1393,7 @@
                                     "userConfig": {
                                         "dataIndex": "id_labores",
                                         "format": "00",
+                                        "hidden": true,
                                         "text": "Id Labores"
                                     },
                                     "name": "MyNumberColumn42",
@@ -1417,7 +1452,8 @@
                                     "userConfig": {
                                         "dataIndex": "cod_maquina",
                                         "format": "00",
-                                        "text": "Maquina"
+                                        "text": "Maquina",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn51",
                                     "designerId": "978b27ef-2023-45d8-bb9c-433f913f10cc",
@@ -1476,7 +1512,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn52",
                                     "designerId": "9a50c821-df8a-4fa9-bf85-978468eb9e65",

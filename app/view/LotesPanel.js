@@ -81,13 +81,13 @@ Ext.define('MyApp.view.LotesPanel', {
         },
         {
           xtype: 'gridcolumn',
-          width: '33%',
+          width: '50%',
           dataIndex: 'nombre',
           text: 'Nombre'
         },
         {
           xtype: 'numbercolumn',
-          width: '33%',
+          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
@@ -224,11 +224,6 @@ Ext.define('MyApp.view.LotesPanel', {
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('just a clic - You should add behavior here');
     }
     this.longpress = false;

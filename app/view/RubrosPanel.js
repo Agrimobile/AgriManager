@@ -211,11 +211,6 @@ Ext.define('MyApp.view.RubrosPanel', {
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('just a clic - You should add behavior here');
     }
     this.longpress = false;
@@ -227,7 +222,7 @@ Ext.define('MyApp.view.RubrosPanel', {
     this.form_name  = 'MyApp.view.RubrosForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.load_store(this.store_name);
+    //f_crud.load_store(this.store_name);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

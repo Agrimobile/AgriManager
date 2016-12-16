@@ -83,14 +83,14 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '25%',
+          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          width: '25%',
+          width: '50%',
           dataIndex: 'nombre',
           text: 'Nombre'
         },
