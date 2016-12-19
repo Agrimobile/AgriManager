@@ -330,15 +330,7 @@
                                 ],
                                 "fn": "renderer",
                                 "implHandler": [
-                                    "var st = Ext.getStore(\"Rubros\"), cod, displayValue;",
-                                    "cod = st.find(\"codigo\",value);",
-                                    "if(cod > -1) {",
-                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                    "}",
-                                    "else {",
-                                    "  displayValue = '';",
-                                    "}",
-                                    "return displayValue;"
+                                    "return f_crud.getDisplayValue('Rubros', value, 'descripcion');"
                                 ]
                             },
                             "name": "renderer",

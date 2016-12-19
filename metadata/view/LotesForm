@@ -123,7 +123,7 @@
             ]
         },
         {
-            "type": "Ext.form.field.Number",
+            "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -132,11 +132,12 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "editable": false,
                 "fieldLabel": "Codigo",
                 "layout|flex": null,
                 "name": "codigo"
             },
-            "name": "MyNumberField1",
+            "name": "MyTextField17",
             "designerId": "0e3047c6-6d3a-4989-8bbd-f530868385c8"
         },
         {

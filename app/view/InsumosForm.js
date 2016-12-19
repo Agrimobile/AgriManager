@@ -75,11 +75,12 @@ Ext.define('MyApp.view.InsumosForm', {
   ],
   items: [
     {
-      xtype: 'numberfield',
+      xtype: 'textfield',
       fieldLabel: 'Codigo',
       name: 'codigo',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      editable: false
     },
     {
       xtype: 'numberfield',

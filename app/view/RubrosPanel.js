@@ -173,7 +173,6 @@ Ext.define('MyApp.view.RubrosPanel', {
                   message: 'No puede borrar un rubro con insumos, <br> borre los insumos asociados primeros'
                 };
                 f_crud.grid_check_delete(gridPanel,checkConfig);
-
               },
               cls: '',
               margin: '0 0 0 10',

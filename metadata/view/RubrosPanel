@@ -444,8 +444,7 @@
                                             "    msgTitle: 'Rubro asignado',",
                                             "    message: 'No puede borrar un rubro con insumos, <br> borre los insumos asociados primeros'",
                                             "};",
-                                            "f_crud.grid_check_delete(gridPanel,checkConfig);",
-                                            ""
+                                            "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]
                                     },
                                     "name": "handler",

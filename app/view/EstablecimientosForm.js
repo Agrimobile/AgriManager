@@ -19,7 +19,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
 
   requires: [
     'MyApp.view.ActividadesFormViewModel1',
-    'Ext.form.field.Number',
+    'Ext.form.field.Text',
     'Ext.container.Container',
     'Ext.button.Button'
   ],
@@ -40,11 +40,12 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   },
   items: [
     {
-      xtype: 'numberfield',
+      xtype: 'textfield',
       fieldLabel: 'Código',
       name: 'codigo',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      editable: false
     },
     {
       xtype: 'textfield',

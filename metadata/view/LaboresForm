@@ -107,7 +107,7 @@
                             "designerId": "3b5b8e21-662f-4e54-a685-2760e07a680f"
                         },
                         {
-                            "type": "Ext.form.field.Number",
+                            "type": "Ext.form.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -116,11 +116,12 @@
                             "userConfig": {
                                 "allowBlank": false,
                                 "blankText": "Este campo es obligatorio",
+                                "editable": false,
                                 "fieldLabel": "ID",
                                 "hidden": true,
                                 "name": "id"
                             },
-                            "name": "MyNumberField1",
+                            "name": "MyTextField15",
                             "designerId": "76392ea5-48e2-437a-be66-12a4fd4f285f"
                         },
                         {
@@ -475,15 +476,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Insumos\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return f_crud.getDisplayValue('Insumos',value,'descripcion');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -592,15 +585,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Depositos\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return f_crud.getDisplayValue('Depositos',value,'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -1008,15 +993,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Personal\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return getDisplayValue('Personal', value, 'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -1487,15 +1464,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Maquinaria\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return getDisplayValue('Maquinaria', value, 'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",

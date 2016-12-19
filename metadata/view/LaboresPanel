@@ -328,15 +328,7 @@
                                 ],
                                 "fn": "renderer",
                                 "implHandler": [
-                                    "var st = Ext.getStore(\"Campanias\"), cod, displayValue;",
-                                    "cod = st.find(\"codigo\",value);",
-                                    "if(cod > -1) {",
-                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                    "}",
-                                    "else {",
-                                    "  displayValue = '';",
-                                    "}",
-                                    "return displayValue;"
+                                    "return f_crud.getDisplayValue('Campanias', value, 'descripcion');"
                                 ]
                             },
                             "name": "renderer",
@@ -373,15 +365,7 @@
                                 ],
                                 "fn": "renderer",
                                 "implHandler": [
-                                    "var st = Ext.getStore(\"Tareas\"), cod, displayValue;",
-                                    "cod = st.find(\"codigo\",value);",
-                                    "if(cod > -1) {",
-                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                    "}",
-                                    "else {",
-                                    "  displayValue = '';",
-                                    "}",
-                                    "return displayValue;"
+                                    "return f_crud.getDisplayValue('Tareas', value, 'descripcion');"
                                 ]
                             },
                             "name": "renderer",

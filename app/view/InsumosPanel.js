@@ -118,15 +118,7 @@ Ext.define('MyApp.view.InsumosPanel', {
         {
           xtype: 'numbercolumn',
           renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-            var st = Ext.getStore("Rubros"), cod, displayValue;
-            cod = st.find("codigo",value);
-            if(cod > -1) {
-              displayValue = st.getAt(cod).get('descripcion');
-            }
-            else {
-              displayValue = '';
-            }
-            return displayValue;
+            return f_crud.getDisplayValue('Rubros', value, 'descripcion');
           },
           width: '16.66%',
           dataIndex: 'cod_rubro',

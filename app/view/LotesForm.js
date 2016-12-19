@@ -21,7 +21,7 @@ Ext.define('MyApp.view.LotesForm', {
     'MyApp.view.LotesFormViewModel',
     'Ext.container.Container',
     'Ext.button.Button',
-    'Ext.form.field.Number'
+    'Ext.form.field.Text'
   ],
 
   viewModel: {
@@ -75,11 +75,12 @@ Ext.define('MyApp.view.LotesForm', {
   ],
   items: [
     {
-      xtype: 'numberfield',
+      xtype: 'textfield',
       fieldLabel: 'Codigo',
       name: 'codigo',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      editable: false
     },
     {
       xtype: 'textfield',

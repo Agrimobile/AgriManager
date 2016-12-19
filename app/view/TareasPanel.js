@@ -238,7 +238,6 @@ Ext.define('MyApp.view.TareasPanel', {
     this.form_name  = 'MyApp.view.TareasForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    //f_crud.load_store(this.store_name);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

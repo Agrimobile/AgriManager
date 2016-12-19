@@ -127,15 +127,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         {
           xtype: 'numbercolumn',
           renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-            var st = Ext.getStore("Campanias"), cod, displayValue;
-            cod = st.find("codigo",value);
-            if(cod > -1) {
-              displayValue = st.getAt(cod).get('descripcion');
-            }
-            else {
-              displayValue = '';
-            }
-            return displayValue;
+            return f_crud.getDisplayValue('Campanias', value, 'descripcion');
           },
           width: '20%',
           dataIndex: 'cod_periodo',
@@ -145,15 +137,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         {
           xtype: 'numbercolumn',
           renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-            var st = Ext.getStore("Tareas"), cod, displayValue;
-            cod = st.find("codigo",value);
-            if(cod > -1) {
-              displayValue = st.getAt(cod).get('descripcion');
-            }
-            else {
-              displayValue = '';
-            }
-            return displayValue;
+            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
           },
           width: '20%',
           dataIndex: 'cod_tarea',

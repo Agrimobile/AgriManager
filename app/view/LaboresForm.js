@@ -21,9 +21,9 @@ Ext.define('MyApp.view.LaboresForm', {
     'MyApp.view.LotesFormViewModel4',
     'Ext.tab.Panel',
     'Ext.tab.Tab',
-    'Ext.form.field.Number',
     'Ext.form.field.ComboBox',
     'Ext.form.field.Date',
+    'Ext.form.field.Number',
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
@@ -60,12 +60,13 @@ Ext.define('MyApp.view.LaboresForm', {
           title: 'Labor',
           items: [
             {
-              xtype: 'numberfield',
+              xtype: 'textfield',
               hidden: true,
               fieldLabel: 'ID',
               name: 'id',
               allowBlank: false,
-              blankText: 'Este campo es obligatorio'
+              blankText: 'Este campo es obligatorio',
+              editable: false
             },
             {
               xtype: 'combobox',
@@ -189,15 +190,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Insumos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('descripcion');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return f_crud.getDisplayValue('Insumos',value,'descripcion');
                   },
                   width: '20%',
                   dataIndex: 'cod_insumo',
@@ -233,15 +226,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Depositos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return f_crud.getDisplayValue('Depositos',value,'nombre');
                   },
                   width: '20%',
                   dataIndex: 'cod_deposito',
@@ -388,15 +373,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Personal"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return getDisplayValue('Personal', value, 'nombre');
                   },
                   width: '20%',
                   dataIndex: 'cod_personal',
@@ -567,15 +544,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Maquinaria"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return getDisplayValue('Maquinaria', value, 'nombre');
                   },
                   width: '33%',
                   dataIndex: 'cod_maquina',

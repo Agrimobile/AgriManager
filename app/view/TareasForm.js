@@ -74,11 +74,12 @@ Ext.define('MyApp.view.TareasForm', {
   ],
   items: [
     {
-      xtype: 'numberfield',
+      xtype: 'textfield',
       fieldLabel: 'Codigo',
       name: 'codigo',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      editable: false
     },
     {
       xtype: 'textfield',

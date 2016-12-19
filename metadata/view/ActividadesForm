@@ -23,7 +23,7 @@
     "viewModelInstanceId": "e243c575-f8da-47ad-8620-4c2e60e35ddc",
     "cn": [
         {
-            "type": "Ext.form.field.Number",
+            "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -32,10 +32,11 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "editable": false,
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
-            "name": "MyNumberField",
+            "name": "MyTextField5",
             "designerId": "80c98adb-93e3-4d9f-8f1b-991f3206bc7c"
         },
         {
