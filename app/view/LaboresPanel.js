@@ -58,7 +58,8 @@ Ext.define('MyApp.view.LaboresPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -304,6 +305,10 @@ Ext.define('MyApp.view.LaboresPanel', {
         console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {

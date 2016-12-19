@@ -60,7 +60,8 @@ Ext.define('MyApp.view.ActividadesPanel', {
       listeners: {
         selectionchange: 'onGridpanelSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -233,6 +234,10 @@ Ext.define('MyApp.view.ActividadesPanel', {
         MyApp.main.getLayout().setActiveItem(newPan);
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {

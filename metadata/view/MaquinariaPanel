@@ -253,6 +253,24 @@
                     },
                     "name": "MyColumn34",
                     "designerId": "684970ca-0fea-4742-8850-ae78ead7a3cc"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "ed4b5ff2-9bb2-45ad-8a84-e92fbb73322f"
                 }
             ]
         },

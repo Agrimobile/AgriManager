@@ -433,6 +433,24 @@
                     },
                     "name": "MyNumberColumn34",
                     "designerId": "5b9db788-e04d-4ed4-930b-3aaefd6e88b2"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "068f0b4f-ad13-4cdd-b7dc-39a776093c98"
                 }
             ]
         },

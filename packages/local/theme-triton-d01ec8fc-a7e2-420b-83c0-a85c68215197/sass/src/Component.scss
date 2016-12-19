@@ -10,6 +10,9 @@
   text-align: left!important;
 }
 
+// Las propiedades seteadas con important arriba no pueden refactorearse
+// ya que el codigo que se renderiza en el html tiene inline styles
+
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
   color: transparent;
 }
@@ -29,7 +32,7 @@
 
 .fa-calendar-custom.fa-calendar-o:after {
   left: -14px;
-  content: "\f133" !important;
+  content: "\f133";
 }
 
 .fa-calendar-custom.fa-calendar-o:after, .fa-calendar-custom.fa-calendar-o:before {

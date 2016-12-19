@@ -57,7 +57,8 @@ Ext.define('MyApp.view.RubrosPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -213,6 +214,10 @@ Ext.define('MyApp.view.RubrosPanel', {
         console.log('just a clic - You should add behavior here');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {

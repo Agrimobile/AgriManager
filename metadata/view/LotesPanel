@@ -262,6 +262,24 @@
                     },
                     "name": "onGridItemClick",
                     "designerId": "701d4494-4fca-4a03-bba2-891a7da1596f"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "941ecf88-1785-40a5-a707-5c0b17a3b863"
                 }
             ]
         },

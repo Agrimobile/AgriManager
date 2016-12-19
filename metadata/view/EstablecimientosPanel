@@ -47,7 +47,6 @@
                     "this.form_name  = 'MyApp.view.EstablecimientosForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "",
                     "f_crud.load_store(this.store_name);"
                 ],
                 "name": "render",
@@ -132,7 +131,8 @@
                     "userConfig": {
                         "dataIndex": "estado_registro",
                         "hidden": true,
-                        "text": "Estado Registro"
+                        "text": "Estado Registro",
+                        "width": "20%"
                     },
                     "name": "MyColumn1",
                     "designerId": "d524de88-28f6-49f9-90dc-c33e2c66bec4"
@@ -209,7 +209,6 @@
                     "userConfig": {
                         "dataIndex": "zoom",
                         "format": "00",
-                        "hidden": true,
                         "text": "Zoom"
                     },
                     "name": "MyNumberColumn8",
@@ -314,6 +313,24 @@
                     },
                     "name": "onGridItemClick",
                     "designerId": "e3d15a6b-5c61-4ea6-9b18-d414d7c9674f"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "c50245af-84b4-4455-9947-7099fbeee37b"
                 }
             ]
         },

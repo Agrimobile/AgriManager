@@ -61,7 +61,8 @@ Ext.define('MyApp.view.InsumosPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange1',
         itemlongpress: 'onGridItemLongpress1',
-        itemclick: 'onGridItemClick1'
+        itemclick: 'onGridItemClick1',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -246,6 +247,10 @@ Ext.define('MyApp.view.InsumosPanel', {
         console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

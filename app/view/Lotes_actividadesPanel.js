@@ -135,7 +135,8 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
       listeners: {
         itemlongpress: 'onGridpanelItemLongpress',
         selectionchange: 'onGridpanelSelectionChange',
-        itemclick: 'onGridpanelItemClick'
+        itemclick: 'onGridpanelItemClick',
+        beforerender: 'onGridBeforeRender'
       }
     }
   ],
@@ -270,6 +271,10 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         MyApp.main.getLayout().setActiveItem(newPan);
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

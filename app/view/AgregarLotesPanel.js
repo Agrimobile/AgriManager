@@ -109,7 +109,8 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
         }
       ],
       listeners: {
-        itemclick: 'onAddinggridItemClick'
+        itemclick: 'onAddinggridItemClick',
+        beforerender: 'onAddinggridBeforeRender'
       }
     }
   ],
@@ -167,6 +168,10 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     // console.log(record.data.agregar);
     // TODO: no basta con cambiar el valor de agregar, porque no se cambiar el
     // tilde: hay que hacer un trabajito de 2-way-dataBinding.-
+  },
+
+  onAddinggridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {
