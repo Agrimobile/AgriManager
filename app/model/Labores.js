@@ -37,7 +37,7 @@ Ext.define('MyApp.model.Labores', {
     },
     {
       type: 'int',
-      sincronizar: 'false',
+      sincronizar: false,
       name: 'id_origen'
     },
     {
@@ -78,6 +78,7 @@ Ext.define('MyApp.model.Labores', {
     },
     {
       type: 'string',
+      aliasSQL: 'precio_tarea',
       name: 'precio'
     },
     {

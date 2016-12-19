@@ -61,7 +61,8 @@ Ext.define('MyApp.view.MaquinariaPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange1',
         itemlongpress: 'onGridItemLongpress1',
-        itemclick: 'onGridItemClick1'
+        itemclick: 'onGridItemClick1',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -191,7 +192,7 @@ Ext.define('MyApp.view.MaquinariaPanel', {
     this.form_name  = 'MyApp.view.MaquinariaForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.load_store(this.store_name);
+    //f_crud.load_store(this.store_name);
   },
 
   onGridSelectionChange1: function(model, selected, eOpts) {
@@ -213,14 +214,13 @@ Ext.define('MyApp.view.MaquinariaPanel', {
 
   onGridItemClick1: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.parent = record.data;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

@@ -58,7 +58,8 @@ Ext.define('MyApp.view.LaboresPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
@@ -70,7 +71,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '20%',
+          width: '10%',
           dataIndex: 'id',
           text: 'ID'
         },
@@ -89,13 +90,14 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'datecolumn',
-          hidden: true,
+          width: '15%',
           dataIndex: 'fecha',
           text: 'Fecha',
           format: 'm/j/Y'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_lote_actividad',
           text: 'Cod Lote Actividad',
@@ -103,6 +105,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
@@ -124,27 +127,33 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            return f_crud.getDisplayValue('Campanias', value, 'descripcion');
+          },
+          width: '20%',
           dataIndex: 'cod_periodo',
-          text: 'Cod Periodo',
+          text: 'Campaña',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
+          },
           width: '20%',
           dataIndex: 'cod_tarea',
-          text: 'Cod Tarea',
+          text: 'Tarea',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          hidden: true,
+          width: '15%',
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
-          hidden: true,
+          width: '19%',
           dataIndex: 'precio',
           text: 'Precio'
         },
@@ -156,6 +165,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'cod_contratista',
           text: 'Cod Contratista',
           format: '00'
@@ -292,14 +302,13 @@ Ext.define('MyApp.view.LaboresPanel', {
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.parent = record.data;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {
@@ -308,14 +317,10 @@ Ext.define('MyApp.view.LaboresPanel', {
     this.form_name  = 'MyApp.view.LaboresForm';
     var store = Ext.getStore(this.store_name);
     f_crud.load_store(this.store_name, 'cod_lote_actividad = ' + component.parent.codigo);
-    f_crud.load_store('Tareas');
-    f_crud.load_store('Contratistas');
     var st_insumos    = Ext.getStore('Labores_insumos');
     var st_personal   = Ext.getStore('Labores_personal');
     var st_maquinaria = Ext.getStore('Labores_maquinaria');
     this.form_store_array = [store,st_insumos,st_personal,st_maquinaria];
-    // this.form_store_array = [store];
-
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

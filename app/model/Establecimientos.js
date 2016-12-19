@@ -48,6 +48,7 @@ Ext.define('MyApp.model.Establecimientos', {
     },
     {
       type: 'int',
+      aliasSQL: 'nivelzoom',
       name: 'zoom'
     },
     {

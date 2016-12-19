@@ -74,7 +74,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "field_alias": "descripcion",
+                "aliasSQL": "descripcion",
                 "name": "nombre"
             },
             "name": "MyString5",
@@ -82,7 +82,7 @@
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
-                    "name": "field_alias",
+                    "name": "aliasSQL",
                     "type": "string"
                 }
             ]

@@ -79,6 +79,24 @@ Ext.define('MyApp.view.MainContainer', {
   onPanelRender: function(component, eOpts) {
     MyApp.main = component;
     MyApp.archivo_base = 'AgriManager';
+
+    //f_crud.load_store('Registros_borrados');
+
+    /*
+    f_crud.load_store('Actividades');
+    f_crud.load_store('Establecimientos');
+    f_crud.load_store('Insumos');
+    f_crud.load_store('Lotes');*/
+
+    //f_crud.load_store('Lotes_coordenadas');
+
+    f_crud.load_store('Rubros');
+    f_crud.load_store('Personal');
+    f_crud.load_store('Maquinaria');
+    f_crud.load_store('Contratistas');
+    f_crud.load_store('Depositos');
+    f_crud.load_store('Campanias');
+    f_crud.load_store('Tareas');
   },
 
   onViewportRender: function(component, eOpts) {

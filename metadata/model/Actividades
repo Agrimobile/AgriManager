@@ -74,28 +74,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "aliasSQL": "descrip",
                 "name": "nombre"
             },
             "name": "MyString1",
-            "designerId": "a203c676-5631-4e33-990b-29c4f7574017"
-        },
-        {
-            "type": "Ext.data.field.Date",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "field_alias": "fecha_desde",
-                "name": "desde"
-            },
-            "name": "MyDate",
-            "designerId": "7256e2f0-096d-4ccb-bef5-929180c9b50b",
+            "designerId": "a203c676-5631-4e33-990b-29c4f7574017",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
-                    "name": "field_alias",
+                    "name": "aliasSQL",
                     "type": "string"
                 }
             ]
@@ -108,7 +95,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "field_alias": "fecha_hasta",
+                "aliasSQL": "fecha_desde",
+                "name": "desde"
+            },
+            "name": "MyDate",
+            "designerId": "7256e2f0-096d-4ccb-bef5-929180c9b50b",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "aliasSQL": "fecha_hasta",
                 "name": "hasta"
             },
             "name": "MyDate1",
@@ -116,7 +124,7 @@
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
-                    "name": "field_alias",
+                    "name": "aliasSQL",
                     "type": "string"
                 }
             ]

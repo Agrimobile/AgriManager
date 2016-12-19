@@ -61,17 +61,20 @@ Ext.define('MyApp.view.InsumosPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange1',
         itemlongpress: 'onGridItemLongpress1',
-        itemclick: 'onGridItemClick1'
+        itemclick: 'onGridItemClick1',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
           xtype: 'numbercolumn',
+          width: '16.66%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          width: '16.66%',
           dataIndex: 'descripcion',
           text: 'Descripcion'
         },
@@ -96,24 +99,31 @@ Ext.define('MyApp.view.InsumosPanel', {
         },
         {
           xtype: 'numbercolumn',
+          width: '16.66%',
           dataIndex: 'precio',
           text: 'Precio'
         },
         {
           xtype: 'gridcolumn',
+          width: '16.66%',
           dataIndex: 'um',
-          text: 'Um'
+          text: 'Unidad Medida'
         },
         {
           xtype: 'numbercolumn',
-          dataIndex: 'cod_rubro',
-          text: 'Cod Rubro',
+          width: '16.66%',
+          dataIndex: 'dias_carencia',
+          text: 'Dias Carencia',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
-          dataIndex: 'dias_carencia',
-          text: 'Dias Carencia',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            return f_crud.getDisplayValue('Rubros', value, 'descripcion');
+          },
+          width: '16.66%',
+          dataIndex: 'cod_rubro',
+          text: 'Rubro',
           format: '00'
         }
       ]
@@ -212,7 +222,7 @@ Ext.define('MyApp.view.InsumosPanel', {
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
     f_crud.load_store(this.store_name);
-    f_crud.load_store('Rubros');
+    //f_crud.load_store('Rubros');
   },
 
   onGridSelectionChange1: function(model, selected, eOpts) {
@@ -234,14 +244,13 @@ Ext.define('MyApp.view.InsumosPanel', {
 
   onGridItemClick1: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.parent = record.data;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('Should bring the user to a single-labor view');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

@@ -45,16 +45,17 @@ Ext.define('MyApp.model.Actividades', {
     },
     {
       type: 'string',
+      aliasSQL: 'descrip',
       name: 'nombre'
     },
     {
       type: 'date',
-      field_alias: 'fecha_desde',
+      aliasSQL: 'fecha_desde',
       name: 'desde'
     },
     {
       type: 'date',
-      field_alias: 'fecha_hasta',
+      aliasSQL: 'fecha_hasta',
       name: 'hasta'
     }
   ]

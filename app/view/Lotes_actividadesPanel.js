@@ -83,19 +83,20 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '25%',
+          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          width: '25%',
+          width: '50%',
           dataIndex: 'nombre',
           text: 'Nombre'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '25%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
@@ -103,6 +104,7 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '',
           dataIndex: 'cod_actividad',
           text: 'Cod Actividad',
@@ -133,7 +135,8 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
       listeners: {
         itemlongpress: 'onGridpanelItemLongpress',
         selectionchange: 'onGridpanelSelectionChange',
-        itemclick: 'onGridpanelItemClick'
+        itemclick: 'onGridpanelItemClick',
+        beforerender: 'onGridBeforeRender'
       }
     }
   ],
@@ -268,6 +271,10 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         MyApp.main.getLayout().setActiveItem(newPan);
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

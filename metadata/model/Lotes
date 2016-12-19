@@ -74,10 +74,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "aliasSQL": "descrip",
                 "name": "nombre"
             },
             "name": "MyString3",
-            "designerId": "d7c42327-c8a0-4463-b50f-4c5c22f5ff01"
+            "designerId": "d7c42327-c8a0-4463-b50f-4c5c22f5ff01",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Number",

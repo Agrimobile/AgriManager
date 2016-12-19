@@ -37,9 +37,7 @@ Ext.application({
     'Contratistas',
     'Depositos',
     'Insumos',
-    'Campanias',
-    'GridEditing',
-    'GridEditingField'
+    'Campanias'
   ],
   stores: [
     'Menu',
@@ -59,9 +57,7 @@ Ext.application({
     'Depositos',
     'Insumos',
     'Campanias',
-    'Labores_insumos',
-    'GridEditing',
-    'GridEditingField'
+    'Labores_insumos'
   ],
   views: [
     'MainContainer',
@@ -91,8 +87,7 @@ Ext.application({
     'MaquinariaPanel',
     'MaquinariaForm',
     'CampaniasPanel',
-    'CampaniasForm',
-    'GridContainerTesting'
+    'CampaniasForm'
   ],
   name: 'MyApp',
 

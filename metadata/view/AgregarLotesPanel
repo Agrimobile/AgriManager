@@ -230,6 +230,24 @@
                     },
                     "name": "onAddinggridItemClick",
                     "designerId": "7685da65-efea-4b87-9ce7-f72b291d58bb"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAddinggridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onAddinggridBeforeRender",
+                    "designerId": "f28bb353-2e5d-41a5-a94b-db019ed0bbc0"
                 }
             ]
         },

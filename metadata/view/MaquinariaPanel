@@ -77,7 +77,7 @@
                     "this.form_name  = 'MyApp.view.MaquinariaForm';",
                     "var store = Ext.getStore(this.store_name);",
                     "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name);"
+                    "//f_crud.load_store(this.store_name);"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -167,11 +167,6 @@
                         "fn": "onGridItemClick1",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.\";",
-                            "    var newPan = Ext.create(panelClass);",
-                            "    newPan.parent = record.data;",
-                            "    MyApp.main.add(newPan);",
-                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
                             "    console.log('Should bring the user to a single-labor view');",
                             "}",
                             "this.longpress = false;"
@@ -258,6 +253,24 @@
                     },
                     "name": "MyColumn34",
                     "designerId": "684970ca-0fea-4742-8850-ae78ead7a3cc"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "ed4b5ff2-9bb2-45ad-8a84-e92fbb73322f"
                 }
             ]
         },

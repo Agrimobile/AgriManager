@@ -107,7 +107,7 @@
                             "designerId": "3b5b8e21-662f-4e54-a685-2760e07a680f"
                         },
                         {
-                            "type": "Ext.form.field.Number",
+                            "type": "Ext.form.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -116,11 +116,12 @@
                             "userConfig": {
                                 "allowBlank": false,
                                 "blankText": "Este campo es obligatorio",
+                                "editable": false,
                                 "fieldLabel": "ID",
                                 "hidden": true,
                                 "name": "id"
                             },
-                            "name": "MyNumberField1",
+                            "name": "MyTextField15",
                             "designerId": "76392ea5-48e2-437a-be66-12a4fd4f285f"
                         },
                         {
@@ -216,6 +217,29 @@
                             },
                             "name": "MyComboBox1",
                             "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
+                                "defaultListenerScope": true,
+                                "displayField": "descripcion",
+                                "fieldLabel": "Campaña",
+                                "forceSelection": true,
+                                "itemId": "fieldCampania",
+                                "name": "cod_periodo",
+                                "queryMode": "local",
+                                "store": "Campanias",
+                                "valueField": "codigo",
+                                "width": "100%"
+                            },
+                            "name": "MyComboBox3",
+                            "designerId": "73065e48-70b8-49d1-9700-bd644eca4b9b"
                         }
                     ]
                 },
@@ -325,7 +349,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn43",
                                     "designerId": "c3c953c2-174a-4698-a90a-94347b8637f8",
@@ -355,6 +380,7 @@
                                     "userConfig": {
                                         "dataIndex": "id_labores",
                                         "format": "00",
+                                        "hidden": true,
                                         "text": "Id Labores"
                                     },
                                     "name": "MyNumberColumn46",
@@ -414,7 +440,8 @@
                                         "dataIndex": "cod_insumo",
                                         "designer|displayName": "Insumo",
                                         "format": "00",
-                                        "text": "Cod Insumo"
+                                        "text": "Insumo",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn48",
                                     "designerId": "6152b93a-a4d6-4ced-ac01-f958fbe4801f",
@@ -449,15 +476,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Insumos\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return f_crud.getDisplayValue('Insumos',value,'descripcion');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -474,7 +493,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "dosis",
-                                        "text": "Dosis"
+                                        "text": "Dosis",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn49",
                                     "designerId": "e633819d-dd17-4c94-b96e-628eae88d603",
@@ -500,7 +520,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn90",
                                     "designerId": "f08d509a-a3c6-4b24-8f2f-bfc783100432",
@@ -528,7 +549,8 @@
                                         "dataIndex": "cod_deposito",
                                         "designer|displayName": "Deposito",
                                         "format": "00",
-                                        "text": "Cod Deposito"
+                                        "text": "Deposito",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn91",
                                     "designerId": "3907ddef-b8c8-4391-8d90-31dc79836ba1",
@@ -563,15 +585,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Depositos\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return f_crud.getDisplayValue('Depositos',value,'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -588,6 +602,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "tipo",
+                                        "hidden": true,
                                         "text": "Tipo"
                                     },
                                     "name": "MyColumn40",
@@ -614,325 +629,6 @@
                                     "codeClass": null,
                                     "name": "MyCellEditingPlugin5",
                                     "designerId": "4c8c8ae5-e1a8-4c74-8321-ac01a523e091"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "Ext.grid.Panel",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "hidden": true,
-                                "itemId": "labores_insumos_grid-test",
-                                "store": "Labores_insumos",
-                                "title": "My Grid Panel"
-                            },
-                            "name": "MyGridPanel10",
-                            "designerId": "4cc223f8-3a19-44f4-885b-16b3be4b9f4c",
-                            "cn": [
-                                {
-                                    "type": "Ext.view.Table",
-                                    "reference": {
-                                        "name": "viewConfig",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "name": "MyTable8",
-                                    "designerId": "b488f4b6-8bd7-4f34-a4b8-fe7b18cd4ff0"
-                                },
-                                {
-                                    "type": "Ext.grid.column.Column",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "estado_registro",
-                                        "text": "Estado Registro"
-                                    },
-                                    "name": "MyColumn38",
-                                    "designerId": "7e5eca69-82b9-4a1f-9861-f238e7d09d11",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Text",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyTextField11",
-                                            "designerId": "cd521782-0799-4204-8ef0-9e316c17bc6f"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "id",
-                                        "text": "ID"
-                                    },
-                                    "name": "MyNumberColumn53",
-                                    "designerId": "b0856149-19ab-42bf-bde9-1381734dbc8d",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Display",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "value": "Display Field"
-                                            },
-                                            "name": "MyDisplayField7",
-                                            "designerId": "d7a67afc-7243-4fb3-912a-5d88c3b11f97"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "id_labores",
-                                        "format": "00",
-                                        "text": "Id Labores"
-                                    },
-                                    "name": "MyNumberColumn54",
-                                    "designerId": "6498fe7e-20aa-456a-9bfe-f2eaffe9bdde",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Display",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "value": "Display Field"
-                                            },
-                                            "name": "MyDisplayField8",
-                                            "designerId": "1fc72483-261b-451e-8dd6-b6456a4f9982"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "uid",
-                                        "format": "00",
-                                        "text": "Uid"
-                                    },
-                                    "name": "MyNumberColumn55",
-                                    "designerId": "f417e241-c1d4-4322-8583-b963dfa89313",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Number",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyNumberField17",
-                                            "designerId": "42435b1a-69cb-44b3-afde-c61d6989f93f"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "cod_insumo",
-                                        "designer|displayName": "Insumos",
-                                        "format": "00",
-                                        "text": "Cod Insumo"
-                                    },
-                                    "name": "MyNumberColumn56",
-                                    "designerId": "a84c790f-1164-4226-a563-c0a412dfa7dc",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.ComboBox",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|displayName": null,
-                                                "displayField": "descripcion",
-                                                "queryMode": "local",
-                                                "store": "Insumos",
-                                                "valueField": "codigo"
-                                            },
-                                            "name": "MyComboBox8",
-                                            "designerId": "42ad34ed-5fec-4a30-b123-3bbb4870b012"
-                                        },
-                                        {
-                                            "type": "basicfunction",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|params": [
-                                                    "value, metaData, record, rowIndex, colIndex, store"
-                                                ],
-                                                "fn": "renderer",
-                                                "implHandler": [
-                                                    "console.log(\"friendly message\");",
-                                                    "debugger;",
-                                                    "var st = Ext.getStore(\"Insumos\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('descripcion');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
-                                                ]
-                                            },
-                                            "name": "renderer",
-                                            "designerId": "72a985e6-0452-4ba2-8d07-e6ff0ae7600e"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "dosis",
-                                        "text": "Dosis"
-                                    },
-                                    "name": "MyNumberColumn57",
-                                    "designerId": "904bf30c-305c-485c-8004-89338bb4c086",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Number",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyNumberField20",
-                                            "designerId": "b8a7cde4-47f2-4037-8242-6ab4fa6b1311"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "cantidad",
-                                        "text": "Cantidad"
-                                    },
-                                    "name": "MyNumberColumn58",
-                                    "designerId": "0cac96dc-ee94-4d21-ad92-9c9307897405",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Number",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyNumberField21",
-                                            "designerId": "5d36cc08-2325-4d00-ae59-6fae1a0e0789"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Number",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "cod_deposito",
-                                        "format": "00",
-                                        "text": "Cod Deposito"
-                                    },
-                                    "name": "MyNumberColumn59",
-                                    "designerId": "fc086c8e-25dc-4546-b8ff-400526c724f5",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Number",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyNumberField22",
-                                            "designerId": "30102a48-5504-41f8-a432-0d7a20bd1e9d"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.column.Column",
-                                    "reference": {
-                                        "name": "columns",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "dataIndex": "tipo",
-                                        "text": "Tipo"
-                                    },
-                                    "name": "MyColumn41",
-                                    "designerId": "b0f49db5-b34e-4166-83a1-415fe2cce5ec",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.form.field.Text",
-                                            "reference": {
-                                                "name": "editor",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "name": "MyTextField12",
-                                            "designerId": "c78d4599-89fe-4be4-9165-a8de5334f50f"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.grid.plugin.CellEditing",
-                                    "reference": {
-                                        "name": "plugins",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "name": "MyCellEditingPlugin1",
-                                    "designerId": "0e31756b-6865-4480-a6d3-3397469af392"
                                 }
                             ]
                         },
@@ -1171,7 +867,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn83",
                                     "designerId": "1890c776-dc65-4de8-a5b3-668abed9572e",
@@ -1201,6 +898,7 @@
                                     "userConfig": {
                                         "dataIndex": "id_labores",
                                         "format": "00",
+                                        "hidden": true,
                                         "text": "Id Labores"
                                     },
                                     "name": "MyNumberColumn84",
@@ -1260,7 +958,8 @@
                                         "dataIndex": "cod_personal",
                                         "designer|displayName": "Personal",
                                         "format": "00",
-                                        "text": "Cod Personal"
+                                        "text": "Personal",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn86",
                                     "designerId": "dc18c44d-f8e8-4814-84c5-8b729cde3ee1",
@@ -1294,15 +993,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Personal\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return getDisplayValue('Personal', value, 'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -1321,7 +1012,7 @@
                                         "dataIndex": "cod_concepto",
                                         "format": "00",
                                         "hidden": true,
-                                        "text": "Cod Concepto"
+                                        "text": "Concepto"
                                     },
                                     "name": "MyNumberColumn87",
                                     "designerId": "0359e324-5e95-4f3d-a5e4-3be59c53b827",
@@ -1347,7 +1038,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn88",
                                     "designerId": "f8de9048-8396-4582-9f21-3d7419a3ba2d",
@@ -1373,7 +1065,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "precio",
-                                        "text": "Precio"
+                                        "text": "Precio",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn89",
                                     "designerId": "277546e5-505c-4278-b95b-d488fd12978e",
@@ -1399,7 +1092,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "importe",
-                                        "text": "Importe"
+                                        "text": "Importe",
+                                        "width": "20%"
                                     },
                                     "name": "MyNumberColumn92",
                                     "designerId": "f51f62a9-895d-48b7-983f-2d166f670506",
@@ -1645,7 +1339,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
-                                        "text": "ID"
+                                        "text": "ID",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn6",
                                     "designerId": "eab491c1-f36b-4760-a432-092af87794da",
@@ -1675,6 +1370,7 @@
                                     "userConfig": {
                                         "dataIndex": "id_labores",
                                         "format": "00",
+                                        "hidden": true,
                                         "text": "Id Labores"
                                     },
                                     "name": "MyNumberColumn42",
@@ -1733,7 +1429,8 @@
                                     "userConfig": {
                                         "dataIndex": "cod_maquina",
                                         "format": "00",
-                                        "text": "Cod Maquina"
+                                        "text": "Maquina",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn51",
                                     "designerId": "978b27ef-2023-45d8-bb9c-433f913f10cc",
@@ -1767,15 +1464,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "var st = Ext.getStore(\"Maquinaria\"), cod, displayValue;",
-                                                    "cod = st.find(\"codigo\",value);",
-                                                    "if(cod > -1) {",
-                                                    "  displayValue = st.getAt(cod).get('nombre');",
-                                                    "}",
-                                                    "else {",
-                                                    "  displayValue = '';",
-                                                    "}",
-                                                    "return displayValue;"
+                                                    "return getDisplayValue('Maquinaria', value, 'nombre');"
                                                 ]
                                             },
                                             "name": "renderer",
@@ -1792,7 +1481,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "cantidad",
-                                        "text": "Cantidad"
+                                        "text": "Cantidad",
+                                        "width": "33%"
                                     },
                                     "name": "MyNumberColumn52",
                                     "designerId": "9a50c821-df8a-4fa9-bf85-978468eb9e65",

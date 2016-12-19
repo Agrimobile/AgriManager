@@ -249,7 +249,7 @@
                         "dataIndex": "desde",
                         "format": "j/m/Y",
                         "text": "Desde",
-                        "width": "25%"
+                        "width": "23%"
                     },
                     "name": "MyDateColumn3",
                     "designerId": "7a8060b4-6dd5-4c8f-a6c1-9b5e751d33e1"
@@ -269,6 +269,24 @@
                     },
                     "name": "MyDateColumn4",
                     "designerId": "0d4c0eb2-a26a-48cb-9cae-2d528cf86d39"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "a19c58fc-e260-4018-a736-4c5ac47ade38"
                 }
             ]
         },

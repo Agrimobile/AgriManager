@@ -21,9 +21,9 @@ Ext.define('MyApp.view.LaboresForm', {
     'MyApp.view.LotesFormViewModel4',
     'Ext.tab.Panel',
     'Ext.tab.Tab',
-    'Ext.form.field.Number',
     'Ext.form.field.ComboBox',
     'Ext.form.field.Date',
+    'Ext.form.field.Number',
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
@@ -60,12 +60,13 @@ Ext.define('MyApp.view.LaboresForm', {
           title: 'Labor',
           items: [
             {
-              xtype: 'numberfield',
+              xtype: 'textfield',
               hidden: true,
               fieldLabel: 'ID',
               name: 'id',
               allowBlank: false,
-              blankText: 'Este campo es obligatorio'
+              blankText: 'Este campo es obligatorio',
+              editable: false
             },
             {
               xtype: 'combobox',
@@ -114,6 +115,20 @@ Ext.define('MyApp.view.LaboresForm', {
               queryMode: 'local',
               store: 'Contratistas',
               valueField: 'codigo'
+            },
+            {
+              xtype: 'combobox',
+              defaultListenerScope: true,
+              itemId: 'fieldCampania',
+              width: '100%',
+              fieldLabel: 'Campaña',
+              name: 'cod_periodo',
+              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+              displayField: 'descripcion',
+              forceSelection: true,
+              queryMode: 'local',
+              store: 'Campanias',
+              valueField: 'codigo'
             }
           ]
         },
@@ -143,6 +158,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -152,6 +168,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -173,18 +190,11 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Insumos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('descripcion');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return f_crud.getDisplayValue('Insumos',value,'descripcion');
                   },
+                  width: '20%',
                   dataIndex: 'cod_insumo',
-                  text: 'Cod Insumo',
+                  text: 'Insumo',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -197,6 +207,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'dosis',
                   text: 'Dosis',
                   editor: {
@@ -205,6 +216,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
@@ -214,18 +226,11 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Depositos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return f_crud.getDisplayValue('Depositos',value,'nombre');
                   },
+                  width: '20%',
                   dataIndex: 'cod_deposito',
-                  text: 'Cod Deposito',
+                  text: 'Deposito',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -238,115 +243,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'gridcolumn',
-                  dataIndex: 'tipo',
-                  text: 'Tipo',
-                  editor: {
-                    xtype: 'textfield'
-                  }
-                }
-              ],
-              plugins: [
-                {
-                  ptype: 'cellediting'
-                }
-              ]
-            },
-            {
-              xtype: 'gridpanel',
-              hidden: true,
-              itemId: 'labores_insumos_grid-test',
-              title: 'My Grid Panel',
-              store: 'Labores_insumos',
-              columns: [
-                {
-                  xtype: 'gridcolumn',
-                  dataIndex: 'estado_registro',
-                  text: 'Estado Registro',
-                  editor: {
-                    xtype: 'textfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'id',
-                  text: 'ID',
-                  editor: {
-                    xtype: 'displayfield',
-                    value: 'Display Field'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'id_labores',
-                  text: 'Id Labores',
-                  format: '00',
-                  editor: {
-                    xtype: 'displayfield',
-                    value: 'Display Field'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'uid',
-                  text: 'Uid',
-                  format: '00',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    console.log("friendly message");
-                    debugger;
-                    var st = Ext.getStore("Insumos"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('descripcion');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
-                  },
-                  dataIndex: 'cod_insumo',
-                  text: 'Cod Insumo',
-                  format: '00',
-                  editor: {
-                    xtype: 'combobox',
-                    displayField: 'descripcion',
-                    queryMode: 'local',
-                    store: 'Insumos',
-                    valueField: 'codigo'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'dosis',
-                  text: 'Dosis',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'cantidad',
-                  text: 'Cantidad',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'numbercolumn',
-                  dataIndex: 'cod_deposito',
-                  text: 'Cod Deposito',
-                  format: '00',
-                  editor: {
-                    xtype: 'numberfield'
-                  }
-                },
-                {
-                  xtype: 'gridcolumn',
+                  hidden: true,
                   dataIndex: 'tipo',
                   text: 'Tipo',
                   editor: {
@@ -444,6 +341,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -453,6 +351,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -474,18 +373,11 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Personal"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return getDisplayValue('Personal', value, 'nombre');
                   },
+                  width: '20%',
                   dataIndex: 'cod_personal',
-                  text: 'Cod Personal',
+                  text: 'Personal',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -499,7 +391,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   xtype: 'numbercolumn',
                   hidden: true,
                   dataIndex: 'cod_concepto',
-                  text: 'Cod Concepto',
+                  text: 'Concepto',
                   format: '00',
                   editor: {
                     xtype: 'numberfield'
@@ -507,6 +399,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
@@ -515,6 +408,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'precio',
                   text: 'Precio',
                   editor: {
@@ -523,6 +417,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '20%',
                   dataIndex: 'importe',
                   text: 'Importe',
                   editor: {
@@ -617,6 +512,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '33%',
                   dataIndex: 'id',
                   text: 'ID',
                   editor: {
@@ -626,6 +522,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   dataIndex: 'id_labores',
                   text: 'Id Labores',
                   format: '00',
@@ -647,18 +544,11 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    var st = Ext.getStore("Maquinaria"), cod, displayValue;
-                    cod = st.find("codigo",value);
-                    if(cod > -1) {
-                      displayValue = st.getAt(cod).get('nombre');
-                    }
-                    else {
-                      displayValue = '';
-                    }
-                    return displayValue;
+                    return getDisplayValue('Maquinaria', value, 'nombre');
                   },
+                  width: '33%',
                   dataIndex: 'cod_maquina',
-                  text: 'Cod Maquina',
+                  text: 'Maquina',
                   format: '00',
                   editor: {
                     xtype: 'combobox',
@@ -670,6 +560,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  width: '33%',
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {

@@ -172,7 +172,7 @@
                         "dataIndex": "codigo",
                         "format": "00",
                         "text": "Codigo",
-                        "width": "25%"
+                        "width": "50%"
                     },
                     "name": "MyNumberColumn17",
                     "designerId": "796258e1-9c01-4eb3-9c70-6294bdb179ca"
@@ -187,7 +187,7 @@
                     "userConfig": {
                         "dataIndex": "nombre",
                         "text": "Nombre",
-                        "width": "25%"
+                        "width": "50%"
                     },
                     "name": "MyColumn8",
                     "designerId": "d6bac272-1825-434e-945b-b710b54bc8ee"
@@ -202,6 +202,7 @@
                     "userConfig": {
                         "dataIndex": "cod_lote",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Lote",
                         "width": "25%"
                     },
@@ -218,6 +219,7 @@
                     "userConfig": {
                         "dataIndex": "cod_actividad",
                         "format": "00",
+                        "hidden": true,
                         "text": "Cod Actividad",
                         "width": ""
                     },
@@ -342,6 +344,24 @@
                     },
                     "name": "onGridpanelItemClick",
                     "designerId": "93188dd1-cbac-4ae4-941e-02097fdd0598"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "c5ed96a4-27bb-4a75-8a03-2202bd9798de"
                 }
             ]
         },

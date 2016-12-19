@@ -144,11 +144,6 @@
                         "fn": "onGridItemClick",
                         "implHandler": [
                             "if(!this.longpress) {",
-                            "    /*var panelClass = \"MyApp.view.\";",
-                            "    var newPan = Ext.create(panelClass);",
-                            "    newPan.est_code = record.data.codigo;",
-                            "    MyApp.main.add(newPan);",
-                            "    MyApp.main.getLayout().setActiveItem(newPan);*/",
                             "    console.log('just a clic');",
                             "}",
                             "this.longpress = false;"
@@ -279,6 +274,24 @@
                     },
                     "name": "MyColumn16",
                     "designerId": "17239dfe-a828-4400-aeb0-9ca27d5d6307"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridBeforeRender",
+                        "implHandler": [
+                            "f_crud.renderGridWidth(component);"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onGridBeforeRender",
+                    "designerId": "19f3c534-fb7e-41e1-9286-7dd572baa481"
                 }
             ]
         },
@@ -296,8 +309,7 @@
                     "this.model_name = 'MyApp.model.Tareas';",
                     "this.form_name  = 'MyApp.view.TareasForm';",
                     "var store = Ext.getStore(this.store_name);",
-                    "this.form_store_array = [store];",
-                    "f_crud.load_store(this.store_name);"
+                    "this.form_store_array = [store];"
                 ],
                 "name": "render",
                 "scope": "me"

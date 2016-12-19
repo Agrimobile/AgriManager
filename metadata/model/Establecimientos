@@ -87,10 +87,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "aliasSQL": "nivelzoom",
                 "name": "zoom"
             },
             "name": "MyInteger9",
-            "designerId": "bfb0b2f2-888a-41d3-a641-b75c8d656260"
+            "designerId": "bfb0b2f2-888a-41d3-a641-b75c8d656260",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "aliasSQL",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Number",

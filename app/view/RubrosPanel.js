@@ -57,33 +57,39 @@ Ext.define('MyApp.view.RubrosPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       },
       columns: [
         {
           xtype: 'gridcolumn',
+          hidden: true,
           dataIndex: 'estado_registro',
           text: 'Estado Registro'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'id',
           text: 'ID'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'uid',
           text: 'Uid',
           format: '00'
         },
         {
           xtype: 'numbercolumn',
+          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
+          width: '50%',
           dataIndex: 'descripcion',
           text: 'Descripcion'
         }
@@ -168,7 +174,6 @@ Ext.define('MyApp.view.RubrosPanel', {
                   message: 'No puede borrar un rubro con insumos, <br> borre los insumos asociados primeros'
                 };
                 f_crud.grid_check_delete(gridPanel,checkConfig);
-
               },
               cls: '',
               margin: '0 0 0 10',
@@ -206,14 +211,13 @@ Ext.define('MyApp.view.RubrosPanel', {
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
     if(!this.longpress) {
-        /*var panelClass = "MyApp.view.";
-        var newPan = Ext.create(panelClass);
-        newPan.est_code = record.data.codigo;
-        MyApp.main.add(newPan);
-        MyApp.main.getLayout().setActiveItem(newPan);*/
         console.log('just a clic - You should add behavior here');
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   },
 
   onPanelRender: function(component, eOpts) {
@@ -222,7 +226,7 @@ Ext.define('MyApp.view.RubrosPanel', {
     this.form_name  = 'MyApp.view.RubrosForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.load_store(this.store_name);
+    //f_crud.load_store(this.store_name);
   },
 
   onGridpanelAfterRender: function(component, eOpts) {

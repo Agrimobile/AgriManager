@@ -19,7 +19,6 @@ Ext.define('MyApp.view.ActividadesForm', {
 
   requires: [
     'MyApp.view.ActividadesFormViewModel',
-    'Ext.form.field.Number',
     'Ext.form.field.Date',
     'Ext.form.field.Display',
     'Ext.container.Container',
@@ -41,11 +40,12 @@ Ext.define('MyApp.view.ActividadesForm', {
   },
   items: [
     {
-      xtype: 'numberfield',
+      xtype: 'textfield',
       fieldLabel: 'Código',
       name: 'codigo',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      editable: false
     },
     {
       xtype: 'textfield',

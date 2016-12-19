@@ -63,6 +63,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         {
           xtype: 'gridcolumn',
           hidden: true,
+          width: '20%',
           dataIndex: 'estado_registro',
           text: 'Estado Registro'
         },
@@ -94,7 +95,6 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
           dataIndex: 'zoom',
           text: 'Zoom',
           format: '00'
@@ -115,7 +115,8 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       listeners: {
         selectionchange: 'onGridSelectionChange',
         itemlongpress: 'onGridItemLongpress',
-        itemclick: 'onGridItemClick'
+        itemclick: 'onGridItemClick',
+        beforerender: 'onGridBeforeRender'
       }
     }
   ],
@@ -211,7 +212,6 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
     this.form_name  = 'MyApp.view.EstablecimientosForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-
     f_crud.load_store(this.store_name);
   },
 
@@ -247,6 +247,10 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         MyApp.main.getLayout().setActiveItem(newPan);
     }
     this.longpress = false;
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   }
 
 });

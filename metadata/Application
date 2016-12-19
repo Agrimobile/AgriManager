@@ -23,9 +23,7 @@
             "Contratistas",
             "Depositos",
             "Insumos",
-            "Campanias",
-            "GridEditing",
-            "GridEditingField"
+            "Campanias"
         ],
         "name": "MyApp",
         "stores": [
@@ -46,9 +44,7 @@
             "Depositos",
             "Insumos",
             "Campanias",
-            "Labores_insumos",
-            "GridEditing",
-            "GridEditingField"
+            "Labores_insumos"
         ],
         "views": [
             "MainContainer",
@@ -78,8 +74,7 @@
             "MaquinariaPanel",
             "MaquinariaForm",
             "CampaniasPanel",
-            "CampaniasForm",
-            "GridContainerTesting"
+            "CampaniasForm"
         ]
     },
     "name": "Application",
