@@ -308,7 +308,7 @@
 .x-treelist-item-icon:before,
 .x-treelist-item-tool:before,
 .x-treelist-item-expander {
-    line-height: 32px;
+    line-height: 39px;
 }
 /* C:/wamp64/www/AgriManager/ext/packages/core/sass/src/list/TreeItem.scss:175 */
 .x-treelist-item-icon,
@@ -355,8 +355,8 @@
     color: #404040;
     margin-left: 22px;
     margin-right: 18px;
-    font-size: 13px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 39px;
     text-overflow: ellipsis;
 }
 /* C:/wamp64/www/AgriManager/ext/packages/core/sass/src/list/TreeItem.scss:258 */
@@ -3070,7 +3070,7 @@ the height of a multi-line element */
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/Component.scss:1 */
 .x-body {
     color: #404040;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 17px;
     font-weight: 300;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
@@ -3129,7 +3129,7 @@ body > .x-mask {
     padding: 0;
     background-color: transparent;
     color: #404040;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/LoadMask.scss:59 */
 .x-mask-msg-text {
@@ -3159,7 +3159,7 @@ body > .x-mask {
 .x-progress-default .x-progress-text {
     color: #fff;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 18px;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     text-align: center;
     line-height: 24px;
@@ -3190,8 +3190,8 @@ body > .x-mask {
 .x-progressbar-default-cell > .x-grid-cell-inner,
 .x-progress-default-cell > .x-grid-cell-inner,
 .x-progressbarwidget-default-cell > .x-grid-cell-inner {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 7px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/ProgressBar.scss:163 */
 .x-progressbar-default-cell > .x-grid-cell-inner .x-progress-default,
@@ -3325,7 +3325,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #f0f0f0;
     padding: 0 5px;
     max-width: 100%;
@@ -3787,8 +3787,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-default-small-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1251 */
 .x-button-default-small-cell > .x-grid-cell-inner >.x-btn-default-small {
@@ -3920,7 +3920,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-medium {
-    font: 400 14px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #f0f0f0;
     padding: 0 8px;
     max-width: 100%;
@@ -4382,8 +4382,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-default-medium-cell > .x-grid-cell-inner {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 1px;
+    padding-bottom: 0px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1251 */
 .x-button-default-medium-cell > .x-grid-cell-inner >.x-btn-default-medium {
@@ -4515,7 +4515,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-large {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 20px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #f0f0f0;
     padding: 0 10px;
     max-width: 100%;
@@ -5110,7 +5110,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #606060;
     padding: 0 5px;
     max-width: 100%;
@@ -5572,8 +5572,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-default-toolbar-small-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1251 */
 .x-button-default-toolbar-small-cell > .x-grid-cell-inner >.x-btn-default-toolbar-small {
@@ -5705,7 +5705,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-medium {
-    font: 400 14px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #606060;
     padding: 0 8px;
     max-width: 100%;
@@ -6167,8 +6167,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-default-toolbar-medium-cell > .x-grid-cell-inner {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 1px;
+    padding-bottom: 0px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1251 */
 .x-button-default-toolbar-medium-cell > .x-grid-cell-inner >.x-btn-default-toolbar-medium {
@@ -6300,7 +6300,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-large {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 20px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #606060;
     padding: 0 10px;
     max-width: 100%;
@@ -7408,7 +7408,7 @@ body > .x-mask {
 .x-toolbar-text-default {
     padding: 0 4px;
     color: #4b4c4c;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/toolbar/Toolbar.scss:334 */
 .x-toolbar-spacer-default {
@@ -7600,7 +7600,7 @@ body > .x-mask {
 .x-toolbar-text-footer {
     padding: 0 4px;
     color: #4b4c4c;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/toolbar/Toolbar.scss:334 */
 .x-toolbar-spacer-footer {
@@ -7694,7 +7694,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/dd/StatusProxy.scss:1 */
 .x-dd-drag-proxy {
     color: #404040;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     border: 1px solid #d0d0d0;
     background-color: #fff;
 }
@@ -7756,7 +7756,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:282 */
 .x-panel-header-default {
-    font-size: 16px;
+    font-size: 22px;
     border: 1px solid #5fa2dd;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:307 */
@@ -7820,7 +7820,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:387 */
 .x-panel-header-title-default {
     color: #f0f0f0;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 20px;
@@ -7877,7 +7877,7 @@ body > .x-mask {
     background: #fff;
     border-color: #d0d0d0;
     color: #404040;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     border-width: 1px;
@@ -8117,7 +8117,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:282 */
 .x-panel-header-default-framed {
-    font-size: 16px;
+    font-size: 22px;
     border: 2px solid #5fa2dd;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:307 */
@@ -8181,7 +8181,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/panel/Panel.scss:387 */
 .x-panel-header-title-default-framed {
     color: #f0f0f0;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 20px;
@@ -8238,7 +8238,7 @@ body > .x-mask {
     background: #fff;
     border-color: #d0d0d0;
     color: #404040;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     border-width: 1px;
@@ -9592,7 +9592,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/container/ButtonGroup.scss:132 */
 .x-btn-group-header-title-default {
-    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 16px;
     color: #606060;
 }
@@ -9852,7 +9852,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/container/ButtonGroup.scss:132 */
 .x-btn-group-header-title-default-framed {
-    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 16px;
     color: #606060;
 }
@@ -10032,13 +10032,13 @@ body > .x-mask {
     border-style: solid;
     background: #fff;
     color: #000;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/window/Window.scss:264 */
 .x-window-header-default {
-    font-size: 16px;
+    font-size: 22px;
     border-color: #5fa2dd;
     background-color: #5fa2dd;
 }
@@ -10064,7 +10064,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/window/Window.scss:305 */
 .x-window-header-title-default {
     color: #f0f0f0;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 20px;
@@ -11289,7 +11289,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/Labelable.scss:97 */
 .x-form-item-label-default {
     color: #404040;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     min-height: 32px;
     padding-top: 8px;
     padding-right: 5px;
@@ -11331,7 +11331,7 @@ body > .x-mask {
 .x-form-invalid-under-default {
     padding: 2px 2px 2px 20px;
     color: #cf4c35;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background: no-repeat 0 2px;
     background-image: url(images/form/exclamation.png);
 }
@@ -11375,7 +11375,7 @@ body > .x-mask {
     color: #404040;
     padding: 5px 10px 4px;
     background-color: #fff;
-    font: 300 13px/21px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/21px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     min-height: 30px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:272 */
@@ -11384,12 +11384,12 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:278 */
 .x-form-text-default.x-form-textarea {
-    line-height: 20px;
-    min-height: 80px;
+    line-height: 27px;
+    min-height: 108px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:283 */
 .x-ie8 .x-form-text-default.x-form-textarea {
-    min-height: 71px;
+    min-height: 99px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:290 */
 .x-form-text-default.x-form-text-file {
@@ -11440,8 +11440,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:371 */
 .x-textfield-default-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/Text.scss:431 */
 .x-form-clear-trigger {
@@ -11583,7 +11583,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:169 */
 .x-form-cb-label-default {
     margin-top: 8px;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #404040;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:174 */
@@ -11606,8 +11606,8 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:199 */
 .x-checkbox-default-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/CheckboxGroup.scss:44 */
 .x-form-item-body-default.x-form-checkboxgroup-body {
@@ -11640,7 +11640,7 @@ body > .x-mask {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/FieldSet.scss:148 */
 .x-fieldset-header-default > .x-fieldset-header-text {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 22px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #919191;
     padding: 1px 0;
 }
@@ -11868,7 +11868,7 @@ body > .x-mask {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/view/BoundList.scss:8 */
 .x-boundlist-item {
     padding: 0 10px;
-    font: normal 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: normal 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 30px;
     cursor: pointer;
     cursor: hand;
@@ -11999,13 +11999,13 @@ div.x-datepicker-arrow:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/picker/Date.scss:125 */
 .x-datepicker-month .x-btn-inner {
-    font-size: 15px;
+    font-size: 21px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/picker/Date.scss:130 */
 .x-datepicker-column-header {
     width: 44px;
     color: #404040;
-    font: 400 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     text-align: right;
     background-color: #ececec;
 }
@@ -12022,7 +12022,7 @@ div.x-datepicker-arrow:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/picker/Date.scss:163 */
 .x-datepicker-date {
     padding: 0 15px 0 0;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #404040;
     cursor: pointer;
     line-height: 36px;
@@ -12107,7 +12107,7 @@ div.x-datepicker-date:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/picker/Date.scss:274 */
 .x-monthpicker-item {
     margin: 5px 0 5px;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     text-align: center;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/picker/Date.scss:280 */
@@ -12211,7 +12211,7 @@ a.x-monthpicker-yearnav-button:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/form/field/Display.scss:52 */
 .x-form-display-field-default {
     min-height: 32px;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #404040;
     margin-top: 8px;
 }
@@ -12387,14 +12387,14 @@ a.x-monthpicker-yearnav-button:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:363 */
 .x-tip-header-title-default {
     color: #f0f0f0;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: bold;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:369 */
 .x-tip-body-default {
     padding: 6px 8px;
     color: #f0f0f0;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:374 */
@@ -12575,14 +12575,14 @@ a.x-monthpicker-yearnav-button:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:363 */
 .x-tip-header-title-form-invalid {
     color: #f0f0f0;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: bold;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:369 */
 .x-tip-body-form-invalid {
     padding: 3px 3px 3px 22px;
     color: #f0f0f0;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/var/tip/Tip.scss:374 */
@@ -12834,12 +12834,12 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/HtmlEditor.scss:166 */
 .x-html-editor-tb .x-font-select {
-    font-size: 13px;
+    font-size: 18px;
     font-family: inherit;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/form/field/HtmlEditor.scss:171 */
 .x-html-editor-wrap textarea {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background-color: #fff;
     resize: none;
 }
@@ -12942,12 +12942,12 @@ a.x-color-picker-item:hover {
     padding: 10px;
     color: grey;
     background-color: #fff;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/view/Table.scss:25 */
 .x-grid-item {
     color: #404040;
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/26px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background-color: #fff;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/view/Table.scss:31 */
@@ -13178,7 +13178,7 @@ a.x-color-picker-item:hover {
 .x-column-header {
     border-right: 1px solid #d0d0d0;
     color: #404040;
-    font: 400 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/26px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     outline: 0;
     background-color: #fff;
 }
@@ -13336,7 +13336,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/column/Action.scss:1 */
 .x-grid-cell-inner-action-col {
-    padding: 7px 4px 7px 4px;
+    padding: 11px 4px 10px 4px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/column/Action.scss:12 */
 .x-action-col-cell .x-item-disabled {
@@ -13354,7 +13354,7 @@ a.x-color-picker-item:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/column/Check.scss:2 */
 .x-column-header-checkbox .x-column-header-inner,
 .x-grid-checkcolumn-cell-inner {
-    padding: 7px 4px 7px 4px;
+    padding: 11px 4px 10px 4px;
     text-overflow: clip;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/column/Check.scss:18 */
@@ -13525,7 +13525,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-grid-cell-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     color: #f0f0f0;
     padding: 0 5px;
     max-width: 100%;
@@ -13951,8 +13951,8 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-grid-cell-small-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/button/Button.scss:1251 */
 .x-button-grid-cell-small-cell > .x-grid-cell-inner >.x-btn-grid-cell-small {
@@ -13994,7 +13994,7 @@ a.x-color-picker-item:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/feature/Grouping.scss:36 */
 .x-grid-group-title {
     color: #606060;
-    font: 400 13px/15px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 18px/21px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-grid-group-hd-collapsed .x-grid-group-title:before {
@@ -14013,7 +14013,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/feature/RowBody.scss:1 */
 .x-grid-rowbody {
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/26px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     padding: 5px 10px 5px 10px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/feature/Summary.scss:1 */
@@ -14034,7 +14034,7 @@ a.x-color-picker-item:hover {
     border-color: #e9e9e9;
     background-color: #fff !important;
     border-top: 1px solid #e9e9e9;
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px/26px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/feature/Summary.scss:26 */
 .x-docked-summary .x-grid-item,
@@ -14122,7 +14122,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:405 */
 .x-menu-item-default .x-form-item-label {
-    font-size: 13px;
+    font-size: 18px;
     color: #000;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:412 */
@@ -14132,7 +14132,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:417 */
 .x-menu-item-text-default {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 31px;
     padding-top: 1px;
     color: #000;
@@ -14476,7 +14476,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:405 */
 .x-menu-item-default-menubar .x-form-item-label {
-    font-size: 13px;
+    font-size: 18px;
     color: #000;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:412 */
@@ -14486,7 +14486,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/menu/Menu.scss:417 */
 .x-menu-item-text-default-menubar {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     line-height: 31px;
     padding-top: 1px;
     color: #000;
@@ -14912,7 +14912,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:24 */
 .x-grid-editor .x-form-action-col-field {
-    padding: 7px 4px 7px 4px;
+    padding: 11px 4px 10px 4px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:30 */
 .x-grid-editor .x-form-text {
@@ -14931,11 +14931,11 @@ a.x-color-picker-item:hover {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:7 */
 .x-grid-row-editor .x-form-display-field {
     padding: 7px 8px 6px 8px;
-    line-height: 19px;
+    line-height: 26px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:18 */
 .x-ie9m .x-grid-row-editor .x-form-display-field {
-    min-height: 19px;
+    min-height: 26px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:26 */
 .x-grid-row-editor .x-form-action-col-field {
@@ -15240,7 +15240,7 @@ a.x-color-picker-item:hover {
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/RowExpander.scss:1 */
 .x-grid-cell-inner-row-expander {
-    padding: 8px 8px 8px 8px;
+    padding: 12px 8px 11px 8px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/grid/plugin/RowExpander.scss:14 */
 .x-grid-row-expander {
@@ -15753,8 +15753,8 @@ div.x-border-layout-ct {
 /* C:/wamp64/www/AgriManager/ext/classic/theme-neutral/sass/src/slider/Multi.scss:244 */
 .x-slider-default-cell > .x-grid-cell-inner,
 .x-sliderwidget-default-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 4px;
 }
 /* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-default-top {

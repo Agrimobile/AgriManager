@@ -209,6 +209,7 @@
                     "userConfig": {
                         "dataIndex": "zoom",
                         "format": "00",
+                        "hidden": true,
                         "text": "Zoom"
                     },
                     "name": "MyNumberColumn8",
