@@ -95,6 +95,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'zoom',
           text: 'Zoom',
           format: '00'
