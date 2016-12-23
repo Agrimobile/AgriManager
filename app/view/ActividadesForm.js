@@ -19,6 +19,7 @@ Ext.define('MyApp.view.ActividadesForm', {
 
   requires: [
     'MyApp.view.ActividadesFormViewModel',
+    'Ext.form.field.ComboBox',
     'Ext.form.field.Date',
     'Ext.form.field.Display',
     'Ext.container.Container',
@@ -53,6 +54,19 @@ Ext.define('MyApp.view.ActividadesForm', {
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
+    },
+    {
+      xtype: 'combobox',
+      itemId: 'fieldPeriodo',
+      fieldLabel: 'Campaña',
+      name: 'cod_periodo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
+      displayField: 'descripcion',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'Campanias',
+      valueField: 'codigo'
     },
     {
       xtype: 'datefield',
@@ -93,11 +107,6 @@ Ext.define('MyApp.view.ActividadesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            /*var formWrapper = this.up('#form');
-            if(formWrapper.getForm().isValid()) {
-            f_crud.save_form(formWrapper);
-            }
-            */
             var formWrapper = this.up('#form'),
               desde = formWrapper.down("#desde").value,
               hasta = formWrapper.down("#hasta").value,
@@ -111,7 +120,6 @@ Ext.define('MyApp.view.ActividadesForm', {
             else {
               formWrapper.down("[cls=warning-message]").setValue(warning);
             }
-
           },
           margins: '',
           margin: 10,

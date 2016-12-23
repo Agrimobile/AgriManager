@@ -57,6 +57,11 @@ Ext.define('MyApp.model.Actividades', {
       type: 'date',
       aliasSQL: 'fecha_hasta',
       name: 'hasta'
+    },
+    {
+      type: 'int',
+      sincronizar: true,
+      name: 'cod_periodo'
     }
   ]
 });

@@ -54,11 +54,6 @@ Ext.define('MyApp.model.Lotes_actividades', {
     {
       type: 'int',
       name: 'cod_actividad'
-    },
-    {
-      type: 'int',
-      sincronizar: false,
-      name: 'cod_periodo'
     }
   ]
 });

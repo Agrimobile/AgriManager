@@ -115,20 +115,6 @@ Ext.define('MyApp.view.LaboresForm', {
               queryMode: 'local',
               store: 'Contratistas',
               valueField: 'codigo'
-            },
-            {
-              xtype: 'combobox',
-              defaultListenerScope: true,
-              itemId: 'fieldCampania',
-              width: '100%',
-              fieldLabel: 'Campaña',
-              name: 'cod_periodo',
-              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
-              displayField: 'descripcion',
-              forceSelection: true,
-              queryMode: 'local',
-              store: 'Campanias',
-              valueField: 'codigo'
             }
           ]
         },
@@ -653,22 +639,37 @@ Ext.define('MyApp.view.LaboresForm', {
           handler: function(button, e) {
             var formWrapper = this.up('#form');
             var tarea_cod = this.up('#form').down("#fieldTarea").value;
-            var query = "select cod_establecimiento from Lotes where codigo = " + formWrapper.parent.cod_lote;
+
             formWrapper.form._record.data.cod_lote_actividad = formWrapper.parent.codigo;
             formWrapper.form._record.data.cod_lote = formWrapper.parent.cod_lote;
-            formWrapper.form._record.data.cod_periodo = formWrapper.parent.cod_periodo;
-            f_crud.sql_select(query, function(resultSet){
-              if(resultSet === -1 || !Array.isArray(resultSet)) {
-                console.log("Query statement: " + query);
+
+            var pk_lote_actividad = formWrapper.parent.codigo;
+            var sqlJoin = "select actividades.cod_periodo from actividades join lotes_actividades ";
+            sqlJoin = sqlJoin + "on actividades.codigo=lotes_actividades.cod_actividad ";
+            sqlJoin = sqlJoin + "where lotes_actividades.codigo = " + pk_lote_actividad;
+            f_crud.sql_select(sqlJoin, function(periodResultSet){
+              if(periodResultSet === -1 || !Array.isArray(periodResultSet)) {
+                console.log("Query statement: " + sqlJoin);
                 throw "Database error: Check your sql statement or your WebSql instance";
               }
               else {
-                formWrapper.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;
-                //f_crud.save_form(formWrapper);
-                if(formWrapper.getForm().isValid()) {
-                  f_crud.save_form(formWrapper);
-                }
+                var query = "select cod_establecimiento from Lotes where codigo = " + formWrapper.parent.cod_lote;
+                formWrapper.form._record.data.cod_periodo = periodResultSet[0].cod_periodo;
+                f_crud.sql_select(query, function(resultSet){
+                  if(resultSet === -1 || !Array.isArray(resultSet)) {
+                    console.log("Query statement: " + query);
+                    throw "Database error: Check your sql statement or your WebSql instance";
+                  }
+                  else {
+                    formWrapper.form._record.data.cod_establecimiento = resultSet[0].cod_establecimiento;
+                    //f_crud.save_form(formWrapper);
+                    if(formWrapper.getForm().isValid()) {
+                      f_crud.save_form(formWrapper);
+                    }
+                  }
+                });
               }
+
             });
           },
           margins: '',

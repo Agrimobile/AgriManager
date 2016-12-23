@@ -128,6 +128,30 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cod_periodo",
+                "sincronizar": true
+            },
+            "name": "MyInteger47",
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "58170a69-3caf-4172-9d16-919d1ca5238f",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

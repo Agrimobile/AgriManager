@@ -112,30 +112,6 @@
             },
             "name": "MyInteger16",
             "designerId": "ba0b8fbe-8707-44a6-82b4-25d25a7b24ce"
-        },
-        {
-            "type": "Ext.data.field.Integer",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "cod_periodo",
-                "sincronizar": false
-            },
-            "name": "MyInteger17",
-            "configAlternates": {
-                "sincronizar": "boolean"
-            },
-            "designerId": "d5fdf51d-070b-49d3-975a-cc2bf04470c4",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "sincronizar",
-                    "type": "string"
-                }
-            ]
         }
     ]
 }

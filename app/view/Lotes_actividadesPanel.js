@@ -23,7 +23,6 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
-    'Ext.grid.column.Date',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -61,6 +60,12 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
       title: 'Lotes en Actividad',
       hideHeaders: false,
       store: 'Lotes_actividades',
+      listeners: {
+        itemlongpress: 'onGridpanelItemLongpress',
+        selectionchange: 'onGridpanelSelectionChange',
+        itemclick: 'onGridpanelItemClick',
+        beforerender: 'onGridBeforeRender'
+      },
       columns: [
         {
           xtype: 'gridcolumn',
@@ -83,21 +88,18 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '50%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          width: '50%',
           dataIndex: 'nombre',
           text: 'Nombre'
         },
         {
           xtype: 'numbercolumn',
           hidden: true,
-          width: '25%',
           dataIndex: 'cod_lote',
           text: 'Cod Lote',
           format: '00'
@@ -105,39 +107,11 @@ Ext.define('MyApp.view.Lotes_actividadesPanel', {
         {
           xtype: 'numbercolumn',
           hidden: true,
-          width: '',
           dataIndex: 'cod_actividad',
           text: 'Cod Actividad',
           format: '00'
-        },
-        {
-          xtype: 'numbercolumn',
-          hidden: true,
-          dataIndex: 'cod_periodo',
-          text: 'Cod Periodo',
-          format: '00'
-        },
-        {
-          xtype: 'datecolumn',
-          hidden: true,
-          dataIndex: 'desde',
-          text: 'Desde',
-          format: 'm/j/Y'
-        },
-        {
-          xtype: 'datecolumn',
-          hidden: true,
-          dataIndex: 'hasta',
-          text: 'Hasta',
-          format: 'm/j/Y'
         }
-      ],
-      listeners: {
-        itemlongpress: 'onGridpanelItemLongpress',
-        selectionchange: 'onGridpanelSelectionChange',
-        itemclick: 'onGridpanelItemClick',
-        beforerender: 'onGridBeforeRender'
-      }
+      ]
     }
   ],
   dockedItems: [

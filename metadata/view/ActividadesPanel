@@ -162,115 +162,6 @@
                     "designerId": "91dc2d76-19c1-40cf-a1ce-f7e38f50c302"
                 },
                 {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "estado_registro",
-                        "hidden": true,
-                        "text": "Estado Registro"
-                    },
-                    "name": "MyColumn18",
-                    "designerId": "de8b13ca-a509-4c73-8b28-636d4f02598d"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "id",
-                        "hidden": true,
-                        "text": "ID"
-                    },
-                    "name": "MyNumberColumn38",
-                    "designerId": "df9630da-d159-4ae6-826f-05a0d23b4185"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "uid",
-                        "format": "00",
-                        "hidden": true,
-                        "text": "Uid"
-                    },
-                    "name": "MyNumberColumn40",
-                    "designerId": "5ece5708-4457-4c83-8342-b88cc07ace3d"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo",
-                        "width": "25%"
-                    },
-                    "name": "MyNumberColumn41",
-                    "designerId": "d9780ed1-df77-4a5e-b893-b5b42c27a57b"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "nombre",
-                        "text": "Nombre",
-                        "width": "25%"
-                    },
-                    "name": "MyColumn19",
-                    "designerId": "4cab5811-3b06-4943-9f6d-911bcbcbff4b"
-                },
-                {
-                    "type": "Ext.grid.column.Date",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "desde",
-                        "format": "j/m/Y",
-                        "text": "Desde",
-                        "width": "23%"
-                    },
-                    "name": "MyDateColumn3",
-                    "designerId": "7a8060b4-6dd5-4c8f-a6c1-9b5e751d33e1"
-                },
-                {
-                    "type": "Ext.grid.column.Date",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "hasta",
-                        "format": "j/m/Y",
-                        "text": "Hasta",
-                        "width": "25%"
-                    },
-                    "name": "MyDateColumn4",
-                    "designerId": "0d4c0eb2-a26a-48cb-9cae-2d528cf86d39"
-                },
-                {
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",
@@ -287,6 +178,126 @@
                     },
                     "name": "onGridBeforeRender",
                     "designerId": "a19c58fc-e260-4018-a736-4c5ac47ade38"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "estado_registro",
+                        "hidden": true,
+                        "text": "Estado Registro"
+                    },
+                    "name": "MyColumn5",
+                    "designerId": "12b444fd-d478-48e2-937f-56f748623a74"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "hidden": true,
+                        "text": "ID"
+                    },
+                    "name": "MyNumberColumn10",
+                    "designerId": "f838356d-cb2f-4887-b296-c0498b53594f"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "uid",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Uid"
+                    },
+                    "name": "MyNumberColumn16",
+                    "designerId": "6f9e42c9-0ff0-4e6b-a64c-be3626e7b8d9"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo"
+                    },
+                    "name": "MyNumberColumn17",
+                    "designerId": "ae14a953-f040-4b74-bde1-804d7e4a87ca"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nombre",
+                        "text": "Nombre"
+                    },
+                    "name": "MyColumn8",
+                    "designerId": "45650de5-b3aa-47b2-a4e1-e00b7d471bd5"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "desde",
+                        "format": "m/j/Y",
+                        "text": "Desde"
+                    },
+                    "name": "MyDateColumn1",
+                    "designerId": "910a0b8b-8c7b-4417-a6be-7e2d75bde266"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "hasta",
+                        "format": "m/j/Y",
+                        "text": "Hasta"
+                    },
+                    "name": "MyDateColumn2",
+                    "designerId": "af006c2b-8b53-41cf-89eb-2212d4a69006"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_periodo",
+                        "format": "00",
+                        "text": "Cod Periodo"
+                    },
+                    "name": "MyNumberColumn18",
+                    "designerId": "e1e5056a-068a-4096-8f44-bdf5a8a0c5f7"
                 }
             ]
         },
