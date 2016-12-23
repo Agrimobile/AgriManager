@@ -27,10 +27,9 @@
             "codeClass": null,
             "userConfig": {
                 "flex": null,
-                "header": false,
                 "layout": "card",
                 "scrollable": true,
-                "title": "MainPanel"
+                "title": "Agrimanager"
             },
             "name": "MyPanel",
             "designerId": "9ef1da91-c5df-43ff-8e59-54ebf923108e",
