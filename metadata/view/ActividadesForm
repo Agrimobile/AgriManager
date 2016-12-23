@@ -57,6 +57,29 @@
             "designerId": "217bec27-e085-48cd-8eaa-29f85c424c1f"
         },
         {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal",
+                "displayField": "descripcion",
+                "fieldLabel": "Campaña",
+                "forceSelection": true,
+                "itemId": "fieldPeriodo",
+                "layout|flex": null,
+                "name": "cod_periodo",
+                "queryMode": "local",
+                "store": "Campanias",
+                "valueField": "codigo"
+            },
+            "name": "MyComboBox8",
+            "designerId": "af47dfe7-2cf7-4d08-b02e-13c0dc010570"
+        },
+        {
             "type": "Ext.form.field.Date",
             "reference": {
                 "name": "items",
@@ -161,15 +184,10 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "/*var formWrapper = this.up('#form');",
-                                    "if(formWrapper.getForm().isValid()) {",
-                                    "  f_crud.save_form(formWrapper);",
-                                    "}",
-                                    "*/",
                                     "var formWrapper = this.up('#form'),",
-                                    "desde = formWrapper.down(\"#desde\").value,",
-                                    "hasta = formWrapper.down(\"#hasta\").value,",
-                                    "warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
+                                    "    desde = formWrapper.down(\"#desde\").value,",
+                                    "    hasta = formWrapper.down(\"#hasta\").value,",
+                                    "    warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
                                     "if(desde <= hasta){",
                                     "  formWrapper.down(\"[cls=warning-message]\").setValue(\"\");",
                                     "  if(formWrapper.getForm().isValid()) {",
@@ -178,8 +196,7 @@
                                     "}",
                                     "else {",
                                     "  formWrapper.down(\"[cls=warning-message]\").setValue(warning);",
-                                    "}",
-                                    ""
+                                    "}"
                                 ]
                             },
                             "name": "handler",

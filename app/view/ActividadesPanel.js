@@ -85,30 +85,36 @@ Ext.define('MyApp.view.ActividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
-          width: '25%',
           dataIndex: 'codigo',
           text: 'Codigo',
           format: '00'
         },
         {
           xtype: 'gridcolumn',
-          width: '25%',
           dataIndex: 'nombre',
           text: 'Nombre'
         },
         {
           xtype: 'datecolumn',
-          width: '23%',
           dataIndex: 'desde',
           text: 'Desde',
-          format: 'j/m/Y'
+          format: 'm/j/Y'
         },
         {
           xtype: 'datecolumn',
-          width: '25%',
           dataIndex: 'hasta',
           text: 'Hasta',
-          format: 'j/m/Y'
+          format: 'm/j/Y'
+        },
+        {
+          xtype: 'numbercolumn',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+
+            return f_crud.getDisplayValue('Campanias', value, 'descripcion');
+          },
+          dataIndex: 'cod_periodo',
+          text: 'Campaña',
+          format: '00'
         }
       ]
     }

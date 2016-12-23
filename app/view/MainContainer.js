@@ -35,8 +35,7 @@ Ext.define('MyApp.view.MainContainer', {
       xtype: 'panel',
       scrollable: true,
       layout: 'card',
-      header: false,
-      title: 'MainPanel',
+      title: 'Agrimanager',
       items: [
         {
           xtype: 'treepanel',
