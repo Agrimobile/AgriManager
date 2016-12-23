@@ -108,8 +108,12 @@ Ext.define('MyApp.view.ActividadesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+
+            return f_crud.getDisplayValue('Campanias', value, 'descripcion');
+          },
           dataIndex: 'cod_periodo',
-          text: 'Cod Periodo',
+          text: 'Campaña',
           format: '00'
         }
       ]

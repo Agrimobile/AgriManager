@@ -294,10 +294,32 @@
                     "userConfig": {
                         "dataIndex": "cod_periodo",
                         "format": "00",
-                        "text": "Cod Periodo"
+                        "text": "Campaña"
                     },
                     "name": "MyNumberColumn18",
-                    "designerId": "e1e5056a-068a-4096-8f44-bdf5a8a0c5f7"
+                    "designerId": "e1e5056a-068a-4096-8f44-bdf5a8a0c5f7",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value, metaData, record, rowIndex, colIndex, store"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "",
+                                    "return f_crud.getDisplayValue('Campanias', value, 'descripcion');"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "645d10d3-9084-4b77-abec-ef774cdbf7f4"
+                        }
+                    ]
                 }
             ]
         },
