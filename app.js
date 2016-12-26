@@ -87,7 +87,10 @@ Ext.application({
     'MaquinariaPanel',
     'MaquinariaForm',
     'CampaniasPanel',
-    'CampaniasForm'
+    'CampaniasForm',
+    'ConfigMenu',
+    'SimplePanel',
+    'MainMenu'
   ],
   name: 'MyApp',
 

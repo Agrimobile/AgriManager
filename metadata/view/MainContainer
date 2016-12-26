@@ -27,9 +27,12 @@
             "codeClass": null,
             "userConfig": {
                 "flex": null,
+                "id": "agrimobile",
+                "itemId": "agrimobile",
                 "layout": "card",
                 "scrollable": true,
-                "title": "Agrimanager"
+                "title": "Agrimobile",
+                "titleAlign": "center"
             },
             "name": "MyPanel",
             "designerId": "9ef1da91-c5df-43ff-8e59-54ebf923108e",
@@ -133,6 +136,77 @@
                     },
                     "name": "onPanelRender",
                     "designerId": "3ce50405-423e-4349-bb2c-15039c4b82dc"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "paneltool"
+                        ],
+                        "iconCls": "x-fa fa-bars"
+                    },
+                    "name": "MyTool5",
+                    "designerId": "3f27087f-7da0-41cf-b7a2-cc12ca7d715c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick",
+                                "implHandler": [
+                                    "var menu = Ext.create('MyApp.view.MainMenu');",
+                                    "menu.showBy(tool);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onToolClick",
+                            "designerId": "94669a07-506a-41cf-9745-e78165ca7d17"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-gear"
+                    },
+                    "name": "MyTool6",
+                    "designerId": "c5e5b43e-a7d2-4549-b13e-19269ea32be3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick1",
+                                "implHandler": [
+                                    "var menu = Ext.create('MyApp.view.ConfigMenu');",
+                                    "menu.showBy(tool);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onToolClick1",
+                            "designerId": "d1fc7537-180e-4f2e-92cb-11fb8e8e49dc"
+                        }
+                    ]
                 }
             ]
         },

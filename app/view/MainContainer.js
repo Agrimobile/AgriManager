@@ -20,7 +20,8 @@ Ext.define('MyApp.view.MainContainer', {
   requires: [
     'MyApp.view.MainContainerViewModel',
     'Ext.tree.Panel',
-    'Ext.tree.View'
+    'Ext.tree.View',
+    'Ext.panel.Tool'
   ],
 
   viewModel: {
@@ -33,9 +34,12 @@ Ext.define('MyApp.view.MainContainer', {
   items: [
     {
       xtype: 'panel',
+      id: 'agrimobile',
+      itemId: 'agrimobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agrimanager',
+      title: 'Agrimobile',
+      titleAlign: 'center',
       items: [
         {
           xtype: 'treepanel',
@@ -51,7 +55,24 @@ Ext.define('MyApp.view.MainContainer', {
       ],
       listeners: {
         render: 'onPanelRender'
-      }
+      },
+      tools: [
+        {
+          xtype: 'tool',
+          cls: 'paneltool',
+          iconCls: 'x-fa fa-bars',
+          listeners: {
+            click: 'onToolClick'
+          }
+        },
+        {
+          xtype: 'tool',
+          iconCls: 'x-fa fa-gear',
+          listeners: {
+            click: 'onToolClick1'
+          }
+        }
+      ]
     }
   ],
   listeners: {
@@ -96,6 +117,16 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Depositos');
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
+  },
+
+  onToolClick: function(tool, e, owner, eOpts) {
+    var menu = Ext.create('MyApp.view.MainMenu');
+    menu.showBy(tool);
+  },
+
+  onToolClick1: function(tool, e, owner, eOpts) {
+    var menu = Ext.create('MyApp.view.ConfigMenu');
+    menu.showBy(tool);
   },
 
   onViewportRender: function(component, eOpts) {

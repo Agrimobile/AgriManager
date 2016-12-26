@@ -74,7 +74,10 @@
             "MaquinariaPanel",
             "MaquinariaForm",
             "CampaniasPanel",
-            "CampaniasForm"
+            "CampaniasForm",
+            "ConfigMenu",
+            "SimplePanel",
+            "MainMenu"
         ]
     },
     "name": "Application",

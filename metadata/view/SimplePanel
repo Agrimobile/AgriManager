@@ -1,0 +1,35 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "simplepanel",
+        "designer|userClassName": "SimplePanel",
+        "floating": true,
+        "height": 250,
+        "title": "My Panel",
+        "width": 400
+    },
+    "name": "MyPanel5",
+    "designerId": "81cddd74-5a88-4394-ac08-c2012bf5e50d",
+    "viewControllerInstanceId": "1deae47d-3fc3-4edc-b89a-a3737c4d7e03",
+    "viewModelInstanceId": "c339ddbe-62dd-4540-993c-95773651ffb2",
+    "cn": [
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "text": "simplebutton"
+            },
+            "name": "MyButton1",
+            "designerId": "96067295-c2d6-4bd6-ad05-ffc75e46531e"
+        }
+    ]
+}

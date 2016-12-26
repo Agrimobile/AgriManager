@@ -1,0 +1,47 @@
+{
+    "type": "Ext.menu.Menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mainmenu",
+        "designer|userClassName": "MainMenu",
+        "width": null
+    },
+    "name": "ConfigMenu1",
+    "designerId": "bf75fea5-60f7-49b1-8a40-71ad8e230c07",
+    "viewControllerInstanceId": "fc80187b-5e71-4260-ba4c-9b838181b22a",
+    "viewModelInstanceId": "eb8e8ede-04e7-43f4-8d12-7889a5fc03fa",
+    "cn": [
+        {
+            "type": "Ext.menu.Item",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-gear",
+                "text": "Usuario"
+            },
+            "name": "MyMenuItem",
+            "designerId": "56f206cc-b3f4-44ac-905e-2d41b59ca22e"
+        },
+        {
+            "type": "Ext.menu.Item",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-rotate-right",
+                "text": "Sincronizacion"
+            },
+            "name": "MyMenuItem1",
+            "designerId": "641b78a0-9f9f-47ae-8a0b-ca8b55dc8209"
+        }
+    ]
+}

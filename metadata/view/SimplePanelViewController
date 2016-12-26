@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "simplepanel",
+        "designer|userClassName": "SimplePanelViewController"
+    },
+    "designerId": "1deae47d-3fc3-4edc-b89a-a3737c4d7e03"
+}
