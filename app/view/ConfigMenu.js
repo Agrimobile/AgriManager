@@ -18,25 +18,27 @@ Ext.define('MyApp.view.ConfigMenu', {
   alias: 'widget.configmenu',
 
   requires: [
-    'MyApp.view.ConfigMenuViewModel',
-    'Ext.menu.Item'
+    'MyApp.view.ConfigMenuViewModel'
   ],
 
   viewModel: {
     type: 'configmenu'
   },
 
-  items: [
-    {
-      xtype: 'menuitem',
-      iconCls: 'x-fa fa-gear',
-      text: 'Usuario y Base'
-    },
-    {
-      xtype: 'menuitem',
-      iconCls: 'x-fa fa-rotate-right',
-      text: 'Sincronizacion'
-    }
-  ]
+  openCard: function(item, e) {
+    var createPanel = function(panelClass) {
+        var cardClass = "MyApp.view." + panelClass;
+        if(Ext.ClassManager.get(cardClass)) {
+            var newPan = Ext.create(cardClass);
+            MyApp.main.add(newPan);
+            MyApp.main.getLayout().next();
+        }
+        else {
+            var errorMsg = "Error: Panel " + panelClass + " does not exist";
+            throw errorMsg;
+        }
+    },panelClass = item.panelClass;
+    createPanel(panelClass);
+  }
 
 });

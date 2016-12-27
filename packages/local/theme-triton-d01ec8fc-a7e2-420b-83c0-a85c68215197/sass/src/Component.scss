@@ -10,6 +10,10 @@
   text-align: left!important;
 }
 
+.x-panel-header-title {
+  width: 100%!important;
+}
+
 // Las propiedades seteadas con important arriba no pueden refactorearse
 // ya que el codigo que se renderiza en el html tiene inline styles
 
@@ -33,6 +37,7 @@
 .fa-calendar-custom.fa-calendar-o:after {
   left: -14px;
   content: "\f133";
+  font-family: FontAwesome;
 }
 
 .fa-calendar-custom.fa-calendar-o:after, .fa-calendar-custom.fa-calendar-o:before {
@@ -47,4 +52,9 @@
 
 .x-title.x-panel-header-title-default {
   line-height: 29px;
+}
+
+.x-menu-item-icon-default.mainmenu-icon {
+  top: 14px;
+  left: 10px;
 }

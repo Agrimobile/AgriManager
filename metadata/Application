@@ -27,7 +27,7 @@
         ],
         "name": "MyApp",
         "stores": [
-            "Menu",
+            "MainMenu",
             "Establecimientos",
             "Actividades",
             "Lotes",
@@ -44,7 +44,8 @@
             "Depositos",
             "Insumos",
             "Campanias",
-            "Labores_insumos"
+            "Labores_insumos",
+            "ConfigMenu"
         ],
         "views": [
             "MainContainer",
@@ -76,7 +77,6 @@
             "CampaniasPanel",
             "CampaniasForm",
             "ConfigMenu",
-            "SimplePanel",
             "MainMenu"
         ]
     },

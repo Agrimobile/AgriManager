@@ -46,7 +46,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootVisible": false,
-                        "store": "Menu",
+                        "store": "MainMenu",
                         "title": "Menu"
                     },
                     "name": "MyTreePanel",
@@ -110,18 +110,41 @@
                     "userConfig": {
                         "fn": "onPanelRender",
                         "implHandler": [
+                            "var mainMenuTool = component.down(\"#mainmenu-tool\"),",
+                            "    configMenuTool = component.down(\"#configmenu-tool\"),",
+                            "    mainMenuStoreRecords = Ext.getStore(\"MainMenu\").getData().items,",
+                            "    configMenuStoreRecords = Ext.getStore(\"ConfigMenu\").getData().items,",
+                            "    itemClicHandler = function(item, e) {",
+                            "      this.parentMenu.openCard(item, e);",
+                            "    };",
+                            "",
+                            "mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');",
+                            "configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');",
+                            "",
+                            "for (var i = 0; i < mainMenuStoreRecords.length; i++) {",
+                            "    mainMenuTool.menu.add({",
+                            "      xtype: 'menuitem',",
+                            "      iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,",
+                            "      text: mainMenuStoreRecords[i].data.text,",
+                            "      panelClass: mainMenuStoreRecords[i].data.panelClass,",
+                            "      padding: '10px 0px',",
+                            "      handler: itemClicHandler",
+                            "    });",
+                            "}",
+                            "",
+                            "for (var i = 0; i < configMenuStoreRecords.length; i++) {",
+                            "    configMenuTool.menu.add({",
+                            "      xtype: 'menuitem',",
+                            "      iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,",
+                            "      text: configMenuStoreRecords[i].data.text,",
+                            "      panelClass: configMenuStoreRecords[i].data.panelClass,",
+                            "      padding: '10px 0px',",
+                            "      handler: itemClicHandler",
+                            "    });",
+                            "}",
+                            "",
                             "MyApp.main = component;",
                             "MyApp.archivo_base = 'AgriManager';",
-                            "",
-                            "//f_crud.load_store('Registros_borrados');",
-                            "",
-                            "/*",
-                            "f_crud.load_store('Actividades');",
-                            "f_crud.load_store('Establecimientos');",
-                            "f_crud.load_store('Insumos');",
-                            "f_crud.load_store('Lotes');*/",
-                            "",
-                            "//f_crud.load_store('Lotes_coordenadas');",
                             "",
                             "f_crud.load_store('Rubros');",
                             "f_crud.load_store('Personal');",
@@ -148,7 +171,8 @@
                         "cls": [
                             "paneltool"
                         ],
-                        "iconCls": "x-fa fa-bars"
+                        "iconCls": "x-fa fa-bars",
+                        "itemId": "mainmenu-tool"
                     },
                     "name": "MyTool5",
                     "designerId": "3f27087f-7da0-41cf-b7a2-cc12ca7d715c",
@@ -163,8 +187,8 @@
                             "userConfig": {
                                 "fn": "onToolClick",
                                 "implHandler": [
-                                    "var menu = Ext.create('MyApp.view.MainMenu');",
-                                    "menu.showBy(tool);"
+                                    "var toolMenu = tool.menu;",
+                                    "toolMenu.showBy(tool);"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -182,7 +206,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "iconCls": "x-fa fa-gear"
+                        "iconCls": "x-fa fa-gear",
+                        "itemId": "configmenu-tool"
                     },
                     "name": "MyTool6",
                     "designerId": "c5e5b43e-a7d2-4549-b13e-19269ea32be3",
@@ -197,8 +222,8 @@
                             "userConfig": {
                                 "fn": "onToolClick1",
                                 "implHandler": [
-                                    "var menu = Ext.create('MyApp.view.ConfigMenu');",
-                                    "menu.showBy(tool);"
+                                    "var toolMenu = tool.menu;",
+                                    "toolMenu.showBy(tool);"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -220,7 +245,8 @@
             "userConfig": {
                 "fn": "onViewportRender",
                 "implHandler": [
-                    "MyApp.vp = component;"
+                    "MyApp.vp = component;",
+                    ""
                 ],
                 "name": "render",
                 "scope": "me"

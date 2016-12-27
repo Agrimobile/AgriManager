@@ -16,32 +16,35 @@
     "viewModelInstanceId": "cfe4e072-7518-4bde-83e0-65c325f4a5a4",
     "cn": [
         {
-            "type": "Ext.menu.Item",
+            "type": "basicfunction",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "x-fa fa-gear",
-                "text": "Usuario y Base"
+                "designer|params": [
+                    "item, e"
+                ],
+                "fn": "openCard",
+                "implHandler": [
+                    "var createPanel = function(panelClass) {",
+                    "    var cardClass = \"MyApp.view.\" + panelClass;",
+                    "    if(Ext.ClassManager.get(cardClass)) {",
+                    "        var newPan = Ext.create(cardClass);",
+                    "        MyApp.main.add(newPan);",
+                    "        MyApp.main.getLayout().next();",
+                    "    }",
+                    "    else {",
+                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
+                    "        throw errorMsg;",
+                    "    }",
+                    "},panelClass = item.panelClass;",
+                    "createPanel(panelClass);"
+                ]
             },
-            "name": "MyMenuItem",
-            "designerId": "292022d9-984e-4bdd-943b-b7ba0156febb"
-        },
-        {
-            "type": "Ext.menu.Item",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "iconCls": "x-fa fa-rotate-right",
-                "text": "Sincronizacion"
-            },
-            "name": "MyMenuItem1",
-            "designerId": "16223b4b-927c-4560-8f23-dab2909a7059"
+            "name": "openCard",
+            "designerId": "152f365f-682f-4001-945a-d6670d8ae032"
         }
     ]
 }

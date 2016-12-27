@@ -40,7 +40,7 @@ Ext.application({
     'Campanias'
   ],
   stores: [
-    'Menu',
+    'MainMenu',
     'Establecimientos',
     'Actividades',
     'Lotes',
@@ -57,7 +57,8 @@ Ext.application({
     'Depositos',
     'Insumos',
     'Campanias',
-    'Labores_insumos'
+    'Labores_insumos',
+    'ConfigMenu'
   ],
   views: [
     'MainContainer',
@@ -89,7 +90,6 @@ Ext.application({
     'CampaniasPanel',
     'CampaniasForm',
     'ConfigMenu',
-    'SimplePanel',
     'MainMenu'
   ],
   name: 'MyApp',

@@ -44,7 +44,7 @@ Ext.define('MyApp.view.MainContainer', {
         {
           xtype: 'treepanel',
           title: 'Menu',
-          store: 'Menu',
+          store: 'MainMenu',
           rootVisible: false,
           viewConfig: {
             listeners: {
@@ -60,6 +60,7 @@ Ext.define('MyApp.view.MainContainer', {
         {
           xtype: 'tool',
           cls: 'paneltool',
+          itemId: 'mainmenu-tool',
           iconCls: 'x-fa fa-bars',
           listeners: {
             click: 'onToolClick'
@@ -67,6 +68,7 @@ Ext.define('MyApp.view.MainContainer', {
         },
         {
           xtype: 'tool',
+          itemId: 'configmenu-tool',
           iconCls: 'x-fa fa-gear',
           listeners: {
             click: 'onToolClick1'
@@ -97,18 +99,41 @@ Ext.define('MyApp.view.MainContainer', {
   },
 
   onPanelRender: function(component, eOpts) {
+    var mainMenuTool = component.down("#mainmenu-tool"),
+        configMenuTool = component.down("#configmenu-tool"),
+        mainMenuStoreRecords = Ext.getStore("MainMenu").getData().items,
+        configMenuStoreRecords = Ext.getStore("ConfigMenu").getData().items,
+        itemClicHandler = function(item, e) {
+          this.parentMenu.openCard(item, e);
+        };
+
+    mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');
+    configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');
+
+    for (var i = 0; i < mainMenuStoreRecords.length; i++) {
+        mainMenuTool.menu.add({
+          xtype: 'menuitem',
+          iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,
+          text: mainMenuStoreRecords[i].data.text,
+          panelClass: mainMenuStoreRecords[i].data.panelClass,
+          padding: '10px 0px',
+          handler: itemClicHandler
+        });
+    }
+
+    for (var i = 0; i < configMenuStoreRecords.length; i++) {
+        configMenuTool.menu.add({
+          xtype: 'menuitem',
+          iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,
+          text: configMenuStoreRecords[i].data.text,
+          panelClass: configMenuStoreRecords[i].data.panelClass,
+          padding: '10px 0px',
+          handler: itemClicHandler
+        });
+    }
+
     MyApp.main = component;
     MyApp.archivo_base = 'AgriManager';
-
-    //f_crud.load_store('Registros_borrados');
-
-    /*
-    f_crud.load_store('Actividades');
-    f_crud.load_store('Establecimientos');
-    f_crud.load_store('Insumos');
-    f_crud.load_store('Lotes');*/
-
-    //f_crud.load_store('Lotes_coordenadas');
 
     f_crud.load_store('Rubros');
     f_crud.load_store('Personal');
@@ -120,17 +145,18 @@ Ext.define('MyApp.view.MainContainer', {
   },
 
   onToolClick: function(tool, e, owner, eOpts) {
-    var menu = Ext.create('MyApp.view.MainMenu');
-    menu.showBy(tool);
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
   },
 
   onToolClick1: function(tool, e, owner, eOpts) {
-    var menu = Ext.create('MyApp.view.ConfigMenu');
-    menu.showBy(tool);
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
   },
 
   onViewportRender: function(component, eOpts) {
     MyApp.vp = component;
+
   }
 
 });
