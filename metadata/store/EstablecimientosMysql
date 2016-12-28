@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EstablecimientosMysql",
+        "model": "Establecimientos",
+        "sql": "SELECT id,codigo,nombre FROM establecimiento",
+        "storeId": "EstablecimientosMysql"
+    },
+    "name": "Establecimientos1",
+    "designerId": "fccaaeaa-1db4-499a-b9e3-ae92b6a8b8d0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy4",
+            "designerId": "843efc7e-55fb-47cf-b118-92385129eec9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Establecimientos"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "90648834-589c-4c3e-99c4-a54fc9d46853"
+                }
+            ]
+        }
+    ]
+}

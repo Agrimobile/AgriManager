@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TareasMysql",
+        "model": "Tareas",
+        "sql": "select codigo,descrip as descripcion ,valor as precio,tipo,uni_medida as um,id from tareas",
+        "storeId": "TareasMysql"
+    },
+    "name": "Tareas2",
+    "designerId": "2c18d2bf-7e8a-44ca-a607-f2d6554f3523",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy16",
+            "designerId": "ce234971-3161-433e-b935-36b19a9a3993",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Tareas"
+                    },
+                    "name": "MyJsonReader16",
+                    "designerId": "2e1cb78a-b095-4d28-b56a-c0beef3a66e4"
+                }
+            ]
+        }
+    ]
+}

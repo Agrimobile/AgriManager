@@ -28,13 +28,13 @@ Ext.define('MyApp.store.ConfigMenu', {
             text: 'Usuario y Base',
             leaf: true,
             iconCls: 'x-fa fa-user',
-            panelClass: 'LoginPanel'
+            panelClass: 'LoginForm'
           },
           {
             text: 'Sincronizacion',
             leaf: true,
             iconCls: 'x-fa fa-rotate-right',
-            panelClass: 'SyncPanel'
+            panelClass: 'SyncForm'
           }
         ]
       }

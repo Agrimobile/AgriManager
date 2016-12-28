@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DepositosMysql",
+        "model": "Depositos",
+        "sql": "SELECT id, cod_deposito as codigo,descripcion as nombre FROM depositos",
+        "storeId": "DepositosMysql"
+    },
+    "name": "Depositos1",
+    "designerId": "ad08376f-9bed-499a-a4f2-8e76599c00db",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy3",
+            "designerId": "c7419d26-306f-4f73-84f4-9bac0f68e15b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Depositos"
+                    },
+                    "name": "MyJsonReader3",
+                    "designerId": "ffeefe68-0940-4597-8d3c-fe7ec9881ef1"
+                }
+            ]
+        }
+    ]
+}

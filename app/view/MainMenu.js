@@ -26,19 +26,24 @@ Ext.define('MyApp.view.MainMenu', {
   },
 
   openCard: function(item, e) {
-    var createPanel = function(panelClass) {
-        var cardClass = "MyApp.view." + panelClass;
-        if(Ext.ClassManager.get(cardClass)) {
-            debugger;
+    /*
+    var thisPanel = MyApp.main.getLayout().getActiveItem();
+    MyApp.main.getLayout().prev();
+    thisPanel.close();
+    */
+    var panelClass = item.panelClass,
+        createPanel = function(panelClass) {
+          var cardClass = "MyApp.view." + panelClass;
+          if(Ext.ClassManager.get(cardClass)) {
             var newPan = Ext.create(cardClass);
             MyApp.main.add(newPan);
             MyApp.main.getLayout().next();
-        }
-        else {
+          }
+          else {
             var errorMsg = "Error: Panel " + panelClass + " does not exist";
             throw errorMsg;
-        }
-    },panelClass = item.panelClass;
+          }
+        };
     createPanel(panelClass);
   }
 

@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ContratistasMysql",
+        "model": "Contratistas",
+        "sql": "SELECT id,cod_proveedor as codigo,nombre FROM proveedores where fletero_campo=1 or contratista_campo=1",
+        "storeId": "ContratistasMysql"
+    },
+    "name": "Contratistas1",
+    "designerId": "cc99c9ec-0b1d-4bc0-92b8-2dc10c2e95a7",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy2",
+            "designerId": "4a4826f5-049d-46fc-a064-0d8053c5d7d6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Contratistas"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "307be7d1-045f-4155-b991-f7198cd03742"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InsumosMysql",
+        "model": "Insumos",
+        "sql": "SELECT id,cod_articulo as codigo,descripcion,precio_compra as precio,uni_medida as um,cod_rubro,carencia as dias_carencia FROM articulos",
+        "storeId": "InsumosMysql"
+    },
+    "name": "Insumos1",
+    "designerId": "fb4cfea8-c79c-4dc6-a948-c5de483eec8f",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy5",
+            "designerId": "270d55cb-549f-4169-8201-323358b5064b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Insumos"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "386b4c00-c1f9-4435-9f6a-cf7342da807c"
+                }
+            ]
+        }
+    ]
+}

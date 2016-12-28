@@ -132,9 +132,25 @@ Ext.define('MyApp.view.MainContainer', {
         });
     }
 
+    //main configuration
     MyApp.main = component;
     MyApp.archivo_base = 'AgriManager';
+    MyApp.screen_count = 0;
+    MyApp.screen_name = [];
+    //MyApp.url_lib     = '../LibPHP/';
+    MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
+    MyApp.usuario       = window.localStorage.getItem("agrimanager_usuario");
+    MyApp.clave         = window.localStorage.getItem("agrimanager_clave");
+    MyApp.base_nombre   = window.localStorage.getItem("agrimanager_base");
+    MyApp.base_url      = window.localStorage.getItem("agrimanager_servidor");
+    MyApp.base_usuario  = 'dba';
+    MyApp.base_clave    = 'gestion525';
+    MyApp.estado_sinc   = '';
+    MyApp.sinc_array_store = [];
+    MyApp.sinc_array_tabla = [];
+    MyApp.estado_editar = 'N';
 
+    // loading data
     f_crud.load_store('Rubros');
     f_crud.load_store('Personal');
     f_crud.load_store('Maquinaria');
@@ -142,6 +158,8 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Depositos');
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
+
+
   },
 
   onToolClick: function(tool, e, owner, eOpts) {

@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Lotes_actividadesMysql",
+        "model": "Lotes_actividades",
+        "sql": "SELECT id,codigo,descripcion as nombre,cod_lote,cod_actividad,cod_periodo,fecha_desde as desde,fecha_hasta as hasta FROM lote_actividad",
+        "storeId": "Lotes_actividadesMysql"
+    },
+    "name": "Lotes_actividades1",
+    "designerId": "f3840e39-c207-4ff1-9bcc-67680f211363",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy11",
+            "designerId": "a7677280-4094-4bec-ad8d-f4fefc2647a6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Lotes_actividades"
+                    },
+                    "name": "MyJsonReader11",
+                    "designerId": "120374ef-b1f1-4aef-989e-80e8c408e97f"
+                }
+            ]
+        }
+    ]
+}

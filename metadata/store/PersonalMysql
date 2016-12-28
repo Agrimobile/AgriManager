@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PersonalMysql",
+        "model": "Personal",
+        "sql": "SELECT id,codigo,nombre FROM personal",
+        "storeId": "PersonalMysql"
+    },
+    "name": "Personal1",
+    "designerId": "a4da219e-a2b7-437a-986a-82e3dd4a5581",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy14",
+            "designerId": "13402d47-65a1-486e-bc76-550a8c68ddf2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Personal"
+                    },
+                    "name": "MyJsonReader14",
+                    "designerId": "dba59df8-44cf-4497-9a54-f730c1f9e38c"
+                }
+            ]
+        }
+    ]
+}

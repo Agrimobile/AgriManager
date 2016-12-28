@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CampaniasMysql",
+        "model": "Campanias",
+        "sql": "SELECT id,codigo,descripcion FROM periodos",
+        "storeId": "CampaniasMysql"
+    },
+    "name": "Campanias1",
+    "designerId": "0ed50193-3461-4b9d-86ad-7946d4e1ab68",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy1",
+            "designerId": "1a90cda4-2e1c-4a9b-b17b-5b4d9b87ab2a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Campanias"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "4bb546cc-cd3f-4f9f-afeb-7e08986e497f"
+                }
+            ]
+        }
+    ]
+}

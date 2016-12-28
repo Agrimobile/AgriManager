@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MaquinariaMysql",
+        "model": "Maquinaria",
+        "sql": "SELECT id,codigo,descrip as nombre FROM maquinar",
+        "storeId": "MaquinariaMysql"
+    },
+    "name": "Maquinaria1",
+    "designerId": "569151ed-ed89-4561-ac30-734a69164519",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy13",
+            "designerId": "ddba08ae-9417-43c1-a559-200b100ea8f3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Maquinaria"
+                    },
+                    "name": "MyJsonReader13",
+                    "designerId": "a4ef7be6-b43d-450b-b0e0-3a81d89b76aa"
+                }
+            ]
+        }
+    ]
+}
