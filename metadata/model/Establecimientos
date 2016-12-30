@@ -6,13 +6,24 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "Establecimiento",
         "designer|userClassName": "Establecimientos",
         "identifier": [
             "{type: 'uuid'}"
         ]
     },
     "name": "MyModel",
+    "configAlternates": {
+        "sincronizar": "boolean"
+    },
     "designerId": "ce5925bb-47d8-44e5-abe1-1bdd7101b021",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -48,10 +59,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger6",
-            "designerId": "5158cf44-2fbf-449a-8d9d-656e39060713"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "5158cf44-2fbf-449a-8d9d-656e39060713",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

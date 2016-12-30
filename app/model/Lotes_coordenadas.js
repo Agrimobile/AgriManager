@@ -32,6 +32,7 @@ Ext.define('MyApp.model.Lotes_coordenadas', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

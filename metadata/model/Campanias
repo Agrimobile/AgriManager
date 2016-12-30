@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "periodos",
         "designer|userClassName": "Campanias",
         "identifier": [
             "{",
@@ -15,6 +16,13 @@
     },
     "name": "Contratistas1",
     "designerId": "5e01cf45-caa9-404e-ba22-073ba6d89dd4",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -50,10 +58,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger56",
-            "designerId": "29d16c24-77f7-4bea-8056-314b414549a6"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "29d16c24-77f7-4bea-8056-314b414549a6",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

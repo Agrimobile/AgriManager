@@ -181,8 +181,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "allowBlank": false,
                         "blankText": "Este campo es obligatorio",
+                        "editable": false,
                         "fieldLabel": "Tabla",
                         "itemId": "tabla",
                         "name": null,

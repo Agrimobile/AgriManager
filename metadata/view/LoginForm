@@ -143,6 +143,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Usuario",
+                "itemId": "usuario",
                 "layout|flex": null,
                 "name": "usuario"
             },
@@ -160,6 +161,8 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Clave",
+                "inputType": "password",
+                "itemId": "clave",
                 "layout|flex": null,
                 "name": "clave"
             },
@@ -177,6 +180,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Base",
+                "itemId": "base",
                 "layout|flex": null,
                 "name": "base"
             },
@@ -194,6 +198,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Servidor",
+                "itemId": "servidor",
                 "layout|flex": null,
                 "name": "servidor"
             },
@@ -210,7 +215,13 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
+                    "var item = component.header.title.text,",
+                    "    form = component, ",
+                    "    user = window.localStorage.getItem(\"agrimanager_usuario\"),",
+                    "    clave = window.localStorage.getItem(\"agrimanager_clave\"),",
+                    "    server = window.localStorage.getItem(\"agrimanager_servidor\"),",
+                    "    base = window.localStorage.getItem(\"agrimanager_base\");",
+                    "",
                     "if(component.action === 'ADD') {",
                     "  component.setTitle('Nuevo ' + item);",
                     "}",
@@ -219,6 +230,34 @@
                     "}",
                     "else {",
                     "  component.setTitle(item);",
+                    "}",
+                    "",
+                    "// user",
+                    "if(user) {",
+                    "  form.down('#usuario').setValue(user);",
+                    "}else {",
+                    "  form.down('#usuario').setValue('Admin');",
+                    "}",
+                    "",
+                    "// pass",
+                    "if(clave) {",
+                    "  form.down('#clave').setValue(clave);",
+                    "}else{",
+                    "  form.down('#clave').setValue('Synagro');",
+                    "}",
+                    "",
+                    "// server",
+                    "if(server) {",
+                    "  form.down('#servidor').setValue(server);",
+                    "}else {",
+                    "  form.down('#servidor').setValue('sistec01.dnsalias.com');",
+                    "}",
+                    "",
+                    "// base",
+                    "if(base) {",
+                    "  form.down('#base').setValue(base);",
+                    "}else {",
+                    "  form.down('#servidor').setValue('sistec01');",
                     "}"
                 ],
                 "name": "activate",
@@ -226,6 +265,24 @@
             },
             "name": "onFormActivate",
             "designerId": "45d49430-a31d-41d0-91c4-6eabcf38109e"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormRender",
+                "implHandler": [
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onFormRender",
+            "designerId": "b1eb601a-14aa-45f5-9283-3c9ee9fe9330"
         }
     ]
 }

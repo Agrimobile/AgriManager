@@ -99,8 +99,8 @@ Ext.define('MyApp.view.SyncForm', {
           itemId: 'tabla',
           width: '100%',
           fieldLabel: 'Tabla',
-          allowBlank: false,
-          blankText: 'Este campo es obligatorio'
+          blankText: 'Este campo es obligatorio',
+          editable: false
         }
       ]
     }

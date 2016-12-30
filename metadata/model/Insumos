@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "articulos",
         "designer|userClassName": "Insumos",
         "identifier": [
             "{",
@@ -15,6 +16,13 @@
     },
     "name": "MyModel",
     "designerId": "747d37ab-2acd-4b8c-86d0-db0084212871",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.Integer",
@@ -84,10 +92,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger68",
-            "designerId": "f458a5d9-6484-4027-89ea-e0cf3ebea159"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "f458a5d9-6484-4027-89ea-e0cf3ebea159",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Number",

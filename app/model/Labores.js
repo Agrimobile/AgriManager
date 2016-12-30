@@ -29,6 +29,7 @@ Ext.define('MyApp.model.Labores', {
   fields: [
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

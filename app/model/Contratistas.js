@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Contratistas', {
     'Ext.data.field.Integer'
   ],
 
+  aliasSQL: 'proveedores',
   identifier: {
     type: 'uuid'
   },
@@ -36,6 +37,7 @@ Ext.define('MyApp.model.Contratistas', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

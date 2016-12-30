@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "cuentas",
         "designer|userClassName": "Actividades",
         "identifier": [
             "{type: 'uuid'}"
@@ -13,6 +14,13 @@
     },
     "name": "MyModel",
     "designerId": "0eff1d5e-44c8-444c-b378-80c96d57780c",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -48,10 +56,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger1",
-            "designerId": "ce1ea89a-636c-44ed-9fdf-a360aa44f9bf"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "ce1ea89a-636c-44ed-9fdf-a360aa44f9bf",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

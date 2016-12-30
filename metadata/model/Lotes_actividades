@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "lote_actividad",
         "designer|userClassName": "Lotes_actividades",
         "identifier": [
             "{type: 'uuid'}"
@@ -13,6 +14,13 @@
     },
     "name": "MyModel1",
     "designerId": "eb8b5c0f-9249-4190-8a9d-7fd85bcc24a5",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -48,10 +56,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger13",
-            "designerId": "150e3fb2-1b04-4eeb-96b7-2df5bc93918e"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "150e3fb2-1b04-4eeb-96b7-2df5bc93918e",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

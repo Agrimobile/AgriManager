@@ -22,6 +22,7 @@ Ext.define('MyApp.model.Actividades', {
     'Ext.data.field.Date'
   ],
 
+  aliasSQL: 'cuentas',
   identifier: {
     type: 'uuid'
   },
@@ -37,6 +38,7 @@ Ext.define('MyApp.model.Actividades', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

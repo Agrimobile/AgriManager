@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Campanias', {
     'Ext.data.field.Integer'
   ],
 
+  aliasSQL: 'periodos',
   identifier: {
     type: 'uuid'
   },
@@ -36,6 +37,7 @@ Ext.define('MyApp.model.Campanias', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

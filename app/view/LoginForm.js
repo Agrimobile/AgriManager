@@ -86,6 +86,7 @@ Ext.define('MyApp.view.LoginForm', {
   items: [
     {
       xtype: 'textfield',
+      itemId: 'usuario',
       fieldLabel: 'Usuario',
       name: 'usuario',
       allowBlank: false,
@@ -93,13 +94,16 @@ Ext.define('MyApp.view.LoginForm', {
     },
     {
       xtype: 'textfield',
+      itemId: 'clave',
       fieldLabel: 'Clave',
       name: 'clave',
+      inputType: 'password',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
     },
     {
       xtype: 'textfield',
+      itemId: 'base',
       fieldLabel: 'Base',
       name: 'base',
       allowBlank: false,
@@ -107,6 +111,7 @@ Ext.define('MyApp.view.LoginForm', {
     },
     {
       xtype: 'textfield',
+      itemId: 'servidor',
       fieldLabel: 'Servidor',
       name: 'servidor',
       allowBlank: false,
@@ -114,11 +119,18 @@ Ext.define('MyApp.view.LoginForm', {
     }
   ],
   listeners: {
-    activate: 'onFormActivate'
+    activate: 'onFormActivate',
+    render: 'onFormRender'
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
+    var item = component.header.title.text,
+        form = component,
+        user = window.localStorage.getItem("agrimanager_usuario"),
+        clave = window.localStorage.getItem("agrimanager_clave"),
+        server = window.localStorage.getItem("agrimanager_servidor"),
+        base = window.localStorage.getItem("agrimanager_base");
+
     if(component.action === 'ADD') {
       component.setTitle('Nuevo ' + item);
     }
@@ -128,6 +140,38 @@ Ext.define('MyApp.view.LoginForm', {
     else {
       component.setTitle(item);
     }
+
+    // user
+    if(user) {
+      form.down('#usuario').setValue(user);
+    }else {
+      form.down('#usuario').setValue('Admin');
+    }
+
+    // pass
+    if(clave) {
+      form.down('#clave').setValue(clave);
+    }else{
+      form.down('#clave').setValue('Synagro');
+    }
+
+    // server
+    if(server) {
+      form.down('#servidor').setValue(server);
+    }else {
+      form.down('#servidor').setValue('sistec01.dnsalias.com');
+    }
+
+    // base
+    if(base) {
+      form.down('#base').setValue(base);
+    }else {
+      form.down('#servidor').setValue('sistec01');
+    }
+  },
+
+  onFormRender: function(component, eOpts) {
+
   }
 
 });

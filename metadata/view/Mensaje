@@ -1,0 +1,168 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "mensaje",
+        "designer|userClassName": "Mensaje",
+        "header": false,
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Informacion",
+        "width": null
+    },
+    "name": "LotesForm1",
+    "designerId": "196c3827-2c2f-46c7-af35-e51157aef148",
+    "viewControllerInstanceId": "4ac04a61-0eef-4924-95fd-4c445d2b1da3",
+    "viewModelInstanceId": "b52bc225-40e2-47d9-a079-7e806f70edce",
+    "cn": [
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Titl",
+                "itemId": "title",
+                "layout|flex": 1,
+                "text": "My Label"
+            },
+            "name": "MyLabel",
+            "designerId": "22e52e8a-1d0f-41aa-83cd-5b25d70106ac"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "html": "<p>Msg...</p>",
+                "itemId": "mensaje",
+                "layout|flex": 1,
+                "title": "My Form"
+            },
+            "name": "MyForm8",
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "9217db52-1a71-4fc2-91ae-aba82bd22687"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-remove",
+                "layout|flex": null,
+                "margin": 10,
+                "text": "Cerrar"
+            },
+            "name": "MyButton7",
+            "designerId": "b367fc01-b287-4f34-b149-26453491975c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "button",
+                            "e"
+                        ],
+                        "fn": "handler",
+                        "implHandler": [
+                            "f_crud.close_form(this.up(\"#form\"));"
+                        ]
+                    },
+                    "name": "handler",
+                    "designerId": "08d1df6a-396a-4bc2-9cf1-6fe3d6b1465f"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "debugger;",
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nuevo ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "3290e496-5fe3-432a-9e77-41847006b3ba"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormHide",
+                "implHandler": [
+                    "this.destroy();"
+                ],
+                "name": "hide",
+                "scope": "me"
+            },
+            "name": "onFormHide",
+            "designerId": "60adb14c-d900-4538-bea0-63c69efc6265"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "title",
+                    "msg"
+                ],
+                "fn": "f_mensaje",
+                "implHandler": [
+                    "this.down('#title').setHtml(title);",
+                    "this.down('#mensaje').setHtml(msg);"
+                ]
+            },
+            "name": "f_mensaje",
+            "designerId": "4b84905f-5ad8-46f4-a817-3370c2a7d07e"
+        }
+    ]
+}

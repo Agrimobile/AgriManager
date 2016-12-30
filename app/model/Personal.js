@@ -36,6 +36,7 @@ Ext.define('MyApp.model.Personal', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

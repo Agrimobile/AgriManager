@@ -112,7 +112,8 @@ Ext.application({
     'ConfigMenu',
     'MainMenu',
     'LoginForm',
-    'SyncForm'
+    'SyncForm',
+    'Mensaje'
   ],
   name: 'MyApp',
 

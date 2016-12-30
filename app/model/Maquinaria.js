@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Maquinaria', {
     'Ext.data.field.Integer'
   ],
 
+  aliasSQL: 'maquinar',
   identifier: {
     type: 'uuid'
   },
@@ -36,6 +37,7 @@ Ext.define('MyApp.model.Maquinaria', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

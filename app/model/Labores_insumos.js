@@ -40,6 +40,7 @@ Ext.define('MyApp.model.Labores_insumos', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {
