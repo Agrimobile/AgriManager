@@ -12,7 +12,7 @@
         "storeId": "LaboresMysql"
     },
     "name": "Labores1",
-    "designerId": "fe2798b3-3071-4162-9cb3-e7d51cd56672",
+    "designerId": "68f6ef8d-22c3-44b7-9fd0-7d2660cac61e",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -29,7 +29,7 @@
             },
             "codeClass": null,
             "name": "MyAjaxProxy6",
-            "designerId": "f6e14d67-cc22-4ec8-8a1d-707132cd8c57",
+            "designerId": "1df4d3a0-7134-4f75-8e08-5d9b974ef18d",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -42,7 +42,7 @@
                         "rootProperty": "Labores"
                     },
                     "name": "MyJsonReader6",
-                    "designerId": "d63929d8-bb17-4017-83af-472767407c52"
+                    "designerId": "9799f62d-8978-4325-927e-8e51375409d6"
                 }
             ]
         }

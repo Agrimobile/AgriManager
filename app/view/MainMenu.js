@@ -31,6 +31,7 @@ Ext.define('MyApp.view.MainMenu', {
     MyApp.main.getLayout().prev();
     thisPanel.close();
     */
+    debugger;
     var panelClass = item.panelClass,
         createPanel = function(panelClass) {
           var cardClass = "MyApp.view." + panelClass;

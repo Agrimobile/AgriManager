@@ -78,7 +78,8 @@ Ext.application({
     'MaquinariaMysql',
     'PersonalMysql',
     'RubrosMysql',
-    'TareasMysql'
+    'TareasMysql',
+    'LaboresMysql'
   ],
   views: [
     'MainContainer',

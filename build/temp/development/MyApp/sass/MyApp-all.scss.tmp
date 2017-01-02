@@ -940,7 +940,6 @@ $include-myapp-store-establecimientosmysql: dynamic(true);;
 $include-myapp-store-insumos: dynamic(true);;
 $include-myapp-store-insumosmysql: dynamic(true);;
 $include-myapp-store-labores: dynamic(true);;
-$include-myapp-store-laboresmysql: dynamic(true);;
 $include-myapp-store-labores_insumos: dynamic(true);;
 $include-myapp-store-labores_insumosmysql: dynamic(true);;
 $include-myapp-store-labores_maquinaria: dynamic(true);;
