@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RubrosMysql",
+        "model": "Rubros",
+        "sql": "SELECT id,cod_rubro as codigo, descripcion FROM rubros",
+        "storeId": "RubrosMysql"
+    },
+    "name": "Rubros1",
+    "designerId": "aa15f282-21fa-4a2d-b41f-e9fbb8c8b535",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy15",
+            "designerId": "545db3a2-5f97-483c-be1d-72db713c11e6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Rubros"
+                    },
+                    "name": "MyJsonReader15",
+                    "designerId": "3f308618-947f-4055-a785-ae7b799c6a7d"
+                }
+            ]
+        }
+    ]
+}

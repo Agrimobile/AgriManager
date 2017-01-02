@@ -1,0 +1,33 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ConfigMenu",
+        "root": [
+            "{",
+            "  expanded: true,",
+            "  children: [",
+            "    { ",
+            "      text: 'Usuario y Base',",
+            "      leaf: true,",
+            "      iconCls: 'x-fa fa-user',",
+            "      panelClass: 'LoginForm'",
+            "    },",
+            "    {",
+            "      text: 'Sincronizacion',",
+            "      leaf: true,",
+            "      iconCls: 'x-fa fa-rotate-right',",
+            "      panelClass: 'SyncForm'",
+            "    }",
+            "  ]",
+            "}"
+        ],
+        "storeId": "ConfigMenu"
+    },
+    "name": "MainMenu1",
+    "designerId": "9d7001a0-cafa-4a8c-8e8a-56cbb22efc71"
+}

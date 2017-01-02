@@ -1,0 +1,288 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "loginform",
+        "designer|userClassName": "LoginForm",
+        "height": null,
+        "itemId": "form",
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Datos de conexión",
+        "width": null
+    },
+    "name": "ContratistasForm1",
+    "designerId": "63257582-9adb-4b65-9cc3-3527bb962213",
+    "viewControllerInstanceId": "8f4be77f-02c8-4eed-8fbd-0b6c873643fa",
+    "viewModelInstanceId": "2c6b1835-624b-4628-adbb-650175534ec5",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "dock": "bottom",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "name": "MyContainer1",
+            "designerId": "edc57574-4a72-40c6-8cbe-0efe5f81c51b",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-check",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": 10,
+                        "text": "Aceptar"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "d4ccd00f-9259-4901-b9b8-53c2b2a45c8e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()) {",
+                                    "  var val = formWrapper.getValues();",
+                                    "",
+                                    "  window.localStorage.setItem(\"agrimanager_usuario\", val.usuario);",
+                                    "  window.localStorage.setItem(\"agrimanager_clave\", val.clave);",
+                                    "  window.localStorage.setItem(\"agrimanager_base\", val.base);",
+                                    "  window.localStorage.setItem(\"agrimanager_servidor\", val.servidor);",
+                                    "",
+                                    "  MyApp.usuario = val.usuario;",
+                                    "  MyApp.clave = val.clave;",
+                                    "  MyApp.base_nombre = val.base;",
+                                    "  MyApp.base_url = val.servidor;",
+                                    "  f_crud.close_form(formWrapper);",
+                                    "}"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "960cfc24-488b-4dd6-81ea-b6923e6d8ae9"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-remove",
+                        "layout|flex": null,
+                        "margin": 10,
+                        "text": "Cancelar"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "7bc06bab-6fd5-4f32-83cd-b3ab7a0c6db3",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "f_crud.close_form(this.up(\"#form\"));"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "a23050f0-7fff-4b33-bbc5-8c388eecf602"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Usuario",
+                "itemId": "usuario",
+                "layout|flex": null,
+                "name": "usuario"
+            },
+            "name": "MyTextField11",
+            "designerId": "c0b808d2-324a-4845-958c-36766aac17db"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Clave",
+                "inputType": "password",
+                "itemId": "clave",
+                "layout|flex": null,
+                "name": "clave"
+            },
+            "name": "MyTextField1",
+            "designerId": "45cd2b50-08a8-4696-9215-3ba3686958e0"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Base",
+                "itemId": "base",
+                "layout|flex": null,
+                "name": "base"
+            },
+            "name": "MyTextField22",
+            "designerId": "9e9550b8-1cbe-4403-9cb3-6274977afda7"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Servidor",
+                "itemId": "servidor",
+                "layout|flex": null,
+                "name": "servidor"
+            },
+            "name": "MyTextField23",
+            "designerId": "c178077e-18c7-4d8c-a3d7-0357813f9dfd"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text,",
+                    "    form = component, ",
+                    "    user = window.localStorage.getItem(\"agrimanager_usuario\"),",
+                    "    clave = window.localStorage.getItem(\"agrimanager_clave\"),",
+                    "    server = window.localStorage.getItem(\"agrimanager_servidor\"),",
+                    "    base = window.localStorage.getItem(\"agrimanager_base\");",
+                    "",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nuevo ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}",
+                    "",
+                    "// user",
+                    "if(user) {",
+                    "  form.down('#usuario').setValue(user);",
+                    "}else {",
+                    "  form.down('#usuario').setValue('Admin');",
+                    "}",
+                    "",
+                    "// pass",
+                    "if(clave) {",
+                    "  form.down('#clave').setValue(clave);",
+                    "}else{",
+                    "  form.down('#clave').setValue('Synagro');",
+                    "}",
+                    "",
+                    "// server",
+                    "if(server) {",
+                    "  form.down('#servidor').setValue(server);",
+                    "}else {",
+                    "  form.down('#servidor').setValue('sistec01.dnsalias.com');",
+                    "}",
+                    "",
+                    "// base",
+                    "if(base) {",
+                    "  form.down('#base').setValue(base);",
+                    "}else {",
+                    "  form.down('#servidor').setValue('sistec01');",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "name": "onFormActivate",
+            "designerId": "45d49430-a31d-41d0-91c4-6eabcf38109e"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormRender",
+                "implHandler": [
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onFormRender",
+            "designerId": "b1eb601a-14aa-45f5-9283-3c9ee9fe9330"
+        }
+    ]
+}

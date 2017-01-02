@@ -36,6 +36,7 @@ Ext.define('MyApp.model.Rubros', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

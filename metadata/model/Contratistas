@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "proveedores",
         "designer|userClassName": "Contratistas",
         "identifier": [
             "{",
@@ -15,6 +16,13 @@
     },
     "name": "MyModel",
     "designerId": "e1c53a32-f73c-44ce-b932-a132aab745c6",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -50,10 +58,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger56",
-            "designerId": "0a7831b1-48d9-414a-9a8b-5a2863d74d60"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "0a7831b1-48d9-414a-9a8b-5a2863d74d60",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

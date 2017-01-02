@@ -27,9 +27,12 @@
             "codeClass": null,
             "userConfig": {
                 "flex": null,
+                "id": "agrimobile",
+                "itemId": "agrimobile",
                 "layout": "card",
                 "scrollable": true,
-                "title": "Agrimanager"
+                "title": "Agrimobile",
+                "titleAlign": "center"
             },
             "name": "MyPanel",
             "designerId": "9ef1da91-c5df-43ff-8e59-54ebf923108e",
@@ -43,7 +46,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootVisible": false,
-                        "store": "Menu",
+                        "store": "MainMenu",
                         "title": "Menu"
                     },
                     "name": "MyTreePanel",
@@ -107,32 +110,146 @@
                     "userConfig": {
                         "fn": "onPanelRender",
                         "implHandler": [
+                            "var mainMenuTool = component.down(\"#mainmenu-tool\"),",
+                            "    configMenuTool = component.down(\"#configmenu-tool\"),",
+                            "    mainMenuStoreRecords = Ext.getStore(\"MainMenu\").getData().items,",
+                            "    configMenuStoreRecords = Ext.getStore(\"ConfigMenu\").getData().items,",
+                            "    itemClicHandler = function(item, e) {",
+                            "      this.parentMenu.openCard(item, e);",
+                            "    };",
+                            "",
+                            "mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');",
+                            "configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');",
+                            "",
+                            "for (var i = 0; i < mainMenuStoreRecords.length; i++) {",
+                            "    mainMenuTool.menu.add({",
+                            "      xtype: 'menuitem',",
+                            "      iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,",
+                            "      text: mainMenuStoreRecords[i].data.text,",
+                            "      panelClass: mainMenuStoreRecords[i].data.panelClass,",
+                            "      padding: '10px 0px',",
+                            "      handler: itemClicHandler",
+                            "    });",
+                            "}",
+                            "",
+                            "for (var i = 0; i < configMenuStoreRecords.length; i++) {",
+                            "    configMenuTool.menu.add({",
+                            "      xtype: 'menuitem',",
+                            "      iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,",
+                            "      text: configMenuStoreRecords[i].data.text,",
+                            "      panelClass: configMenuStoreRecords[i].data.panelClass,",
+                            "      padding: '10px 0px',",
+                            "      handler: itemClicHandler",
+                            "    });",
+                            "}",
+                            "",
+                            "//main configuration",
                             "MyApp.main = component;",
                             "MyApp.archivo_base = 'AgriManager';",
+                            "MyApp.screen_count = 0;",
+                            "MyApp.screen_name = [];",
+                            "//MyApp.url_lib     = '../LibPHP/';",
+                            "MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';",
+                            "MyApp.usuario       = window.localStorage.getItem(\"agrimanager_usuario\");",
+                            "MyApp.clave         = window.localStorage.getItem(\"agrimanager_clave\");",
+                            "MyApp.base_nombre   = window.localStorage.getItem(\"agrimanager_base\");",
+                            "MyApp.base_url      = window.localStorage.getItem(\"agrimanager_servidor\");",
+                            "MyApp.base_usuario  = 'dba';",
+                            "MyApp.base_clave    = 'gestion525';",
+                            "MyApp.estado_sinc   = '';",
+                            "MyApp.sinc_array_store = [];",
+                            "MyApp.sinc_array_tabla = [];",
+                            "MyApp.estado_editar = 'N';",
                             "",
-                            "//f_crud.load_store('Registros_borrados');",
-                            "",
-                            "/*",
-                            "f_crud.load_store('Actividades');",
-                            "f_crud.load_store('Establecimientos');",
-                            "f_crud.load_store('Insumos');",
-                            "f_crud.load_store('Lotes');*/",
-                            "",
-                            "//f_crud.load_store('Lotes_coordenadas');",
-                            "",
+                            "// loading data",
                             "f_crud.load_store('Rubros');",
                             "f_crud.load_store('Personal');",
                             "f_crud.load_store('Maquinaria');",
                             "f_crud.load_store('Contratistas');",
                             "f_crud.load_store('Depositos');",
                             "f_crud.load_store('Campanias');",
-                            "f_crud.load_store('Tareas');"
+                            "f_crud.load_store('Tareas');",
+                            "",
+                            ""
                         ],
                         "name": "render",
                         "scope": "me"
                     },
                     "name": "onPanelRender",
                     "designerId": "3ce50405-423e-4349-bb2c-15039c4b82dc"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "paneltool"
+                        ],
+                        "iconCls": "x-fa fa-bars",
+                        "itemId": "mainmenu-tool"
+                    },
+                    "name": "MyTool5",
+                    "designerId": "3f27087f-7da0-41cf-b7a2-cc12ca7d715c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick",
+                                "implHandler": [
+                                    "var toolMenu = tool.menu;",
+                                    "toolMenu.showBy(tool);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onToolClick",
+                            "designerId": "94669a07-506a-41cf-9745-e78165ca7d17"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-gear",
+                        "itemId": "configmenu-tool"
+                    },
+                    "name": "MyTool6",
+                    "designerId": "c5e5b43e-a7d2-4549-b13e-19269ea32be3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick1",
+                                "implHandler": [
+                                    "var toolMenu = tool.menu;",
+                                    "toolMenu.showBy(tool);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onToolClick1",
+                            "designerId": "d1fc7537-180e-4f2e-92cb-11fb8e8e49dc"
+                        }
+                    ]
                 }
             ]
         },
@@ -146,7 +263,8 @@
             "userConfig": {
                 "fn": "onViewportRender",
                 "implHandler": [
-                    "MyApp.vp = component;"
+                    "MyApp.vp = component;",
+                    ""
                 ],
                 "name": "render",
                 "scope": "me"

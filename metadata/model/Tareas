@@ -48,10 +48,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger29",
-            "designerId": "3adc587b-c0d6-4fba-917f-3389d806712a"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "3adc587b-c0d6-4fba-917f-3389d806712a",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

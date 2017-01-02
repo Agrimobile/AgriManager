@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Labores_maquinariaMysql",
+        "model": "Labores_maquinaria",
+        "sql": "select id,id_labores,cod_maquina,horas_maquina as cantidad from labores_maquinarias",
+        "storeId": "Labores_maquinariaMysql"
+    },
+    "name": "Labores_maquinaria1",
+    "designerId": "1858c49e-1223-4317-9da9-453c8caaa49c",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy8",
+            "designerId": "394be207-5b0e-4653-8269-cd2a38d019bd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Labores_maquinaria"
+                    },
+                    "name": "MyJsonReader8",
+                    "designerId": "78529774-9ec0-4d66-b258-1e0ba8f1dc61"
+                }
+            ]
+        }
+    ]
+}

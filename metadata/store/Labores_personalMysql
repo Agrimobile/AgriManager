@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Labores_personalMysql",
+        "model": "Labores_personal",
+        "sql": "select id,id_labores,cod_empleado as cod_personal,cantidad,precio,importe from labores_personal",
+        "storeId": "Labores_personalMysql"
+    },
+    "name": "Labores_personal1",
+    "designerId": "056dffd0-0389-4d5a-a0db-90de03dd5e3f",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy9",
+            "designerId": "5002b90e-de49-4230-ab2a-0b3ea6b67d05",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Labores_personal"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "c69514c9-49fd-4b24-99cf-98ac9e073cfa"
+                }
+            ]
+        }
+    ]
+}

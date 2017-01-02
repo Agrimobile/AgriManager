@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mainmenu",
+        "designer|userClassName": "ConfigMenuViewModel1"
+    },
+    "name": "ConfigMenuViewModel1",
+    "designerId": "eb8e8ede-04e7-43f4-8d12-7889a5fc03fa"
+}

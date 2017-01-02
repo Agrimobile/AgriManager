@@ -1,0 +1,60 @@
+{
+    "type": "Ext.menu.Menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mainmenu",
+        "designer|userClassName": "MainMenu",
+        "id": null,
+        "itemId": null,
+        "padding": null,
+        "width": null
+    },
+    "name": "ConfigMenu1",
+    "designerId": "bf75fea5-60f7-49b1-8a40-71ad8e230c07",
+    "viewControllerInstanceId": "fc80187b-5e71-4260-ba4c-9b838181b22a",
+    "viewModelInstanceId": "eb8e8ede-04e7-43f4-8d12-7889a5fc03fa",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item, e"
+                ],
+                "fn": "openCard",
+                "implHandler": [
+                    "/*",
+                    "var thisPanel = MyApp.main.getLayout().getActiveItem();",
+                    "MyApp.main.getLayout().prev();",
+                    "thisPanel.close();",
+                    "*/",
+                    "debugger;",
+                    "var panelClass = item.panelClass,",
+                    "    createPanel = function(panelClass) {",
+                    "      var cardClass = \"MyApp.view.\" + panelClass;",
+                    "      if(Ext.ClassManager.get(cardClass)) {",
+                    "        var newPan = Ext.create(cardClass);",
+                    "        MyApp.main.add(newPan);",
+                    "        MyApp.main.getLayout().next();",
+                    "      }",
+                    "      else {",
+                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
+                    "        throw errorMsg;",
+                    "      }",
+                    "    };",
+                    "createPanel(panelClass);"
+                ]
+            },
+            "name": "openCard",
+            "designerId": "37999904-d9aa-4d1d-b984-f50d0ac8d203"
+        }
+    ]
+}

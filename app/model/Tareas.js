@@ -36,6 +36,7 @@ Ext.define('MyApp.model.Tareas', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

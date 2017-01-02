@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Registros_borrados",
+        "model": "Registros_borrados",
+        "storeId": "Registros_borrados"
+    },
+    "name": "Actividades1",
+    "designerId": "bf21cac1-421e-42eb-b8d7-26e64d7705d4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy2",
+            "designerId": "0a41bf1c-35cf-4883-a742-27a76188adf1"
+        }
+    ]
+}

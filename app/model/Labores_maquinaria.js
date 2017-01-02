@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Labores_maquinaria', {
     'Ext.data.field.Number'
   ],
 
+  aliasSQL: 'labores_maquinarias',
   identifier: {
     type: 'uuid'
   },
@@ -40,6 +41,7 @@ Ext.define('MyApp.model.Labores_maquinaria', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

@@ -36,6 +36,7 @@ Ext.define('MyApp.model.Lotes', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

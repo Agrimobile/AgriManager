@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LotesMysql",
+        "model": "Lotes",
+        "sql": "select id,codigo,descrip as nombre,superficie,cod_establecimiento from lotes",
+        "storeId": "LotesMysql"
+    },
+    "name": "Lotes1",
+    "designerId": "262052ec-4e06-4ff8-a076-7a8b8dd1a484",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy10",
+            "designerId": "6d400c6a-6413-4314-a83f-60d09c128ca0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Lotes"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "ffcc6539-5c34-48b5-9130-4625bc121fb0"
+                }
+            ]
+        }
+    ]
+}

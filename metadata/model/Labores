@@ -22,10 +22,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger18",
-            "designerId": "57d3daae-1d8f-4ee1-840c-879a8a58d01f"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "57d3daae-1d8f-4ee1-840c-879a8a58d01f",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

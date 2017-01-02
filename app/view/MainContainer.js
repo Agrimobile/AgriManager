@@ -20,7 +20,8 @@ Ext.define('MyApp.view.MainContainer', {
   requires: [
     'MyApp.view.MainContainerViewModel',
     'Ext.tree.Panel',
-    'Ext.tree.View'
+    'Ext.tree.View',
+    'Ext.panel.Tool'
   ],
 
   viewModel: {
@@ -33,14 +34,17 @@ Ext.define('MyApp.view.MainContainer', {
   items: [
     {
       xtype: 'panel',
+      id: 'agrimobile',
+      itemId: 'agrimobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agrimanager',
+      title: 'Agrimobile',
+      titleAlign: 'center',
       items: [
         {
           xtype: 'treepanel',
           title: 'Menu',
-          store: 'Menu',
+          store: 'MainMenu',
           rootVisible: false,
           viewConfig: {
             listeners: {
@@ -51,7 +55,26 @@ Ext.define('MyApp.view.MainContainer', {
       ],
       listeners: {
         render: 'onPanelRender'
-      }
+      },
+      tools: [
+        {
+          xtype: 'tool',
+          cls: 'paneltool',
+          itemId: 'mainmenu-tool',
+          iconCls: 'x-fa fa-bars',
+          listeners: {
+            click: 'onToolClick'
+          }
+        },
+        {
+          xtype: 'tool',
+          itemId: 'configmenu-tool',
+          iconCls: 'x-fa fa-gear',
+          listeners: {
+            click: 'onToolClick1'
+          }
+        }
+      ]
     }
   ],
   listeners: {
@@ -76,19 +99,58 @@ Ext.define('MyApp.view.MainContainer', {
   },
 
   onPanelRender: function(component, eOpts) {
+    var mainMenuTool = component.down("#mainmenu-tool"),
+        configMenuTool = component.down("#configmenu-tool"),
+        mainMenuStoreRecords = Ext.getStore("MainMenu").getData().items,
+        configMenuStoreRecords = Ext.getStore("ConfigMenu").getData().items,
+        itemClicHandler = function(item, e) {
+          this.parentMenu.openCard(item, e);
+        };
+
+    mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');
+    configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');
+
+    for (var i = 0; i < mainMenuStoreRecords.length; i++) {
+        mainMenuTool.menu.add({
+          xtype: 'menuitem',
+          iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,
+          text: mainMenuStoreRecords[i].data.text,
+          panelClass: mainMenuStoreRecords[i].data.panelClass,
+          padding: '10px 0px',
+          handler: itemClicHandler
+        });
+    }
+
+    for (var i = 0; i < configMenuStoreRecords.length; i++) {
+        configMenuTool.menu.add({
+          xtype: 'menuitem',
+          iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,
+          text: configMenuStoreRecords[i].data.text,
+          panelClass: configMenuStoreRecords[i].data.panelClass,
+          padding: '10px 0px',
+          handler: itemClicHandler
+        });
+    }
+
+    //main configuration
     MyApp.main = component;
     MyApp.archivo_base = 'AgriManager';
+    MyApp.screen_count = 0;
+    MyApp.screen_name = [];
+    //MyApp.url_lib     = '../LibPHP/';
+    MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
+    MyApp.usuario       = window.localStorage.getItem("agrimanager_usuario");
+    MyApp.clave         = window.localStorage.getItem("agrimanager_clave");
+    MyApp.base_nombre   = window.localStorage.getItem("agrimanager_base");
+    MyApp.base_url      = window.localStorage.getItem("agrimanager_servidor");
+    MyApp.base_usuario  = 'dba';
+    MyApp.base_clave    = 'gestion525';
+    MyApp.estado_sinc   = '';
+    MyApp.sinc_array_store = [];
+    MyApp.sinc_array_tabla = [];
+    MyApp.estado_editar = 'N';
 
-    //f_crud.load_store('Registros_borrados');
-
-    /*
-    f_crud.load_store('Actividades');
-    f_crud.load_store('Establecimientos');
-    f_crud.load_store('Insumos');
-    f_crud.load_store('Lotes');*/
-
-    //f_crud.load_store('Lotes_coordenadas');
-
+    // loading data
     f_crud.load_store('Rubros');
     f_crud.load_store('Personal');
     f_crud.load_store('Maquinaria');
@@ -96,10 +158,23 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Depositos');
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
+
+
+  },
+
+  onToolClick: function(tool, e, owner, eOpts) {
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
+  },
+
+  onToolClick1: function(tool, e, owner, eOpts) {
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
   },
 
   onViewportRender: function(component, eOpts) {
     MyApp.vp = component;
+
   }
 
 });

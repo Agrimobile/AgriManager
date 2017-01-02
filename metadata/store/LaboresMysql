@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LaboresMysql",
+        "model": "Labores",
+        "sql": "select id,fecha,cod_lote_actividad,cod_lote,cod_area,cod_establecimiento,cod_periodo,cod_tarea,cantidad,precio_tarea as precio,cod_contratista from labores",
+        "storeId": "LaboresMysql"
+    },
+    "name": "Labores1",
+    "designerId": "68f6ef8d-22c3-44b7-9fd0-7d2660cac61e",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy6",
+            "designerId": "1df4d3a0-7134-4f75-8e08-5d9b974ef18d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Labores"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "9799f62d-8978-4325-927e-8e51375409d6"
+                }
+            ]
+        }
+    ]
+}

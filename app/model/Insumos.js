@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Insumos', {
     'Ext.data.field.Number'
   ],
 
+  aliasSQL: 'articulos',
   identifier: {
     type: 'uuid'
   },
@@ -45,6 +46,7 @@ Ext.define('MyApp.model.Insumos', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

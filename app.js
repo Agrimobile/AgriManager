@@ -37,10 +37,12 @@ Ext.application({
     'Contratistas',
     'Depositos',
     'Insumos',
-    'Campanias'
+    'Campanias',
+    'Lotes_coordenadas',
+    'Registros_borrados'
   ],
   stores: [
-    'Menu',
+    'MainMenu',
     'Establecimientos',
     'Actividades',
     'Lotes',
@@ -57,7 +59,27 @@ Ext.application({
     'Depositos',
     'Insumos',
     'Campanias',
-    'Labores_insumos'
+    'Labores_insumos',
+    'ConfigMenu',
+    'Lotes_coordenadas',
+    'Registros_borrados',
+    'ActividadesMysql',
+    'CampaniasMysql',
+    'ContratistasMysql',
+    'DepositosMysql',
+    'EstablecimientosMysql',
+    'InsumosMysql',
+    'Labores_insumosMysql',
+    'Labores_maquinariaMysql',
+    'Labores_personalMysql',
+    'LotesMysql',
+    'Lotes_actividadesMysql',
+    'Lotes_coordenadasMysql',
+    'MaquinariaMysql',
+    'PersonalMysql',
+    'RubrosMysql',
+    'TareasMysql',
+    'LaboresMysql'
   ],
   views: [
     'MainContainer',
@@ -87,7 +109,12 @@ Ext.application({
     'MaquinariaPanel',
     'MaquinariaForm',
     'CampaniasPanel',
-    'CampaniasForm'
+    'CampaniasForm',
+    'ConfigMenu',
+    'MainMenu',
+    'LoginForm',
+    'SyncForm',
+    'Mensaje'
   ],
   name: 'MyApp',
 

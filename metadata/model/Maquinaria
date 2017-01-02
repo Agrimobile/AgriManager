@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "aliasSQL": "maquinar",
         "designer|userClassName": "Maquinaria",
         "identifier": [
             "{type: 'uuid'}"
@@ -13,6 +14,13 @@
     },
     "name": "MyModel",
     "designerId": "d9fe371e-d5e3-4043-aa55-3ae4d84a28cf",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "aliasSQL",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.data.field.String",
@@ -48,10 +56,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "uid"
+                "name": "uid",
+                "sincronizar": false
             },
             "name": "MyInteger53",
-            "designerId": "61893f53-aeab-4d8a-9450-81e53e7799a4"
+            "configAlternates": {
+                "sincronizar": "boolean"
+            },
+            "designerId": "61893f53-aeab-4d8a-9450-81e53e7799a4",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "sincronizar",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.data.field.Integer",

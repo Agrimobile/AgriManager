@@ -32,6 +32,7 @@ Ext.define('MyApp.model.Depositos', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

@@ -21,6 +21,7 @@ Ext.define('MyApp.model.Lotes_actividades', {
     'Ext.data.field.Integer'
   ],
 
+  aliasSQL: 'lote_actividad',
   identifier: {
     type: 'uuid'
   },
@@ -36,6 +37,7 @@ Ext.define('MyApp.model.Lotes_actividades', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {

@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ActividadesMysql",
+        "model": "Actividades",
+        "sql": "SELECT id,codigo,descrip as nombre FROM cuentas",
+        "storeId": "ActividadesMysql"
+    },
+    "name": "Actividades2",
+    "designerId": "b4885684-1f86-4ff5-84f0-4dde6a97a955",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy",
+            "designerId": "984aed1d-17ae-429a-ac5a-576e6785769c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Actividades"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "cd0a3a16-7cc4-4df4-87f0-dc3eb2953d09"
+                }
+            ]
+        }
+    ]
+}

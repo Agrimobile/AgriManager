@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Labores_insumosMysql",
+        "model": "Labores_insumos",
+        "sql": "select id, id_labores,cod_insumo, cantidad, dosis, cod_deposito from labores_insumos",
+        "storeId": "Labores_insumosMysql"
+    },
+    "name": "Labores_insumos1",
+    "designerId": "7f284532-9356-4855-bf57-fbb5c3b0fa33",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "sql",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy7",
+            "designerId": "8c91f024-0ede-4d05-9898-3d85a5c00519",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Labores_insumos"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "6550a7a0-a348-4e90-85e0-b7fd2a70b790"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_qmquvblo",
+        "url": "..\\LibJS\\sinc_lib.js",
+        "x-compile": true
+    },
+    "name": "js1",
+    "designerId": "245c73b3-afd7-4b01-8c90-53393f2616ca"
+}

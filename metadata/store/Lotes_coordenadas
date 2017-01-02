@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Lotes_coordenadas",
+        "model": "Lotes_coordenadas",
+        "storeId": "Lotes_coordenadas"
+    },
+    "name": "Tareas1",
+    "designerId": "58902651-cae2-429d-bb8a-1b99dddbe44b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy1",
+            "designerId": "16c045a5-d07f-4ed7-932f-5bfbffcd6d5e"
+        }
+    ]
+}

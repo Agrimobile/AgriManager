@@ -40,6 +40,7 @@ Ext.define('MyApp.model.Labores_personal', {
     },
     {
       type: 'int',
+      sincronizar: false,
       name: 'uid'
     },
     {
