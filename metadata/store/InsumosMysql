@@ -11,6 +11,12 @@
         "sql": "SELECT id,cod_articulo as codigo,descripcion,precio_compra as precio,uni_medida as um,cod_rubro,carencia as dias_carencia FROM articulos",
         "storeId": "InsumosMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Insumos1",
     "designerId": "fb4cfea8-c79c-4dc6-a948-c5de483eec8f",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Insumos"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader5",
                     "designerId": "386b4c00-c1f9-4435-9f6a-cf7342da807c"

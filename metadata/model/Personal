@@ -11,6 +11,10 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "Rubros1",
     "designerId": "48a150b4-4fe5-4c97-aee5-576471797794",
     "cn": [
@@ -24,6 +28,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString21",
             "designerId": "d8fe4d95-4f1d-457e-bf59-23b76e7fb6c3"
         },
@@ -36,6 +43,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger45",
             "designerId": "2024c638-2bf1-44e7-adf1-cce7d799405b"
@@ -51,10 +61,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger46",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger46",
             "designerId": "bb3edabd-3fd8-4ed1-8a40-9a2facfba48d",
             "customConfigs": [
                 {
@@ -75,6 +86,10 @@
                 "aliasSQL": null,
                 "name": "codigo"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyInteger44",
             "designerId": "df0cb94d-0d40-4d14-9808-52b51f16a9d8",
             "customConfigs": [
@@ -94,6 +109,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString20",
             "designerId": "8d6f6e4d-35fa-484f-80cf-160e6dd1e700"

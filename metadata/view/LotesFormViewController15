@@ -9,6 +9,10 @@
         "designer|userAlias": "maquinariaform",
         "designer|userClassName": "LotesFormViewController15"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController15",
     "designerId": "6cf90c80-f4b4-4e27-8632-ca765002516e"
 }

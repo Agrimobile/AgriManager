@@ -10,6 +10,11 @@
         "model": "Actividades",
         "storeId": "Actividades"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "MyJsonStore",
     "designerId": "f8994d84-96fb-4ab9-8642-0381d120863f",
     "cn": [

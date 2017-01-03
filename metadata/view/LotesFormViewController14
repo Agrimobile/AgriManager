@@ -9,6 +9,10 @@
         "designer|userAlias": "personalform",
         "designer|userClassName": "LotesFormViewController14"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController14",
     "designerId": "8d9018bd-3fbf-4d8e-875e-f7b0ee802a4a"
 }

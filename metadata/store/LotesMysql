@@ -11,6 +11,12 @@
         "sql": "select id,codigo,descrip as nombre,superficie,cod_establecimiento from lotes",
         "storeId": "LotesMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Lotes1",
     "designerId": "262052ec-4e06-4ff8-a076-7a8b8dd1a484",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Lotes"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader10",
                     "designerId": "ffcc6539-5c34-48b5-9130-4625bc121fb0"

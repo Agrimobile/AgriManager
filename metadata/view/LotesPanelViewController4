@@ -9,6 +9,10 @@
         "designer|userAlias": "contratistaspanel",
         "designer|userClassName": "LotesPanelViewController4"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewController4",
     "designerId": "d2c06a2d-6749-4400-8acd-f3168c5ae996"
 }

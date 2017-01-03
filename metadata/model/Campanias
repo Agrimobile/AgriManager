@@ -14,6 +14,11 @@
             "        }"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "Contratistas1",
     "designerId": "5e01cf45-caa9-404e-ba22-073ba6d89dd4",
     "customConfigs": [
@@ -34,6 +39,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString27",
             "designerId": "e60b9b80-4f29-452d-af93-dec95b310614"
         },
@@ -46,6 +54,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger55",
             "designerId": "fb8f48cd-f28c-4e58-ad47-03aa28bbde2a"
@@ -61,10 +72,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger56",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger56",
             "designerId": "29d16c24-77f7-4bea-8056-314b414549a6",
             "customConfigs": [
                 {
@@ -85,6 +97,10 @@
                 "aliasSQL": null,
                 "name": "codigo"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyInteger57",
             "designerId": "813175f9-eb17-453c-ac67-13170a6b7138",
             "customConfigs": [
@@ -104,6 +120,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "descripcion"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString28",
             "designerId": "5f7a2cef-2f34-45bc-b051-4e2a8357d08a"

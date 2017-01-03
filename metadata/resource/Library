@@ -8,7 +8,16 @@
     "userConfig": {
         "basePath": "ext/",
         "designer|userClassName": "Library",
+        "libraryRequires": [
+            "font-awesome"
+        ],
         "theme": "MyTritonTheme"
+    },
+    "configAlternates": {
+        "basePath": "uri",
+        "designer|userClassName": "string",
+        "theme": "string",
+        "libraryRequires": "typedarray"
     },
     "name": "Library",
     "designerId": "1699dfd1-b5ed-4022-9c08-a92785a01c63"

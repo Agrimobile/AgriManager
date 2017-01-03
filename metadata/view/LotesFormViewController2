@@ -9,6 +9,10 @@
         "designer|userAlias": "campaniasform",
         "designer|userClassName": "LotesFormViewController2"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController2",
     "designerId": "5c7ad14a-44b9-4e5c-990e-a8559475be78"
 }

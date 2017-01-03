@@ -17,6 +17,18 @@
         "title": "Actividad",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "flex": "number",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "MyForm2",
     "designerId": "97804b88-8621-4c35-9050-1333382814b3",
     "viewControllerInstanceId": "9572b353-4411-4f52-8023-6772b6229798",
@@ -36,6 +48,13 @@
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "name": "string"
+            },
             "name": "MyTextField5",
             "designerId": "80c98adb-93e3-4d9f-8f1b-991f3206bc7c"
         },
@@ -52,6 +71,13 @@
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyTextField",
             "designerId": "217bec27-e085-48cd-8eaa-29f85c424c1f"
@@ -76,6 +102,19 @@
                 "store": "Campanias",
                 "valueField": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield"
+            },
             "name": "MyComboBox8",
             "designerId": "af47dfe7-2cf7-4d08-b02e-13c0dc010570"
         },
@@ -94,6 +133,15 @@
                 "itemId": "desde",
                 "layout|flex": null,
                 "name": "desde"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "invalidText": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyDateField",
             "designerId": "e1f219ad-67f3-446c-8a81-cda5a9a70650"
@@ -114,6 +162,15 @@
                 "layout|flex": null,
                 "name": "hasta"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "invalidText": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyDateField1",
             "designerId": "6bcf2a7f-5570-4359-8df3-c65e8f053c99"
         },
@@ -133,6 +190,13 @@
                 "layout|flex": null,
                 "value": ""
             },
+            "configAlternates": {
+                "cls": "typedarray",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "value": "string"
+            },
             "name": "MyDisplayField",
             "designerId": "e582fb26-882a-4976-87c1-dfcfbb7f869b"
         },
@@ -150,6 +214,13 @@
                 "layout": "hbox",
                 "layout|flex": 1
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer",
             "designerId": "2a123ff6-fce5-46a5-8309-1bf441bc45ba",
             "cn": [
@@ -166,6 +237,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton3",
                     "designerId": "ce8f048e-c7ad-42aa-acaa-9fbec558a3ba",
@@ -199,6 +277,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "b94b84df-c1fd-4d43-b03c-0755bb2afafb"
                         }
@@ -216,6 +299,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton4",
                     "designerId": "745d1382-09f3-4440-9dbb-c75cfa5a7ee6",
@@ -236,6 +325,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "91457055-452e-4b07-aaeb-1467613f1b64"
@@ -267,6 +361,12 @@
                 ],
                 "name": "activate",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormActivate",
             "designerId": "2f439667-d3fa-4ce1-9d55-23cc9720cb0a"

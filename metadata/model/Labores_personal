@@ -11,6 +11,10 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "b819991a-6c5d-41d6-afba-cd837cdc7ee2",
     "cn": [
@@ -23,6 +27,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "estado_registro"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString19",
             "designerId": "657e7713-721d-4a71-b1b5-8e8ada1fb3ac"
@@ -37,6 +44,9 @@
             "userConfig": {
                 "name": "id"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger39",
             "designerId": "230c5ef3-366f-4b37-8591-229a38c5dcea"
         },
@@ -49,6 +59,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id_labores"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger40",
             "designerId": "dec21c86-43ad-439f-ad02-5f41ab898dc9"
@@ -64,10 +77,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger41",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger41",
             "designerId": "59b63e8f-74b3-48ee-bc9c-a21f2e129551",
             "customConfigs": [
                 {
@@ -87,6 +101,10 @@
             "userConfig": {
                 "aliasSQL": "cod_empleado",
                 "name": "cod_personal"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyInteger42",
             "designerId": "59cd1367-4469-4489-8e98-a926987d81cf",
@@ -108,6 +126,9 @@
             "userConfig": {
                 "name": "cod_concepto"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger43",
             "designerId": "381a8115-fd47-4600-a415-999de518dfd2"
         },
@@ -120,6 +141,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "cantidad"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyNumber7",
             "designerId": "4e221312-d648-4fab-ae32-05815c073f6b"
@@ -134,6 +158,9 @@
             "userConfig": {
                 "name": "precio"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyNumber8",
             "designerId": "0655e678-fea7-4173-9d52-b5b09e88ea4a"
         },
@@ -146,6 +173,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "importe"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyNumber9",
             "designerId": "ae8e6f8d-b589-4021-88ab-d87afb7dd284"

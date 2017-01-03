@@ -17,6 +17,18 @@
         "title": "Maquinaria",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "PersonalForm1",
     "designerId": "5fd1720d-89ec-466f-a594-91d0fdee3b4e",
     "viewControllerInstanceId": "6cf90c80-f4b4-4e27-8632-ca765002516e",
@@ -36,6 +48,13 @@
                 "layout": "hbox",
                 "layout|flex": null
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer1",
             "designerId": "183f2d8b-c180-4b94-87dc-6e03d59b16f1",
             "cn": [
@@ -52,6 +71,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton6",
                     "designerId": "eb67ce81-8dee-4784-8994-1c2b02fabc3c",
@@ -76,6 +102,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "65f86ad6-19b1-48af-99ea-46b63fae4c51"
                         }
@@ -93,6 +124,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton7",
                     "designerId": "2feb1fa4-4fe6-4cb2-8020-53b561f4dc33",
@@ -113,6 +150,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "ece05324-75c1-485c-af76-3f5a4fdb607c"
@@ -136,6 +178,14 @@
                 "layout|flex": null,
                 "name": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField18",
             "designerId": "f0a27c98-f5a7-4e1d-848c-79c2977a7545"
         },
@@ -152,6 +202,13 @@
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyTextField1",
             "designerId": "b8f1cac3-98c2-4b62-8477-b62e32700ce9"
@@ -179,6 +236,12 @@
                 ],
                 "name": "activate",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormActivate",
             "designerId": "34206c92-a80d-49b3-9377-d1fad075a1a4"

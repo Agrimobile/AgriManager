@@ -12,6 +12,11 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "d9fe371e-d5e3-4043-aa55-3ae4d84a28cf",
     "customConfigs": [
@@ -32,6 +37,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString25",
             "designerId": "d1981d5c-73ee-4e9e-90b1-cb79ae9cab30"
         },
@@ -44,6 +52,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger52",
             "designerId": "275f496a-2564-4c7b-9811-7d90ab25e114"
@@ -59,10 +70,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger53",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger53",
             "designerId": "61893f53-aeab-4d8a-9450-81e53e7799a4",
             "customConfigs": [
                 {
@@ -82,6 +94,9 @@
             "userConfig": {
                 "name": "codigo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger54",
             "designerId": "801485cf-c23f-4f01-8644-ddbc6f11380a"
         },
@@ -95,6 +110,10 @@
             "userConfig": {
                 "aliasSQL": "descrip",
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyString26",
             "designerId": "8b8873ab-b374-4c2d-8c78-9e076415b72b",

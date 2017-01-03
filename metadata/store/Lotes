@@ -10,6 +10,11 @@
         "model": "Lotes",
         "storeId": "Lotes"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "MyJsonStore",
     "designerId": "5df2599a-b2d8-4f39-a804-c3dee7a35c67",
     "cn": [

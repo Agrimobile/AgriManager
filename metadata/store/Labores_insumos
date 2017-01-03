@@ -10,6 +10,11 @@
         "model": "Labores_insumos",
         "storeId": "Labores_insumos"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Labores_maquinaria1",
     "designerId": "5bf2230d-9127-43dc-9820-ee48f1976844",
     "cn": [

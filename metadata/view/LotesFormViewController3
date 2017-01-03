@@ -9,6 +9,10 @@
         "designer|userAlias": "tareasform",
         "designer|userClassName": "LotesFormViewController3"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController3",
     "designerId": "08264892-f640-4121-8bb3-93c0a4780258"
 }

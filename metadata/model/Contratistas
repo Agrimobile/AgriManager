@@ -14,6 +14,11 @@
             "        }"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "e1c53a32-f73c-44ce-b932-a132aab745c6",
     "customConfigs": [
@@ -34,6 +39,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString27",
             "designerId": "9a002dcd-6b7a-4d90-bd98-6cc7fdf67e34"
         },
@@ -46,6 +54,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger55",
             "designerId": "5bfb3216-596a-4674-bf52-f8960713981b"
@@ -61,10 +72,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger56",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger56",
             "designerId": "0a7831b1-48d9-414a-9a8b-5a2863d74d60",
             "customConfigs": [
                 {
@@ -85,6 +97,10 @@
                 "aliasSQL": "cod_proveedor",
                 "name": "codigo"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyInteger57",
             "designerId": "c21a61cb-bb4a-483b-b04c-2cd489746361",
             "customConfigs": [
@@ -104,6 +120,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString28",
             "designerId": "44feaa24-9ed7-46d1-b17d-97ea5f566745"

@@ -9,6 +9,10 @@
         "designer|userAlias": "maquinariapanel",
         "designer|userClassName": "LotesPanelViewController7"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewController7",
     "designerId": "3d2c599b-4aa1-4d2c-85c3-ab43984422ac"
 }

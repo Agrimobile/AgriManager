@@ -10,6 +10,11 @@
         "model": "Rubros",
         "storeId": "Rubros"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Lotes1",
     "designerId": "71fcf697-645b-4da0-9060-64d47f57f4c9",
     "cn": [

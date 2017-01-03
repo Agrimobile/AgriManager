@@ -11,6 +11,12 @@
         "sql": "SELECT id,codigo,descripcion FROM periodos",
         "storeId": "CampaniasMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Campanias1",
     "designerId": "0ed50193-3461-4b9d-86ad-7946d4e1ab68",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Campanias"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader1",
                     "designerId": "4bb546cc-cd3f-4f9f-afeb-7e08986e497f"

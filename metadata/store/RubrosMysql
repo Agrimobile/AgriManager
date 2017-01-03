@@ -11,6 +11,12 @@
         "sql": "SELECT id,cod_rubro as codigo, descripcion FROM rubros",
         "storeId": "RubrosMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Rubros1",
     "designerId": "aa15f282-21fa-4a2d-b41f-e9fbb8c8b535",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Rubros"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader15",
                     "designerId": "3f308618-947f-4055-a785-ae7b799c6a7d"

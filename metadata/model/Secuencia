@@ -8,6 +8,9 @@
     "userConfig": {
         "designer|userClassName": "Secuencia"
     },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
     "name": "MyModel1",
     "designerId": "7502a00a-423d-4c78-9468-e23a0e779123",
     "cn": [
@@ -21,6 +24,9 @@
             "userConfig": {
                 "name": "id"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField",
             "designerId": "f4417b4d-d703-4101-9256-35d7af37d63c"
         },
@@ -33,6 +39,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "secuencia"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger11",
             "designerId": "f0d8fd8c-9518-4fa1-99be-a5de32e8af92"

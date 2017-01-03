@@ -9,5 +9,9 @@
         "designer|userAlias": "maincontainer",
         "designer|userClassName": "MainContainerViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "da4e9256-dcb0-45ea-ac9f-4259ab592505"
 }

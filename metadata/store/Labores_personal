@@ -10,6 +10,11 @@
         "model": "Labores_personal",
         "storeId": "Labores_personal"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Labores_maquinaria1",
     "designerId": "1180936c-607c-4f89-a881-a817e263786e",
     "cn": [

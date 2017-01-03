@@ -17,6 +17,18 @@
         "title": "Sincronizacion",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "LoginForm1",
     "designerId": "d5faffa4-b549-4026-9ced-bd7f03ec0f93",
     "viewControllerInstanceId": "83c22bcc-fdbc-4577-ad2e-6d20863ad048",
@@ -36,6 +48,13 @@
                 "layout": "hbox",
                 "layout|flex": null
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer1",
             "designerId": "35c914b9-8f13-49c3-b509-2cf99cced1b9",
             "cn": [
@@ -53,6 +72,14 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton6",
                     "designerId": "c899888d-b3c7-4d54-9ccc-af48aee6ec3e",
@@ -86,6 +113,11 @@
                                     "panel.down('#cancelar').setDisabled(true);"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "0a052484-293e-4377-8514-034aebc25705"
                         }
@@ -104,6 +136,13 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton7",
                     "designerId": "a99f80ab-e29c-4c07-8d53-a0b8bffa7e8c",
@@ -124,6 +163,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "b88cfec6-d6f1-49b6-b124-51fe466f24aa"
@@ -156,6 +200,12 @@
                 "name": "activate",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onFormActivate",
             "designerId": "f24dcd03-fc1c-4542-bb1f-bf6255f05e17"
         },
@@ -169,6 +219,10 @@
             "userConfig": {
                 "layout|flex": 1,
                 "title": "Sincronizando tablas"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "title": "string"
             },
             "name": "MyFieldSet",
             "designerId": "7bcbfa73-9c44-4eb1-935d-8d76842d7518",
@@ -187,6 +241,14 @@
                         "itemId": "tabla",
                         "name": null,
                         "width": "100%"
+                    },
+                    "configAlternates": {
+                        "blankText": "string",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "width": "auto"
                     },
                     "name": "MyTextField11",
                     "designerId": "a1063d8a-32a1-4041-92de-57830b178a70"
@@ -222,6 +284,12 @@
                 "name": "render",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onFormRender",
             "designerId": "5d8f15ef-f8af-4550-a9d9-6072542e670a"
         },
@@ -244,6 +312,12 @@
                 "name": "hide",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onFormHide",
             "designerId": "76236bf6-21cd-460e-9bbc-a13ed45386f7"
         },
@@ -260,6 +334,10 @@
                     "f_sinc.agregar_todas();",
                     "f_sinc.sincronizar(this);"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "f_sincronizar",
             "designerId": "e7d5d692-9ca9-45d4-93f5-13e57dd611a4"

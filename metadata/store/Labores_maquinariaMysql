@@ -11,6 +11,12 @@
         "sql": "select id,id_labores,cod_maquina,horas_maquina as cantidad from labores_maquinarias",
         "storeId": "Labores_maquinariaMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Labores_maquinaria1",
     "designerId": "1858c49e-1223-4317-9da9-453c8caaa49c",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Labores_maquinaria"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader8",
                     "designerId": "78529774-9ec0-4d66-b258-1e0ba8f1dc61"

@@ -9,5 +9,9 @@
         "designer|userAlias": "agregarlotespanel",
         "designer|userClassName": "AgregarLotesPanelViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "ba5a3ff8-323f-41fa-8164-dd808d2101ea"
 }

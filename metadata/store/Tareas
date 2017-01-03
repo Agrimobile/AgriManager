@@ -10,6 +10,11 @@
         "model": "Tareas",
         "storeId": "Tareas"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Lotes2",
     "designerId": "c16feb58-bae9-49d6-90d6-b1abf39e5adc",
     "cn": [

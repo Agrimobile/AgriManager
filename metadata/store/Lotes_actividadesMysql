@@ -11,6 +11,12 @@
         "sql": "SELECT id,codigo,descripcion as nombre,cod_lote,cod_actividad,cod_periodo,fecha_desde as desde,fecha_hasta as hasta FROM lote_actividad",
         "storeId": "Lotes_actividadesMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Lotes_actividades1",
     "designerId": "f3840e39-c207-4ff1-9bcc-67680f211363",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Lotes_actividades"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader11",
                     "designerId": "120374ef-b1f1-4aef-989e-80e8c408e97f"

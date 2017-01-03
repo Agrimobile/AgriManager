@@ -11,6 +11,10 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "1cecb3ee-236a-4994-b076-e2d2a4e867fa",
     "cn": [
@@ -24,6 +28,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString12",
             "designerId": "da820118-9311-4ce6-b33f-caeb971e4805"
         },
@@ -36,6 +43,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger28",
             "designerId": "8b813eff-9fea-41f4-8c61-2d6a5d7a54af"
@@ -51,10 +61,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger29",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger29",
             "designerId": "3adc587b-c0d6-4fba-917f-3389d806712a",
             "customConfigs": [
                 {
@@ -74,6 +85,9 @@
             "userConfig": {
                 "name": "codigo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger30",
             "designerId": "49c98c8f-eeac-4b66-abd4-4a88cf131114"
         },
@@ -87,6 +101,10 @@
             "userConfig": {
                 "name": "descripcion",
                 "sqlAlias": "descrip"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sqlAlias": "string"
             },
             "name": "MyString15",
             "designerId": "dd2114c3-e7ca-4a48-afdc-ef0da0f90f69",
@@ -109,6 +127,10 @@
                 "name": "precio",
                 "sqlAlias": "valor"
             },
+            "configAlternates": {
+                "name": "string",
+                "sqlAlias": "string"
+            },
             "name": "MyNumber3",
             "designerId": "f81094e5-c5b1-453b-9a83-a1241e97d7b8",
             "customConfigs": [
@@ -129,6 +151,9 @@
             "userConfig": {
                 "name": "tipo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString13",
             "designerId": "32ceeb84-52eb-4692-81ec-13f3b1e6a151"
         },
@@ -142,6 +167,10 @@
             "userConfig": {
                 "name": "um",
                 "sqlAlias": "uni_medida"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sqlAlias": "string"
             },
             "name": "MyString14",
             "designerId": "a60a722d-2ef2-44fe-a303-ac61caf32d3f",

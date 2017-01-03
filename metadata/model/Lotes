@@ -11,6 +11,10 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "f146487d-0889-4a2d-9af5-dd7207c93059",
     "cn": [
@@ -24,6 +28,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString2",
             "designerId": "dd37743a-9413-4a29-a59b-43acc0780dad"
         },
@@ -36,6 +43,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger3",
             "designerId": "f7ce1379-6f0c-4257-9882-c0853e973574"
@@ -51,10 +61,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger4",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger4",
             "designerId": "70dbe24b-97a1-48ad-9f7e-d357fff1685e",
             "customConfigs": [
                 {
@@ -74,6 +85,9 @@
             "userConfig": {
                 "name": "codigo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger8",
             "designerId": "999f2f12-1507-4718-b5b7-e5099c324ea6"
         },
@@ -87,6 +101,10 @@
             "userConfig": {
                 "aliasSQL": "descrip",
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyString3",
             "designerId": "d7c42327-c8a0-4463-b50f-4c5c22f5ff01",
@@ -108,6 +126,9 @@
             "userConfig": {
                 "name": "superficie"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyNumber2",
             "designerId": "f8df9422-593b-4351-ad61-add9a00835b1"
         },
@@ -120,6 +141,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "cod_establecimiento"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger10",
             "designerId": "d0bb1fa9-92c5-4ca9-8b26-5c455c5ce938"

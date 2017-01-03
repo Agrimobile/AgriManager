@@ -16,6 +16,17 @@
         "titleAlign": "center",
         "width": null
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "flex": "number",
+        "height": "auto",
+        "itemId": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto"
+    },
     "name": "MyPanel1",
     "designerId": "d99fd598-7d60-409e-905b-45a7b55c7182",
     "viewControllerInstanceId": "f4ff5ed2-68df-498d-8ece-c58bc9481dfe",
@@ -33,6 +44,10 @@
                     "paneltool"
                 ],
                 "iconCls": "x-fa fa-arrow-left"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "iconCls": "string"
             },
             "name": "MyTool4",
             "designerId": "3cf55d44-3d47-4eda-bd6b-f9c82406a496",
@@ -54,6 +69,12 @@
                         "name": "click",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onToolClick",
                     "designerId": "b07d5963-97d1-417b-8df6-c754c02a563a"
                 }
@@ -73,6 +94,12 @@
                 "itemId": "addinggrid",
                 "store": "Lotes",
                 "title": "Lotes a agregar"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "itemId": "string",
+                "store": "store",
+                "title": "string"
             },
             "name": "MyGridPanel4",
             "designerId": "90dd6671-e0cd-4436-8599-b43293691b3a",
@@ -99,6 +126,11 @@
                         "hidden": true,
                         "text": "Estado Registro"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyColumn9",
                     "designerId": "56a69666-def6-489b-8fe9-f4a82e8f59af"
                 },
@@ -113,6 +145,11 @@
                         "dataIndex": "id",
                         "hidden": true,
                         "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
                     },
                     "name": "MyNumberColumn21",
                     "designerId": "37c578a1-d5fe-4a75-9065-8aa8b96089ed"
@@ -130,6 +167,12 @@
                         "hidden": true,
                         "text": "Uid"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyNumberColumn22",
                     "designerId": "6c5d14ad-a1f1-4e9b-963a-c16c8fd055c3"
                 },
@@ -146,6 +189,12 @@
                         "text": "Codigo",
                         "width": "25%"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
                     "name": "MyNumberColumn23",
                     "designerId": "267ff696-ec2c-4b9d-8f63-84cc5bb095c3"
                 },
@@ -161,6 +210,11 @@
                         "text": "Nombre",
                         "width": "25%"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
                     "name": "MyColumn10",
                     "designerId": "b6033ef4-a520-4037-94a9-1ee48822b408"
                 },
@@ -175,6 +229,11 @@
                         "dataIndex": "superficie",
                         "hidden": true,
                         "text": "Superficie"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
                     },
                     "name": "MyNumberColumn24",
                     "designerId": "c23beff9-a0bb-4d09-9d46-f5bfdba59d18"
@@ -192,6 +251,12 @@
                         "text": "Cod Establecimiento",
                         "width": "25%"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
                     "name": "MyNumberColumn25",
                     "designerId": "1808ff3b-8634-48b9-949f-5da4323b06de"
                 },
@@ -207,6 +272,12 @@
                         "itemId": null,
                         "text": "Agregar",
                         "width": "25%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "itemId": "string",
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyCheck2",
                     "designerId": "a6ee212d-70a9-4a9b-9623-61133cf84442"
@@ -228,6 +299,12 @@
                         "name": "itemclick",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onAddinggridItemClick",
                     "designerId": "7685da65-efea-4b87-9ce7-f72b291d58bb"
                 },
@@ -245,6 +322,12 @@
                         ],
                         "name": "beforerender",
                         "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
                     "name": "onAddinggridBeforeRender",
                     "designerId": "f28bb353-2e5d-41a5-a94b-db019ed0bbc0"
@@ -272,6 +355,12 @@
                 "name": "render",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onPanelRender",
             "designerId": "e6277ad5-c016-4e35-8fc9-fbd07ea35001"
         },
@@ -292,6 +381,16 @@
                 "layout": "hbox",
                 "title": "My Form"
             },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "container|align": "string",
+                "container|pack": "string",
+                "designer|displayName": "string",
+                "dock": "string",
+                "header": "boolean",
+                "layout": "string",
+                "title": "string"
+            },
             "name": "MyForm3",
             "designerId": "d4bb948c-92cd-4245-b1c9-289082074100",
             "cn": [
@@ -309,6 +408,13 @@
                         "itemId": "MoreBox",
                         "layout": "hbox"
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "itemId": "string",
+                        "layout": "string"
+                    },
                     "name": "MyContainer5",
                     "designerId": "cce1fa56-8f72-4c99-af2b-6547471a74fc",
                     "cn": [
@@ -322,6 +428,10 @@
                             "userConfig": {
                                 "layout|flex": 1,
                                 "text": "Agregar Lotes Seleccionados"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string"
                             },
                             "name": "MyButton",
                             "designerId": "2b283cdb-e8d4-411a-834e-06070f737225",
@@ -347,6 +457,11 @@
                                             "};",
                                             "f_crud.save_several_records(lotesToAdd, config);"
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "9631a0d3-a2cf-428c-a8ea-1131ad9f9017"

@@ -28,6 +28,11 @@
         ],
         "storeId": "ConfigMenu"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "root": "object",
+        "storeId": "string"
+    },
     "name": "MainMenu1",
     "designerId": "9d7001a0-cafa-4a8c-8e8a-56cbb22efc71"
 }

@@ -10,6 +10,11 @@
         "model": "Contratistas",
         "storeId": "Contratistas"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Actividades2",
     "designerId": "9edb2758-03b3-4600-9524-d998881fe442",
     "cn": [

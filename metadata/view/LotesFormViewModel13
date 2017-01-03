@@ -9,6 +9,10 @@
         "designer|userAlias": "depositosform",
         "designer|userClassName": "LotesFormViewModel13"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewModel13",
     "designerId": "6d2e1ef3-5238-4f0b-a8af-76270adf264d"
 }

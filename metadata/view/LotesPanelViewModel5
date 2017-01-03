@@ -9,6 +9,10 @@
         "designer|userAlias": "depositospanel",
         "designer|userClassName": "LotesPanelViewModel5"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewModel5",
     "designerId": "9a4c574a-df10-4ede-a257-55a042ce351c"
 }

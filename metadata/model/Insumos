@@ -14,6 +14,11 @@
             "        }"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "747d37ab-2acd-4b8c-86d0-db0084212871",
     "customConfigs": [
@@ -35,6 +40,10 @@
                 "aliasSQL": "cod_articulo",
                 "name": "codigo"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyInteger66",
             "designerId": "a7480693-e74c-4185-a6ed-1b000d644e42",
             "customConfigs": [
@@ -55,6 +64,9 @@
             "userConfig": {
                 "name": "descripcion"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString34",
             "designerId": "bb3ceef6-0294-4c39-b74b-6cdc079e263a"
         },
@@ -68,6 +80,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString35",
             "designerId": "1e82031b-432c-4756-94dd-8bda6e080182"
         },
@@ -80,6 +95,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger67",
             "designerId": "d603ff07-2a7a-488c-9cc5-13cafd31f4ee"
@@ -95,10 +113,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger68",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger68",
             "designerId": "f458a5d9-6484-4027-89ea-e0cf3ebea159",
             "customConfigs": [
                 {
@@ -118,6 +137,10 @@
             "userConfig": {
                 "aliasSQL": "precio_compra",
                 "name": "precio"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyNumber12",
             "designerId": "5ce73346-3826-40ed-83f9-a536de9bd2b0",
@@ -140,6 +163,10 @@
                 "aliasSQL": "uni_medida",
                 "name": "um"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyString36",
             "designerId": "d1f87b1f-2be0-421f-9465-031a7a058f40",
             "customConfigs": [
@@ -160,6 +187,9 @@
             "userConfig": {
                 "name": "cod_rubro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger69",
             "designerId": "9a1250d5-05ee-4280-b689-01c5e6cf02fd"
         },
@@ -173,6 +203,10 @@
             "userConfig": {
                 "aliasSQL": "carencia",
                 "name": "dias_carencia"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyInteger70",
             "designerId": "05149d25-8192-4113-885b-e1135c7f60e2",

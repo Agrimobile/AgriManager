@@ -76,6 +76,11 @@
         ],
         "storeId": "MainMenu"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "root": "object",
+        "storeId": "string"
+    },
     "name": "MyTreeStore",
     "designerId": "0873f80e-c2d7-4d33-b2d9-d6e1e5f32bd6"
 }

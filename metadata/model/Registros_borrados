@@ -8,6 +8,9 @@
     "userConfig": {
         "designer|userClassName": "Registros_borrados"
     },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
     "name": "MyModel",
     "designerId": "e27d78e5-60d5-421d-95c4-870567d01daa",
     "cn": [
@@ -20,6 +23,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger62",
             "designerId": "99d2faf1-9c0e-4a07-9ab7-ce12bb90bf5a"
@@ -34,6 +40,9 @@
             "userConfig": {
                 "name": "id_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger63",
             "designerId": "33b295fe-e959-4699-a642-88b8227fc199"
         },
@@ -46,6 +55,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "tabla"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString23",
             "designerId": "3f9cf7b5-d6ba-47e0-9f93-1ddd48864f02"
