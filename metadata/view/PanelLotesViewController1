@@ -9,6 +9,10 @@
         "designer|userAlias": "laborespanel",
         "designer|userClassName": "PanelLotesViewController1"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "PanelLotesViewController1",
     "designerId": "df2ebb8e-e5df-4f2e-a509-1b9f872aeed6"
 }

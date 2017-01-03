@@ -10,6 +10,11 @@
         "model": "Depositos",
         "storeId": "Depositos"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Actividades3",
     "designerId": "9bc27a53-36a2-4ed6-ab00-a0bcab6493fb",
     "cn": [

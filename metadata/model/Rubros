@@ -11,6 +11,10 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "0d40a760-1b8e-4664-a62f-a75f79f0c113",
     "cn": [
@@ -24,6 +28,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString21",
             "designerId": "a91472ab-72b8-4277-9958-51cd90127d9c"
         },
@@ -36,6 +43,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger45",
             "designerId": "52438b03-63af-4d7d-aec4-c1da046ff462"
@@ -51,10 +61,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger46",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger46",
             "designerId": "36b67d1c-1bf4-439e-bdec-46626b7db20b",
             "customConfigs": [
                 {
@@ -75,6 +86,10 @@
                 "aliasSQL": "cod_rubro",
                 "name": "codigo"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyInteger44",
             "designerId": "cac59074-f388-4926-95d2-f43e022506e1",
             "customConfigs": [
@@ -94,6 +109,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "descripcion"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString20",
             "designerId": "23a883dd-dc83-4804-b952-d8a5f3fdfed9"

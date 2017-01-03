@@ -11,6 +11,12 @@
         "sql": "SELECT id,cod_proveedor as codigo,nombre FROM proveedores where fletero_campo=1 or contratista_campo=1",
         "storeId": "ContratistasMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Contratistas1",
     "designerId": "cc99c9ec-0b1d-4bc0-92b8-2dc10c2e95a7",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Contratistas"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader2",
                     "designerId": "307be7d1-045f-4155-b991-f7198cd03742"

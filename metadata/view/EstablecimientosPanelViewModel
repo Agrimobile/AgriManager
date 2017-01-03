@@ -9,5 +9,9 @@
         "designer|userAlias": "establecimientospanel",
         "designer|userClassName": "EstablecimientosPanelViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "2d8f883f-2815-46ed-a89d-2be4db1e62cb"
 }

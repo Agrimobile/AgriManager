@@ -9,5 +9,9 @@
         "designer|userAlias": "actividadesform",
         "designer|userClassName": "ActividadesFormViewController"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "9572b353-4411-4f52-8023-6772b6229798"
 }

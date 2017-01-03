@@ -10,6 +10,11 @@
         "model": "Registros_borrados",
         "storeId": "Registros_borrados"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Actividades1",
     "designerId": "bf21cac1-421e-42eb-b8d7-26e64d7705d4",
     "cn": [

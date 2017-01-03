@@ -10,6 +10,11 @@
         "model": "Campanias",
         "storeId": "Campanias"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Contratistas1",
     "designerId": "65ddb75a-5aba-42fb-bb84-a7600919de88",
     "cn": [

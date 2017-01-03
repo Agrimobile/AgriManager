@@ -10,6 +10,11 @@
         "model": "Lotes_actividades",
         "storeId": "Lotes_actividades"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Lotes1",
     "designerId": "fd079763-7e79-4c1c-8de7-84c32ee48fed",
     "cn": [

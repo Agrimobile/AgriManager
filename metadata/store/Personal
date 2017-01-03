@@ -10,6 +10,11 @@
         "model": "Personal",
         "storeId": "Personal"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Rubros2",
     "designerId": "ddf2776b-f299-414c-a078-c65569ea6c2b",
     "cn": [

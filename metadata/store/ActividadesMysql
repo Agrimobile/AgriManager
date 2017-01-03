@@ -11,6 +11,12 @@
         "sql": "SELECT id,codigo,descrip as nombre FROM cuentas",
         "storeId": "ActividadesMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Actividades2",
     "designerId": "b4885684-1f86-4ff5-84f0-4dde6a97a955",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Actividades"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader",
                     "designerId": "cd0a3a16-7cc4-4df4-87f0-dc3eb2953d09"

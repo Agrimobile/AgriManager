@@ -10,6 +10,11 @@
         "model": "Secuencia",
         "storeId": "Secuencia"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Lotes1",
     "designerId": "a8b9b2ff-92e8-4ab2-882a-10e7d8f45be2",
     "cn": [

@@ -13,6 +13,14 @@
         "layout": "card",
         "scrollable": null
     },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "flex": "number",
+        "layout": "string",
+        "scrollable": "auto"
+    },
     "name": "MyViewport",
     "designerId": "8bf667af-506e-4b4d-9b3d-4fab35c22889",
     "viewControllerInstanceId": "8c0d0e4f-7048-49ca-9ae5-36417a5700ab",
@@ -34,6 +42,15 @@
                 "title": "Agrimobile",
                 "titleAlign": "center"
             },
+            "configAlternates": {
+                "flex": "number",
+                "id": "string",
+                "itemId": "string",
+                "layout": "string",
+                "scrollable": "auto",
+                "title": "string",
+                "titleAlign": "string"
+            },
             "name": "MyPanel",
             "designerId": "9ef1da91-c5df-43ff-8e59-54ebf923108e",
             "cn": [
@@ -49,6 +66,11 @@
                         "store": "MainMenu",
                         "title": "Menu"
                     },
+                    "configAlternates": {
+                        "rootVisible": "boolean",
+                        "store": "store",
+                        "title": "string"
+                    },
                     "name": "MyTreePanel",
                     "designerId": "f25e46d1-3cdd-45c3-87ee-db43cfed7aba",
                     "cn": [
@@ -61,6 +83,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "MenuTree"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string"
                             },
                             "name": "MyTreeView",
                             "designerId": "28e666be-f64a-42aa-957e-62783a245565",
@@ -92,6 +117,12 @@
                                         ],
                                         "name": "itemclick",
                                         "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
                                     },
                                     "name": "onViewItemClick",
                                     "designerId": "8513213d-3ac5-4486-a8df-a418d5ef887b"
@@ -175,6 +206,12 @@
                         "name": "render",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onPanelRender",
                     "designerId": "3ce50405-423e-4349-bb2c-15039c4b82dc"
                 },
@@ -191,6 +228,11 @@
                         ],
                         "iconCls": "x-fa fa-bars",
                         "itemId": "mainmenu-tool"
+                    },
+                    "configAlternates": {
+                        "cls": "typedarray",
+                        "iconCls": "string",
+                        "itemId": "string"
                     },
                     "name": "MyTool5",
                     "designerId": "3f27087f-7da0-41cf-b7a2-cc12ca7d715c",
@@ -211,6 +253,12 @@
                                 "name": "click",
                                 "scope": "me"
                             },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
                             "name": "onToolClick",
                             "designerId": "94669a07-506a-41cf-9745-e78165ca7d17"
                         }
@@ -226,6 +274,10 @@
                     "userConfig": {
                         "iconCls": "x-fa fa-gear",
                         "itemId": "configmenu-tool"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string"
                     },
                     "name": "MyTool6",
                     "designerId": "c5e5b43e-a7d2-4549-b13e-19269ea32be3",
@@ -245,6 +297,12 @@
                                 ],
                                 "name": "click",
                                 "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
                             },
                             "name": "onToolClick1",
                             "designerId": "d1fc7537-180e-4f2e-92cb-11fb8e8e49dc"
@@ -268,6 +326,12 @@
                 ],
                 "name": "render",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onViewportRender",
             "designerId": "034d5935-d1a6-492a-9831-bcdfce4d739f"

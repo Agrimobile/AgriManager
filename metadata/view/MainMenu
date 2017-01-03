@@ -13,6 +13,14 @@
         "padding": null,
         "width": null
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "itemId": "string",
+        "padding": "auto",
+        "width": "auto"
+    },
     "name": "ConfigMenu1",
     "designerId": "bf75fea5-60f7-49b1-8a40-71ad8e230c07",
     "viewControllerInstanceId": "fc80187b-5e71-4260-ba4c-9b838181b22a",
@@ -31,13 +39,8 @@
                 ],
                 "fn": "openCard",
                 "implHandler": [
-                    "/*",
-                    "var thisPanel = MyApp.main.getLayout().getActiveItem();",
-                    "MyApp.main.getLayout().prev();",
-                    "thisPanel.close();",
-                    "*/",
-                    "debugger;",
-                    "var panelClass = item.panelClass,",
+                    "var layout = MyApp.main.getLayout(), next,",
+                    "    panelClass = item.panelClass,",
                     "    createPanel = function(panelClass) {",
                     "      var cardClass = \"MyApp.view.\" + panelClass;",
                     "      if(Ext.ClassManager.get(cardClass)) {",
@@ -50,8 +53,20 @@
                     "        throw errorMsg;",
                     "      }",
                     "    };",
+                    "layout.setActiveItem(0);",
+                    "next = layout.getNext();",
+                    "while(next) {",
+                    "  next.close();",
+                    "  next.destroy();",
+                    "  next = layout.getNext();",
+                    "}",
                     "createPanel(panelClass);"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openCard",
             "designerId": "37999904-d9aa-4d1d-b984-f50d0ac8d203"

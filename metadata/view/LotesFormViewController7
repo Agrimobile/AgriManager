@@ -9,6 +9,10 @@
         "designer|userAlias": "mensaje",
         "designer|userClassName": "LotesFormViewController7"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController7",
     "designerId": "4ac04a61-0eef-4924-95fd-4c445d2b1da3"
 }

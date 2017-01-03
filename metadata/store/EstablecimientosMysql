@@ -11,6 +11,12 @@
         "sql": "SELECT id,codigo,nombre FROM establecimiento",
         "storeId": "EstablecimientosMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Establecimientos1",
     "designerId": "fccaaeaa-1db4-499a-b9e3-ae92b6a8b8d0",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Establecimientos"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader4",
                     "designerId": "90648834-589c-4c3e-99c4-a54fc9d46853"

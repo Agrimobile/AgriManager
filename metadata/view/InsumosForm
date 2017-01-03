@@ -17,6 +17,18 @@
         "title": "Insumos",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "LotesForm2",
     "designerId": "e8f3c35a-6a5f-4d0b-92b8-b37bd1c88f8e",
     "viewControllerInstanceId": "6094b36e-a0e8-4d7d-9495-b2ca80c90763",
@@ -36,6 +48,13 @@
                 "layout": "hbox",
                 "layout|flex": null
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer1",
             "designerId": "f5608723-3797-485d-8de5-7d4fdc8e0b3b",
             "cn": [
@@ -52,6 +71,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton6",
                     "designerId": "b068ba0a-c84a-4bbb-a272-263ef271da13",
@@ -76,6 +102,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "0a88eec4-8396-49b2-abc5-fa39d354257d"
                         }
@@ -93,6 +124,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton7",
                     "designerId": "305baf33-6b9a-4a1b-aa15-a33145677440",
@@ -113,6 +150,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "9f5db639-f0cc-4a3d-b115-b23fe445b3d6"
@@ -136,6 +178,14 @@
                 "layout|flex": null,
                 "name": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField14",
             "designerId": "b20f7fc1-d643-4936-a884-f9f2d7e578f1"
         },
@@ -152,6 +202,13 @@
                 "fieldLabel": "Dias de Carencia",
                 "layout|flex": null,
                 "name": "dias_carencia"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyNumberField5",
             "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"
@@ -170,6 +227,13 @@
                 "layout|flex": null,
                 "name": "descripcion"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField1",
             "designerId": "34b81877-8a22-4a5b-93d3-c1e2acacca30"
         },
@@ -187,6 +251,13 @@
                 "layout|flex": null,
                 "name": "um"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField4",
             "designerId": "1682ac93-3f1d-43a6-add0-16ce482fa14e"
         },
@@ -203,6 +274,13 @@
                 "fieldLabel": "Precio",
                 "layout|flex": null,
                 "name": "precio"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyNumberField6",
             "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
@@ -231,6 +309,12 @@
                 "name": "activate",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onFormActivate",
             "designerId": "7c2c5c78-619d-4170-9d32-3921436ed05d"
         },
@@ -253,6 +337,19 @@
                 "queryMode": "local",
                 "store": "Rubros",
                 "valueField": "codigo"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield"
             },
             "name": "MyComboBox2",
             "designerId": "d030ab29-d427-47df-ad15-56509bd7f4b6"

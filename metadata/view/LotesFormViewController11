@@ -9,6 +9,10 @@
         "designer|userAlias": "insumosform",
         "designer|userClassName": "LotesFormViewController11"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController11",
     "designerId": "6094b36e-a0e8-4d7d-9495-b2ca80c90763"
 }

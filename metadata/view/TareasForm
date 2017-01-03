@@ -17,6 +17,18 @@
         "title": "Tarea",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "LotesForm2",
     "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
     "viewControllerInstanceId": "08264892-f640-4121-8bb3-93c0a4780258",
@@ -36,6 +48,13 @@
                 "layout": "hbox",
                 "layout|flex": null
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer1",
             "designerId": "7310ee82-c1ac-452b-b34f-adcc58ee5ae3",
             "cn": [
@@ -52,6 +71,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton6",
                     "designerId": "50e97c76-0402-48ae-a84b-d232d65d6047",
@@ -76,6 +102,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "dca5265c-6840-4df5-bb62-a7687154308c"
                         }
@@ -93,6 +124,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton7",
                     "designerId": "3312cd46-ce5b-4be8-802f-1b6797281505",
@@ -113,6 +150,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "b14f6f67-d0d1-410e-b447-5ecb7cbf5c09"
@@ -136,6 +178,14 @@
                 "layout|flex": null,
                 "name": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField21",
             "designerId": "a30119ce-4686-4b77-b947-5f5ba4749ff5"
         },
@@ -152,6 +202,13 @@
                 "fieldLabel": "Descripcion",
                 "layout|flex": null,
                 "name": "descripcion"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyTextField1",
             "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
@@ -170,6 +227,13 @@
                 "layout|flex": null,
                 "name": "tipo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField2",
             "designerId": "5f73ef38-e590-41ee-83c3-74fdf75cc230"
         },
@@ -187,6 +251,13 @@
                 "layout|flex": null,
                 "name": "um"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField3",
             "designerId": "1a1282f3-b867-44db-a1dc-a4c457905e94"
         },
@@ -203,6 +274,13 @@
                 "fieldLabel": "Precio",
                 "layout|flex": null,
                 "name": "precio"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyNumberField3",
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
@@ -230,6 +308,12 @@
                 ],
                 "name": "activate",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormActivate",
             "designerId": "454f4d8b-3c59-46c4-a89a-55d994ef2ae4"

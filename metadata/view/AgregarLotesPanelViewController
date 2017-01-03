@@ -9,5 +9,9 @@
         "designer|userAlias": "agregarlotespanel",
         "designer|userClassName": "AgregarLotesPanelViewController"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "f4ff5ed2-68df-498d-8ece-c58bc9481dfe"
 }

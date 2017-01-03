@@ -11,6 +11,12 @@
         "sql": "select id,fecha,cod_lote_actividad,cod_lote,cod_area,cod_establecimiento,cod_periodo,cod_tarea,cantidad,precio_tarea as precio,cod_contratista from labores",
         "storeId": "LaboresMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Labores1",
     "designerId": "68f6ef8d-22c3-44b7-9fd0-7d2660cac61e",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Labores"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader6",
                     "designerId": "9799f62d-8978-4325-927e-8e51375409d6"

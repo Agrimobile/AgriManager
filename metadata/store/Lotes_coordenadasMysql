@@ -11,6 +11,12 @@
         "sql": "SELECT lotes_coordenadas.id,id_lote,codigo as cod_lote,cod_establecimiento,latitud,longitud,orden FROM lotes_coordenadas,lotes where lotes_coordenadas.id_lote= lotes.id",
         "storeId": "Lotes_coordenadasMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Lotes_coordenadas1",
     "designerId": "e30d5256-5c70-41c4-8d07-e4894c61e507",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Lotes_coordenadas"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader12",
                     "designerId": "af2ff829-26d3-47ac-81be-de9b1f112635"

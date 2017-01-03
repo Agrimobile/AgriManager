@@ -10,6 +10,11 @@
         "designer|userClassName": "ConfigMenu",
         "width": null
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "width": "auto"
+    },
     "name": "MyMenu",
     "designerId": "32205bf4-86b6-4809-9507-3312920118ea",
     "viewControllerInstanceId": "d0cfbb3f-6e1e-447c-8be4-eeaf694c8d26",
@@ -28,20 +33,34 @@
                 ],
                 "fn": "openCard",
                 "implHandler": [
-                    "var createPanel = function(panelClass) {",
-                    "    var cardClass = \"MyApp.view.\" + panelClass;",
-                    "    if(Ext.ClassManager.get(cardClass)) {",
+                    "var layout = MyApp.main.getLayout(), next,",
+                    "    panelClass = item.panelClass,",
+                    "    createPanel = function(panelClass) {",
+                    "      var cardClass = \"MyApp.view.\" + panelClass;",
+                    "      if(Ext.ClassManager.get(cardClass)) {",
                     "        var newPan = Ext.create(cardClass);",
                     "        MyApp.main.add(newPan);",
                     "        MyApp.main.getLayout().next();",
-                    "    }",
-                    "    else {",
+                    "      }",
+                    "      else {",
                     "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
                     "        throw errorMsg;",
-                    "    }",
-                    "},panelClass = item.panelClass;",
+                    "      }",
+                    "    };",
+                    "layout.setActiveItem(0);",
+                    "next = layout.getNext();",
+                    "while(next) {",
+                    "  next.close();",
+                    "  next.destroy();",
+                    "  next = layout.getNext();",
+                    "}",
                     "createPanel(panelClass);"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openCard",
             "designerId": "152f365f-682f-4001-945a-d6670d8ae032"

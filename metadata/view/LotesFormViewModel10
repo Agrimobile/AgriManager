@@ -9,6 +9,10 @@
         "designer|userAlias": "rubrosform",
         "designer|userClassName": "LotesFormViewModel10"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewModel10",
     "designerId": "f14d5cdb-cf91-40f0-8c5c-62d574d3aa02"
 }

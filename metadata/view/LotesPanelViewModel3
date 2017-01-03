@@ -9,6 +9,10 @@
         "designer|userAlias": "insumospanel",
         "designer|userClassName": "LotesPanelViewModel3"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewModel3",
     "designerId": "bb7a5524-1db9-4880-9638-07954b24c1c8"
 }

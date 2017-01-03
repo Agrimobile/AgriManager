@@ -18,6 +18,19 @@
         "title": "Establecimiento",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "flex": "number",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "ActividadesForm1",
     "designerId": "f5e9c88d-de7a-4e3e-af44-244e02c921d0",
     "viewControllerInstanceId": "7acee19d-f404-4e64-bd68-fe643300a2d2",
@@ -37,6 +50,13 @@
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "name": "string"
+            },
             "name": "MyTextField13",
             "designerId": "949aab15-ca23-4402-94b2-9b41ac1fe571"
         },
@@ -53,6 +73,13 @@
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyTextField",
             "designerId": "2b358406-74fd-477c-a82d-dfe5ea7ffaf9"
@@ -71,6 +98,13 @@
                 "layout": "hbox",
                 "layout|flex": 1
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer",
             "designerId": "0c40dec1-7e74-48e3-bf59-a14ec29396e2",
             "cn": [
@@ -87,6 +121,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton3",
                     "designerId": "1459ff9c-2f8e-4ff4-b80f-521290c1a4d9",
@@ -111,6 +152,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "2e9b5a12-3157-4a04-88c7-ce9f2fba2846"
                         }
@@ -128,6 +174,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton4",
                     "designerId": "f82beda8-3197-485c-bbb9-059073a22798",
@@ -148,6 +200,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "0e10f8dc-2275-4918-8651-27d5d551d883"
@@ -179,6 +236,12 @@
                 ],
                 "name": "activate",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormActivate",
             "designerId": "c565f7ba-16f2-40f5-bdcd-ea07dcfe8ce6"

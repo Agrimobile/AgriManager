@@ -9,6 +9,10 @@
         "designer|userAlias": "insumospanel",
         "designer|userClassName": "LotesPanelViewController3"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewController3",
     "designerId": "f2280b7d-685c-4917-bfe9-5c6dc9107577"
 }

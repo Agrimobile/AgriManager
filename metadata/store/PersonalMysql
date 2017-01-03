@@ -11,6 +11,12 @@
         "sql": "SELECT id,codigo,nombre FROM personal",
         "storeId": "PersonalMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Personal1",
     "designerId": "a4da219e-a2b7-437a-986a-82e3dd4a5581",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Personal"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader14",
                     "designerId": "dba59df8-44cf-4497-9a54-f730c1f9e38c"

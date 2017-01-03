@@ -10,6 +10,11 @@
         "model": "Lotes_coordenadas",
         "storeId": "Lotes_coordenadas"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Tareas1",
     "designerId": "58902651-cae2-429d-bb8a-1b99dddbe44b",
     "cn": [

@@ -9,6 +9,10 @@
         "designer|userAlias": "contratistasform",
         "designer|userClassName": "LotesFormViewModel12"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewModel12",
     "designerId": "b3696974-9c7c-46c1-8933-4d307a56d0db"
 }

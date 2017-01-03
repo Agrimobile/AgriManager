@@ -12,6 +12,11 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "e8b250ad-7bce-4f1e-9751-e75bad75bbbf",
     "customConfigs": [
@@ -32,6 +37,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString18",
             "designerId": "0ebd6b5a-813a-4ef9-a92e-fc903c97d272"
         },
@@ -45,6 +53,9 @@
             "userConfig": {
                 "name": "id"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger35",
             "designerId": "a6737b2f-00b4-429e-a936-f85d0026aedd"
         },
@@ -57,6 +68,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id_labores"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger36",
             "designerId": "e4203daa-dbba-46f7-9252-2f3594905235"
@@ -72,10 +86,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger37",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger37",
             "designerId": "0a2ed236-1776-4a25-9edc-08b41d9df6f0",
             "customConfigs": [
                 {
@@ -95,6 +110,9 @@
             "userConfig": {
                 "name": "cod_maquina"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger38",
             "designerId": "b8b83a6c-2e09-47a2-bcd3-55a08818c241"
         },
@@ -108,6 +126,10 @@
             "userConfig": {
                 "aliasSQL": "horas_maquina",
                 "name": "cantidad"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyNumber6",
             "designerId": "172dfecd-cb7e-4ff8-a662-e8347dea7162",

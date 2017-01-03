@@ -9,6 +9,10 @@
         "designer|userAlias": "personalpanel",
         "designer|userClassName": "LotesPanelViewController6"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewController6",
     "designerId": "1b9c11a4-2c0a-486d-934e-9775dc926222"
 }

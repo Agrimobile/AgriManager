@@ -11,6 +11,12 @@
         "sql": "select codigo,descrip as descripcion ,valor as precio,tipo,uni_medida as um,id from tareas",
         "storeId": "TareasMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Tareas2",
     "designerId": "2c18d2bf-7e8a-44ca-a607-f2d6554f3523",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Tareas"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader16",
                     "designerId": "2e1cb78a-b095-4d28-b56a-c0beef3a66e4"

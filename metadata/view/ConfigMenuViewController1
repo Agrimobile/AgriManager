@@ -9,6 +9,10 @@
         "designer|userAlias": "mainmenu",
         "designer|userClassName": "ConfigMenuViewController1"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "ConfigMenuViewController1",
     "designerId": "fc80187b-5e71-4260-ba4c-9b838181b22a"
 }

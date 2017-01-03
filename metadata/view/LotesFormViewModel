@@ -9,5 +9,9 @@
         "designer|userAlias": "lotesform",
         "designer|userClassName": "LotesFormViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "194943ae-ad3a-4ce3-9e57-1bf90560075c"
 }

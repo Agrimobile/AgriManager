@@ -12,10 +12,13 @@
             "{type: 'uuid'}"
         ]
     },
-    "name": "MyModel",
     "configAlternates": {
-        "sincronizar": "boolean"
+        "sincronizar": "boolean",
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
     },
+    "name": "MyModel",
     "designerId": "ce5925bb-47d8-44e5-abe1-1bdd7101b021",
     "customConfigs": [
         {
@@ -35,6 +38,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString8",
             "designerId": "718315f9-1d8c-435b-9a7d-6a26f002d51a"
         },
@@ -47,6 +53,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger5",
             "designerId": "cffc6b21-8840-46ce-9b8d-238560d217fe"
@@ -62,10 +71,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger6",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger6",
             "designerId": "5158cf44-2fbf-449a-8d9d-656e39060713",
             "customConfigs": [
                 {
@@ -85,6 +95,9 @@
             "userConfig": {
                 "name": "codigo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger7",
             "designerId": "352e526a-f1c9-4649-a7a4-ea6288b7f936"
         },
@@ -97,6 +110,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyString10",
             "designerId": "bf0be0d7-e98f-468a-87a0-009b31509d74"
@@ -111,6 +127,10 @@
             "userConfig": {
                 "aliasSQL": "nivelzoom",
                 "name": "zoom"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyInteger9",
             "designerId": "bfb0b2f2-888a-41d3-a641-b75c8d656260",
@@ -132,6 +152,9 @@
             "userConfig": {
                 "name": "latitud"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyNumber",
             "designerId": "f5beac55-0be0-4c56-a03c-889640d126a5"
         },
@@ -144,6 +167,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "longitud"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyNumber1",
             "designerId": "8f259c64-f978-469f-a2f9-dd1d10c17297"

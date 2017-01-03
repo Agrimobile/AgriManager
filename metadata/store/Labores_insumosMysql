@@ -11,6 +11,12 @@
         "sql": "select id, id_labores,cod_insumo, cantidad, dosis, cod_deposito from labores_insumos",
         "storeId": "Labores_insumosMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Labores_insumos1",
     "designerId": "7f284532-9356-4855-bf57-fbb5c3b0fa33",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Labores_insumos"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader7",
                     "designerId": "6550a7a0-a348-4e90-85e0-b7fd2a70b790"

@@ -19,6 +19,18 @@
         "titleAlign": "center",
         "width": null
     },
+    "configAlternates": {
+        "cls": "typedarray",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "flex": "number",
+        "height": "auto",
+        "itemId": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto"
+    },
     "name": "ContratistasPanel1",
     "designerId": "6f09fe6f-2fc2-4488-ae69-1880c7e26424",
     "viewControllerInstanceId": "e0f97c95-a67a-46fe-a9b1-8337f95934ef",
@@ -36,6 +48,10 @@
                     "paneltool"
                 ],
                 "iconCls": "x-fa fa-arrow-left"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "iconCls": "string"
             },
             "name": "MyTool2",
             "designerId": "81d5adb2-acaf-4302-b0bc-76b1bd86b97b",
@@ -56,6 +72,12 @@
                         ],
                         "name": "click",
                         "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
                     "name": "onToolClick",
                     "designerId": "e36ca3cc-9de7-40b2-9abd-bd8482d9b1c4"
@@ -82,6 +104,12 @@
                 "name": "render",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onPanelRender",
             "designerId": "e0ec6743-9d4a-498e-a658-c2953684d3c4"
         },
@@ -97,6 +125,12 @@
                 "itemId": "grid",
                 "store": "Depositos",
                 "title": "Depositos"
+            },
+            "configAlternates": {
+                "header": "boolean",
+                "itemId": "string",
+                "store": "store",
+                "title": "string"
             },
             "name": "MyGridPanel8",
             "designerId": "5913489c-c75f-4750-9218-85ee67368290",
@@ -126,6 +160,12 @@
                         "name": "selectionchange",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridSelectionChange1",
                     "designerId": "3793f419-f6c4-4c7a-9251-54d99a9436d1"
                 },
@@ -153,6 +193,12 @@
                         "name": "itemlongpress",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridItemLongpress1",
                     "designerId": "313b96c3-a431-461d-b90e-8e1c3cef0e04"
                 },
@@ -179,6 +225,12 @@
                         "name": "itemclick",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridItemClick1",
                     "designerId": "d4f263f9-839d-406d-a07a-9f4ba07a3d74"
                 },
@@ -194,6 +246,11 @@
                         "hidden": true,
                         "text": "Estado Registro"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyColumn28",
                     "designerId": "3d9b8a1f-5dd0-4a4f-8615-698f313e5f2e"
                 },
@@ -208,6 +265,11 @@
                         "dataIndex": "id",
                         "hidden": true,
                         "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
                     },
                     "name": "MyNumberColumn68",
                     "designerId": "8908663c-6711-4aeb-a191-a3254d630d23"
@@ -225,6 +287,12 @@
                         "hidden": true,
                         "text": "Uid"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyNumberColumn72",
                     "designerId": "a540ffe8-1c2d-44a1-ab35-0e727a5786c0"
                 },
@@ -241,6 +309,12 @@
                         "text": "Codigo",
                         "width": "50%"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
                     "name": "MyNumberColumn73",
                     "designerId": "d1a3c7b1-71bf-41da-b944-076a589e6829"
                 },
@@ -255,6 +329,11 @@
                         "dataIndex": "nombre",
                         "text": "Nombre",
                         "width": "50%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn30",
                     "designerId": "3728543f-376c-47a0-807b-e785f172b271"
@@ -273,6 +352,12 @@
                         ],
                         "name": "beforerender",
                         "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
                     "name": "onGridBeforeRender",
                     "designerId": "a9b1a978-dca0-43e8-9538-83b9659dc29e"
@@ -295,6 +380,15 @@
                 "layout": "column",
                 "title": "My Form"
             },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "designer|displayName": "string",
+                "dock": "string",
+                "flex": "number",
+                "header": "boolean",
+                "layout": "string",
+                "title": "string"
+            },
             "name": "MyForm5",
             "designerId": "bc97671a-3ebc-4791-84b7-cd1b38eba2f7",
             "cn": [
@@ -312,6 +406,13 @@
                         "layout": "hbox",
                         "layout|columnWidth": 1
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer2",
                     "designerId": "a0f96610-2efb-4809-837f-00887767ae60",
                     "cn": [
@@ -326,6 +427,11 @@
                                 "cls": "",
                                 "iconCls": "x-fa fa-plus",
                                 "text": "Nuevo"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string",
+                                "text": "string"
                             },
                             "name": "MyButton3",
                             "designerId": "7d18c3a4-5808-4171-99d9-e2ef4ab52563",
@@ -346,6 +452,11 @@
                                         "implHandler": [
                                             "f_crud.form_open(this.up(\"[cls=gridpanel]\"),'ADD');"
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "fdd86cf9-59ae-41a2-9d07-276f7fe7ba48"
@@ -369,6 +480,14 @@
                         "layout": "hbox",
                         "layout|columnWidth": 0.33
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer3",
                     "designerId": "843d8b31-89f3-417f-bab0-d206e488aa3f",
                     "cn": [
@@ -384,6 +503,12 @@
                                 "iconCls": "x-fa fa-pencil",
                                 "margin": "0 0 0 10",
                                 "text": "Editar"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "text": "string"
                             },
                             "name": "MyButton5",
                             "designerId": "4beb3d17-602f-4d21-8374-3a267308e11a",
@@ -404,6 +529,11 @@
                                         "implHandler": [
                                             "f_crud.form_open(this.up('[cls=gridpanel]'),'EDIT');"
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "f2edab03-144b-4722-95cd-f5bc90832601"
@@ -426,6 +556,13 @@
                         "layout": "hbox",
                         "layout|columnWidth": 0.33
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer4",
                     "designerId": "b50c3d25-9ef8-40d7-8b42-caabb63fc7e2",
                     "cn": [
@@ -442,6 +579,13 @@
                                 "layout|flex": null,
                                 "margin": "0 0 0 10",
                                 "text": "Borrar"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
                             },
                             "name": "MyButton4",
                             "designerId": "d263282a-4d47-4cd5-85e8-c226bd3dca92",
@@ -463,6 +607,11 @@
                                             "var gridPanel = this.up('[cls=gridpanel]');",
                                             "f_crud.grid_delete(gridPanel);"
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "e4dc6dc7-9e59-4b4e-9057-46ff209f0a69"
@@ -487,6 +636,12 @@
                 ],
                 "name": "afterrender",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onGridpanelAfterRender",
             "designerId": "20c0a2b2-a6e4-4cc6-9c4f-a9f05664fb81"

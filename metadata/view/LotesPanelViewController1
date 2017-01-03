@@ -9,6 +9,10 @@
         "designer|userAlias": "rubrospanel",
         "designer|userClassName": "LotesPanelViewController1"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesPanelViewController1",
     "designerId": "a4c243b3-c9ae-43f0-80e6-562b4c953e4d"
 }

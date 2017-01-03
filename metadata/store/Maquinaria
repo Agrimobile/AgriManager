@@ -10,6 +10,11 @@
         "model": "Maquinaria",
         "storeId": "Maquinaria"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Insumos1",
     "designerId": "9a152f32-0b92-4085-996c-123b009d4cfd",
     "cn": [

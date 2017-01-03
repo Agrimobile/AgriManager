@@ -9,5 +9,9 @@
         "designer|userAlias": "lotes_actividadespanel",
         "designer|userClassName": "Lotes_actividadesPanelViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "994a49db-bfa5-49e8-9690-2a208b8f75fe"
 }

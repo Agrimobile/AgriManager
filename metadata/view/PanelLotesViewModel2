@@ -9,6 +9,10 @@
         "designer|userAlias": "tareaspanel",
         "designer|userClassName": "PanelLotesViewModel2"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "PanelLotesViewModel2",
     "designerId": "63402f13-1f1b-496b-a0f7-a9d5304f62cc"
 }

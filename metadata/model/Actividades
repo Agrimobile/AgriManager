@@ -12,6 +12,11 @@
             "{type: 'uuid'}"
         ]
     },
+    "configAlternates": {
+        "aliasSQL": "string",
+        "designer|userClassName": "string",
+        "identifier": "object"
+    },
     "name": "MyModel",
     "designerId": "0eff1d5e-44c8-444c-b378-80c96d57780c",
     "customConfigs": [
@@ -32,6 +37,9 @@
             "userConfig": {
                 "name": "estado_registro"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyString",
             "designerId": "a87a8c41-2baf-4377-a004-9f0e2e44bf44"
         },
@@ -44,6 +52,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyInteger",
             "designerId": "bf1989d4-8720-4add-b0ac-febc67435c23"
@@ -59,10 +70,11 @@
                 "name": "uid",
                 "sincronizar": false
             },
-            "name": "MyInteger1",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger1",
             "designerId": "ce1ea89a-636c-44ed-9fdf-a360aa44f9bf",
             "customConfigs": [
                 {
@@ -82,6 +94,9 @@
             "userConfig": {
                 "name": "codigo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyInteger2",
             "designerId": "7efdc873-c933-4044-9b9d-482617de6645"
         },
@@ -95,6 +110,10 @@
             "userConfig": {
                 "aliasSQL": "descrip",
                 "name": "nombre"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyString1",
             "designerId": "a203c676-5631-4e33-990b-29c4f7574017",
@@ -117,6 +136,10 @@
                 "aliasSQL": "fecha_desde",
                 "name": "desde"
             },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
+            },
             "name": "MyDate",
             "designerId": "7256e2f0-096d-4ccb-bef5-929180c9b50b",
             "customConfigs": [
@@ -137,6 +160,10 @@
             "userConfig": {
                 "aliasSQL": "fecha_hasta",
                 "name": "hasta"
+            },
+            "configAlternates": {
+                "aliasSQL": "string",
+                "name": "string"
             },
             "name": "MyDate1",
             "designerId": "3ceb3891-73d1-42ed-aa48-151cb725c3b7",
@@ -159,10 +186,11 @@
                 "name": "cod_periodo",
                 "sincronizar": true
             },
-            "name": "MyInteger47",
             "configAlternates": {
-                "sincronizar": "boolean"
+                "sincronizar": "boolean",
+                "name": "string"
             },
+            "name": "MyInteger47",
             "designerId": "58170a69-3caf-4172-9d16-919d1ca5238f",
             "customConfigs": [
                 {

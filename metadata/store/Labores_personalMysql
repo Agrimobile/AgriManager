@@ -11,6 +11,12 @@
         "sql": "select id,id_labores,cod_empleado as cod_personal,cantidad,precio,importe from labores_personal",
         "storeId": "Labores_personalMysql"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "sql": "string",
+        "storeId": "string"
+    },
     "name": "Labores_personal1",
     "designerId": "056dffd0-0389-4d5a-a0db-90de03dd5e3f",
     "customConfigs": [
@@ -40,6 +46,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "rootProperty": "Labores_personal"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader9",
                     "designerId": "c69514c9-49fd-4b24-99cf-98ac9e073cfa"

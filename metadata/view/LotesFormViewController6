@@ -9,6 +9,10 @@
         "designer|userAlias": "syncform",
         "designer|userClassName": "LotesFormViewController6"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController6",
     "designerId": "83c22bcc-fdbc-4577-ad2e-6d20863ad048"
 }

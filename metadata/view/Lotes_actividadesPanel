@@ -20,6 +20,19 @@
         "titleAlign": "center",
         "width": null
     },
+    "configAlternates": {
+        "cls": "typedarray",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "dock": "string",
+        "flex": "number",
+        "height": "auto",
+        "itemId": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto"
+    },
     "name": "MyPanel1",
     "designerId": "87b132a1-31e1-49af-8999-f740dd67cf45",
     "viewControllerInstanceId": "1691b9bb-70e3-456b-b2c7-678582a8aecf",
@@ -37,6 +50,10 @@
                     "paneltool"
                 ],
                 "iconCls": "x-fa fa-arrow-left"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "iconCls": "string"
             },
             "name": "MyTool3",
             "designerId": "e2638f19-b8ab-4c70-83e9-fcc5de213536",
@@ -57,6 +74,12 @@
                         ],
                         "name": "click",
                         "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
                     "name": "onToolClick",
                     "designerId": "d633ea9c-d964-4b66-b162-f9fe9be36bdd"
@@ -83,6 +106,12 @@
                 "name": "render",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onPanelRender",
             "designerId": "f02d5424-fbc7-4b8e-abb1-bed3d837aeab"
         },
@@ -101,6 +130,15 @@
                 "scrollable": null,
                 "store": "Lotes_actividades",
                 "title": "Lotes en Actividad"
+            },
+            "configAlternates": {
+                "header": "boolean",
+                "hideHeaders": "boolean",
+                "itemId": "string",
+                "overlapHeader": "boolean",
+                "scrollable": "auto",
+                "store": "store",
+                "title": "string"
             },
             "name": "MyGridPanel3",
             "designerId": "c7a0a76e-c50f-457f-8bbf-56016ed057aa",
@@ -140,6 +178,12 @@
                         "name": "itemlongpress",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridpanelItemLongpress",
                     "designerId": "11092193-1aa1-4cef-ab88-9abc14898c13"
                 },
@@ -157,6 +201,12 @@
                         ],
                         "name": "selectionchange",
                         "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
                     "name": "onGridpanelSelectionChange",
                     "designerId": "8b5516b6-263d-49f0-a182-e53b1ae5e1f2"
@@ -183,6 +233,12 @@
                         "name": "itemclick",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridpanelItemClick",
                     "designerId": "93188dd1-cbac-4ae4-941e-02097fdd0598"
                 },
@@ -201,6 +257,12 @@
                         "name": "beforerender",
                         "scope": "me"
                     },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
                     "name": "onGridBeforeRender",
                     "designerId": "c5ed96a4-27bb-4a75-8a03-2202bd9798de"
                 },
@@ -216,6 +278,11 @@
                         "hidden": true,
                         "text": "Estado Registro"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyColumn20",
                     "designerId": "edc4437b-7559-4aff-91a6-eec9388736fb"
                 },
@@ -230,6 +297,11 @@
                         "dataIndex": "id",
                         "hidden": true,
                         "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
                     },
                     "name": "MyNumberColumn5",
                     "designerId": "d3f77b45-1860-48b5-a52f-43902c1caefc"
@@ -247,6 +319,12 @@
                         "hidden": true,
                         "text": "Uid"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyNumberColumn44",
                     "designerId": "8ea4fb02-8935-45a1-8376-a600ecd43a6c"
                 },
@@ -262,6 +340,11 @@
                         "format": "00",
                         "text": "Codigo"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
                     "name": "MyNumberColumn45",
                     "designerId": "1da7f9f3-3c85-4cf2-95a6-e3dd34175dc7"
                 },
@@ -275,6 +358,10 @@
                     "userConfig": {
                         "dataIndex": "nombre",
                         "text": "Nombre"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
                     },
                     "name": "MyColumn21",
                     "designerId": "13513917-e5f7-46ba-8218-d3e6ba2741b2"
@@ -292,6 +379,12 @@
                         "hidden": true,
                         "text": "Cod Lote"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
                     "name": "MyNumberColumn53",
                     "designerId": "b52ca8d7-6dae-424c-b09f-57f618cc7682"
                 },
@@ -307,6 +400,12 @@
                         "format": "00",
                         "hidden": true,
                         "text": "Cod Actividad"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
                     },
                     "name": "MyNumberColumn54",
                     "designerId": "75aefeab-1d4c-461e-8a5a-c08f4ef06628"
@@ -328,6 +427,12 @@
                 "name": "afterrender",
                 "scope": "me"
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
             "name": "onGridpanelAfterRender",
             "designerId": "7e85b688-c3b1-4f18-9480-ef7ffa591bf5"
         },
@@ -345,6 +450,14 @@
                 "header": false,
                 "layout": "column",
                 "title": "My Form"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "designer|displayName": "string",
+                "dock": "string",
+                "header": "boolean",
+                "layout": "string",
+                "title": "string"
             },
             "name": "MyForm",
             "designerId": "7ad6df09-f36b-4e05-bc26-201711ecb5c2",
@@ -364,6 +477,14 @@
                         "layout": "hbox",
                         "layout|columnWidth": 1
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer5",
                     "designerId": "17cc7448-6310-49f0-8a39-550cf77d6cc2",
                     "cn": [
@@ -378,6 +499,11 @@
                                 "iconCls": "x-fa fa-plus",
                                 "layout|flex": null,
                                 "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "text": "string"
                             },
                             "name": "MyButton",
                             "designerId": "5324287a-4a03-4bb5-a08b-9b7709ad1527",
@@ -399,6 +525,11 @@
                                             "var lotes_actividades_grid = this.up(\"[cls=gridpanel]\");",
                                             "f_crud.form_open(lotes_actividades_grid);"
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "34a66fc9-318c-4067-9361-15cfa278e42e"
@@ -422,6 +553,14 @@
                         "layout": "hbox",
                         "layout|columnWidth": 0.33
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer",
                     "designerId": "edaf38cd-bda4-4b0e-aa96-12523750b16c",
                     "cn": [
@@ -437,6 +576,12 @@
                                 "iconCls": "x-fa fa-pencil",
                                 "margin": "0 0 0 10",
                                 "text": "Editar"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "text": "string"
                             },
                             "name": "MyButton5",
                             "designerId": "68b6c494-4d34-4572-bb65-90f5c2937096",
@@ -460,6 +605,11 @@
                                             "f_crud.form_open(lotes_actividades_grid,'EDIT');"
                                         ]
                                     },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
                                     "name": "handler",
                                     "designerId": "497a945b-f34f-42ad-9f56-9789f8a92dbd"
                                 }
@@ -481,6 +631,13 @@
                         "layout": "hbox",
                         "layout|columnWidth": 0.33
                     },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout": "string",
+                        "layout|columnWidth": "auto"
+                    },
                     "name": "MyContainer6",
                     "designerId": "620ca333-35e4-4727-acb9-e719d4414c6f",
                     "cn": [
@@ -497,6 +654,13 @@
                                 "layout|flex": null,
                                 "margin": "0 0 0 10",
                                 "text": "Borrar"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
                             },
                             "name": "MyButton4",
                             "designerId": "5b77ec13-be98-42e4-9d84-ac5b3752626c",
@@ -525,6 +689,11 @@
                                             "f_crud.grid_check_delete(gridPanel,checkConfig);",
                                             ""
                                         ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
                                     },
                                     "name": "handler",
                                     "designerId": "a65bdb49-dcf8-4567-bfa8-e9e2bc3fa7af"

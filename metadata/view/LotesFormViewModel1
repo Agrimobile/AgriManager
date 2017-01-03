@@ -9,6 +9,10 @@
         "designer|userAlias": "lotes_actividadesform",
         "designer|userClassName": "LotesFormViewModel1"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewModel1",
     "designerId": "a51272a7-7dec-4250-82d1-366969d6346f"
 }

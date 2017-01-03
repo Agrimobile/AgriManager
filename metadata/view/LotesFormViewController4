@@ -9,6 +9,10 @@
         "designer|userAlias": "laboresform",
         "designer|userClassName": "LotesFormViewController4"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "LotesFormViewController4",
     "designerId": "f1961471-7148-4ea1-a32b-06c8dccef075"
 }

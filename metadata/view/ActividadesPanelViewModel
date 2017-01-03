@@ -9,5 +9,9 @@
         "designer|userAlias": "actividadespanel",
         "designer|userClassName": "ActividadesPanelViewModel"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "846545cf-1cc9-4ee7-8f25-7057cd77e16e"
 }

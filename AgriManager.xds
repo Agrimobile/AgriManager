@@ -3,8 +3,8 @@
     "settings": {
         "cmd": {
             "license": "commercial",
-            "cmdVersion": "6.2.0.103",
-            "frameworkVersion": "6.2.0.981"
+            "cmdVersion": "6.2.1.29",
+            "frameworkVersion": "6.2.1.167"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
         "urlPrefix": "http://localhost:57953/",
@@ -31,8 +31,8 @@
             "buildPlatform": false
         }
     },
-    "xdsVersion": "4.0.2",
-    "xdsBuild": 209,
+    "xdsVersion": "4.1.0",
+    "xdsBuild": 91,
     "schemaVersion": 1,
     "upgradeVersion": 310000000001,
     "framework": "ext62",

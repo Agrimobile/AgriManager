@@ -11,6 +11,12 @@
         "url": "..\\LibJS\\sinc_lib.js",
         "x-compile": true
     },
+    "configAlternates": {
+        "defer": "boolean",
+        "designer|userClassName": "string",
+        "url": "uri",
+        "x-compile": "boolean"
+    },
     "name": "js1",
     "designerId": "245c73b3-afd7-4b01-8c90-53393f2616ca"
 }

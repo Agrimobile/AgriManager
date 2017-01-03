@@ -10,6 +10,11 @@
         "model": "Establecimientos",
         "storeId": "Establecimientos"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "MyJsonStore",
     "designerId": "033e4f0c-b414-4764-9ee4-8a99fa3d2d05",
     "cn": [

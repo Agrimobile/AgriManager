@@ -17,6 +17,18 @@
         "title": "Datos de conexión",
         "width": null
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
     "name": "ContratistasForm1",
     "designerId": "63257582-9adb-4b65-9cc3-3527bb962213",
     "viewControllerInstanceId": "8f4be77f-02c8-4eed-8fbd-0b6c873643fa",
@@ -36,6 +48,13 @@
                 "layout": "hbox",
                 "layout|flex": null
             },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
             "name": "MyContainer1",
             "designerId": "edc57574-4a72-40c6-8cbe-0efe5f81c51b",
             "cn": [
@@ -52,6 +71,13 @@
                         "layout|margins": "",
                         "margin": 10,
                         "text": "Aceptar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton6",
                     "designerId": "d4ccd00f-9259-4901-b9b8-53c2b2a45c8e",
@@ -87,6 +113,11 @@
                                     "}"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
                             "name": "handler",
                             "designerId": "960cfc24-488b-4dd6-81ea-b6923e6d8ae9"
                         }
@@ -104,6 +135,12 @@
                         "layout|flex": null,
                         "margin": 10,
                         "text": "Cancelar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
                     },
                     "name": "MyButton7",
                     "designerId": "7bc06bab-6fd5-4f32-83cd-b3ab7a0c6db3",
@@ -124,6 +161,11 @@
                                 "implHandler": [
                                     "f_crud.close_form(this.up(\"#form\"));"
                                 ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
                             },
                             "name": "handler",
                             "designerId": "a23050f0-7fff-4b33-bbc5-8c388eecf602"
@@ -147,6 +189,14 @@
                 "layout|flex": null,
                 "name": "usuario"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField11",
             "designerId": "c0b808d2-324a-4845-958c-36766aac17db"
         },
@@ -166,6 +216,15 @@
                 "layout|flex": null,
                 "name": "clave"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "inputType": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField1",
             "designerId": "45cd2b50-08a8-4696-9215-3ba3686958e0"
         },
@@ -183,6 +242,14 @@
                 "itemId": "base",
                 "layout|flex": null,
                 "name": "base"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
             },
             "name": "MyTextField22",
             "designerId": "9e9550b8-1cbe-4403-9cb3-6274977afda7"
@@ -202,6 +269,14 @@
                 "layout|flex": null,
                 "name": "servidor"
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
             "name": "MyTextField23",
             "designerId": "c178077e-18c7-4d8c-a3d7-0357813f9dfd"
         },
@@ -216,7 +291,7 @@
                 "fn": "onFormActivate",
                 "implHandler": [
                     "var item = component.header.title.text,",
-                    "    form = component, ",
+                    "    form = component,",
                     "    user = window.localStorage.getItem(\"agrimanager_usuario\"),",
                     "    clave = window.localStorage.getItem(\"agrimanager_clave\"),",
                     "    server = window.localStorage.getItem(\"agrimanager_servidor\"),",
@@ -257,11 +332,17 @@
                     "if(base) {",
                     "  form.down('#base').setValue(base);",
                     "}else {",
-                    "  form.down('#servidor').setValue('sistec01');",
+                    "  form.down('#base').setValue('sistec01');",
                     "}"
                 ],
                 "name": "activate",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormActivate",
             "designerId": "45d49430-a31d-41d0-91c4-6eabcf38109e"
@@ -280,6 +361,12 @@
                 ],
                 "name": "render",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onFormRender",
             "designerId": "b1eb601a-14aa-45f5-9283-3c9ee9fe9330"

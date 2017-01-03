@@ -10,6 +10,11 @@
         "model": "Insumos",
         "storeId": "Insumos"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "Actividades1",
     "designerId": "d058d573-db5b-4159-90e6-59edd30631cd",
     "cn": [
