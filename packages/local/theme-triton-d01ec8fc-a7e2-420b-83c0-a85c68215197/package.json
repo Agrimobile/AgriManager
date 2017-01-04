@@ -32,6 +32,7 @@
         "src": [
             "${package.dir}/sass/src",
             "${package.dir}/sass/src/_architect_src.scss",
+            "${package.dir}/sass/src/_architect_src.scss",
             "${package.dir}/sass/src/_architect_src.scss"
         ]
     },
