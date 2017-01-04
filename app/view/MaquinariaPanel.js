@@ -167,7 +167,15 @@ Ext.define('MyApp.view.MaquinariaPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
-                f_crud.grid_delete(gridPanel);
+                // f_crud.grid_delete(gridPanel);
+
+                var checkConfig = {
+                  table: 'Labores_maquinaria',
+                  field: 'cod_maquinaria',
+                  msgTitle: 'Maquinaria asignada',
+                  message: 'No puede borrar maquinaria que fueron asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Maquinaria'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',
               margin: '0 0 0 10',

@@ -167,7 +167,14 @@ Ext.define('MyApp.view.PersonalPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
-                f_crud.grid_delete(gridPanel);
+
+                var checkConfig = {
+                  table: 'Labores_personal',
+                  field: 'cod_personal',
+                  msgTitle: 'Personal asignado',
+                  message: 'No puede borrar personal que fue asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Personal'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',
               margin: '0 0 0 10',
