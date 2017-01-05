@@ -600,13 +600,12 @@
                                         "fn": "handler",
                                         "implHandler": [
                                             "var gridPanel = this.up('[cls=gridpanel]');",
-                                            "// f_crud.grid_delete(gridPanel);",
                                             "",
                                             "var checkConfig = {",
                                             "    table: 'Labores_maquinaria',",
-                                            "    field: 'cod_maquinaria',",
+                                            "    field: 'cod_maquina',",
                                             "    msgTitle: 'Maquinaria asignada',",
-                                            "    message: 'No puede borrar maquinaria que fueron asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Maquinaria'",
+                                            "    message: 'No puede borrar maquinaria que fue asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Maquinaria'",
                                             "};",
                                             "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]

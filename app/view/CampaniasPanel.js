@@ -167,7 +167,14 @@ Ext.define('MyApp.view.CampaniasPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
-                f_crud.grid_delete(gridPanel);
+
+                var checkConfig = {
+                  table: 'actividades',
+                  field: 'cod_periodo',
+                  msgTitle: 'Campaña asignada',
+                  message: 'No puede borrar un campaña asignada a una actividad, <br> desvinculela desde el editor de la actividad asociada'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',
               margin: '0 0 0 10',

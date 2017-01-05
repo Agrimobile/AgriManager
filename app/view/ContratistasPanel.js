@@ -167,7 +167,14 @@ Ext.define('MyApp.view.ContratistasPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
-                f_crud.grid_delete(gridPanel);
+
+                var checkConfig = {
+                  table: 'labores',
+                  field: 'cod_contratista',
+                  msgTitle: 'Contratista asignado',
+                  message: 'No puede borrar un contratista asignado a una labor, <br> desvinculelo desde el editor de la labor asociado'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',
               margin: '0 0 0 10',

@@ -716,7 +716,7 @@
                                             "    table: 'Labores_insumos',",
                                             "    field: 'cod_insumo',",
                                             "    msgTitle: 'Insumo asignado',",
-                                            "    message: 'No puede borrar un insumo que fueron asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Insumos'",
+                                            "    message: 'No puede borrar un insumo que fue asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Insumos'",
                                             "};",
                                             "f_crud.grid_check_delete(gridPanel,checkConfig);",
                                             ""

@@ -184,11 +184,12 @@ Ext.define('MyApp.view.TareasPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
+
                 var checkConfig = {
-                  table: 'Labores',
+                  table: 'labores',
                   field: 'cod_tarea',
-                  msgTitle: 'Tarea asignada',
-                  message: 'Esta tarea fue asignada en al menos una labor<br> cambie la tarea en esas labores, o borrelas primero'
+                  msgTitle: 'Tarea asignado',
+                  message: 'No puede borrar una tarea asignada a una labor, <br> desvinculela desde el editor de la labor asociada'
                 };
                 f_crud.grid_check_delete(gridPanel,checkConfig);
               },
