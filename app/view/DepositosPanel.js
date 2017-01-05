@@ -167,7 +167,14 @@ Ext.define('MyApp.view.DepositosPanel', {
               xtype: 'button',
               handler: function(button, e) {
                 var gridPanel = this.up('[cls=gridpanel]');
-                f_crud.grid_delete(gridPanel);
+
+                var checkConfig = {
+                  table: 'labores_insumos',
+                  field: 'cod_deposito',
+                  msgTitle: 'Deposito asignado',
+                  message: 'No puede borrar un deposito asignado a una labor, <br> desvincule la labor borrando el registro en la pestaña Insumos del editor de labores'
+                };
+                f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',
               margin: '0 0 0 10',
