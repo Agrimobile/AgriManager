@@ -359,7 +359,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    return getDisplayValue('Personal', value, 'nombre');
+                    return f_crud.getDisplayValue('Personal', value, 'nombre');
                   },
                   width: '20%',
                   dataIndex: 'cod_personal',
@@ -530,7 +530,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'numbercolumn',
                   renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-                    return getDisplayValue('Maquinaria', value, 'nombre');
+                    return f_crud.getDisplayValue('Maquinaria', value, 'nombre');
                   },
                   width: '33%',
                   dataIndex: 'cod_maquina',

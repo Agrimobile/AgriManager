@@ -1242,7 +1242,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "return getDisplayValue('Personal', value, 'nombre');"
+                                                    "return f_crud.getDisplayValue('Personal', value, 'nombre');"
                                                 ]
                                             },
                                             "configAlternates": {
@@ -1827,7 +1827,7 @@
                                                 ],
                                                 "fn": "renderer",
                                                 "implHandler": [
-                                                    "return getDisplayValue('Maquinaria', value, 'nombre');"
+                                                    "return f_crud.getDisplayValue('Maquinaria', value, 'nombre');"
                                                 ]
                                             },
                                             "configAlternates": {
