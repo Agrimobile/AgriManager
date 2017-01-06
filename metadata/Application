@@ -101,7 +101,8 @@
             "MainMenu",
             "LoginForm",
             "SyncForm",
-            "Mensaje"
+            "Mensaje",
+            "MenuPanel"
         ]
     },
     "configAlternates": {

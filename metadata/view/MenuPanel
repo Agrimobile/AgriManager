@@ -1,0 +1,317 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menupanel",
+        "designer|userClassName": "MenuPanel",
+        "flex": null,
+        "id": "agrimobile1",
+        "itemId": "agrimobile1",
+        "layout": "card",
+        "scrollable": true,
+        "title": "Agrimobile",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "flex": "number",
+        "id": "string",
+        "itemId": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyPanel5",
+    "designerId": "4614a918-23ce-4289-9dbf-eada3442b03f",
+    "viewControllerInstanceId": "060fef7f-f61e-4b8b-a39d-19c5ab752da9",
+    "viewModelInstanceId": "a5c526da-516d-4d99-9fef-98a5ac7705e9",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "rootVisible": false,
+                "store": "MainMenu",
+                "title": "Menu"
+            },
+            "configAlternates": {
+                "rootVisible": "boolean",
+                "store": "store",
+                "title": "string"
+            },
+            "name": "MyTreePanel",
+            "designerId": "c77e15fb-80ce-4223-bf07-19bf5ed4e80d",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "MenuTree"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string"
+                    },
+                    "name": "MyTreeView",
+                    "designerId": "01649401-3ce9-4991-8005-1d0b7d85c4f6",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onViewItemClick1",
+                                "implHandler": [
+                                    "/*var createPanel = function(panelClass) {",
+                                    "    var cardClass = \"MyApp.view.\" + panelClass;",
+                                    "    if(Ext.ClassManager.get(cardClass)) {",
+                                    "        var newPan = Ext.create(cardClass);",
+                                    "        MyApp.main.add(newPan);",
+                                    "        MyApp.main.getLayout().next();",
+                                    "    }",
+                                    "    else {",
+                                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
+                                    "        throw errorMsg;",
+                                    "    }",
+                                    "};",
+                                    "var panelClass = record.get('panelClass');",
+                                    "createPanel(panelClass);",
+                                    "",
+                                    "*/",
+                                    "var layout = MyApp.main.getLayout(), next,",
+                                    "    panelClass = item.panelClass,",
+                                    "    createPanel = function(panelClass) {",
+                                    "      var cardClass = \"MyApp.view.\" + panelClass;",
+                                    "      if(Ext.ClassManager.get(cardClass)) {",
+                                    "        var newPan = Ext.create(cardClass);",
+                                    "        MyApp.main.add(newPan);",
+                                    "        MyApp.main.getLayout().next();",
+                                    "      }",
+                                    "      else {",
+                                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
+                                    "        throw errorMsg;",
+                                    "      }",
+                                    "    };",
+                                    "",
+                                    "layout.setActiveItem(0);",
+                                    "next = layout.getNext();",
+                                    "while(next) {",
+                                    "  next.close();",
+                                    "  next.destroy();",
+                                    "  next = layout.getNext();",
+                                    "}",
+                                    "createPanel(panelClass);"
+                                ],
+                                "name": "itemclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onViewItemClick1",
+                            "designerId": "19927b1a-4497-43c0-996f-4ceafd56ee39"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelRender1",
+                "implHandler": [
+                    "var mainMenuTool = component.down(\"#mainmenu-tool\"),",
+                    "    configMenuTool = component.down(\"#configmenu-tool\"),",
+                    "    mainMenuStoreRecords = Ext.getStore(\"MainMenu\").getData().items,",
+                    "    configMenuStoreRecords = Ext.getStore(\"ConfigMenu\").getData().items,",
+                    "    itemClicHandler = function(item, e) {",
+                    "      this.parentMenu.openCard(item, e);",
+                    "    };",
+                    "",
+                    "mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');",
+                    "configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');",
+                    "",
+                    "for (var i = 0; i < mainMenuStoreRecords.length; i++) {",
+                    "    mainMenuTool.menu.add({",
+                    "      xtype: 'menuitem',",
+                    "      iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,",
+                    "      text: mainMenuStoreRecords[i].data.text,",
+                    "      panelClass: mainMenuStoreRecords[i].data.panelClass,",
+                    "      padding: '10px 0px',",
+                    "      handler: itemClicHandler",
+                    "    });",
+                    "}",
+                    "",
+                    "for (var i = 0; i < configMenuStoreRecords.length; i++) {",
+                    "    configMenuTool.menu.add({",
+                    "      xtype: 'menuitem',",
+                    "      iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,",
+                    "      text: configMenuStoreRecords[i].data.text,",
+                    "      panelClass: configMenuStoreRecords[i].data.panelClass,",
+                    "      padding: '10px 0px',",
+                    "      handler: itemClicHandler",
+                    "    });",
+                    "}",
+                    "",
+                    "//main configuration",
+                    "MyApp.main = component;",
+                    "MyApp.archivo_base = 'AgriManager';",
+                    "MyApp.screen_count = 0;",
+                    "MyApp.screen_name = [];",
+                    "//MyApp.url_lib     = '../LibPHP/';",
+                    "//MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';",
+                    "MyApp.url_lib       = 'http://localhost:8080/LibPHP/';",
+                    "MyApp.usuario       = window.localStorage.getItem(\"agrimanager_usuario\");",
+                    "MyApp.clave         = window.localStorage.getItem(\"agrimanager_clave\");",
+                    "MyApp.base_nombre   = window.localStorage.getItem(\"agrimanager_base\");",
+                    "MyApp.base_url      = window.localStorage.getItem(\"agrimanager_servidor\");",
+                    "MyApp.base_usuario  = 'dba';",
+                    "MyApp.base_clave    = 'gestion525';",
+                    "MyApp.estado_sinc   = '';",
+                    "MyApp.sinc_array_store = [];",
+                    "MyApp.sinc_array_tabla = [];",
+                    "MyApp.estado_editar = 'N';",
+                    "",
+                    "// loading data",
+                    "f_crud.load_store('Rubros');",
+                    "f_crud.load_store('Personal');",
+                    "f_crud.load_store('Maquinaria');",
+                    "f_crud.load_store('Contratistas');",
+                    "f_crud.load_store('Depositos');",
+                    "f_crud.load_store('Campanias');",
+                    "f_crud.load_store('Tareas');",
+                    "",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPanelRender1",
+            "designerId": "0e289e9d-25b7-45f7-9dd8-7835d840b574"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "paneltool"
+                ],
+                "iconCls": "x-fa fa-bars",
+                "itemId": "mainmenu-tool"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "iconCls": "string",
+                "itemId": "string"
+            },
+            "name": "MyTool5",
+            "designerId": "8652d9a9-ac9b-47d5-bbd9-d46afc31475f",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onToolClick2",
+                        "implHandler": [
+                            "var toolMenu = tool.menu;",
+                            "toolMenu.showBy(tool);"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onToolClick2",
+                    "designerId": "210e9352-eefa-41e8-9d7e-5622c87952d6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-gear",
+                "itemId": "configmenu-tool"
+            },
+            "configAlternates": {
+                "iconCls": "string",
+                "itemId": "string"
+            },
+            "name": "MyTool6",
+            "designerId": "59be0b41-4091-4a45-a14d-7fe6aca7b3c9",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onToolClick11",
+                        "implHandler": [
+                            "var toolMenu = tool.menu;",
+                            "toolMenu.showBy(tool);"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onToolClick11",
+                    "designerId": "3d01c211-dec7-4abc-a847-116e66ae813f"
+                }
+            ]
+        }
+    ]
+}

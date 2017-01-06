@@ -19,9 +19,9 @@ Ext.define('MyApp.view.MainContainer', {
 
   requires: [
     'MyApp.view.MainContainerViewModel',
-    'Ext.tree.Panel',
-    'Ext.tree.View',
-    'Ext.panel.Tool'
+    'Ext.panel.Tool',
+    'Ext.form.Panel',
+    'Ext.button.Button'
   ],
 
   viewModel: {
@@ -40,22 +40,6 @@ Ext.define('MyApp.view.MainContainer', {
       layout: 'card',
       title: 'Agrimobile',
       titleAlign: 'center',
-      items: [
-        {
-          xtype: 'treepanel',
-          title: 'Menu',
-          store: 'MainMenu',
-          rootVisible: false,
-          viewConfig: {
-            listeners: {
-              itemclick: 'onViewItemClick'
-            }
-          }
-        }
-      ],
-      listeners: {
-        render: 'onPanelRender'
-      },
       tools: [
         {
           xtype: 'tool',
@@ -74,31 +58,195 @@ Ext.define('MyApp.view.MainContainer', {
             click: 'onToolClick1'
           }
         }
-      ]
+      ],
+      items: [
+        {
+          xtype: 'panel',
+          openHomeItem: function(button) {
+            var layout = MyApp.main.getLayout(), next,
+              panelClass = button.panelClass,
+              createPanel = function(panelClass) {
+                var cardClass = "MyApp.view." + panelClass;
+              if(Ext.ClassManager.get(cardClass)) {
+                var newPan = Ext.create(cardClass);
+                MyApp.main.add(newPan);
+                MyApp.main.getLayout().next();
+              }
+              else {
+                var errorMsg = "Error: Panel " + panelClass + " does not exist";
+                throw errorMsg;
+              }
+            };
+            layout.setActiveItem(0);
+            next = layout.getNext();
+            while(next) {
+              next.close();
+              next.destroy();
+              next = layout.getNext();
+            }
+            createPanel(panelClass);
+          },
+          cls: 'gridpanel',
+          flex: 1,
+          itemId: 'homePanel',
+          scrollable: true,
+          iconCls: 'x-fa fa-home',
+          title: 'Home',
+          titleAlign: 'left',
+          dockedItems: [
+            {
+              xtype: 'form',
+              dock: 'top',
+              layout: 'column',
+              bodyPadding: 10,
+              header: false,
+              title: 'My Form',
+              items: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'mainButtonBox',
+                  itemId: 'EstabBox',
+                  margin: '20px 20px 0 20px',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        button.up("#homePanel").openHomeItem(button);
+                      },
+                      panelClass: 'EstablecimientosPanel',
+                      cls: '',
+                      padding: '20px',
+                      width: '100%',
+                      iconCls: 'x-fa fa-industry',
+                      text: 'Establecimientos'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'mainButtonBox',
+                  itemId: 'ActivBox',
+                  margin: '20px 20px 0 20px',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        button.up("#homePanel").openHomeItem(button);
+                      },
+                      panelClass: 'ActividadesPanel',
+                      cls: '',
+                      margin: '',
+                      padding: '20px',
+                      width: '100%',
+                      iconCls: 'x-fa fa-pagelines',
+                      text: 'Actividades'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'mainButtonBox',
+                  itemId: 'SesionBox',
+                  margin: '20px 20px 0 20px',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        button.up("#homePanel").openHomeItem(button);
+                      },
+                      panelClass: 'LoginForm',
+                      cls: '',
+                      margin: '',
+                      padding: '20px',
+                      width: '100%',
+                      iconCls: 'x-fa fa-user',
+                      text: 'Iniciar Sesion'
+                    }
+                  ]
+                },
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  panelClass: '',
+                  cls: 'mainButtonBox',
+                  itemId: 'SyncBox',
+                  margin: '20px 20px 0 20px',
+                  layout: {
+                    type: 'hbox',
+                    align: 'stretch',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        button.up("#homePanel").openHomeItem(button);
+                      },
+                      panelClass: 'SyncForm',
+                      cls: '',
+                      margin: '',
+                      padding: '20px',
+                      width: '100%',
+                      iconCls: 'x-fa fa-rotate-right',
+                      text: 'Sincronizar'
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          listeners: {
+            render: 'onPanelRender'
+          }
+        }
+      ],
+      listeners: {
+        render: 'onAgrimobileRender'
+      }
     }
   ],
   listeners: {
     render: 'onViewportRender'
   },
 
-  onViewItemClick: function(dataview, record, item, index, e, eOpts) {
-    var createPanel = function(panelClass) {
-        var cardClass = "MyApp.view." + panelClass;
-        if(Ext.ClassManager.get(cardClass)) {
-            var newPan = Ext.create(cardClass);
-            MyApp.main.add(newPan);
-            MyApp.main.getLayout().next();
-        }
-        else {
-            var errorMsg = "Error: Panel " + panelClass + " does not exist";
-            throw errorMsg;
-        }
-    };
-    var panelClass = record.get('panelClass');
-    createPanel(panelClass);
+  onToolClick: function(tool, e, owner, eOpts) {
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
+  },
+
+  onToolClick1: function(tool, e, owner, eOpts) {
+    var toolMenu = tool.menu;
+    toolMenu.showBy(tool);
   },
 
   onPanelRender: function(component, eOpts) {
+    /*this.store_name = 'Personal';
+    this.model_name = 'MyApp.model.Personal';
+    this.form_name  = 'MyApp.view.PersonalForm';
+    var store = Ext.getStore(this.store_name);
+    this.form_store_array = [store];*/
+    //f_crud.load_store(this.store_name);
+  },
+
+  onAgrimobileRender: function(component, eOpts) {
     var mainMenuTool = component.down("#mainmenu-tool"),
         configMenuTool = component.down("#configmenu-tool"),
         mainMenuStoreRecords = Ext.getStore("MainMenu").getData().items,
@@ -111,25 +259,25 @@ Ext.define('MyApp.view.MainContainer', {
     configMenuTool.menu = Ext.create('MyApp.view.ConfigMenu');
 
     for (var i = 0; i < mainMenuStoreRecords.length; i++) {
-        mainMenuTool.menu.add({
-          xtype: 'menuitem',
-          iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,
-          text: mainMenuStoreRecords[i].data.text,
-          panelClass: mainMenuStoreRecords[i].data.panelClass,
-          padding: '10px 0px',
-          handler: itemClicHandler
-        });
+      mainMenuTool.menu.add({
+        xtype: 'menuitem',
+        iconCls: 'mainmenu-icon ' + mainMenuStoreRecords[i].data.iconCls,
+        text: mainMenuStoreRecords[i].data.text,
+        panelClass: mainMenuStoreRecords[i].data.panelClass,
+        padding: '10px 0px',
+        handler: itemClicHandler
+      });
     }
 
     for (var i = 0; i < configMenuStoreRecords.length; i++) {
-        configMenuTool.menu.add({
-          xtype: 'menuitem',
-          iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,
-          text: configMenuStoreRecords[i].data.text,
-          panelClass: configMenuStoreRecords[i].data.panelClass,
-          padding: '10px 0px',
-          handler: itemClicHandler
-        });
+      configMenuTool.menu.add({
+        xtype: 'menuitem',
+        iconCls: 'mainmenu-icon ' + configMenuStoreRecords[i].data.iconCls,
+        text: configMenuStoreRecords[i].data.text,
+        panelClass: configMenuStoreRecords[i].data.panelClass,
+        padding: '10px 0px',
+        handler: itemClicHandler
+      });
     }
 
     //main configuration
@@ -163,19 +311,8 @@ Ext.define('MyApp.view.MainContainer', {
 
   },
 
-  onToolClick: function(tool, e, owner, eOpts) {
-    var toolMenu = tool.menu;
-    toolMenu.showBy(tool);
-  },
-
-  onToolClick1: function(tool, e, owner, eOpts) {
-    var toolMenu = tool.menu;
-    toolMenu.showBy(tool);
-  },
-
   onViewportRender: function(component, eOpts) {
     MyApp.vp = component;
-
   }
 
 });
