@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "ActividadesMysql",
         "model": "Actividades",
-        "sql": "SELECT id,codigo,descrip as nombre FROM cuentas",
+        "sql": "SELECT id, codigo , descrip as nombre, fecha_desde as desde, fecha_hasta as hasta, cod_periodo FROM cuentas",
         "storeId": "ActividadesMysql"
     },
     "configAlternates": {

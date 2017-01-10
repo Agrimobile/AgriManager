@@ -134,11 +134,13 @@
             "codeClass": null,
             "userConfig": {
                 "aliasSQL": "fecha_desde",
+                "dateFormat": null,
                 "name": "desde"
             },
             "configAlternates": {
                 "aliasSQL": "string",
-                "name": "string"
+                "name": "string",
+                "dateFormat": "string"
             },
             "name": "MyDate",
             "designerId": "7256e2f0-096d-4ccb-bef5-929180c9b50b",
@@ -159,11 +161,13 @@
             "codeClass": null,
             "userConfig": {
                 "aliasSQL": "fecha_hasta",
+                "dateFormat": null,
                 "name": "hasta"
             },
             "configAlternates": {
                 "aliasSQL": "string",
-                "name": "string"
+                "name": "string",
+                "dateFormat": "string"
             },
             "name": "MyDate1",
             "designerId": "3ceb3891-73d1-42ed-aa48-151cb725c3b7",

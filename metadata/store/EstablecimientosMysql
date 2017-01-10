@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "EstablecimientosMysql",
         "model": "Establecimientos",
-        "sql": "SELECT id,codigo,nombre FROM establecimiento",
+        "sql": "SELECT id,codigo,nombre,nivelzoom as zoom,latitud,longitud FROM establecimiento",
         "storeId": "EstablecimientosMysql"
     },
     "configAlternates": {

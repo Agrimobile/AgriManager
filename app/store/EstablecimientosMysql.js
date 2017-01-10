@@ -23,7 +23,7 @@ Ext.define('MyApp.store.EstablecimientosMysql', {
   ],
 
   config: {
-    sql: 'SELECT id,codigo,nombre FROM establecimiento'
+    sql: 'SELECT id,codigo,nombre,nivelzoom as zoom,latitud,longitud FROM establecimiento'
   },
 
   constructor: function(cfg) {

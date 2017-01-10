@@ -23,7 +23,7 @@ Ext.define('MyApp.store.ActividadesMysql', {
   ],
 
   config: {
-    sql: 'SELECT id,codigo,descrip as nombre FROM cuentas'
+    sql: 'SELECT id, codigo , descrip as nombre, fecha_desde as desde, fecha_hasta as hasta, cod_periodo FROM cuentas'
   },
 
   constructor: function(cfg) {

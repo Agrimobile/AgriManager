@@ -184,8 +184,8 @@ Ext.define('MyApp.view.MainContainer', {
                 },
                 {
                   xtype: 'container',
-                  columnWidth: 1,
                   panelClass: '',
+                  columnWidth: 1,
                   cls: 'mainButtonBox',
                   itemId: 'SyncBox',
                   margin: '20px 20px 0 20px',
