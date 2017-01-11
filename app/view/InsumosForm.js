@@ -83,16 +83,16 @@ Ext.define('MyApp.view.InsumosForm', {
       editable: false
     },
     {
-      xtype: 'numberfield',
-      fieldLabel: 'Dias de Carencia',
-      name: 'dias_carencia',
+      xtype: 'textfield',
+      fieldLabel: 'Descripcion',
+      name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
     },
     {
-      xtype: 'textfield',
-      fieldLabel: 'Descripcion',
-      name: 'descripcion',
+      xtype: 'numberfield',
+      fieldLabel: 'Precio',
+      name: 'precio',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
     },
@@ -105,8 +105,8 @@ Ext.define('MyApp.view.InsumosForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Precio',
-      name: 'precio',
+      fieldLabel: 'Dias de Carencia',
+      name: 'dias_carencia',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
     },

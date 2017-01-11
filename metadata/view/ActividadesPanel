@@ -341,7 +341,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "desde",
-                        "format": "m/j/Y",
+                        "format": "d/m/Y",
                         "text": "Desde"
                     },
                     "configAlternates": {
@@ -361,7 +361,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "hasta",
-                        "format": "m/j/Y",
+                        "format": "d/m/Y",
                         "text": "Hasta"
                     },
                     "configAlternates": {

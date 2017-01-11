@@ -129,6 +129,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Desde",
+                "format": null,
                 "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
                 "itemId": "desde",
                 "layout|flex": null,
@@ -141,7 +142,8 @@
                 "invalidText": "string",
                 "itemId": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "format": "string"
             },
             "name": "MyDateField",
             "designerId": "e1f219ad-67f3-446c-8a81-cda5a9a70650"
@@ -157,6 +159,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "hasta",
+                "format": null,
                 "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
                 "itemId": "hasta",
                 "layout|flex": null,
@@ -169,7 +172,8 @@
                 "invalidText": "string",
                 "itemId": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "format": "string"
             },
             "name": "MyDateField1",
             "designerId": "6bcf2a7f-5570-4359-8df3-c65e8f053c99"

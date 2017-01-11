@@ -97,13 +97,13 @@ Ext.define('MyApp.view.ActividadesPanel', {
           xtype: 'datecolumn',
           dataIndex: 'desde',
           text: 'Desde',
-          format: 'm/j/Y'
+          format: 'd/m/Y'
         },
         {
           xtype: 'datecolumn',
           dataIndex: 'hasta',
           text: 'Hasta',
-          format: 'm/j/Y'
+          format: 'd/m/Y'
         },
         {
           xtype: 'numbercolumn',

@@ -89,6 +89,13 @@ Ext.define('MyApp.view.TareasForm', {
       blankText: 'Este campo es obligatorio'
     },
     {
+      xtype: 'numberfield',
+      fieldLabel: 'Precio',
+      name: 'precio',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio'
+    },
+    {
       xtype: 'textfield',
       fieldLabel: 'Tipo',
       name: 'tipo',
@@ -99,13 +106,6 @@ Ext.define('MyApp.view.TareasForm', {
       xtype: 'textfield',
       fieldLabel: 'Unidad de medida',
       name: 'um',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'Precio',
-      name: 'precio',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
     }
