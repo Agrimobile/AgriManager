@@ -53,12 +53,14 @@ Ext.define('MyApp.model.Actividades', {
     {
       type: 'date',
       aliasSQL: 'fecha_desde',
-      name: 'desde'
+      name: 'desde',
+      dateWriteFormat: 'Y-m-d'
     },
     {
       type: 'date',
       aliasSQL: 'fecha_hasta',
-      name: 'hasta'
+      name: 'hasta',
+      dateWriteFormat: 'Y-m-d'
     },
     {
       type: 'int',
