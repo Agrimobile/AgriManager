@@ -69,6 +69,13 @@ Ext.define('MyApp.view.LaboresForm', {
               editable: false
             },
             {
+              xtype: 'datefield',
+              itemId: 'fecha',
+              width: '100%',
+              fieldLabel: 'Fecha',
+              name: 'fecha'
+            },
+            {
               xtype: 'combobox',
               defaultListenerScope: true,
               itemId: 'fieldTarea',
@@ -82,13 +89,6 @@ Ext.define('MyApp.view.LaboresForm', {
               queryMode: 'local',
               store: 'Tareas',
               valueField: 'codigo'
-            },
-            {
-              xtype: 'datefield',
-              itemId: 'fecha',
-              width: '100%',
-              fieldLabel: 'Fecha',
-              name: 'fecha'
             },
             {
               xtype: 'numberfield',
@@ -130,7 +130,8 @@ Ext.define('MyApp.view.LaboresForm', {
               title: 'InsumosGrid',
               store: 'Labores_insumos',
               listeners: {
-                selectionchange: 'onGridpanelSelectionChange'
+                selectionchange: 'onGridpanelSelectionChange',
+                beforerender: 'onGridBeforeRender'
               },
               columns: [
                 {
@@ -144,6 +145,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
@@ -313,7 +315,8 @@ Ext.define('MyApp.view.LaboresForm', {
               title: 'PersonalGrid',
               store: 'Labores_personal',
               listeners: {
-                selectionchange: 'onGridpanelSelectionChange1'
+                selectionchange: 'onGridpanelSelectionChange1',
+                beforerender: 'onGridBeforeRender'
               },
               columns: [
                 {
@@ -327,6 +330,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   width: '20%',
                   dataIndex: 'id',
                   text: 'ID',
@@ -498,6 +502,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 },
                 {
                   xtype: 'numbercolumn',
+                  hidden: true,
                   width: '33%',
                   dataIndex: 'id',
                   text: 'ID',
@@ -560,7 +565,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 }
               ],
               listeners: {
-                selectionchange: 'onLabores_maquinaria_gridSelectionChange'
+                selectionchange: 'onLabores_maquinaria_gridSelectionChange',
+                beforerender: 'onGridBeforeRender'
               }
             }
           ],
@@ -732,6 +738,10 @@ Ext.define('MyApp.view.LaboresForm', {
 
   onLabores_maquinaria_gridSelectionChange: function(model, selected, eOpts) {
     this.down("#labores_maquinaria_grid").record = selected[0];
+  },
+
+  onGridBeforeRender: function(component, eOpts) {
+    f_crud.renderGridWidth(component);
   }
 
 });

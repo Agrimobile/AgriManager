@@ -105,12 +105,14 @@ Ext.define('MyApp.view.InsumosPanel', {
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           width: '16.66%',
           dataIndex: 'um',
           text: 'Unidad Medida'
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '16.66%',
           dataIndex: 'dias_carencia',
           text: 'Dias Carencia',

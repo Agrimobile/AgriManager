@@ -71,6 +71,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '10%',
           dataIndex: 'id',
           text: 'ID'
@@ -94,6 +95,16 @@ Ext.define('MyApp.view.LaboresPanel', {
           dataIndex: 'fecha',
           text: 'Fecha',
           format: 'm/j/Y'
+        },
+        {
+          xtype: 'numbercolumn',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
+          },
+          width: '20%',
+          dataIndex: 'cod_tarea',
+          text: 'Tarea',
+          format: '00'
         },
         {
           xtype: 'numbercolumn',
@@ -127,6 +138,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           renderer: function(value, metaData, record, rowIndex, colIndex, store) {
             return f_crud.getDisplayValue('Campanias', value, 'descripcion');
           },
@@ -136,23 +148,15 @@ Ext.define('MyApp.view.LaboresPanel', {
           format: '00'
         },
         {
-          xtype: 'numbercolumn',
-          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
-          },
-          width: '20%',
-          dataIndex: 'cod_tarea',
-          text: 'Tarea',
-          format: '00'
-        },
-        {
           xtype: 'gridcolumn',
+          hidden: true,
           width: '15%',
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           width: '19%',
           dataIndex: 'precio',
           text: 'Precio'
