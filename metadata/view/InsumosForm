@@ -190,30 +190,6 @@
             "designerId": "b20f7fc1-d643-4936-a884-f9f2d7e578f1"
         },
         {
-            "type": "Ext.form.field.Number",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Dias de Carencia",
-                "layout|flex": null,
-                "name": "dias_carencia"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyNumberField5",
-            "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"
-        },
-        {
             "type": "Ext.form.field.Text",
             "reference": {
                 "name": "items",
@@ -236,6 +212,30 @@
             },
             "name": "MyTextField1",
             "designerId": "34b81877-8a22-4a5b-93d3-c1e2acacca30"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "fieldLabel": "Precio",
+                "layout|flex": null,
+                "name": "precio"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string"
+            },
+            "name": "MyNumberField6",
+            "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
         },
         {
             "type": "Ext.form.field.Text",
@@ -271,9 +271,9 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Precio",
+                "fieldLabel": "Dias de Carencia",
                 "layout|flex": null,
-                "name": "precio"
+                "name": "dias_carencia"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -282,41 +282,8 @@
                 "layout|flex": "number",
                 "name": "string"
             },
-            "name": "MyNumberField6",
-            "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onFormActivate",
-                "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
-                ],
-                "name": "activate",
-                "scope": "me"
-            },
-            "configAlternates": {
-                "fn": "string",
-                "implHandler": "code",
-                "name": "string",
-                "scope": "string"
-            },
-            "name": "onFormActivate",
-            "designerId": "7c2c5c78-619d-4170-9d32-3921436ed05d"
+            "name": "MyNumberField5",
+            "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"
         },
         {
             "type": "Ext.form.field.ComboBox",
@@ -353,6 +320,39 @@
             },
             "name": "MyComboBox2",
             "designerId": "d030ab29-d427-47df-ad15-56509bd7f4b6"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormActivate",
+                "implHandler": [
+                    "var item = component.header.title.text;",
+                    "if(component.action === 'ADD') {",
+                    "  component.setTitle('Nuevo ' + item);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  component.setTitle('Editar ' + item);",
+                    "}",
+                    "else {",
+                    "  component.setTitle(item);",
+                    "}"
+                ],
+                "name": "activate",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onFormActivate",
+            "designerId": "7c2c5c78-619d-4170-9d32-3921436ed05d"
         }
     ]
 }

@@ -263,6 +263,28 @@
                     "designerId": "610534ee-d403-4df1-9193-5da3b04735c9"
                 },
                 {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "codigo",
+                        "format": "00",
+                        "text": "Codigo",
+                        "width": "25%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyNumberColumn37",
+                    "designerId": "e779216e-1f9d-414c-a594-4843de7bf4c1"
+                },
+                {
                     "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
@@ -290,36 +312,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "codigo",
-                        "format": "00",
-                        "text": "Codigo",
-                        "width": "25%"
-                    },
-                    "configAlternates": {
-                        "dataIndex": "datafield",
-                        "format": "string",
-                        "text": "string",
-                        "width": "auto"
-                    },
-                    "name": "MyNumberColumn37",
-                    "designerId": "e779216e-1f9d-414c-a594-4843de7bf4c1"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "dataIndex": "precio",
+                        "hidden": true,
                         "text": "Precio",
                         "width": "25%"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyNumberColumn39",
                     "designerId": "897f363c-d789-4c0b-ab48-80dc8956d55e"
@@ -333,11 +335,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "tipo",
+                        "hidden": true,
                         "text": "Tipo"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "hidden": "boolean"
                     },
                     "name": "MyColumn15",
                     "designerId": "a8c77789-1b9c-4df5-ad66-02c5217d9115"
