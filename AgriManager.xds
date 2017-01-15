@@ -7,7 +7,7 @@
             "frameworkVersion": "6.2.1.167"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:57953/",
+        "urlPrefix": "http://localhost:51620/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",
@@ -31,8 +31,8 @@
             "buildPlatform": false
         }
     },
-    "xdsVersion": "4.1.0",
-    "xdsBuild": 91,
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
     "schemaVersion": 1,
     "upgradeVersion": 310000000001,
     "framework": "ext62",

@@ -159,6 +159,30 @@
                             "designerId": "76392ea5-48e2-437a-be66-12a4fd4f285f"
                         },
                         {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "",
+                                "fieldLabel": "Fecha",
+                                "itemId": "fecha",
+                                "name": "fecha",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDateField2",
+                            "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
+                        },
+                        {
                             "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
@@ -195,30 +219,6 @@
                             },
                             "name": "MyComboBox",
                             "designerId": "178006af-0e46-467c-8684-6b5356cbe66a"
-                        },
-                        {
-                            "type": "Ext.form.field.Date",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|displayName": "",
-                                "fieldLabel": "Fecha",
-                                "itemId": "fecha",
-                                "name": "fecha",
-                                "width": "100%"
-                            },
-                            "configAlternates": {
-                                "designer|displayName": "string",
-                                "fieldLabel": "string",
-                                "itemId": "string",
-                                "name": "string",
-                                "width": "auto"
-                            },
-                            "name": "MyDateField2",
-                            "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
                         },
                         {
                             "type": "Ext.form.field.Number",
@@ -363,30 +363,6 @@
                                     "designerId": "1c59d49f-2ac1-4187-b778-47b1befc8a2e"
                                 },
                                 {
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onGridpanelSelectionChange",
-                                        "implHandler": [
-                                            "this.down(\"#labores_insumos_grid\").record = selected[0];"
-                                        ],
-                                        "name": "selectionchange",
-                                        "scope": "me"
-                                    },
-                                    "configAlternates": {
-                                        "fn": "string",
-                                        "implHandler": "code",
-                                        "name": "string",
-                                        "scope": "string"
-                                    },
-                                    "name": "onGridpanelSelectionChange",
-                                    "designerId": "bb0d85db-8814-4e04-830d-54fdf4258d17"
-                                },
-                                {
                                     "type": "Ext.grid.column.Column",
                                     "reference": {
                                         "name": "columns",
@@ -427,13 +403,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
+                                        "hidden": true,
                                         "text": "ID",
                                         "width": "20%"
                                     },
                                     "configAlternates": {
                                         "dataIndex": "datafield",
                                         "text": "string",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "hidden": "boolean"
                                     },
                                     "name": "MyNumberColumn43",
                                     "designerId": "c3c953c2-174a-4698-a90a-94347b8637f8",
@@ -783,6 +761,54 @@
                                     "codeClass": null,
                                     "name": "MyCellEditingPlugin5",
                                     "designerId": "4c8c8ae5-e1a8-4c74-8321-ac01a523e091"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange",
+                                        "implHandler": [
+                                            "this.down(\"#labores_insumos_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onGridpanelSelectionChange",
+                                    "designerId": "bb0d85db-8814-4e04-830d-54fdf4258d17"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLabores_insumos_gridBeforeRender",
+                                        "implHandler": [
+                                            "f_crud.renderGridWidth(component);"
+                                        ],
+                                        "name": "beforerender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onLabores_insumos_gridBeforeRender",
+                                    "designerId": "07ba93a3-0e81-4f8a-96e2-bfc85225ad37"
                                 }
                             ]
                         },
@@ -1016,30 +1042,6 @@
                                     "designerId": "63c580e5-607b-41a5-88d4-f2ce2af85f5d"
                                 },
                                 {
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onGridpanelSelectionChange1",
-                                        "implHandler": [
-                                            "this.down(\"#labores_personal_grid\").record = selected[0];"
-                                        ],
-                                        "name": "selectionchange",
-                                        "scope": "me"
-                                    },
-                                    "configAlternates": {
-                                        "fn": "string",
-                                        "implHandler": "code",
-                                        "name": "string",
-                                        "scope": "string"
-                                    },
-                                    "name": "onGridpanelSelectionChange1",
-                                    "designerId": "e0fcafcf-0cb0-49e5-83a5-dfeffb774e03"
-                                },
-                                {
                                     "type": "Ext.grid.column.Column",
                                     "reference": {
                                         "name": "columns",
@@ -1080,13 +1082,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
+                                        "hidden": true,
                                         "text": "ID",
                                         "width": "20%"
                                     },
                                     "configAlternates": {
                                         "dataIndex": "datafield",
                                         "text": "string",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "hidden": "boolean"
                                     },
                                     "name": "MyNumberColumn83",
                                     "designerId": "1890c776-dc65-4de8-a5b3-668abed9572e",
@@ -1394,6 +1398,54 @@
                                     "codeClass": null,
                                     "name": "MyCellEditingPlugin6",
                                     "designerId": "612a6bbf-7653-464e-94cb-94437d85035d"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange1",
+                                        "implHandler": [
+                                            "this.down(\"#labores_personal_grid\").record = selected[0];"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onGridpanelSelectionChange1",
+                                    "designerId": "e0fcafcf-0cb0-49e5-83a5-dfeffb774e03"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLabores_personal_gridBeforeRender",
+                                        "implHandler": [
+                                            "f_crud.renderGridWidth(component);"
+                                        ],
+                                        "name": "beforerender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onLabores_personal_gridBeforeRender",
+                                    "designerId": "270e5168-ee9c-4f4b-800b-f8e2e873f5e6"
                                 }
                             ]
                         },
@@ -1667,13 +1719,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "dataIndex": "id",
+                                        "hidden": true,
                                         "text": "ID",
                                         "width": "33%"
                                     },
                                     "configAlternates": {
                                         "dataIndex": "datafield",
                                         "text": "string",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "hidden": "boolean"
                                     },
                                     "name": "MyNumberColumn6",
                                     "designerId": "eab491c1-f36b-4760-a432-092af87794da",
@@ -1905,6 +1959,30 @@
                                     },
                                     "name": "onLabores_maquinaria_gridSelectionChange",
                                     "designerId": "a4b65195-59fb-4e07-8ce2-333f9486152d"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLabores_maquinaria_gridBeforeRender",
+                                        "implHandler": [
+                                            "f_crud.renderGridWidth(component);"
+                                        ],
+                                        "name": "beforerender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onLabores_maquinaria_gridBeforeRender",
+                                    "designerId": "edc49065-f3d9-4035-a97c-9bfa6bf4ca44"
                                 }
                             ]
                         },

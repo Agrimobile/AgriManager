@@ -363,13 +363,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "um",
+                        "hidden": true,
                         "text": "Unidad Medida",
                         "width": "16.66%"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyColumn29",
                     "designerId": "8c1b0d3e-b330-48db-a808-f400b99e9c32"
@@ -384,6 +386,7 @@
                     "userConfig": {
                         "dataIndex": "dias_carencia",
                         "format": "00",
+                        "hidden": true,
                         "text": "Dias Carencia",
                         "width": "16.66%"
                     },
@@ -391,7 +394,8 @@
                         "dataIndex": "datafield",
                         "format": "string",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyNumberColumn71",
                     "designerId": "8d029c08-e747-4639-8cb6-f8b367346bcb"
