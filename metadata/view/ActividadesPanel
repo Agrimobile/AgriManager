@@ -695,7 +695,7 @@
                                             "    table: 'Lotes_actividades',",
                                             "    field: 'cod_actividad',",
                                             "    msgTitle: 'Actividad asignada',",
-                                            "    message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desasocie esta actividad de los lotes a los que fue ligada'",
+                                            "    message: 'No puede borrar una actividad que ya fue asignada a un lote, <br> desvincule esta actividad de los lotes a los que fue ligada'",
                                             "};",
                                             "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]
