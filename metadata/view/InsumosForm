@@ -7,6 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "form"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "insumosform",
         "designer|userClassName": "InsumosForm",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "LotesForm2",
     "designerId": "e8f3c35a-6a5f-4d0b-92b8-b37bd1c88f8e",
@@ -286,42 +290,6 @@
             "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"
         },
         {
-            "type": "Ext.form.field.ComboBox",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal",
-                "displayField": "descripcion",
-                "fieldLabel": "Rubro",
-                "forceSelection": true,
-                "itemId": "fieldRubro",
-                "layout|flex": null,
-                "name": "cod_rubro",
-                "queryMode": "local",
-                "store": "Rubros",
-                "valueField": "codigo"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "displayField": "datafield",
-                "fieldLabel": "string",
-                "forceSelection": "boolean",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string",
-                "queryMode": "string",
-                "store": "store",
-                "valueField": "datafield"
-            },
-            "name": "MyComboBox2",
-            "designerId": "d030ab29-d427-47df-ad15-56509bd7f4b6"
-        },
-        {
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -353,6 +321,126 @@
             },
             "name": "onFormActivate",
             "designerId": "7c2c5c78-619d-4170-9d32-3921436ed05d"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyContainer7",
+            "designerId": "0c98f217-3b93-49bc-8d00-59e1d1ed2986",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal",
+                        "displayField": "descripcion",
+                        "fieldLabel": "Rubro",
+                        "forceSelection": true,
+                        "itemId": "fieldRubro",
+                        "layout|flex": null,
+                        "name": "cod_rubro",
+                        "queryMode": "local",
+                        "store": "Rubros",
+                        "valueField": "codigo",
+                        "width": "80%"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "blankText": "string",
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "forceSelection": "boolean",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox2",
+                    "designerId": "d030ab29-d427-47df-ad15-56509bd7f4b6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": "0 10",
+                        "text": "",
+                        "width": "10%"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "5e05191b-a746-4698-ac97-451357db4dd0",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "/*var formWrapper = this.up('#form');",
+                                    "if(formWrapper.getForm().isValid()) {",
+                                    "  f_crud.save_form(formWrapper);",
+                                    "}*/",
+                                    "",
+                                    "var pantalla = Ext.create('MyApp.view.RubrosPanel');",
+                                    "pantalla.fireEvent(\"render\",pantalla);",
+                                    "f_crud.form_open(pantalla,'ADD');"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "handler",
+                            "designerId": "80d12b27-e4db-4c1b-9ee5-b02ff62b3905"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

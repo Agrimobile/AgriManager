@@ -28,6 +28,7 @@ Ext.define('MyApp.view.InsumosForm', {
   viewModel: {
     type: 'insumosform'
   },
+  cls: 'form',
   itemId: 'form',
   scrollable: true,
   bodyPadding: 10,
@@ -111,17 +112,45 @@ Ext.define('MyApp.view.InsumosForm', {
       blankText: 'Este campo es obligatorio'
     },
     {
-      xtype: 'combobox',
-      itemId: 'fieldRubro',
-      fieldLabel: 'Rubro',
-      name: 'cod_rubro',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
-      displayField: 'descripcion',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'Rubros',
-      valueField: 'codigo'
+      xtype: 'container',
+      layout: {
+        type: 'hbox',
+        align: 'stretch'
+      },
+      items: [
+        {
+          xtype: 'combobox',
+          itemId: 'fieldRubro',
+          width: '80%',
+          fieldLabel: 'Rubro',
+          name: 'cod_rubro',
+          allowBlank: false,
+          blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
+          displayField: 'descripcion',
+          forceSelection: true,
+          queryMode: 'local',
+          store: 'Rubros',
+          valueField: 'codigo'
+        },
+        {
+          xtype: 'button',
+          handler: function(button, e) {
+            /*var formWrapper = this.up('#form');
+            if(formWrapper.getForm().isValid()) {
+            f_crud.save_form(formWrapper);
+            }*/
+
+            var pantalla = Ext.create('MyApp.view.RubrosPanel');
+            pantalla.fireEvent("render",pantalla);
+            f_crud.form_open(pantalla,'ADD');
+          },
+          margins: '',
+          margin: '0 10',
+          width: '10%',
+          iconCls: 'x-fa fa-plus',
+          text: ''
+        }
+      ]
     }
   ],
   listeners: {
