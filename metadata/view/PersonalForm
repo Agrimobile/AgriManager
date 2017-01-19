@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "personalform",
         "designer|userClassName": "PersonalForm",
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
         "title": "Personal",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "DepositosForm1",
     "designerId": "be945555-e000-497e-a31d-ed645f9853f5",
@@ -96,7 +100,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +152,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

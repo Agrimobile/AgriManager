@@ -8,13 +8,13 @@
     "userConfig": {
         "bodyPadding": 10,
         "cls": [
-            "form"
+            "formpanel"
         ],
         "container|align": "stretch",
         "designer|userAlias": "insumosform",
         "designer|userClassName": "InsumosForm",
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
         "title": "Insumos",
@@ -100,7 +100,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -152,7 +152,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {
@@ -242,7 +242,7 @@
             "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
         },
         {
-            "type": "Ext.form.field.Text",
+            "type": "Ext.form.field.ComboBox",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -251,19 +251,33 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "displayField": "nombre",
                 "fieldLabel": "Unidad de Medida",
+                "forceSelection": true,
+                "itemId": "unidadMedida",
                 "layout|flex": null,
-                "name": "um"
+                "name": "um",
+                "queryMode": "local",
+                "store": "UnidadesMedida",
+                "valueField": "valor",
+                "width": null
             },
             "configAlternates": {
                 "allowBlank": "boolean",
                 "blankText": "string",
+                "displayField": "datafield",
                 "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto"
             },
-            "name": "MyTextField4",
-            "designerId": "1682ac93-3f1d-43a6-add0-16ce482fa14e"
+            "name": "MyComboBox11",
+            "designerId": "47c4e9ff-c127-4ba2-b10d-054b1209fc24"
         },
         {
             "type": "Ext.form.field.Number",
@@ -420,14 +434,9 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "/*var formWrapper = this.up('#form');",
-                                    "if(formWrapper.getForm().isValid()) {",
-                                    "  f_crud.save_form(formWrapper);",
-                                    "}*/",
-                                    "",
-                                    "var pantalla = Ext.create('MyApp.view.RubrosPanel');",
-                                    "pantalla.fireEvent(\"render\",pantalla);",
-                                    "f_crud.form_open(pantalla,'ADD');"
+                                    "var formWrapper = this.up('[cls=formpanel]');",
+                                    "formWrapper.dropdownId = \"fieldRubro\";",
+                                    "f_crud.openNestedForm('RubrosPanel');"
                                 ]
                             },
                             "configAlternates": {

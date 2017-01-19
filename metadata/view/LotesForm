@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "lotesform",
         "designer|userClassName": "LotesForm",
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
         "title": "Lote",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "MyForm3",
     "designerId": "4fa39d2f-e014-4acb-b7f3-9d9100f4eaec",
@@ -96,7 +100,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "formWrapper.form._record.data.cod_establecimiento = formWrapper.parent.codigo;",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
@@ -149,7 +153,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

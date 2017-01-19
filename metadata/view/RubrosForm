@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "rubrosform",
         "designer|userClassName": "RubrosForm",
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
         "title": "Rubro",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "LotesForm1",
     "designerId": "96f48973-be1b-4f21-b5ed-c1a6180c845c",
@@ -96,7 +100,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +152,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

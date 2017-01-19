@@ -27,6 +27,7 @@ Ext.define('MyApp.view.SyncForm', {
   viewModel: {
     type: 'syncform'
   },
+  cls: 'formpanel',
   itemId: 'sincronizar',
   scrollable: true,
   bodyPadding: 10,

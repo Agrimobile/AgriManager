@@ -79,7 +79,9 @@ Ext.application({
     'PersonalMysql',
     'RubrosMysql',
     'TareasMysql',
-    'LaboresMysql'
+    'LaboresMysql',
+    'TiposTarea',
+    'UnidadesMedida'
   ],
   views: [
     'MainContainer',

@@ -7,6 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "syncform",
         "designer|userClassName": "SyncForm",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "LoginForm1",
     "designerId": "d5faffa4-b549-4026-9ced-bd7f03ec0f93",

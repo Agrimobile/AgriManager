@@ -7,12 +7,15 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "actividadesform",
         "designer|userClassName": "ActividadesForm",
         "flex": 1,
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "title": "Actividad",
         "width": null
@@ -27,7 +30,8 @@
         "itemId": "string",
         "layout": "string",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "MyForm2",
     "designerId": "97804b88-8621-4c35-9050-1333382814b3",
@@ -266,7 +270,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form'),",
+                                    "var formWrapper = this.up(\"[cls=formpanel]\"),",
                                     "    desde = formWrapper.down(\"#desde\").value,",
                                     "    hasta = formWrapper.down(\"#hasta\").value,",
                                     "    warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
@@ -327,7 +331,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

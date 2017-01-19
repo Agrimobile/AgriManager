@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "maquinariaform",
         "designer|userClassName": "MaquinariaForm",
         "height": null,
-        "itemId": "form",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
         "title": "Maquinaria",
@@ -27,7 +30,8 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray"
     },
     "name": "PersonalForm1",
     "designerId": "5fd1720d-89ec-466f-a594-91d0fdee3b4e",
@@ -96,7 +100,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +152,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

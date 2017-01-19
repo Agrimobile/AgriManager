@@ -1,0 +1,88 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "  {",
+            "    \"nombre\": \"Maquinaria\",",
+            "    \"valor\": \"M\",",
+            "    \"id\": 1",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Riego\",",
+            "    \"valor\": \"R\",",
+            "    \"id\": 2",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Personal\",",
+            "    \"valor\": \"P\",",
+            "    \"id\": 3",
+            "  }",
+            "]"
+        ],
+        "designer|userClassName": "TiposTarea",
+        "storeId": "TiposTarea"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyArrayStore",
+    "designerId": "206bc2f2-0b05-4d7f-8110-146666b1a670",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString4",
+            "designerId": "6c37075f-14f7-41d9-8541-661288acdcaa"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "valor"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString5",
+            "designerId": "57ffacdd-fec5-433f-afc1-4c0ff80fe904"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger12",
+            "designerId": "30c953d1-01b9-44ea-bba8-2934b6f99901"
+        }
+    ]
+}

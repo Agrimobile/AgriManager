@@ -27,7 +27,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
   viewModel: {
     type: 'maquinariaform'
   },
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
   title: 'Maquinaria',
@@ -50,7 +50,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             if(formWrapper.getForm().isValid()) {
               f_crud.save_form(formWrapper);
             }
@@ -63,7 +63,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',

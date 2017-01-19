@@ -28,8 +28,7 @@ Ext.define('MyApp.view.InsumosForm', {
   viewModel: {
     type: 'insumosform'
   },
-  cls: 'form',
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
   title: 'Insumos',
@@ -52,7 +51,7 @@ Ext.define('MyApp.view.InsumosForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             if(formWrapper.getForm().isValid()) {
               f_crud.save_form(formWrapper);
             }
@@ -65,7 +64,7 @@ Ext.define('MyApp.view.InsumosForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',
@@ -98,11 +97,17 @@ Ext.define('MyApp.view.InsumosForm', {
       blankText: 'Este campo es obligatorio'
     },
     {
-      xtype: 'textfield',
+      xtype: 'combobox',
+      itemId: 'unidadMedida',
       fieldLabel: 'Unidad de Medida',
       name: 'um',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'UnidadesMedida',
+      valueField: 'valor'
     },
     {
       xtype: 'numberfield',
@@ -135,14 +140,9 @@ Ext.define('MyApp.view.InsumosForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            /*var formWrapper = this.up('#form');
-            if(formWrapper.getForm().isValid()) {
-            f_crud.save_form(formWrapper);
-            }*/
-
-            var pantalla = Ext.create('MyApp.view.RubrosPanel');
-            pantalla.fireEvent("render",pantalla);
-            f_crud.form_open(pantalla,'ADD');
+            var formWrapper = this.up('[cls=formpanel]');
+            formWrapper.dropdownId = "fieldRubro";
+            f_crud.openNestedForm('RubrosPanel');
           },
           margins: '',
           margin: '0 10',

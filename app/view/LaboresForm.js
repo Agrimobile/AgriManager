@@ -35,7 +35,7 @@ Ext.define('MyApp.view.LaboresForm', {
   viewModel: {
     type: 'laboresform'
   },
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
   title: 'Labor',
@@ -76,19 +76,42 @@ Ext.define('MyApp.view.LaboresForm', {
               name: 'fecha'
             },
             {
-              xtype: 'combobox',
-              defaultListenerScope: true,
-              itemId: 'fieldTarea',
-              width: '100%',
-              fieldLabel: 'Tarea',
-              name: 'cod_tarea',
-              allowBlank: false,
-              blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
-              displayField: 'descripcion',
-              forceSelection: true,
-              queryMode: 'local',
-              store: 'Tareas',
-              valueField: 'codigo'
+              xtype: 'container',
+              margin: '10 0',
+              layout: {
+                type: 'hbox',
+                align: 'stretch'
+              },
+              items: [
+                {
+                  xtype: 'combobox',
+                  defaultListenerScope: true,
+                  itemId: 'fieldTarea',
+                  width: '80%',
+                  fieldLabel: 'Tarea',
+                  name: 'cod_tarea',
+                  allowBlank: false,
+                  blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
+                  displayField: 'descripcion',
+                  forceSelection: true,
+                  queryMode: 'local',
+                  store: 'Tareas',
+                  valueField: 'codigo'
+                },
+                {
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    var formWrapper = this.up('[cls=formpanel]');
+                    formWrapper.dropdownId = "fieldTarea";
+                    f_crud.openNestedForm('TareasPanel');
+                  },
+                  margins: '',
+                  margin: '0 10',
+                  width: '10%',
+                  iconCls: 'x-fa fa-plus',
+                  text: ''
+                }
+              ]
             },
             {
               xtype: 'numberfield',
@@ -103,18 +126,41 @@ Ext.define('MyApp.view.LaboresForm', {
               name: 'precio'
             },
             {
-              xtype: 'combobox',
-              defaultListenerScope: true,
-              itemId: 'fieldContratista',
-              width: '100%',
-              fieldLabel: 'Contratista',
-              name: 'cod_contratista',
-              blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
-              displayField: 'nombre',
-              forceSelection: true,
-              queryMode: 'local',
-              store: 'Contratistas',
-              valueField: 'codigo'
+              xtype: 'container',
+              margin: '10 0',
+              layout: {
+                type: 'hbox',
+                align: 'stretch'
+              },
+              items: [
+                {
+                  xtype: 'combobox',
+                  defaultListenerScope: true,
+                  itemId: 'fieldContratista',
+                  width: '80%',
+                  fieldLabel: 'Contratista',
+                  name: 'cod_contratista',
+                  blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+                  displayField: 'nombre',
+                  forceSelection: true,
+                  queryMode: 'local',
+                  store: 'Contratistas',
+                  valueField: 'codigo'
+                },
+                {
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    var formWrapper = this.up('[cls=formpanel]');
+                    formWrapper.dropdownId = "fieldContratista";
+                    f_crud.openNestedForm('ContratistasPanel');
+                  },
+                  margins: '',
+                  margin: '0 10',
+                  width: '10%',
+                  iconCls: 'x-fa fa-plus',
+                  text: ''
+                }
+              ]
             }
           ]
         },
@@ -268,7 +314,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var form_panel = this.up('#form');
+                        var form_panel = this.up('[cls=formpanel]');
                         var id_labores  =  form_panel.getRecord().get('id');
                         var store = Ext.getStore('Labores_insumos');
                         var newrecord = Ext.create('MyApp.model.Labores_insumos');
@@ -444,7 +490,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var form_panel = this.up('#form');
+                        var form_panel = this.up('[cls=formpanel]');
                         var id_labores  =  form_panel.getRecord().get('id');
                         var store = Ext.getStore('Labores_personal');
                         var newrecord = Ext.create('MyApp.model.Labores_personal');
@@ -592,7 +638,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var form_panel = this.up('#form');
+                        var form_panel = this.up('[cls=formpanel]');
                         var id_labores  =  form_panel.getRecord().get('id');
                         var store = Ext.getStore('Labores_maquinaria');
                         var newrecord = Ext.create('MyApp.model.Labores_maquinaria');
@@ -643,8 +689,8 @@ Ext.define('MyApp.view.LaboresForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
-            var tarea_cod = this.up('#form').down("#fieldTarea").value;
+            var formWrapper = this.up('[cls=formpanel]');
+            var tarea_cod = formWrapper.down("#fieldTarea").value;
 
             formWrapper.form._record.data.cod_lote_actividad = formWrapper.parent.codigo;
             formWrapper.form._record.data.cod_lote = formWrapper.parent.cod_lote;
@@ -686,7 +732,7 @@ Ext.define('MyApp.view.LaboresForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',

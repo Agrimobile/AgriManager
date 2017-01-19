@@ -1,0 +1,109 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "  {",
+            "    \"nombre\": \"Litros\",",
+            "    \"valor\": \"L\",",
+            "    \"id\": 1",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Kilos\",",
+            "    \"valor\": \"K\",",
+            "    \"id\": 2",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Metros\",",
+            "    \"valor\": \"M\",",
+            "    \"id\": 3",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Horas\",",
+            "    \"valor\": \"H\",",
+            "    \"id\": 4",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Metros Cuadrados\",",
+            "    \"valor\": \"M2\",",
+            "    \"id\": 5",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Metros Cubicos\",",
+            "    \"valor\": \"M4\",",
+            "    \"id\": 6",
+            "  },",
+            "  {",
+            "    \"nombre\": \"Toneladas\",",
+            "    \"valor\": \"T\",",
+            "    \"id\": 7",
+            "  }",
+            "  ",
+            "]"
+        ],
+        "designer|userClassName": "UnidadesMedida",
+        "storeId": "UnidadesMedida"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "TiposTarea1",
+    "designerId": "7e126d7e-0dac-4e6c-b1e7-2f84378e82e0",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString4",
+            "designerId": "0fdea595-fff2-4825-8399-dbac8719d6d8"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "valor"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString5",
+            "designerId": "162c24e7-7f27-4b2b-a584-527ac5a2eaba"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger12",
+            "designerId": "20237699-6991-42df-a5f0-da447543ed19"
+        }
+    ]
+}
