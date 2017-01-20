@@ -14,10 +14,11 @@
         "designer|userAlias": "syncform",
         "designer|userClassName": "SyncForm",
         "height": null,
+        "initialTitle": "Sincronizacion",
         "itemId": "sincronizar",
         "layout": "vbox",
         "scrollable": true,
-        "title": "Sincronizacion",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LoginForm1",
     "designerId": "d5faffa4-b549-4026-9ced-bd7f03ec0f93",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "83c22bcc-fdbc-4577-ad2e-6d20863ad048",
     "viewModelInstanceId": "bc7a2a82-68df-4d0c-9251-15ecac25754d",
     "cn": [
@@ -190,16 +199,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

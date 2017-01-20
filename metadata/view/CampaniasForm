@@ -14,10 +14,11 @@
         "designer|userAlias": "campaniasform",
         "designer|userClassName": "CampaniasForm",
         "height": null,
+        "initialTitle": "campaña",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Campañia",
+        "title": "",
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "ContratistasForm1",
     "designerId": "44a2f9f6-79a5-475d-9473-097b9ecbf904",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "5c7ad14a-44b9-4e5c-990e-a8559475be78",
     "viewModelInstanceId": "169ed5d8-1db7-4e8c-b762-262f9d8edebb",
     "cn": [
@@ -227,16 +236,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component, true);"
                 ],
                 "name": "activate",
                 "scope": "me"

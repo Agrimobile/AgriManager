@@ -24,6 +24,10 @@ Ext.define('MyApp.view.LoginForm', {
     'Ext.form.field.Text'
   ],
 
+  config: {
+    initialTitle: 'Datos de conexión'
+  },
+
   viewModel: {
     type: 'loginform'
   },

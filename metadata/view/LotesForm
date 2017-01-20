@@ -14,10 +14,11 @@
         "designer|userAlias": "lotesform",
         "designer|userClassName": "LotesForm",
         "height": null,
+        "initialTitle": "lote",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Lote",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "MyForm3",
     "designerId": "4fa39d2f-e014-4acb-b7f3-9d9100f4eaec",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "774ce9f5-d9e4-46fb-91a2-75ee0c7871c0",
     "viewModelInstanceId": "194943ae-ad3a-4ce3-9e57-1bf90560075c",
     "cn": [
@@ -252,16 +261,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

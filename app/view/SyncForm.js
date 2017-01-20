@@ -24,6 +24,10 @@ Ext.define('MyApp.view.SyncForm', {
     'Ext.form.field.Text'
   ],
 
+  config: {
+    initialTitle: 'Sincronizacion'
+  },
+
   viewModel: {
     type: 'syncform'
   },
@@ -31,7 +35,6 @@ Ext.define('MyApp.view.SyncForm', {
   itemId: 'sincronizar',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Sincronizacion',
   defaultListenerScope: true,
 
   layout: {
@@ -108,16 +111,7 @@ Ext.define('MyApp.view.SyncForm', {
   ],
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component);
   },
 
   onFormRender: function(component, eOpts) {

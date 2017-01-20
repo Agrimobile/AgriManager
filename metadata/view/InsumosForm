@@ -14,10 +14,11 @@
         "designer|userAlias": "insumosform",
         "designer|userClassName": "InsumosForm",
         "height": null,
+        "initialTitle": "insumo",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Insumos",
+        "title": "",
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LotesForm2",
     "designerId": "e8f3c35a-6a5f-4d0b-92b8-b37bd1c88f8e",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "6094b36e-a0e8-4d7d-9495-b2ca80c90763",
     "viewModelInstanceId": "b7b9bd6b-bd93-46e1-acaf-4fb035752497",
     "cn": [
@@ -313,16 +322,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

@@ -25,13 +25,17 @@ Ext.define('MyApp.view.InsumosForm', {
     'Ext.form.field.ComboBox'
   ],
 
+  config: {
+    initialTitle: 'insumo'
+  },
+
   viewModel: {
     type: 'insumosform'
   },
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Insumos',
+  title: '',
   defaultListenerScope: true,
 
   layout: {
@@ -158,16 +162,7 @@ Ext.define('MyApp.view.InsumosForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component);
   }
 
 });

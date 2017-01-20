@@ -14,10 +14,11 @@
         "designer|userAlias": "laboresform",
         "designer|userClassName": "LaboresForm",
         "height": null,
+        "initialTitle": "labor",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Labor",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LaboresForm1",
     "designerId": "609e31be-a99e-4abd-bc02-fca2cf301ace",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "f1961471-7148-4ea1-a32b-06c8dccef075",
     "viewModelInstanceId": "1db237f7-09c6-4d3b-845f-9c0ef1332d4d",
     "cn": [
@@ -49,7 +58,7 @@
                 "fn": "onFormActivate",
                 "implHandler": [
                     "var form_panel = this;",
-                    "var item = component.header.title.text;",
+                    "var item = component.initialTitle;",
                     "var record = form_panel.getRecord();",
                     "",
                     "//empty labores_ tables",

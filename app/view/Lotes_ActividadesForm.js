@@ -24,13 +24,17 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
     'Ext.form.field.Text'
   ],
 
+  config: {
+    initialTitle: 'Actividad en un Lote'
+  },
+
   viewModel: {
     type: 'lotes_actividadesform'
   },
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Actividad en un Lote',
+  title: '',
 
   layout: {
     type: 'vbox',

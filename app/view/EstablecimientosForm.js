@@ -24,6 +24,10 @@ Ext.define('MyApp.view.EstablecimientosForm', {
     'Ext.button.Button'
   ],
 
+  config: {
+    initialTitle: 'establecimiento'
+  },
+
   viewModel: {
     type: 'establecimientosform'
   },
@@ -31,7 +35,6 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   flex: 1,
   scrollable: true,
   bodyPadding: 10,
-  title: 'Establecimiento',
   defaultListenerScope: true,
 
   layout: {
@@ -96,16 +99,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component);
   }
 
 });

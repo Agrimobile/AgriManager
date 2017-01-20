@@ -14,6 +14,7 @@
         "designer|userAlias": "loginform",
         "designer|userClassName": "LoginForm",
         "height": null,
+        "initialTitle": "Datos de conexión",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "ContratistasForm1",
     "designerId": "63257582-9adb-4b65-9cc3-3527bb962213",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "8f4be77f-02c8-4eed-8fbd-0b6c873643fa",
     "viewModelInstanceId": "2c6b1835-624b-4628-adbb-650175534ec5",
     "cn": [

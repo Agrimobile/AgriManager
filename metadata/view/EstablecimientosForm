@@ -15,10 +15,11 @@
         "designer|userClassName": "EstablecimientosForm",
         "flex": 1,
         "height": null,
+        "initialTitle": "establecimiento",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Establecimiento",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -33,10 +34,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "ActividadesForm1",
     "designerId": "f5e9c88d-de7a-4e3e-af44-244e02c921d0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "7acee19d-f404-4e64-bd68-fe643300a2d2",
     "viewModelInstanceId": "641c2284-1be0-4adf-8f19-a7f9180b04ab",
     "cn": [
@@ -227,16 +236,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

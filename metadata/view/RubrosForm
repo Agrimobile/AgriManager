@@ -14,10 +14,11 @@
         "designer|userAlias": "rubrosform",
         "designer|userClassName": "RubrosForm",
         "height": null,
+        "initialTitle": "rubro",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Rubro",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LotesForm1",
     "designerId": "96f48973-be1b-4f21-b5ed-c1a6180c845c",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "605d398a-bdb8-4dfe-ab1d-9eee2f1ca46d",
     "viewModelInstanceId": "f14d5cdb-cf91-40f0-8c5c-62d574d3aa02",
     "cn": [
@@ -227,16 +236,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

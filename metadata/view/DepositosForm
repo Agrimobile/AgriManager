@@ -14,10 +14,11 @@
         "designer|userAlias": "depositosform",
         "designer|userClassName": "DepositosForm",
         "height": null,
+        "initialTitle": "deposito",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Depositos",
+        "title": "",
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "ContratistasForm1",
     "designerId": "3fec14cc-3541-4e02-8086-cb4af94a9aa5",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "449c0b1b-52ca-4bbd-82cf-ebb2bf2cedca",
     "viewModelInstanceId": "6d2e1ef3-5238-4f0b-a8af-76270adf264d",
     "cn": [
@@ -227,16 +236,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

@@ -24,13 +24,16 @@ Ext.define('MyApp.view.MaquinariaForm', {
     'Ext.form.field.Text'
   ],
 
+  config: {
+    initialTitle: 'maquinaria'
+  },
+
   viewModel: {
     type: 'maquinariaform'
   },
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Maquinaria',
   defaultListenerScope: true,
 
   layout: {
@@ -94,16 +97,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component, true);
   }
 
 });

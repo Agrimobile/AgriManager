@@ -25,13 +25,16 @@ Ext.define('MyApp.view.TareasForm', {
     'Ext.form.field.Number'
   ],
 
+  config: {
+    initialTitle: 'tarea'
+  },
+
   viewModel: {
     type: 'tareasform'
   },
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Tarea',
   defaultListenerScope: true,
 
   layout: {
@@ -128,16 +131,7 @@ Ext.define('MyApp.view.TareasForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nueva ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component, true);
   }
 
 });

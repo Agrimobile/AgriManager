@@ -26,13 +26,16 @@ Ext.define('MyApp.view.ActividadesForm', {
     'Ext.button.Button'
   ],
 
+  config: {
+    initialTitle: 'actividad'
+  },
+
   viewModel: {
     type: 'actividadesform'
   },
   cls: 'formpanel',
   flex: 1,
   bodyPadding: 10,
-  title: 'Actividad',
   defaultListenerScope: true,
 
   layout: {
@@ -145,16 +148,7 @@ Ext.define('MyApp.view.ActividadesForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nueva ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component, true);
   }
 
 });

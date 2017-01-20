@@ -15,9 +15,10 @@
         "designer|userClassName": "ActividadesForm",
         "flex": 1,
         "height": null,
+        "initialTitle": "actividad",
         "itemId": null,
         "layout": "vbox",
-        "title": "Actividad",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "layout": "string",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "MyForm2",
     "designerId": "97804b88-8621-4c35-9050-1333382814b3",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "9572b353-4411-4f52-8023-6772b6229798",
     "viewModelInstanceId": "e243c575-f8da-47ad-8620-4c2e60e35ddc",
     "cn": [
@@ -356,16 +365,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nueva ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component, true);"
                 ],
                 "name": "activate",
                 "scope": "me"

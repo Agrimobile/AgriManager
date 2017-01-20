@@ -32,13 +32,16 @@ Ext.define('MyApp.view.LaboresForm', {
     'Ext.form.Panel'
   ],
 
+  config: {
+    initialTitle: 'labor'
+  },
+
   viewModel: {
     type: 'laboresform'
   },
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Labor',
   defaultListenerScope: true,
 
   layout: {
@@ -744,7 +747,7 @@ Ext.define('MyApp.view.LaboresForm', {
 
   onFormActivate: function(component, eOpts) {
     var form_panel = this;
-    var item = component.header.title.text;
+    var item = component.initialTitle;
     var record = form_panel.getRecord();
 
     //empty labores_ tables

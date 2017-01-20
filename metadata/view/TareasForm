@@ -14,10 +14,11 @@
         "designer|userAlias": "tareasform",
         "designer|userClassName": "TareasForm",
         "height": null,
+        "initialTitle": "tarea",
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Tarea",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -31,10 +32,18 @@
         "scrollable": "auto",
         "title": "string",
         "width": "auto",
-        "cls": "typedarray"
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LotesForm2",
     "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "08264892-f640-4121-8bb3-93c0a4780258",
     "viewModelInstanceId": "a5be5582-7363-474e-8310-70e79a8621c4",
     "cn": [
@@ -327,16 +336,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nueva ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component, true);"
                 ],
                 "name": "activate",
                 "scope": "me"
