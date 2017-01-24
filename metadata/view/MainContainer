@@ -679,6 +679,48 @@
                     ]
                 },
                 {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "toolbar-color"
+                        ],
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "cls": "typedarray",
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "223359a1-1b1b-465a-aadf-5fd5f4cf93c1",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "estado_sinc",
+                                "layout|flex": null,
+                                "text": "Sincronizado ok"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "4cfcb4af-2112-429b-bbb1-6fe07258a41c"
+                        }
+                    ]
+                },
+                {
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",

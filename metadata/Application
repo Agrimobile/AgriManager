@@ -103,7 +103,6 @@
             "MainMenu",
             "LoginForm",
             "SyncForm",
-            "Mensaje",
             "MenuPanel"
         ]
     },
