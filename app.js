@@ -79,7 +79,9 @@ Ext.application({
     'PersonalMysql',
     'RubrosMysql',
     'TareasMysql',
-    'LaboresMysql'
+    'LaboresMysql',
+    'TiposTarea',
+    'UnidadesMedida'
   ],
   views: [
     'MainContainer',
@@ -114,7 +116,6 @@ Ext.application({
     'MainMenu',
     'LoginForm',
     'SyncForm',
-    'Mensaje',
     'MenuPanel'
   ],
   name: 'MyApp',

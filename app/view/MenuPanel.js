@@ -72,22 +72,6 @@ Ext.define('MyApp.view.MenuPanel', {
   ],
 
   onViewItemClick1: function(dataview, record, item, index, e, eOpts) {
-    /*var createPanel = function(panelClass) {
-        var cardClass = "MyApp.view." + panelClass;
-        if(Ext.ClassManager.get(cardClass)) {
-            var newPan = Ext.create(cardClass);
-            MyApp.main.add(newPan);
-            MyApp.main.getLayout().next();
-        }
-        else {
-            var errorMsg = "Error: Panel " + panelClass + " does not exist";
-            throw errorMsg;
-        }
-    };
-    var panelClass = record.get('panelClass');
-    createPanel(panelClass);
-
-    */
     var layout = MyApp.main.getLayout(), next,
         panelClass = item.panelClass,
         createPanel = function(panelClass) {

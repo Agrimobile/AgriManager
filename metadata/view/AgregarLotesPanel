@@ -10,7 +10,7 @@
         "designer|userClassName": "AgregarLotesPanel",
         "flex": 1,
         "height": null,
-        "itemId": "form",
+        "itemId": "formseveral",
         "scrollable": true,
         "title": "Asignar Lotes",
         "titleAlign": "center",
@@ -450,7 +450,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "var lotesToAdd = this.up(\"#form\");",
+                                            "var lotesToAdd = this.up(\"#formseveral\");",
                                             "var config = {",
                                             "  gridRecordPK: 'cod_lote',",
                                             "  pivotPK: 'cod_actividad'",

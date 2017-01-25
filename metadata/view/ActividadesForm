@@ -7,14 +7,18 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "actividadesform",
         "designer|userClassName": "ActividadesForm",
         "flex": 1,
         "height": null,
-        "itemId": "form",
+        "initialTitle": "actividad",
+        "itemId": null,
         "layout": "vbox",
-        "title": "Actividad",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -27,10 +31,19 @@
         "itemId": "string",
         "layout": "string",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "MyForm2",
     "designerId": "97804b88-8621-4c35-9050-1333382814b3",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "9572b353-4411-4f52-8023-6772b6229798",
     "viewModelInstanceId": "e243c575-f8da-47ad-8620-4c2e60e35ddc",
     "cn": [
@@ -266,7 +279,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form'),",
+                                    "var formWrapper = this.up(\"[cls=formpanel]\"),",
                                     "    desde = formWrapper.down(\"#desde\").value,",
                                     "    hasta = formWrapper.down(\"#hasta\").value,",
                                     "    warning = \"<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>\";",
@@ -327,7 +340,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {
@@ -352,16 +365,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nueva ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component, true);"
                 ],
                 "name": "activate",
                 "scope": "me"

@@ -24,13 +24,16 @@ Ext.define('MyApp.view.LotesForm', {
     'Ext.form.field.Number'
   ],
 
+  config: {
+    initialTitle: 'lote'
+  },
+
   viewModel: {
     type: 'lotesform'
   },
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Lote',
   defaultListenerScope: true,
 
   layout: {
@@ -50,7 +53,7 @@ Ext.define('MyApp.view.LotesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             formWrapper.form._record.data.cod_establecimiento = formWrapper.parent.codigo;
             if(formWrapper.getForm().isValid()) {
               f_crud.save_form(formWrapper);
@@ -64,7 +67,7 @@ Ext.define('MyApp.view.LotesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',
@@ -102,16 +105,7 @@ Ext.define('MyApp.view.LotesForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component);
   }
 
 });

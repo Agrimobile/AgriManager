@@ -7,14 +7,18 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "contratistasform",
         "designer|userClassName": "ContratistasForm",
         "height": null,
-        "itemId": "form",
+        "initialTitle": "contratista",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Contratista",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -27,10 +31,19 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "RubrosForm1",
     "designerId": "94b847d6-3e3c-4ee2-878d-b27c93af816a",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "252c49a9-8fce-44d8-8429-f87aec9138a6",
     "viewModelInstanceId": "b3696974-9c7c-46c1-8933-4d307a56d0db",
     "cn": [
@@ -96,7 +109,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +161,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {
@@ -223,16 +236,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nuevo ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component);"
                 ],
                 "name": "activate",
                 "scope": "me"

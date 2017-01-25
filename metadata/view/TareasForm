@@ -7,14 +7,18 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "tareasform",
         "designer|userClassName": "TareasForm",
         "height": null,
-        "itemId": "form",
+        "initialTitle": "tarea",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Tarea",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -27,10 +31,19 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LotesForm2",
     "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "08264892-f640-4121-8bb3-93c0a4780258",
     "viewModelInstanceId": "a5be5582-7363-474e-8310-70e79a8621c4",
     "cn": [
@@ -96,7 +109,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()){",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +161,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {
@@ -214,7 +227,7 @@
             "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
         },
         {
-            "type": "Ext.form.field.Text",
+            "type": "Ext.form.field.ComboBox",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -223,43 +236,33 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Tipo",
+                "displayField": "nombre",
+                "fieldLabel": "Unidad de Medida",
+                "forceSelection": true,
+                "itemId": "unidadMedida",
                 "layout|flex": null,
-                "name": "tipo"
+                "name": "um",
+                "queryMode": "local",
+                "store": "UnidadesMedida",
+                "valueField": "valor",
+                "width": null
             },
             "configAlternates": {
                 "allowBlank": "boolean",
                 "blankText": "string",
+                "displayField": "datafield",
                 "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto"
             },
-            "name": "MyTextField2",
-            "designerId": "5f73ef38-e590-41ee-83c3-74fdf75cc230"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Unidad de medida",
-                "layout|flex": null,
-                "name": "um"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField3",
-            "designerId": "1a1282f3-b867-44db-a1dc-a4c457905e94"
+            "name": "MyComboBox10",
+            "designerId": "7742f5b9-1d20-424b-b7d9-2e3428da2596"
         },
         {
             "type": "Ext.form.field.Number",
@@ -286,6 +289,44 @@
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
         },
         {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "displayField": "nombre",
+                "fieldLabel": "Tipo",
+                "forceSelection": true,
+                "itemId": "tipoTarea",
+                "layout|flex": null,
+                "name": "tipo",
+                "queryMode": "local",
+                "store": "TiposTarea",
+                "valueField": "valor",
+                "width": null
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto"
+            },
+            "name": "MyComboBox9",
+            "designerId": "48cc3ee4-cbaa-46e3-92c4-96755d557e58"
+        },
+        {
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -295,16 +336,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var item = component.header.title.text;",
-                    "if(component.action === 'ADD') {",
-                    "  component.setTitle('Nueva ' + item);",
-                    "}",
-                    "else if(component.action === 'EDIT') {",
-                    "  component.setTitle('Editar ' + item);",
-                    "}",
-                    "else {",
-                    "  component.setTitle(item);",
-                    "}"
+                    "f_crud.setFormTitle(component, true);"
                 ],
                 "name": "activate",
                 "scope": "me"

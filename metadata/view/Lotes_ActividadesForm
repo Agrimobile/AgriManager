@@ -7,14 +7,18 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "lotes_actividadesform",
         "designer|userClassName": "Lotes_ActividadesForm",
         "height": null,
-        "itemId": "form",
+        "initialTitle": "Actividad en un Lote",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Actividad en un Lote",
+        "title": "",
         "width": null
     },
     "configAlternates": {
@@ -27,10 +31,19 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LotesForm1",
     "designerId": "d5645b8a-c62e-403c-8f26-6506faf86778",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "f0cf0089-ffa3-4055-9eb1-6cb23f6437ac",
     "viewModelInstanceId": "a51272a7-7dec-4250-82d1-366969d6346f",
     "cn": [
@@ -96,7 +109,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
                                     "if(formWrapper.getForm().isValid()) {",
                                     "  f_crud.save_form(formWrapper);",
                                     "}"
@@ -148,7 +161,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

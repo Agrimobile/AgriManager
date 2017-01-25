@@ -24,14 +24,17 @@ Ext.define('MyApp.view.EstablecimientosForm', {
     'Ext.button.Button'
   ],
 
+  config: {
+    initialTitle: 'establecimiento'
+  },
+
   viewModel: {
     type: 'establecimientosform'
   },
+  cls: 'formpanel',
   flex: 1,
-  itemId: 'form',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Establecimiento',
   defaultListenerScope: true,
 
   layout: {
@@ -69,7 +72,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             if(formWrapper.getForm().isValid()) {
               f_crud.save_form(formWrapper);
             }
@@ -82,7 +85,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',
@@ -96,16 +99,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nuevo ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component);
   }
 
 });

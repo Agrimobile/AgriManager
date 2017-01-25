@@ -26,13 +26,16 @@ Ext.define('MyApp.view.ActividadesForm', {
     'Ext.button.Button'
   ],
 
+  config: {
+    initialTitle: 'actividad'
+  },
+
   viewModel: {
     type: 'actividadesform'
   },
+  cls: 'formpanel',
   flex: 1,
-  itemId: 'form',
   bodyPadding: 10,
-  title: 'Actividad',
   defaultListenerScope: true,
 
   layout: {
@@ -109,7 +112,7 @@ Ext.define('MyApp.view.ActividadesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form'),
+            var formWrapper = this.up("[cls=formpanel]"),
               desde = formWrapper.down("#desde").value,
               hasta = formWrapper.down("#hasta").value,
               warning = "<b>Importante</b>: el valor del campo <i>Desde</i> debería ser antes que <i>Hasta</i>";
@@ -131,7 +134,7 @@ Ext.define('MyApp.view.ActividadesForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',
@@ -145,16 +148,7 @@ Ext.define('MyApp.view.ActividadesForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nueva ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component, true);
   }
 
 });

@@ -21,16 +21,20 @@ Ext.define('MyApp.view.TareasForm', {
     'MyApp.view.LotesFormViewModel3',
     'Ext.container.Container',
     'Ext.button.Button',
+    'Ext.form.field.ComboBox',
     'Ext.form.field.Number'
   ],
+
+  config: {
+    initialTitle: 'tarea'
+  },
 
   viewModel: {
     type: 'tareasform'
   },
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: 'Tarea',
   defaultListenerScope: true,
 
   layout: {
@@ -50,7 +54,7 @@ Ext.define('MyApp.view.TareasForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             if(formWrapper.getForm().isValid()){
               f_crud.save_form(formWrapper);
             }
@@ -63,7 +67,7 @@ Ext.define('MyApp.view.TareasForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            f_crud.close_form(this.up("#form"));
+            f_crud.close_form(this.up("[cls=formpanel]"));
           },
           margin: 10,
           iconCls: 'x-fa fa-remove',
@@ -89,18 +93,17 @@ Ext.define('MyApp.view.TareasForm', {
       blankText: 'Este campo es obligatorio'
     },
     {
-      xtype: 'textfield',
-      fieldLabel: 'Tipo',
-      name: 'tipo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Unidad de medida',
+      xtype: 'combobox',
+      itemId: 'unidadMedida',
+      fieldLabel: 'Unidad de Medida',
       name: 'um',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'UnidadesMedida',
+      valueField: 'valor'
     },
     {
       xtype: 'numberfield',
@@ -108,6 +111,19 @@ Ext.define('MyApp.view.TareasForm', {
       name: 'precio',
       allowBlank: false,
       blankText: 'Este campo es obligatorio'
+    },
+    {
+      xtype: 'combobox',
+      itemId: 'tipoTarea',
+      fieldLabel: 'Tipo',
+      name: 'tipo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'TiposTarea',
+      valueField: 'valor'
     }
   ],
   listeners: {
@@ -115,16 +131,7 @@ Ext.define('MyApp.view.TareasForm', {
   },
 
   onFormActivate: function(component, eOpts) {
-    var item = component.header.title.text;
-    if(component.action === 'ADD') {
-      component.setTitle('Nueva ' + item);
-    }
-    else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
-    }
-    else {
-      component.setTitle(item);
-    }
+    f_crud.setFormTitle(component, true);
   }
 
 });

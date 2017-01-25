@@ -24,10 +24,14 @@ Ext.define('MyApp.view.LoginForm', {
     'Ext.form.field.Text'
   ],
 
+  config: {
+    initialTitle: 'Datos de conexión'
+  },
+
   viewModel: {
     type: 'loginform'
   },
-  itemId: 'form',
+  cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
   title: 'Datos de conexión',
@@ -50,7 +54,7 @@ Ext.define('MyApp.view.LoginForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
-            var formWrapper = this.up('#form');
+            var formWrapper = this.up('[cls=formpanel]');
             if(formWrapper.getForm().isValid()) {
               var val = formWrapper.getValues();
 

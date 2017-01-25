@@ -21,7 +21,9 @@ Ext.define('MyApp.view.MainContainer', {
     'MyApp.view.MainContainerViewModel',
     'Ext.panel.Tool',
     'Ext.form.Panel',
-    'Ext.button.Button'
+    'Ext.button.Button',
+    'Ext.toolbar.Toolbar',
+    'Ext.form.Label'
   ],
 
   viewModel: {
@@ -216,6 +218,20 @@ Ext.define('MyApp.view.MainContainer', {
           listeners: {
             render: 'onPanelRender'
           }
+        }
+      ],
+      dockedItems: [
+        {
+          xtype: 'toolbar',
+          cls: 'toolbar-color',
+          dock: 'bottom',
+          items: [
+            {
+              xtype: 'label',
+              itemId: 'estado_sinc',
+              text: 'Sincronizado ok'
+            }
+          ]
         }
       ],
       listeners: {

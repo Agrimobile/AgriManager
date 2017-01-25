@@ -7,14 +7,18 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "cls": [
+            "formpanel"
+        ],
         "container|align": "stretch",
         "designer|userAlias": "laboresform",
         "designer|userClassName": "LaboresForm",
         "height": null,
-        "itemId": "form",
+        "initialTitle": "labor",
+        "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "Labor",
+        "title": null,
         "width": null
     },
     "configAlternates": {
@@ -27,10 +31,19 @@
         "layout": "string",
         "scrollable": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "cls": "typedarray",
+        "initialTitle": "string"
     },
     "name": "LaboresForm1",
     "designerId": "609e31be-a99e-4abd-bc02-fca2cf301ace",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "initialTitle",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "f1961471-7148-4ea1-a32b-06c8dccef075",
     "viewModelInstanceId": "1db237f7-09c6-4d3b-845f-9c0ef1332d4d",
     "cn": [
@@ -45,7 +58,7 @@
                 "fn": "onFormActivate",
                 "implHandler": [
                     "var form_panel = this;",
-                    "var item = component.header.title.text;",
+                    "var item = component.initialTitle;",
                     "var record = form_panel.getRecord();",
                     "",
                     "//empty labores_ tables",
@@ -183,42 +196,119 @@
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
                         },
                         {
-                            "type": "Ext.form.field.ComboBox",
+                            "type": "Ext.container.Container",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "allowBlank": false,
-                                "blankText": "Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal",
-                                "defaultListenerScope": true,
-                                "displayField": "descripcion",
-                                "fieldLabel": "Tarea",
-                                "forceSelection": true,
-                                "itemId": "fieldTarea",
-                                "name": "cod_tarea",
-                                "queryMode": "local",
-                                "store": "Tareas",
-                                "valueField": "codigo",
-                                "width": "100%"
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "margin": "10 0"
                             },
                             "configAlternates": {
-                                "allowBlank": "boolean",
-                                "blankText": "string",
-                                "defaultListenerScope": "boolean",
-                                "displayField": "datafield",
-                                "fieldLabel": "string",
-                                "forceSelection": "boolean",
-                                "itemId": "string",
-                                "name": "string",
-                                "queryMode": "string",
-                                "store": "store",
-                                "valueField": "datafield",
-                                "width": "auto"
+                                "container|align": "string",
+                                "layout": "string",
+                                "margin": "auto"
                             },
-                            "name": "MyComboBox",
-                            "designerId": "178006af-0e46-467c-8684-6b5356cbe66a"
+                            "name": "MyContainer8",
+                            "designerId": "4fba3e9e-e164-4e9f-b830-43d8708cfe58",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "blankText": "Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal",
+                                        "defaultListenerScope": true,
+                                        "displayField": "descripcion",
+                                        "fieldLabel": "Tarea",
+                                        "forceSelection": true,
+                                        "itemId": "fieldTarea",
+                                        "name": "cod_tarea",
+                                        "queryMode": "local",
+                                        "store": "Tareas",
+                                        "valueField": "codigo",
+                                        "width": "80%"
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "blankText": "string",
+                                        "defaultListenerScope": "boolean",
+                                        "displayField": "datafield",
+                                        "fieldLabel": "string",
+                                        "forceSelection": "boolean",
+                                        "itemId": "string",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "178006af-0e46-467c-8684-6b5356cbe66a"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "x-fa fa-plus",
+                                        "layout|flex": null,
+                                        "layout|margins": "",
+                                        "margin": "0 10",
+                                        "text": "",
+                                        "width": "10%"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "layout|flex": "number",
+                                        "layout|margins": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "0c816f35-3c59-413e-abd8-668d8d0a8d1a",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var formWrapper = this.up('[cls=formpanel]');",
+                                                    "formWrapper.dropdownId = \"fieldTarea\";",
+                                                    "f_crud.openNestedForm('TareasPanel');"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "c22850b6-1fca-4fb2-991f-a33c889c277b"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.form.field.Number",
@@ -261,40 +351,117 @@
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
                         },
                         {
-                            "type": "Ext.form.field.ComboBox",
+                            "type": "Ext.container.Container",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
-                                "defaultListenerScope": true,
-                                "displayField": "nombre",
-                                "fieldLabel": "Contratista",
-                                "forceSelection": true,
-                                "itemId": "fieldContratista",
-                                "name": "cod_contratista",
-                                "queryMode": "local",
-                                "store": "Contratistas",
-                                "valueField": "codigo",
-                                "width": "100%"
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "margin": "10 0"
                             },
                             "configAlternates": {
-                                "blankText": "string",
-                                "defaultListenerScope": "boolean",
-                                "displayField": "datafield",
-                                "fieldLabel": "string",
-                                "forceSelection": "boolean",
-                                "itemId": "string",
-                                "name": "string",
-                                "queryMode": "string",
-                                "store": "store",
-                                "valueField": "datafield",
-                                "width": "auto"
+                                "container|align": "string",
+                                "layout": "string",
+                                "margin": "auto"
                             },
-                            "name": "MyComboBox1",
-                            "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"
+                            "name": "MyContainer9",
+                            "designerId": "e65ef33d-7420-4d66-9fc6-2e8ae824f7d5",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
+                                        "defaultListenerScope": true,
+                                        "displayField": "nombre",
+                                        "fieldLabel": "Contratista",
+                                        "forceSelection": true,
+                                        "itemId": "fieldContratista",
+                                        "name": "cod_contratista",
+                                        "queryMode": "local",
+                                        "store": "Contratistas",
+                                        "valueField": "codigo",
+                                        "width": "80%"
+                                    },
+                                    "configAlternates": {
+                                        "blankText": "string",
+                                        "defaultListenerScope": "boolean",
+                                        "displayField": "datafield",
+                                        "fieldLabel": "string",
+                                        "forceSelection": "boolean",
+                                        "itemId": "string",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyComboBox1",
+                                    "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "x-fa fa-plus",
+                                        "layout|flex": null,
+                                        "layout|margins": "",
+                                        "margin": "0 10",
+                                        "text": "",
+                                        "width": "10%"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "layout|flex": "number",
+                                        "layout|margins": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "3f759a13-c66c-4c3d-90a2-127f7d8730d8",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var formWrapper = this.up('[cls=formpanel]');",
+                                                    "formWrapper.dropdownId = \"fieldContratista\";",
+                                                    "f_crud.openNestedForm('ContratistasPanel');"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "5ab82003-7de0-4f08-abbb-c2e5f318854c"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -759,6 +926,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin5",
                                     "designerId": "4c8c8ae5-e1a8-4c74-8321-ac01a523e091"
                                 },
@@ -898,7 +1071,7 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var form_panel = this.up('#form');",
+                                                            "var form_panel = this.up('[cls=formpanel]');",
                                                             "var id_labores  =  form_panel.getRecord().get('id');",
                                                             "var store = Ext.getStore('Labores_insumos');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_insumos');",
@@ -1535,7 +1708,7 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var form_panel = this.up('#form');",
+                                                            "var form_panel = this.up('[cls=formpanel]');",
                                                             "var id_labores  =  form_panel.getRecord().get('id');",
                                                             "var store = Ext.getStore('Labores_personal');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_personal');",
@@ -2072,7 +2245,7 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var form_panel = this.up('#form');",
+                                                            "var form_panel = this.up('[cls=formpanel]');",
                                                             "var id_labores  =  form_panel.getRecord().get('id');",
                                                             "var store = Ext.getStore('Labores_maquinaria');",
                                                             "var newrecord = Ext.create('MyApp.model.Labores_maquinaria');",
@@ -2219,8 +2392,8 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "var formWrapper = this.up('#form');",
-                                    "var tarea_cod = this.up('#form').down(\"#fieldTarea\").value;",
+                                    "var formWrapper = this.up('[cls=formpanel]');",
+                                    "var tarea_cod = formWrapper.down(\"#fieldTarea\").value;",
                                     "",
                                     "formWrapper.form._record.data.cod_lote_actividad = formWrapper.parent.codigo;",
                                     "formWrapper.form._record.data.cod_lote = formWrapper.parent.cod_lote;",
@@ -2301,7 +2474,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "f_crud.close_form(this.up(\"#form\"));"
+                                    "f_crud.close_form(this.up(\"[cls=formpanel]\"));"
                                 ]
                             },
                             "configAlternates": {

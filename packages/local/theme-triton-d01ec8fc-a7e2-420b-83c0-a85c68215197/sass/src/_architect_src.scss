@@ -1,0 +1,66 @@
+ .x-grid-cell-inner-treecolumn {
+  text-align: left !important;
+}
+
+.paneltool {
+  left: 0!important;
+}
+
+.x-grid-cell-inner {
+  text-align: left!important;
+}
+
+.x-panel-header-title {
+  width: 100%!important;
+}
+
+// Las propiedades seteadas con important arriba no pueden refactorearse
+// ya que el codigo que se renderiza en el html tiene inline styles
+
+.gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
+  color: transparent;
+}
+
+.warning-message .x-form-display-field-default {
+  color: #cf4c35;
+  font-weight: 600;
+}
+
+.custom-contratistas-icon-style:before {
+  border: 1px solid;
+  border-radius: 35px;
+  padding: 0 2px;
+  left: -1px;
+  position: relative;
+}
+
+.fa-calendar-custom.fa-calendar-o:after {
+  left: -14px;
+  content: "\f133";
+  font-family: FontAwesome;
+}
+
+.fa-calendar-custom.fa-calendar-o:after, .fa-calendar-custom.fa-calendar-o:before {
+  background: white;
+  position: relative;
+}
+
+.fa-calendar-custom.fa-calendar-o:before {
+  top: -6px;
+  left: -4px;
+}
+
+.x-title.x-panel-header-title-default {
+  line-height: 29px;
+}
+
+.x-menu-item-icon-default.mainmenu-icon {
+  top: 14px;
+  left: 10px;
+}
+
+.toolbar-color {
+  background: #5FA2DD;
+  color: #FFFFFF;
+  padding: 10px;
+}
