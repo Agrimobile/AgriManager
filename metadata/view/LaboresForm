@@ -926,6 +926,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin5",
                                     "designerId": "4c8c8ae5-e1a8-4c74-8321-ac01a523e091"
                                 },

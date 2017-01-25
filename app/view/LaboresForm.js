@@ -286,7 +286,8 @@ Ext.define('MyApp.view.LaboresForm', {
               ],
               plugins: [
                 {
-                  ptype: 'cellediting'
+                  ptype: 'cellediting',
+                  clicksToEdit: 1
                 }
               ],
               listeners: {
