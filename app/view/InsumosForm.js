@@ -98,7 +98,8 @@ Ext.define('MyApp.view.InsumosForm', {
       fieldLabel: 'Precio',
       name: 'precio',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      decimalSeparator: ','
     },
     {
       xtype: 'combobox',

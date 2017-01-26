@@ -236,6 +236,7 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "decimalSeparator": ",",
                 "fieldLabel": "Precio",
                 "layout|flex": null,
                 "name": "precio"
@@ -245,7 +246,8 @@
                 "blankText": "string",
                 "fieldLabel": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "decimalSeparator": "string"
             },
             "name": "MyNumberField6",
             "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"

@@ -261,28 +261,6 @@
                     "designerId": "1808ff3b-8634-48b9-949f-5da4323b06de"
                 },
                 {
-                    "type": "Ext.grid.column.Check",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "agregar",
-                        "itemId": null,
-                        "text": "Agregar",
-                        "width": "25%"
-                    },
-                    "configAlternates": {
-                        "dataIndex": "datafield",
-                        "itemId": "string",
-                        "text": "string",
-                        "width": "auto"
-                    },
-                    "name": "MyCheck2",
-                    "designerId": "a6ee212d-70a9-4a9b-9623-61133cf84442"
-                },
-                {
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",
@@ -331,6 +309,16 @@
                     },
                     "name": "onAddinggridBeforeRender",
                     "designerId": "f28bb353-2e5d-41a5-a94b-db019ed0bbc0"
+                },
+                {
+                    "type": "Ext.selection.CheckboxModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyCheckboxSelectionModel3",
+                    "designerId": "f67bc64b-a7ba-4e4b-8def-98fc3d64c297"
                 }
             ]
         },
@@ -350,7 +338,8 @@
                     "//var store = Ext.getStore('Lotes_actividades');",
                     "//this.form_store_array = [store];",
                     "",
-                    "f_crud.load_store(this.store_name,'',\"select *,'' as agregar from Lotes\");"
+                    "//f_crud.load_store(this.store_name,'',\"select *,'' as agregar from Lotes\");",
+                    "f_crud.load_store(this.store_name,'',\"select * from Lotes\");"
                 ],
                 "name": "render",
                 "scope": "me"

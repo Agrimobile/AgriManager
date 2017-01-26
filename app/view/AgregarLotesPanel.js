@@ -23,7 +23,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
-    'Ext.grid.column.Check',
+    'Ext.selection.CheckboxModel',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -100,17 +100,14 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'
-        },
-        {
-          xtype: 'checkcolumn',
-          width: '25%',
-          dataIndex: 'agregar',
-          text: 'Agregar'
         }
       ],
       listeners: {
         itemclick: 'onAddinggridItemClick',
         beforerender: 'onAddinggridBeforeRender'
+      },
+      selModel: {
+        selType: 'checkboxmodel'
       }
     }
   ],
@@ -181,7 +178,8 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     //var store = Ext.getStore('Lotes_actividades');
     //this.form_store_array = [store];
 
-    f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
+    //f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
+    f_crud.load_store(this.store_name,'',"select * from Lotes");
   }
 
 });
