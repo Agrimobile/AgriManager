@@ -29,6 +29,7 @@ Ext.define('MyApp.view.LaboresForm', {
     'Ext.grid.column.Number',
     'Ext.form.field.Display',
     'Ext.grid.plugin.CellEditing',
+    'Ext.selection.CheckboxModel',
     'Ext.form.Panel'
   ],
 
@@ -293,6 +294,9 @@ Ext.define('MyApp.view.LaboresForm', {
               listeners: {
                 selectionchange: 'onGridpanelSelectionChange',
                 beforerender: 'onLabores_insumos_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -338,9 +342,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid");
-                        var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid"),
+                        //var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -463,12 +468,16 @@ Ext.define('MyApp.view.LaboresForm', {
               ],
               plugins: [
                 {
-                  ptype: 'cellediting'
+                  ptype: 'cellediting',
+                  clicksToEdit: 1
                 }
               ],
               listeners: {
                 selectionchange: 'onGridpanelSelectionChange1',
                 beforerender: 'onLabores_personal_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -514,9 +523,12 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_personal_tab').down("#labores_personal_grid");
-                        var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_personal_tab').down("#labores_personal_grid"),
+
+                        /*var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);*/
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',
@@ -611,12 +623,16 @@ Ext.define('MyApp.view.LaboresForm', {
               ],
               plugins: [
                 {
-                  ptype: 'cellediting'
+                  ptype: 'cellediting',
+                  clicksToEdit: 1
                 }
               ],
               listeners: {
                 selectionchange: 'onLabores_maquinaria_gridSelectionChange',
                 beforerender: 'onLabores_maquinaria_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -662,9 +678,11 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid");
-                        var gridSeletedRecord = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid"),
+                        /*var gridSeletedRecord = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);*/
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',

@@ -24,7 +24,6 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
-    'Ext.selection.CheckboxModel',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -119,9 +118,6 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         itemlongpress: 'onGridItemLongpress',
         itemclick: 'onGridItemClick',
         beforerender: 'onGridBeforeRender'
-      },
-      selModel: {
-        selType: 'checkboxmodel'
       }
     }
   ],
@@ -227,12 +223,11 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
   },
 
   onGridSelectionChange: function(model, selected, eOpts) {
-    this.record = selected[0];
     var newbox = this.down("#newBox"),
         editbox = this.down("#editBox"),
         deletebox = this.down("#deleteBox"),
         len = selected.length;
-
+    this.record = selected[0];
     if(len === 0) {
       newbox.columnWidth = 1;
       editbox.columnWidth = 0;
@@ -253,7 +248,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       deletebox.hide();
       deletebox.show();
     }
-    else if(len > 1) {
+    /*else if(len > 1) {
       newbox.columnWidth = 0.5;
       editbox.columnWidth = 0;
       deletebox.columnWidth = 0.5;
@@ -262,12 +257,10 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       editbox.hide();
       deletebox.hide();
       deletebox.show();
-    }
+    }*/
     else {
       console.log("Error: the selection amount is negative: " + len + "!");
     }
-
-
   },
 
   onGridItemLongpress: function(dataview, record, item, index, e, eOpts) {

@@ -982,6 +982,16 @@
                                     },
                                     "name": "onLabores_insumos_gridBeforeRender",
                                     "designerId": "07ba93a3-0e81-4f8a-96e2-bfc85225ad37"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel",
+                                    "designerId": "46512f7d-82e0-471a-9fba-e45acf0022df"
                                 }
                             ]
                         },
@@ -1133,9 +1143,10 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\"),",
+                                                            "//var gridSeletedRecord = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\").record;",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {
@@ -1569,6 +1580,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin6",
                                     "designerId": "612a6bbf-7653-464e-94cb-94437d85035d"
                                 },
@@ -1619,6 +1636,16 @@
                                     },
                                     "name": "onLabores_personal_gridBeforeRender",
                                     "designerId": "270e5168-ee9c-4f4b-800b-f8e2e873f5e6"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel2",
+                                    "designerId": "7a84d8b0-744d-4c9f-8e07-bde9738cbddf"
                                 }
                             ]
                         },
@@ -1770,9 +1797,12 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_personal_tab').down(\"#labores_personal_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_personal_tab').down(\"#labores_personal_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_personal_tab').down(\"#labores_personal_grid\"),",
+                                                            "    ",
+                                                            "/*var gridSeletedRecord = this.up('#labores_personal_tab').down(\"#labores_personal_grid\").record;",
+                                                            "grid.getStore().remove(gridSeletedRecord);*/",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {
@@ -2106,6 +2136,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin",
                                     "designerId": "0b8e09d3-9a53-4b24-86d0-71122bc502f8"
                                 },
@@ -2156,6 +2192,16 @@
                                     },
                                     "name": "onLabores_maquinaria_gridBeforeRender",
                                     "designerId": "edc49065-f3d9-4035-a97c-9bfa6bf4ca44"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel1",
+                                    "designerId": "16a9da60-ea02-4f6e-80bf-e11176eb48a8"
                                 }
                             ]
                         },
@@ -2307,9 +2353,11 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\"),",
+                                                            "/*var gridSeletedRecord = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\").record;",
+                                                            "grid.getStore().remove(gridSeletedRecord);*/",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {

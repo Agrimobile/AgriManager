@@ -336,12 +336,11 @@
                     "userConfig": {
                         "fn": "onGridSelectionChange",
                         "implHandler": [
-                            "this.record = selected[0];",
                             "var newbox = this.down(\"#newBox\"),",
                             "    editbox = this.down(\"#editBox\"),",
                             "    deletebox = this.down(\"#deleteBox\"),",
                             "    len = selected.length;",
-                            "",
+                            "this.record = selected[0];",
                             "if(len === 0) {",
                             "  newbox.columnWidth = 1;",
                             "  editbox.columnWidth = 0;",
@@ -362,7 +361,7 @@
                             "  deletebox.hide();",
                             "  deletebox.show();",
                             "}",
-                            "else if(len > 1) {",
+                            "/*else if(len > 1) {",
                             "  newbox.columnWidth = 0.5;",
                             "  editbox.columnWidth = 0;",
                             "  deletebox.columnWidth = 0.5;",
@@ -371,12 +370,10 @@
                             "  editbox.hide();",
                             "  deletebox.hide();",
                             "  deletebox.show();",
-                            "}",
+                            "}*/",
                             "else {",
                             "  console.log(\"Error: the selection amount is negative: \" + len + \"!\");",
-                            "}",
-                            "",
-                            ""
+                            "}"
                         ],
                         "name": "selectionchange",
                         "scope": "me"
@@ -480,16 +477,6 @@
                     },
                     "name": "onGridBeforeRender",
                     "designerId": "c50245af-84b4-4455-9947-7099fbeee37b"
-                },
-                {
-                    "type": "Ext.selection.CheckboxModel",
-                    "reference": {
-                        "name": "selModel",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "name": "MyCheckboxSelectionModel",
-                    "designerId": "97d24480-7ac7-4c72-81b1-351340f5cad8"
                 }
             ]
         },
