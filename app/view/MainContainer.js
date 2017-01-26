@@ -54,6 +54,7 @@ Ext.define('MyApp.view.MainContainer', {
         },
         {
           xtype: 'tool',
+          cls: 'configtool',
           itemId: 'configmenu-tool',
           iconCls: 'x-fa fa-gear',
           listeners: {
@@ -214,10 +215,7 @@ Ext.define('MyApp.view.MainContainer', {
                 }
               ]
             }
-          ],
-          listeners: {
-            render: 'onPanelRender'
-          }
+          ]
         }
       ],
       dockedItems: [
@@ -251,15 +249,6 @@ Ext.define('MyApp.view.MainContainer', {
   onToolClick1: function(tool, e, owner, eOpts) {
     var toolMenu = tool.menu;
     toolMenu.showBy(tool);
-  },
-
-  onPanelRender: function(component, eOpts) {
-    /*this.store_name = 'Personal';
-    this.model_name = 'MyApp.model.Personal';
-    this.form_name  = 'MyApp.view.PersonalForm';
-    var store = Ext.getStore(this.store_name);
-    this.form_store_array = [store];*/
-    //f_crud.load_store(this.store_name);
   },
 
   onAgrimobileRender: function(component, eOpts) {
@@ -301,7 +290,6 @@ Ext.define('MyApp.view.MainContainer', {
     MyApp.archivo_base = 'AgriManager';
     MyApp.screen_count = 0;
     MyApp.screen_name = [];
-    //MyApp.url_lib     = '../LibPHP/';
     //MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
     MyApp.url_lib       = 'http://localhost:8080/LibPHP/';
     MyApp.usuario       = window.localStorage.getItem("agrimanager_usuario");

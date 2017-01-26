@@ -293,7 +293,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "fecha",
-                        "format": "m/j/Y",
+                        "format": null,
                         "text": "Fecha",
                         "width": "15%"
                     },

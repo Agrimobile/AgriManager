@@ -111,12 +111,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "configtool"
+                        ],
                         "iconCls": "x-fa fa-gear",
                         "itemId": "configmenu-tool"
                     },
                     "configAlternates": {
                         "iconCls": "string",
-                        "itemId": "string"
+                        "itemId": "string",
+                        "cls": "typedarray"
                     },
                     "name": "MyTool6",
                     "designerId": "c5e5b43e-a7d2-4549-b13e-19269ea32be3",
@@ -603,35 +607,6 @@
                             ]
                         },
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "onPanelRender",
-                                "implHandler": [
-                                    "/*this.store_name = 'Personal';",
-                                    "this.model_name = 'MyApp.model.Personal';",
-                                    "this.form_name  = 'MyApp.view.PersonalForm';",
-                                    "var store = Ext.getStore(this.store_name);",
-                                    "this.form_store_array = [store];*/",
-                                    "//f_crud.load_store(this.store_name);"
-                                ],
-                                "name": "render",
-                                "scope": "me"
-                            },
-                            "configAlternates": {
-                                "fn": "string",
-                                "implHandler": "code",
-                                "name": "string",
-                                "scope": "string"
-                            },
-                            "name": "onPanelRender",
-                            "designerId": "5bec49da-51fc-448e-9e93-8b91d7c38145"
-                        },
-                        {
                             "type": "basicfunction",
                             "reference": {
                                 "name": "items",
@@ -768,7 +743,6 @@
                             "MyApp.archivo_base = 'AgriManager';",
                             "MyApp.screen_count = 0;",
                             "MyApp.screen_name = [];",
-                            "//MyApp.url_lib     = '../LibPHP/';",
                             "//MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';",
                             "MyApp.url_lib       = 'http://localhost:8080/LibPHP/';",
                             "MyApp.usuario       = window.localStorage.getItem(\"agrimanager_usuario\");",
