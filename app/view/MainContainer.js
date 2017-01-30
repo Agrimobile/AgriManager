@@ -312,19 +312,7 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
 
-    //----- controlo que exista un registro en secuencia
-    var sql ='select count(id) as cant from secuencia';
-    debugger;
-    f_crud.load_store('Secuencia','','',function(rtn){
-      f_crud.sql_select(sql,function(array){
-        var cant = array[0].cant;
-        if (cant===0){
-          f_crud.sql_command('Insert into secuencia (id,secuencia) values (1,1)', function(rtn){
-            console.log('Insert en tabla secuencia = ',rtn);
-          } );
-        }
-      });
-    });
+    f_crud.checkSecuencia();
   },
 
   onViewportRender: function(component, eOpts) {
