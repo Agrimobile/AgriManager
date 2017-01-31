@@ -181,6 +181,7 @@
                             "userConfig": {
                                 "designer|displayName": "",
                                 "fieldLabel": "Fecha",
+                                "format": "Y-m-d",
                                 "itemId": "fecha",
                                 "name": "fecha",
                                 "width": "100%"
@@ -190,7 +191,8 @@
                                 "fieldLabel": "string",
                                 "itemId": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "format": "string"
                             },
                             "name": "MyDateField2",
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
@@ -224,7 +226,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "allowBlank": false,
-                                        "blankText": "Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal",
+                                        "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "descripcion",
                                         "fieldLabel": "Tarea",
@@ -378,7 +380,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
+                                        "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "nombre",
                                         "fieldLabel": "Contratista",

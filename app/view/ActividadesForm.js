@@ -19,11 +19,11 @@ Ext.define('MyApp.view.ActividadesForm', {
 
   requires: [
     'MyApp.view.ActividadesFormViewModel',
-    'Ext.form.field.ComboBox',
-    'Ext.form.field.Date',
-    'Ext.form.field.Display',
     'Ext.container.Container',
-    'Ext.button.Button'
+    'Ext.form.field.ComboBox',
+    'Ext.button.Button',
+    'Ext.form.field.Date',
+    'Ext.form.field.Display'
   ],
 
   config: {
@@ -59,17 +59,41 @@ Ext.define('MyApp.view.ActividadesForm', {
       blankText: 'Este campo es obligatorio'
     },
     {
-      xtype: 'combobox',
-      itemId: 'fieldPeriodo',
-      fieldLabel: 'Campaña',
-      name: 'cod_periodo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
-      displayField: 'descripcion',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'Campanias',
-      valueField: 'codigo'
+      xtype: 'container',
+      margin: '10 0 10',
+      layout: {
+        type: 'hbox',
+        align: 'stretch'
+      },
+      items: [
+        {
+          xtype: 'combobox',
+          itemId: 'fieldPeriodo',
+          width: '80%',
+          fieldLabel: 'Campaña',
+          name: 'cod_periodo',
+          allowBlank: false,
+          blankText: 'Este campo es obligatorio',
+          displayField: 'descripcion',
+          forceSelection: true,
+          queryMode: 'local',
+          store: 'Campanias',
+          valueField: 'codigo'
+        },
+        {
+          xtype: 'button',
+          handler: function(button, e) {
+            var formWrapper = this.up('[cls=formpanel]');
+            formWrapper.dropdownId = "fieldPeriodo";
+            f_crud.openNestedForm('CampaniasPanel');
+          },
+          margins: '',
+          margin: '0 10',
+          width: '10%',
+          iconCls: 'x-fa fa-plus',
+          text: ''
+        }
+      ]
     },
     {
       xtype: 'datefield',

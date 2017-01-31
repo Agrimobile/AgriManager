@@ -108,7 +108,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": null,
+                "dateFormat": "Y-m-d",
                 "name": "fecha"
             },
             "configAlternates": {

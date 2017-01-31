@@ -367,7 +367,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "allowBlank": false,
-                        "blankText": "Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal",
+                        "blankText": "Este campo es obligatorio",
                         "displayField": "descripcion",
                         "fieldLabel": "Rubro",
                         "forceSelection": true,

@@ -77,7 +77,8 @@ Ext.define('MyApp.view.LaboresForm', {
               itemId: 'fecha',
               width: '100%',
               fieldLabel: 'Fecha',
-              name: 'fecha'
+              name: 'fecha',
+              format: 'Y-m-d'
             },
             {
               xtype: 'container',
@@ -95,7 +96,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   fieldLabel: 'Tarea',
                   name: 'cod_tarea',
                   allowBlank: false,
-                  blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
+                  blankText: 'Este campo es obligatorio',
                   displayField: 'descripcion',
                   forceSelection: true,
                   queryMode: 'local',
@@ -144,7 +145,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   width: '80%',
                   fieldLabel: 'Contratista',
                   name: 'cod_contratista',
-                  blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+                  blankText: 'Este campo es obligatorio',
                   displayField: 'nombre',
                   forceSelection: true,
                   queryMode: 'local',

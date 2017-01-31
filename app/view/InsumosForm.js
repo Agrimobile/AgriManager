@@ -135,7 +135,7 @@ Ext.define('MyApp.view.InsumosForm', {
           fieldLabel: 'Rubro',
           name: 'cod_rubro',
           allowBlank: false,
-          blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
+          blankText: 'Este campo es obligatorio',
           displayField: 'descripcion',
           forceSelection: true,
           queryMode: 'local',

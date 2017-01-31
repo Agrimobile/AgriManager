@@ -47,7 +47,8 @@ Ext.define('MyApp.model.Labores', {
     },
     {
       type: 'date',
-      name: 'fecha'
+      name: 'fecha',
+      dateFormat: 'Y-m-d'
     },
     {
       type: 'int',

@@ -92,7 +92,8 @@ Ext.define('MyApp.view.LaboresPanel', {
           xtype: 'datecolumn',
           width: '15%',
           dataIndex: 'fecha',
-          text: 'Fecha'
+          text: 'Fecha',
+          format: 'Y-m-d'
         },
         {
           xtype: 'numbercolumn',
