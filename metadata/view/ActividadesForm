@@ -221,6 +221,7 @@
             "codeClass": null,
             "userConfig": {
                 "allowBlank": false,
+                "altFormats": "",
                 "blankText": "Este campo es obligatorio",
                 "fieldLabel": "Desde",
                 "format": "Y-m-d",
@@ -237,7 +238,8 @@
                 "itemId": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "format": "string"
+                "format": "string",
+                "altFormats": "string"
             },
             "name": "MyDateField",
             "designerId": "e1f219ad-67f3-446c-8a81-cda5a9a70650"

@@ -103,6 +103,7 @@ Ext.define('MyApp.view.ActividadesForm', {
       invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
+      altFormats: '',
       format: 'Y-m-d'
     },
     {
