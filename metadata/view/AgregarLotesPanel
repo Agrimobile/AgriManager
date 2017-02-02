@@ -268,32 +268,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onAddinggridItemClick",
-                        "implHandler": [
-                            "// console.log(record.data.agregar); ",
-                            "// TODO: no basta con cambiar el valor de agregar, porque no se cambiar el ",
-                            "// tilde: hay que hacer un trabajito de 2-way-dataBinding.-"
-                        ],
-                        "name": "itemclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onAddinggridItemClick",
-                    "designerId": "7685da65-efea-4b87-9ce7-f72b291d58bb"
-                },
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "fn": "onAddinggridBeforeRender",
                         "implHandler": [
                             "f_crud.renderGridWidth(component);"
