@@ -181,7 +181,7 @@
                             "userConfig": {
                                 "designer|displayName": "",
                                 "fieldLabel": "Fecha",
-                                "format": "Y-m-d",
+                                "format": "d-m-Y",
                                 "itemId": "fecha",
                                 "name": "fecha",
                                 "width": "100%"

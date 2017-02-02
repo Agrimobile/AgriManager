@@ -251,7 +251,6 @@ Ext.define('MyApp.view.ActividadesPanel', {
     this.form_name  = 'MyApp.view.ActividadesForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    //debugger;
     f_crud.load_store(this.store_name);
   }
 

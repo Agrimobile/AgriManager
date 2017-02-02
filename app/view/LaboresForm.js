@@ -78,7 +78,7 @@ Ext.define('MyApp.view.LaboresForm', {
               width: '100%',
               fieldLabel: 'Fecha',
               name: 'fecha',
-              format: 'Y-m-d'
+              format: 'd-m-Y'
             },
             {
               xtype: 'container',
