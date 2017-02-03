@@ -223,11 +223,14 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
   },
 
   onGridSelectionChange: function(model, selected, eOpts) {
+    this.record = selected[0];
+    /*
     var newbox = this.down("#newBox"),
         editbox = this.down("#editBox"),
         deletebox = this.down("#deleteBox"),
         len = selected.length;
-    this.record = selected[0];
+
+    // clic selection code
     if(len === 0) {
       newbox.columnWidth = 1;
       editbox.columnWidth = 0;
@@ -237,8 +240,9 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       editbox.hide();
       deletebox.hide();
     }
-    else if(len === 1) {
+    else if(len >= 1) {
       newbox.columnWidth = 0.33;
+      newbox.layout.pack = 'end';
       editbox.columnWidth = 0.33;
       deletebox.columnWidth = 0.33;
       newbox.hide();
@@ -248,6 +252,9 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       deletebox.hide();
       deletebox.show();
     }
+    else {
+      console.log("Error: the selection amount is negative: " + len + "!");
+    }*/
     /*else if(len > 1) {
       newbox.columnWidth = 0.5;
       editbox.columnWidth = 0;
@@ -258,13 +265,10 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
       deletebox.hide();
       deletebox.show();
     }*/
-    else {
-      console.log("Error: the selection amount is negative: " + len + "!");
-    }
   },
 
   onGridItemLongpress: function(dataview, record, item, index, e, eOpts) {
-    /*var newbox = this.down("#newBox");
+    var newbox = this.down("#newBox");
     var editbox = this.down("#editBox");
     var deletebox = this.down("#deleteBox");
     newbox.columnWidth = 0.33;
@@ -274,20 +278,26 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
     editbox.show();
     deletebox.show();
     this.longpress = true;
+
     // this was the oldfashion way
-    */
+
+    /*
     var panelClass = "MyApp.view.LotesPanel";
     var newPan = Ext.create(panelClass);
     newPan.parent = record.data;
     MyApp.main.add(newPan);
-    MyApp.main.getLayout().setActiveItem(newPan);
+    MyApp.main.getLayout().setActiveItem(newPan);*/
   },
 
   onGridItemClick: function(dataview, record, item, index, e, eOpts) {
-    /*if(!this.longpress) {*/
-
-    /*}
-    this.longpress = false;*/
+    if(!this.longpress) {
+      var panelClass = "MyApp.view.LotesPanel";
+      var newPan = Ext.create(panelClass);
+      newPan.parent = record.data;
+      MyApp.main.add(newPan);
+      MyApp.main.getLayout().setActiveItem(newPan);
+    }
+    this.longpress = false;
   },
 
   onGridBeforeRender: function(component, eOpts) {

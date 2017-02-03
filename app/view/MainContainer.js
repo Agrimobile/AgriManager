@@ -290,8 +290,8 @@ Ext.define('MyApp.view.MainContainer', {
     MyApp.archivo_base = 'AgriManager';
     MyApp.screen_count = 0;
     MyApp.screen_name = [];
-    //MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
-    MyApp.url_lib       = 'http://localhost:8080/LibPHP/';
+    MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
+    //MyApp.url_lib       = 'http://localhost:8080/LibPHP/';
     MyApp.usuario       = window.localStorage.getItem("agrimanager_usuario");
     MyApp.clave         = window.localStorage.getItem("agrimanager_clave");
     MyApp.base_nombre   = window.localStorage.getItem("agrimanager_base");
