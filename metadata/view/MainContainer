@@ -153,507 +153,6 @@
                     ]
                 },
                 {
-                    "type": "Ext.panel.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "gridpanel"
-                        ],
-                        "flex": 1,
-                        "height": null,
-                        "iconCls": "x-fa fa-home",
-                        "itemId": "homePanel",
-                        "scrollable": true,
-                        "title": "Home",
-                        "titleAlign": "left",
-                        "width": null
-                    },
-                    "configAlternates": {
-                        "cls": "typedarray",
-                        "designer|userAlias": "string",
-                        "designer|userClassName": "string",
-                        "flex": "number",
-                        "height": "auto",
-                        "itemId": "string",
-                        "scrollable": "auto",
-                        "title": "string",
-                        "titleAlign": "string",
-                        "width": "auto",
-                        "iconCls": "string"
-                    },
-                    "name": "PersonalPanel1",
-                    "designerId": "94aaa2c1-756d-4322-9cc7-5ac3d5d4cfc9",
-                    "cn": [
-                        {
-                            "type": "Ext.form.Panel",
-                            "reference": {
-                                "name": "dockedItems",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "bodyPadding": 10,
-                                "designer|displayName": "gridControl",
-                                "dock": "top",
-                                "flex": null,
-                                "header": false,
-                                "layout": "column",
-                                "title": "My Form"
-                            },
-                            "configAlternates": {
-                                "bodyPadding": "auto",
-                                "designer|displayName": "string",
-                                "dock": "string",
-                                "flex": "number",
-                                "header": "boolean",
-                                "layout": "string",
-                                "title": "string"
-                            },
-                            "name": "MyForm5",
-                            "designerId": "0d3d23d2-846c-4fcd-8630-90db7a87f1d5",
-                            "cn": [
-                                {
-                                    "type": "Ext.container.Container",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "mainButtonBox"
-                                        ],
-                                        "container|align": "stretch",
-                                        "container|pack": "center",
-                                        "itemId": "EstabBox",
-                                        "layout": "hbox",
-                                        "layout|columnWidth": 1,
-                                        "margin": "20px 20px 0 20px"
-                                    },
-                                    "configAlternates": {
-                                        "container|align": "string",
-                                        "container|pack": "string",
-                                        "itemId": "string",
-                                        "layout": "string",
-                                        "layout|columnWidth": "auto",
-                                        "cls": "typedarray",
-                                        "margin": "auto"
-                                    },
-                                    "name": "MyContainer2",
-                                    "designerId": "607707ea-6b4c-4126-a3e3-42e31346436a",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.button.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "cls": "",
-                                                "iconCls": "x-fa fa-industry",
-                                                "padding": "20px",
-                                                "panelClass": "EstablecimientosPanel",
-                                                "text": "Establecimientos",
-                                                "width": "100%"
-                                            },
-                                            "configAlternates": {
-                                                "cls": "string",
-                                                "iconCls": "string",
-                                                "text": "string",
-                                                "padding": "auto",
-                                                "panelClass": "string",
-                                                "width": "auto"
-                                            },
-                                            "name": "MyButton3",
-                                            "designerId": "d25ec9c7-6a47-468e-90f6-ff12d732bb5f",
-                                            "customConfigs": [
-                                                {
-                                                    "group": "(Custom Properties)",
-                                                    "name": "panelClass",
-                                                    "type": "string"
-                                                }
-                                            ],
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "button.up(\"#homePanel\").openHomeItem(button);"
-                                                        ]
-                                                    },
-                                                    "configAlternates": {
-                                                        "designer|params": "typedarray",
-                                                        "fn": "string",
-                                                        "implHandler": "code"
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "cd1a503e-e9c9-4695-a9ce-70dfba94d77a"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.container.Container",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "mainButtonBox"
-                                        ],
-                                        "container|align": "stretch",
-                                        "container|pack": "center",
-                                        "itemId": "ActivBox",
-                                        "layout": "hbox",
-                                        "layout|columnWidth": 1,
-                                        "margin": "20px 20px 0 20px"
-                                    },
-                                    "configAlternates": {
-                                        "container|align": "string",
-                                        "container|pack": "string",
-                                        "hidden": "boolean",
-                                        "itemId": "string",
-                                        "layout": "string",
-                                        "layout|columnWidth": "auto",
-                                        "cls": "typedarray",
-                                        "margin": "auto"
-                                    },
-                                    "name": "MyContainer3",
-                                    "designerId": "cea30920-b09f-439f-930e-01568f22cd19",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.button.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "cls": "",
-                                                "iconCls": "x-fa fa-pagelines",
-                                                "margin": "",
-                                                "padding": "20px",
-                                                "panelClass": "ActividadesPanel",
-                                                "text": "Actividades",
-                                                "width": "100%"
-                                            },
-                                            "configAlternates": {
-                                                "cls": "string",
-                                                "iconCls": "string",
-                                                "margin": "auto",
-                                                "text": "string",
-                                                "padding": "auto",
-                                                "panelClass": "string",
-                                                "width": "auto"
-                                            },
-                                            "name": "MyButton5",
-                                            "designerId": "62ed6d28-8443-4a10-a581-d4bc4cd86c45",
-                                            "customConfigs": [
-                                                {
-                                                    "group": "(Custom Properties)",
-                                                    "name": "panelClass",
-                                                    "type": "string"
-                                                }
-                                            ],
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "button.up(\"#homePanel\").openHomeItem(button);"
-                                                        ]
-                                                    },
-                                                    "configAlternates": {
-                                                        "designer|params": "typedarray",
-                                                        "fn": "string",
-                                                        "implHandler": "code"
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "871e569b-f4b9-4525-b20e-6d41a20a569c"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.container.Container",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "mainButtonBox"
-                                        ],
-                                        "container|align": "stretch",
-                                        "container|pack": "center",
-                                        "itemId": "SesionBox",
-                                        "layout": "hbox",
-                                        "layout|columnWidth": 1,
-                                        "margin": "20px 20px 0 20px"
-                                    },
-                                    "configAlternates": {
-                                        "container|align": "string",
-                                        "container|pack": "string",
-                                        "hidden": "boolean",
-                                        "itemId": "string",
-                                        "layout": "string",
-                                        "layout|columnWidth": "auto",
-                                        "cls": "typedarray",
-                                        "margin": "auto"
-                                    },
-                                    "name": "MyContainer5",
-                                    "designerId": "678529ca-905f-43ee-a789-f13288c801a0",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.button.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "cls": "",
-                                                "iconCls": "x-fa fa-user",
-                                                "margin": "",
-                                                "padding": "20px",
-                                                "panelClass": "LoginForm",
-                                                "text": "Iniciar Sesion",
-                                                "width": "100%"
-                                            },
-                                            "configAlternates": {
-                                                "cls": "string",
-                                                "iconCls": "string",
-                                                "margin": "auto",
-                                                "text": "string",
-                                                "padding": "auto",
-                                                "width": "auto",
-                                                "panelClass": "string"
-                                            },
-                                            "name": "MyButton5",
-                                            "designerId": "5088fedf-e036-4a08-8bd4-5f1823af0f05",
-                                            "customConfigs": [
-                                                {
-                                                    "group": "(Custom Properties)",
-                                                    "name": "panelClass",
-                                                    "type": "string"
-                                                }
-                                            ],
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "button.up(\"#homePanel\").openHomeItem(button);"
-                                                        ]
-                                                    },
-                                                    "configAlternates": {
-                                                        "designer|params": "typedarray",
-                                                        "fn": "string",
-                                                        "implHandler": "code"
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "88456609-17e5-4efd-ab70-543556fd464e"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.container.Container",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "mainButtonBox"
-                                        ],
-                                        "container|align": "stretch",
-                                        "container|pack": "center",
-                                        "itemId": "SyncBox",
-                                        "layout": "hbox",
-                                        "layout|columnWidth": 1,
-                                        "margin": "20px 20px 0 20px",
-                                        "panelClass": ""
-                                    },
-                                    "configAlternates": {
-                                        "container|align": "string",
-                                        "container|pack": "string",
-                                        "hidden": "boolean",
-                                        "itemId": "string",
-                                        "layout": "string",
-                                        "layout|columnWidth": "auto",
-                                        "cls": "typedarray",
-                                        "margin": "auto",
-                                        "panelClass": "string"
-                                    },
-                                    "name": "MyContainer6",
-                                    "designerId": "b3516f95-838e-42df-9b2f-292fea3f2888",
-                                    "customConfigs": [
-                                        {
-                                            "group": "(Custom Properties)",
-                                            "name": "panelClass",
-                                            "type": "string"
-                                        }
-                                    ],
-                                    "cn": [
-                                        {
-                                            "type": "Ext.button.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "cls": "",
-                                                "iconCls": "x-fa fa-rotate-right",
-                                                "itemId": null,
-                                                "margin": "",
-                                                "padding": "20px",
-                                                "panelClass": "SyncForm",
-                                                "text": "Sincronizar",
-                                                "width": "100%"
-                                            },
-                                            "configAlternates": {
-                                                "cls": "string",
-                                                "iconCls": "string",
-                                                "margin": "auto",
-                                                "text": "string",
-                                                "padding": "auto",
-                                                "width": "auto",
-                                                "itemId": "string",
-                                                "panelClass": "string"
-                                            },
-                                            "name": "MyButton5",
-                                            "designerId": "a0b8510d-8b97-4190-98a6-1cf2fd30783e",
-                                            "customConfigs": [
-                                                {
-                                                    "group": "(Custom Properties)",
-                                                    "name": "panelClass",
-                                                    "type": "string"
-                                                }
-                                            ],
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "button.up(\"#homePanel\").openHomeItem(button);"
-                                                        ]
-                                                    },
-                                                    "configAlternates": {
-                                                        "designer|params": "typedarray",
-                                                        "fn": "string",
-                                                        "implHandler": "code"
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "82ac0516-1b31-4ef4-9140-276bca9402f9"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "basicfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button"
-                                ],
-                                "fn": "openHomeItem",
-                                "implHandler": [
-                                    "var layout = MyApp.main.getLayout(), next,",
-                                    "    panelClass = button.panelClass,",
-                                    "    createPanel = function(panelClass) {",
-                                    "      var cardClass = \"MyApp.view.\" + panelClass;",
-                                    "      if(Ext.ClassManager.get(cardClass)) {",
-                                    "        var newPan = Ext.create(cardClass);",
-                                    "        MyApp.main.add(newPan);",
-                                    "        MyApp.main.getLayout().next();",
-                                    "      }",
-                                    "      else {",
-                                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
-                                    "        throw errorMsg;",
-                                    "      }",
-                                    "    };",
-                                    "layout.setActiveItem(0);",
-                                    "next = layout.getNext();",
-                                    "while(next) {",
-                                    "  next.close();",
-                                    "  next.destroy();",
-                                    "  next = layout.getNext();",
-                                    "}",
-                                    "createPanel(panelClass);"
-                                ]
-                            },
-                            "configAlternates": {
-                                "designer|params": "typedarray",
-                                "fn": "string",
-                                "implHandler": "code"
-                            },
-                            "name": "openHomeItem",
-                            "designerId": "b20e556b-c86d-4b11-8df5-453ced1605e3"
-                        }
-                    ]
-                },
-                {
                     "type": "Ext.toolbar.Toolbar",
                     "reference": {
                         "name": "dockedItems",
@@ -778,6 +277,462 @@
                     },
                     "name": "onAgrimobileRender",
                     "designerId": "2c47e0c3-6043-4add-a239-e3d018be5c82"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-home",
+                        "itemId": "homePanel",
+                        "scrollable": true,
+                        "title": "Home"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "scrollable": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "f84e2be3-e162-49c7-93f3-306e5011a3c2",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "mainButtonBox"
+                                ],
+                                "container|pack": "center",
+                                "itemId": "EstabBox",
+                                "layout": "hbox",
+                                "margin": "20px 20px 0 20px"
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "itemId": "string",
+                                "layout": "string",
+                                "layout|columnWidth": "auto",
+                                "cls": "typedarray",
+                                "margin": "auto",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer13",
+                            "designerId": "3b8ada7f-e28e-4129-bce5-2fa7ef6dd298",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": "",
+                                        "iconCls": "x-fa fa-industry",
+                                        "padding": "20px",
+                                        "panelClass": "EstablecimientosPanel",
+                                        "text": "Establecimientos",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "cls": "string",
+                                        "iconCls": "string",
+                                        "text": "string",
+                                        "padding": "auto",
+                                        "panelClass": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "743bd57a-7375-4f5f-8e7f-f29f2c8406b2",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "panelClass",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "button.up(\"#homePanel\").openHomeItem(button);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "1b24e6bb-f8dd-4b8f-b6e6-fb748234c598"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "mainButtonBox"
+                                ],
+                                "container|align": "stretch",
+                                "container|pack": "center",
+                                "itemId": "ActivBox",
+                                "layout": "vbox",
+                                "margin": "20px 20px 0 20px"
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "hidden": "boolean",
+                                "itemId": "string",
+                                "layout": "string",
+                                "layout|columnWidth": "auto",
+                                "cls": "typedarray",
+                                "margin": "auto",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer14",
+                            "designerId": "a640af43-5ea3-494a-8e3d-d8515c239b39",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": "",
+                                        "iconCls": "x-fa fa-pagelines",
+                                        "margin": "",
+                                        "padding": "20px",
+                                        "panelClass": "ActividadesPanel",
+                                        "text": "Actividades",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "cls": "string",
+                                        "iconCls": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "padding": "auto",
+                                        "panelClass": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "d208b794-351b-4790-9e88-b85a9bf7b5bf",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "panelClass",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "button.up(\"#homePanel\").openHomeItem(button);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "ed31ae36-6b34-48eb-a7d2-4d79798565b4"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "mainButtonBox"
+                                ],
+                                "container|align": "stretch",
+                                "container|pack": "center",
+                                "itemId": "SesionBox",
+                                "layout": "vbox",
+                                "margin": "20px 20px 0 20px"
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "hidden": "boolean",
+                                "itemId": "string",
+                                "layout": "string",
+                                "layout|columnWidth": "auto",
+                                "cls": "typedarray",
+                                "margin": "auto",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer15",
+                            "designerId": "58db8542-5ec6-47e3-912f-963c1886d299",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": "",
+                                        "iconCls": "x-fa fa-user",
+                                        "margin": "",
+                                        "padding": "20px",
+                                        "panelClass": "LoginForm",
+                                        "text": "Iniciar Sesion",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "cls": "string",
+                                        "iconCls": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "padding": "auto",
+                                        "width": "auto",
+                                        "panelClass": "string"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "06756978-634b-4009-be0d-0224074826f5",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "panelClass",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "button.up(\"#homePanel\").openHomeItem(button);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "7c2c9ced-2be5-49c7-9832-0e40bace2737"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "mainButtonBox"
+                                ],
+                                "container|align": "stretch",
+                                "container|pack": "center",
+                                "itemId": "SyncBox",
+                                "layout": "vbox",
+                                "margin": "20px 20px 20px 20px",
+                                "panelClass": ""
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "hidden": "boolean",
+                                "itemId": "string",
+                                "layout": "string",
+                                "layout|columnWidth": "auto",
+                                "cls": "typedarray",
+                                "margin": "auto",
+                                "panelClass": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer16",
+                            "designerId": "714449b9-a3e5-4172-b727-04cdc087f854",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "panelClass",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": "",
+                                        "iconCls": "x-fa fa-rotate-right",
+                                        "itemId": null,
+                                        "margin": "",
+                                        "padding": "20px",
+                                        "panelClass": "SyncForm",
+                                        "text": "Sincronizar",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "cls": "string",
+                                        "iconCls": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "padding": "auto",
+                                        "width": "auto",
+                                        "itemId": "string",
+                                        "panelClass": "string"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "3f844a64-92ce-4852-8c2a-1cfd839f00e4",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "panelClass",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "button.up(\"#homePanel\").openHomeItem(button);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "622bfa02-3907-421a-8c95-a35c5495038f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button"
+                                ],
+                                "fn": "openHomeItem",
+                                "implHandler": [
+                                    "var layout = MyApp.main.getLayout(), next,",
+                                    "    panelClass = button.panelClass,",
+                                    "    createPanel = function(panelClass) {",
+                                    "      var cardClass = \"MyApp.view.\" + panelClass;",
+                                    "      if(Ext.ClassManager.get(cardClass)) {",
+                                    "        var newPan = Ext.create(cardClass);",
+                                    "        MyApp.main.add(newPan);",
+                                    "        MyApp.main.getLayout().next();",
+                                    "      }",
+                                    "      else {",
+                                    "        var errorMsg = \"Error: Panel \" + panelClass + \" does not exist\";",
+                                    "        throw errorMsg;",
+                                    "      }",
+                                    "    };",
+                                    "layout.setActiveItem(0);",
+                                    "next = layout.getNext();",
+                                    "while(next) {",
+                                    "  next.close();",
+                                    "  next.destroy();",
+                                    "  next = layout.getNext();",
+                                    "}",
+                                    "createPanel(panelClass);"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "openHomeItem",
+                            "designerId": "594bb927-df26-4850-8e2a-04fdafda5cf5"
+                        }
+                    ]
                 }
             ]
         },

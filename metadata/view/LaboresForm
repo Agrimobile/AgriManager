@@ -156,6 +156,7 @@
                                 "allowBlank": false,
                                 "blankText": "Este campo es obligatorio",
                                 "editable": false,
+                                "enableKeyEvents": true,
                                 "fieldLabel": "ID",
                                 "hidden": true,
                                 "name": "id"
@@ -166,7 +167,8 @@
                                 "editable": "boolean",
                                 "fieldLabel": "string",
                                 "hidden": "boolean",
-                                "name": "string"
+                                "name": "string",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyTextField15",
                             "designerId": "76392ea5-48e2-437a-be66-12a4fd4f285f"
@@ -180,6 +182,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "",
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Fecha",
                                 "format": "d-m-Y",
                                 "itemId": "fecha",
@@ -192,7 +195,8 @@
                                 "itemId": "string",
                                 "name": "string",
                                 "width": "auto",
-                                "format": "string"
+                                "format": "string",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyDateField2",
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
@@ -229,6 +233,7 @@
                                         "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "descripcion",
+                                        "enableKeyEvents": true,
                                         "fieldLabel": "Tarea",
                                         "forceSelection": true,
                                         "itemId": "fieldTarea",
@@ -250,7 +255,8 @@
                                         "queryMode": "string",
                                         "store": "store",
                                         "valueField": "datafield",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "enableKeyEvents": "boolean"
                                     },
                                     "name": "MyComboBox",
                                     "designerId": "178006af-0e46-467c-8684-6b5356cbe66a"
@@ -320,6 +326,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Cantidad",
                                 "name": "cantidad",
                                 "width": "100%"
@@ -327,7 +334,8 @@
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyNumberField2",
                             "designerId": "3c213300-f246-4a56-878e-d9199fb5fead"
@@ -340,6 +348,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Precio",
                                 "name": "precio",
                                 "width": "100%"
@@ -347,7 +356,8 @@
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyNumberField4",
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
@@ -383,6 +393,7 @@
                                         "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "nombre",
+                                        "enableKeyEvents": true,
                                         "fieldLabel": "Contratista",
                                         "forceSelection": true,
                                         "itemId": "fieldContratista",
@@ -403,7 +414,8 @@
                                         "queryMode": "string",
                                         "store": "store",
                                         "valueField": "datafield",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "enableKeyEvents": "boolean"
                                     },
                                     "name": "MyComboBox1",
                                     "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"

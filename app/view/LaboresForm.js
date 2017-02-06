@@ -70,7 +70,8 @@ Ext.define('MyApp.view.LaboresForm', {
               name: 'id',
               allowBlank: false,
               blankText: 'Este campo es obligatorio',
-              editable: false
+              editable: false,
+              enableKeyEvents: true
             },
             {
               xtype: 'datefield',
@@ -78,6 +79,7 @@ Ext.define('MyApp.view.LaboresForm', {
               width: '100%',
               fieldLabel: 'Fecha',
               name: 'fecha',
+              enableKeyEvents: true,
               format: 'd-m-Y'
             },
             {
@@ -97,6 +99,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   name: 'cod_tarea',
                   allowBlank: false,
                   blankText: 'Este campo es obligatorio',
+                  enableKeyEvents: true,
                   displayField: 'descripcion',
                   forceSelection: true,
                   queryMode: 'local',
@@ -122,13 +125,15 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'numberfield',
               width: '100%',
               fieldLabel: 'Cantidad',
-              name: 'cantidad'
+              name: 'cantidad',
+              enableKeyEvents: true
             },
             {
               xtype: 'numberfield',
               width: '100%',
               fieldLabel: 'Precio',
-              name: 'precio'
+              name: 'precio',
+              enableKeyEvents: true
             },
             {
               xtype: 'container',
@@ -146,6 +151,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   fieldLabel: 'Contratista',
                   name: 'cod_contratista',
                   blankText: 'Este campo es obligatorio',
+                  enableKeyEvents: true,
                   displayField: 'nombre',
                   forceSelection: true,
                   queryMode: 'local',

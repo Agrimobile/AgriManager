@@ -48,6 +48,166 @@
     "viewModelInstanceId": "a5be5582-7363-474e-8310-70e79a8621c4",
     "cn": [
         {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "editable": false,
+                "enableKeyEvents": true,
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
+                "name": "codigo"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField21",
+            "designerId": "a30119ce-4686-4b77-b947-5f5ba4749ff5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Descripcion",
+                "layout|flex": null,
+                "name": "descripcion"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField1",
+            "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "displayField": "nombre",
+                "enableKeyEvents": true,
+                "fieldLabel": "Unidad de Medida",
+                "forceSelection": true,
+                "itemId": "unidadMedida",
+                "layout|flex": null,
+                "name": "um",
+                "queryMode": "local",
+                "store": "UnidadesMedida",
+                "valueField": "valor",
+                "width": null
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyComboBox10",
+            "designerId": "7742f5b9-1d20-424b-b7d9-2e3428da2596"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Precio",
+                "layout|flex": null,
+                "name": "precio"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyNumberField3",
+            "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "displayField": "nombre",
+                "enableKeyEvents": true,
+                "fieldLabel": "Tipo",
+                "forceSelection": true,
+                "itemId": "tipoTarea",
+                "layout|flex": null,
+                "name": "tipo",
+                "queryMode": "local",
+                "store": "TiposTarea",
+                "valueField": "valor",
+                "width": null
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyComboBox9",
+            "designerId": "48cc3ee4-cbaa-46e3-92c4-96755d557e58"
+        },
+        {
             "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
@@ -175,156 +335,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "editable": false,
-                "fieldLabel": "Codigo",
-                "layout|flex": null,
-                "name": "codigo"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "editable": "boolean",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField21",
-            "designerId": "a30119ce-4686-4b77-b947-5f5ba4749ff5"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Descripcion",
-                "layout|flex": null,
-                "name": "descripcion"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField1",
-            "designerId": "e86b3aef-4a02-4c3c-8c44-b62b859b89e1"
-        },
-        {
-            "type": "Ext.form.field.ComboBox",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "displayField": "nombre",
-                "fieldLabel": "Unidad de Medida",
-                "forceSelection": true,
-                "itemId": "unidadMedida",
-                "layout|flex": null,
-                "name": "um",
-                "queryMode": "local",
-                "store": "UnidadesMedida",
-                "valueField": "valor",
-                "width": null
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "displayField": "datafield",
-                "fieldLabel": "string",
-                "forceSelection": "boolean",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string",
-                "queryMode": "string",
-                "store": "store",
-                "valueField": "datafield",
-                "width": "auto"
-            },
-            "name": "MyComboBox10",
-            "designerId": "7742f5b9-1d20-424b-b7d9-2e3428da2596"
-        },
-        {
-            "type": "Ext.form.field.Number",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Precio",
-                "layout|flex": null,
-                "name": "precio"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyNumberField3",
-            "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
-        },
-        {
-            "type": "Ext.form.field.ComboBox",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "displayField": "nombre",
-                "fieldLabel": "Tipo",
-                "forceSelection": true,
-                "itemId": "tipoTarea",
-                "layout|flex": null,
-                "name": "tipo",
-                "queryMode": "local",
-                "store": "TiposTarea",
-                "valueField": "valor",
-                "width": null
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "displayField": "datafield",
-                "fieldLabel": "string",
-                "forceSelection": "boolean",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string",
-                "queryMode": "string",
-                "store": "store",
-                "valueField": "datafield",
-                "width": "auto"
-            },
-            "name": "MyComboBox9",
-            "designerId": "48cc3ee4-cbaa-46e3-92c4-96755d557e58"
         },
         {
             "type": "basiceventbinding",

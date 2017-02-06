@@ -19,9 +19,9 @@ Ext.define('MyApp.view.LoginForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel5',
+    'Ext.form.field.Text',
     'Ext.container.Container',
-    'Ext.button.Button',
-    'Ext.form.field.Text'
+    'Ext.button.Button'
   ],
 
   config: {
@@ -41,6 +41,45 @@ Ext.define('MyApp.view.LoginForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  items: [
+    {
+      xtype: 'textfield',
+      itemId: 'usuario',
+      fieldLabel: 'Usuario',
+      name: 'usuario',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      itemId: 'clave',
+      fieldLabel: 'Clave',
+      name: 'clave',
+      inputType: 'password',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      itemId: 'base',
+      fieldLabel: 'Base',
+      name: 'base',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      itemId: 'servidor',
+      fieldLabel: 'Servidor',
+      name: 'servidor',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -85,41 +124,6 @@ Ext.define('MyApp.view.LoginForm', {
           text: 'Cancelar'
         }
       ]
-    }
-  ],
-  items: [
-    {
-      xtype: 'textfield',
-      itemId: 'usuario',
-      fieldLabel: 'Usuario',
-      name: 'usuario',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'textfield',
-      itemId: 'clave',
-      fieldLabel: 'Clave',
-      name: 'clave',
-      inputType: 'password',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'textfield',
-      itemId: 'base',
-      fieldLabel: 'Base',
-      name: 'base',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'textfield',
-      itemId: 'servidor',
-      fieldLabel: 'Servidor',
-      name: 'servidor',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
     }
   ],
   listeners: {

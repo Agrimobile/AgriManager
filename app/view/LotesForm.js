@@ -19,9 +19,9 @@ Ext.define('MyApp.view.LotesForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel',
+    'Ext.form.field.Number',
     'Ext.container.Container',
-    'Ext.button.Button',
-    'Ext.form.field.Number'
+    'Ext.button.Button'
   ],
 
   config: {
@@ -40,6 +40,33 @@ Ext.define('MyApp.view.LotesForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  items: [
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Codigo',
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      editable: false,
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Nombre',
+      name: 'nombre',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Superficie',
+      name: 'superficie',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -74,30 +101,6 @@ Ext.define('MyApp.view.LotesForm', {
           text: 'Cancelar'
         }
       ]
-    }
-  ],
-  items: [
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Codigo',
-      name: 'codigo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      editable: false
-    },
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Nombre',
-      name: 'nombre',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'Superficie',
-      name: 'superficie',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
     }
   ],
   listeners: {

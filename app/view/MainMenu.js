@@ -24,6 +24,7 @@ Ext.define('MyApp.view.MainMenu', {
   viewModel: {
     type: 'mainmenu'
   },
+  scrollable: true,
 
   openCard: function(item, e) {
     var layout = MyApp.main.getLayout(), next,

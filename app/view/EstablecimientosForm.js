@@ -48,14 +48,16 @@ Ext.define('MyApp.view.EstablecimientosForm', {
       name: 'codigo',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      editable: false
+      editable: false,
+      enableKeyEvents: true
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
       name: 'nombre',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
     }
   ],
   dockedItems: [

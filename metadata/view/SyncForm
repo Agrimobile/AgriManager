@@ -48,6 +48,54 @@
     "viewModelInstanceId": "bc7a2a82-68df-4d0c-9251-15ecac25754d",
     "cn": [
         {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "title": "Sincronizando tablas"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "title": "string"
+            },
+            "name": "MyFieldSet",
+            "designerId": "7bcbfa73-9c44-4eb1-935d-8d76842d7518",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "blankText": "Este campo es obligatorio",
+                        "editable": false,
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Tabla",
+                        "itemId": "tabla",
+                        "name": null,
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "blankText": "string",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "enableKeyEvents": "boolean"
+                    },
+                    "name": "MyTextField11",
+                    "designerId": "a1063d8a-32a1-4041-92de-57830b178a70"
+                }
+            ]
+        },
+        {
             "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
@@ -212,52 +260,6 @@
             },
             "name": "onFormActivate",
             "designerId": "f24dcd03-fc1c-4542-bb1f-bf6255f05e17"
-        },
-        {
-            "type": "Ext.form.FieldSet",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "layout|flex": 1,
-                "title": "Sincronizando tablas"
-            },
-            "configAlternates": {
-                "layout|flex": "number",
-                "title": "string"
-            },
-            "name": "MyFieldSet",
-            "designerId": "7bcbfa73-9c44-4eb1-935d-8d76842d7518",
-            "cn": [
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "blankText": "Este campo es obligatorio",
-                        "editable": false,
-                        "fieldLabel": "Tabla",
-                        "itemId": "tabla",
-                        "name": null,
-                        "width": "100%"
-                    },
-                    "configAlternates": {
-                        "blankText": "string",
-                        "editable": "boolean",
-                        "fieldLabel": "string",
-                        "itemId": "string",
-                        "name": "string",
-                        "width": "auto"
-                    },
-                    "name": "MyTextField11",
-                    "designerId": "a1063d8a-32a1-4041-92de-57830b178a70"
-                }
-            ]
         },
         {
             "type": "basiceventbinding",

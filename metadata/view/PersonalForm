@@ -48,6 +48,60 @@
     "viewModelInstanceId": "bddca0b9-9e9f-4ab2-aea1-32e65f915451",
     "cn": [
         {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "editable": false,
+                "enableKeyEvents": true,
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
+                "name": "codigo"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "editable": "boolean",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField19",
+            "designerId": "66e47bcf-8395-4596-af81-8bf5773f2ce0"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Nombre",
+                "layout|flex": null,
+                "name": "nombre"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField1",
+            "designerId": "c81c6436-bb2a-47ee-917e-5c4534bb2678"
+        },
+        {
             "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
@@ -175,56 +229,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "editable": false,
-                "fieldLabel": "Codigo",
-                "layout|flex": null,
-                "name": "codigo"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "editable": "boolean",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField19",
-            "designerId": "66e47bcf-8395-4596-af81-8bf5773f2ce0"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Nombre",
-                "layout|flex": null,
-                "name": "nombre"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField1",
-            "designerId": "c81c6436-bb2a-47ee-917e-5c4534bb2678"
         },
         {
             "type": "basiceventbinding",

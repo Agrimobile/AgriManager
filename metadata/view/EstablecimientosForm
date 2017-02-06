@@ -60,6 +60,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "editable": false,
+                "enableKeyEvents": true,
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
@@ -68,7 +69,8 @@
                 "blankText": "string",
                 "editable": "boolean",
                 "fieldLabel": "string",
-                "name": "string"
+                "name": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyTextField13",
             "designerId": "949aab15-ca23-4402-94b2-9b41ac1fe571"
@@ -83,6 +85,7 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
@@ -92,7 +95,8 @@
                 "blankText": "string",
                 "fieldLabel": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyTextField",
             "designerId": "2b358406-74fd-477c-a82d-dfe5ea7ffaf9"

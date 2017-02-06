@@ -49,14 +49,16 @@ Ext.define('MyApp.view.ActividadesForm', {
       name: 'codigo',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      editable: false
+      editable: false,
+      enableKeyEvents: true
     },
     {
       xtype: 'textfield',
       fieldLabel: 'Nombre',
       name: 'nombre',
       allowBlank: false,
-      blankText: 'Este campo es obligatorio'
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
     },
     {
       xtype: 'container',
@@ -74,6 +76,7 @@ Ext.define('MyApp.view.ActividadesForm', {
           name: 'cod_periodo',
           allowBlank: false,
           blankText: 'Este campo es obligatorio',
+          enableKeyEvents: true,
           displayField: 'descripcion',
           forceSelection: true,
           queryMode: 'local',
@@ -103,6 +106,7 @@ Ext.define('MyApp.view.ActividadesForm', {
       invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
       altFormats: '',
       format: 'd-m-Y'
     },
@@ -114,6 +118,7 @@ Ext.define('MyApp.view.ActividadesForm', {
       invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
       format: 'd-m-Y'
     },
     {

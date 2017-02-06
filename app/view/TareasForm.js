@@ -19,10 +19,10 @@ Ext.define('MyApp.view.TareasForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel3',
-    'Ext.container.Container',
-    'Ext.button.Button',
     'Ext.form.field.ComboBox',
-    'Ext.form.field.Number'
+    'Ext.form.field.Number',
+    'Ext.container.Container',
+    'Ext.button.Button'
   ],
 
   config: {
@@ -41,6 +41,61 @@ Ext.define('MyApp.view.TareasForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  items: [
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Codigo',
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      editable: false,
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Descripcion',
+      name: 'descripcion',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'combobox',
+      itemId: 'unidadMedida',
+      fieldLabel: 'Unidad de Medida',
+      name: 'um',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'UnidadesMedida',
+      valueField: 'valor'
+    },
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Precio',
+      name: 'precio',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'combobox',
+      itemId: 'tipoTarea',
+      fieldLabel: 'Tipo',
+      name: 'tipo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'TiposTarea',
+      valueField: 'valor'
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -74,56 +129,6 @@ Ext.define('MyApp.view.TareasForm', {
           text: 'Cancelar'
         }
       ]
-    }
-  ],
-  items: [
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Codigo',
-      name: 'codigo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      editable: false
-    },
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Descripcion',
-      name: 'descripcion',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'combobox',
-      itemId: 'unidadMedida',
-      fieldLabel: 'Unidad de Medida',
-      name: 'um',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      displayField: 'nombre',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'UnidadesMedida',
-      valueField: 'valor'
-    },
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'Precio',
-      name: 'precio',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'combobox',
-      itemId: 'tipoTarea',
-      fieldLabel: 'Tipo',
-      name: 'tipo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      displayField: 'nombre',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'TiposTarea',
-      valueField: 'valor'
     }
   ],
   listeners: {

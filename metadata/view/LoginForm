@@ -48,6 +48,120 @@
     "viewModelInstanceId": "2c6b1835-624b-4628-adbb-650175534ec5",
     "cn": [
         {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Usuario",
+                "itemId": "usuario",
+                "layout|flex": null,
+                "name": "usuario"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField11",
+            "designerId": "c0b808d2-324a-4845-958c-36766aac17db"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Clave",
+                "inputType": "password",
+                "itemId": "clave",
+                "layout|flex": null,
+                "name": "clave"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "inputType": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField1",
+            "designerId": "45cd2b50-08a8-4696-9215-3ba3686958e0"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Base",
+                "itemId": "base",
+                "layout|flex": null,
+                "name": "base"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField22",
+            "designerId": "9e9550b8-1cbe-4403-9cb3-6274977afda7"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
+                "fieldLabel": "Servidor",
+                "itemId": "servidor",
+                "layout|flex": null,
+                "name": "servidor"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "blankText": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "enableKeyEvents": "boolean"
+            },
+            "name": "MyTextField23",
+            "designerId": "c178077e-18c7-4d8c-a3d7-0357813f9dfd"
+        },
+        {
             "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
@@ -186,112 +300,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Usuario",
-                "itemId": "usuario",
-                "layout|flex": null,
-                "name": "usuario"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField11",
-            "designerId": "c0b808d2-324a-4845-958c-36766aac17db"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Clave",
-                "inputType": "password",
-                "itemId": "clave",
-                "layout|flex": null,
-                "name": "clave"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "inputType": "string",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField1",
-            "designerId": "45cd2b50-08a8-4696-9215-3ba3686958e0"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Base",
-                "itemId": "base",
-                "layout|flex": null,
-                "name": "base"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField22",
-            "designerId": "9e9550b8-1cbe-4403-9cb3-6274977afda7"
-        },
-        {
-            "type": "Ext.form.field.Text",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio",
-                "fieldLabel": "Servidor",
-                "itemId": "servidor",
-                "layout|flex": null,
-                "name": "servidor"
-            },
-            "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "fieldLabel": "string",
-                "itemId": "string",
-                "layout|flex": "number",
-                "name": "string"
-            },
-            "name": "MyTextField23",
-            "designerId": "c178077e-18c7-4d8c-a3d7-0357813f9dfd"
         },
         {
             "type": "basiceventbinding",
