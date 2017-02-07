@@ -71,13 +71,14 @@ Ext.define('MyApp.view.MainContainer', {
             {
               xtype: 'label',
               itemId: 'estado_sinc',
-              text: 'Sincronizado ok'
+              text: 'Sincronizado okk'
             }
           ]
         }
       ],
       listeners: {
-        render: 'onAgrimobileRender'
+        render: 'onAgrimobileRender',
+        afterrender: 'onAgromobileAfterRender'
       },
       items: [
         {
@@ -278,12 +279,15 @@ Ext.define('MyApp.view.MainContainer', {
     MyApp.clave         = window.localStorage.getItem("agrimanager_clave");
     MyApp.base_nombre   = window.localStorage.getItem("agrimanager_base");
     MyApp.base_url      = window.localStorage.getItem("agrimanager_servidor");
+
     MyApp.base_usuario  = 'dba';
     MyApp.base_clave    = 'gestion525';
-    MyApp.estado_sinc   = '';
+    if(!window.localStorage.getItem("estado_sinc")){
+      window.localStorage.setItem("estado_sinc", "Pendiente");
+    }
     MyApp.sinc_array_store = [];
     MyApp.sinc_array_tabla = [];
-    MyApp.estado_editar = 'N';
+    MyApp.estado_editar = window.localStorage.getItem("estado_editar") || "OK";
 
     // loading data
     f_crud.load_store('Rubros');
@@ -295,6 +299,10 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Tareas');
 
     f_crud.checkSecuencia();
+  },
+
+  onAgromobileAfterRender: function(component, eOpts) {
+    MyApp.main.down('#estado_sinc').setHtml("Sincronizado: " + window.localStorage.getItem("estado_sinc"));
   },
 
   onViewportRender: function(component, eOpts) {

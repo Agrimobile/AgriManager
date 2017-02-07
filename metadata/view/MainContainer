@@ -182,7 +182,7 @@
                             "userConfig": {
                                 "itemId": "estado_sinc",
                                 "layout|flex": null,
-                                "text": "Sincronizado ok"
+                                "text": "Sincronizado okk"
                             },
                             "configAlternates": {
                                 "itemId": "string",
@@ -248,12 +248,15 @@
                             "MyApp.clave         = window.localStorage.getItem(\"agrimanager_clave\");",
                             "MyApp.base_nombre   = window.localStorage.getItem(\"agrimanager_base\");",
                             "MyApp.base_url      = window.localStorage.getItem(\"agrimanager_servidor\");",
+                            "",
                             "MyApp.base_usuario  = 'dba';",
                             "MyApp.base_clave    = 'gestion525';",
-                            "MyApp.estado_sinc   = '';",
+                            "if(!window.localStorage.getItem(\"estado_sinc\")){",
+                            "  window.localStorage.setItem(\"estado_sinc\", \"Pendiente\");",
+                            "}",
                             "MyApp.sinc_array_store = [];",
                             "MyApp.sinc_array_tabla = [];",
-                            "MyApp.estado_editar = 'N';",
+                            "MyApp.estado_editar = window.localStorage.getItem(\"estado_editar\") || \"OK\";",
                             "",
                             "// loading data",
                             "f_crud.load_store('Rubros');",
@@ -733,6 +736,30 @@
                             "designerId": "594bb927-df26-4850-8e2a-04fdafda5cf5"
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAgromobileAfterRender",
+                        "implHandler": [
+                            "MyApp.main.down('#estado_sinc').setHtml(\"Sincronizado: \" + window.localStorage.getItem(\"estado_sinc\"));"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onAgromobileAfterRender",
+                    "designerId": "6374d1e0-7362-4012-8106-d9c66a007304"
                 }
             ]
         },
