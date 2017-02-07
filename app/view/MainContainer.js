@@ -36,11 +36,11 @@ Ext.define('MyApp.view.MainContainer', {
   items: [
     {
       xtype: 'panel',
-      id: 'agrimobile',
-      itemId: 'agrimobile',
+      id: 'agromobile',
+      itemId: 'agromobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agrimobile',
+      title: 'Agromobile',
       titleAlign: 'center',
       tools: [
         {

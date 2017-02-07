@@ -35,11 +35,11 @@
             "codeClass": null,
             "userConfig": {
                 "flex": null,
-                "id": "agrimobile",
-                "itemId": "agrimobile",
+                "id": "agromobile",
+                "itemId": "agromobile",
                 "layout": "card",
                 "scrollable": true,
-                "title": "Agrimobile",
+                "title": "Agromobile",
                 "titleAlign": "center"
             },
             "configAlternates": {

@@ -98,6 +98,9 @@ Ext.define('MyApp.view.MenuPanel', {
   },
 
   onPanelRender1: function(component, eOpts) {
+    // BORRAR si no se piensa en un update que involucra
+    // un menu de este estilo pronto
+
     var mainMenuTool = component.down("#mainmenu-tool"),
         configMenuTool = component.down("#configmenu-tool"),
         mainMenuStoreRecords = Ext.getStore("MainMenu").getData().items,
