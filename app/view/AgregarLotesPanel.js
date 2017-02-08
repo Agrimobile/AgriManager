@@ -179,6 +179,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
 
   onFormseveralBeforeRender: function(component, eOpts) {
     f_crud.load_store("Establecimientos");
+    // TODO: FIND A BETTER WAY TO FIND THE COLUMN OBJECT!
     component.items.items["0"].columns[6].renderer = function(value, metaData, record, rowIndex, colIndex, store){
       debugger;
       return f_crud.getDisplayValue('Establecimientos', value, 'nombre');
