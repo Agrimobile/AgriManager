@@ -96,6 +96,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          itemId: 'columnEstabl',
           width: '25%',
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
@@ -111,7 +112,8 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     }
   ],
   listeners: {
-    render: 'onPanelRender'
+    render: 'onPanelRender',
+    beforerender: 'onFormseveralBeforeRender'
   },
   dockedItems: [
     {
@@ -173,6 +175,15 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
 
     //f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
     f_crud.load_store(this.store_name,'',"select * from Lotes");
+  },
+
+  onFormseveralBeforeRender: function(component, eOpts) {
+    f_crud.load_store("Establecimientos");
+    component.items.items["0"].columns[6].renderer = function(value, metaData, record, rowIndex, colIndex, store){
+      debugger;
+      return f_crud.getDisplayValue('Establecimientos', value, 'nombre');
+    };
+    // how to get the fucking column
   }
 
 });

@@ -248,6 +248,7 @@
                     "userConfig": {
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
+                        "itemId": "columnEstabl",
                         "text": "Cod Establecimiento",
                         "width": "25%"
                     },
@@ -255,7 +256,8 @@
                         "dataIndex": "datafield",
                         "format": "string",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "itemId": "string"
                     },
                     "name": "MyNumberColumn25",
                     "designerId": "1808ff3b-8634-48b9-949f-5da4323b06de"
@@ -434,6 +436,35 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormseveralBeforeRender",
+                "implHandler": [
+                    "f_crud.load_store(\"Establecimientos\");",
+                    "component.items.items[\"0\"].columns[6].renderer = function(value, metaData, record, rowIndex, colIndex, store){",
+                    "  debugger;",
+                    "  return f_crud.getDisplayValue('Establecimientos', value, 'nombre');",
+                    "};",
+                    "// how to get the fucking column"
+                ],
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onFormseveralBeforeRender",
+            "designerId": "56e26b37-b675-4056-a520-6e67de81baaf"
         }
     ]
 }

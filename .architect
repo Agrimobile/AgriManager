@@ -2837,6 +2837,9 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "56e26b37-b675-4056-a520-6e67de81baaf"
                 }
             ]
         },
@@ -3325,7 +3328,7 @@
                 }
             ]
         },
-        "model": false,
+        "model": true,
         "ce5925bb-47d8-44e5-abe1-1bdd7101b021": {
             "id": "ce5925bb-47d8-44e5-abe1-1bdd7101b021",
             "cn": [
@@ -3835,15 +3838,16 @@
     "tabState": {
         "openTabs": [
             "609e31be-a99e-4abd-bc02-fca2cf301ace",
-            "d01ec8fc-a7e2-420b-83c0-a85c68215197"
+            "d01ec8fc-a7e2-420b-83c0-a85c68215197",
+            "d99fd598-7d60-409e-905b-45a7b55c7182"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "609e31be-a99e-4abd-bc02-fca2cf301ace",
-        "selectedInstance": "92e89f09-5f40-42ca-a172-b06885ccd3b2"
+        "topInstance": "d99fd598-7d60-409e-905b-45a7b55c7182",
+        "selectedInstance": "56e26b37-b675-4056-a520-6e67de81baaf"
     },
     "editMode": "code",
     "userSettings": {
