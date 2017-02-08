@@ -1,4 +1,4 @@
- .x-grid-cell-inner-treecolumn {
+.x-grid-cell-inner-treecolumn {
   text-align: left !important;
 }
 
@@ -39,7 +39,11 @@
 }
 
 .mainButtonBox .x-btn-default-small {
-    padding: 10px 7px !important;
+  padding: 10px 7px !important;
+}
+
+.tabCtrol .x-btn-default-small {
+  padding: 10px 20px !important;
 }
 
 // Las propiedades seteadas con important arriba no pueden refactorearse

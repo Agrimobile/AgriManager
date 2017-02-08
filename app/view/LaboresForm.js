@@ -50,7 +50,8 @@ Ext.define('MyApp.view.LaboresForm', {
     align: 'stretch'
   },
   listeners: {
-    activate: 'onFormActivate'
+    activate: 'onFormActivate',
+    render: 'onFormRender'
   },
   items: [
     {
@@ -243,7 +244,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Insumos',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange1'
+                    }
                   }
                 },
                 {
@@ -279,7 +283,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Depositos',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange'
+                    }
                   }
                 },
                 {
@@ -319,7 +326,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'innerLaboresCtrl',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolInsumos',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -366,8 +374,10 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
+                  cls: 'newButtons',
                   dock: 'bottom',
-                  itemId: 'newBox',
+                  hidden: true,
+                  itemId: 'newButtonsInsumos',
                   margin: '20px 0 0 0 ',
                   layout: {
                     type: 'hbox',
@@ -468,7 +478,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Personal',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange2'
+                    }
                   }
                 },
                 {
@@ -536,7 +549,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'innerLaboresCtrl',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolPersonal',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -585,8 +599,10 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
+                  cls: 'newButtons',
                   dock: 'bottom',
-                  itemId: 'newBox',
+                  hidden: true,
+                  itemId: 'newButtonsPersonal',
                   margin: '20px 0 0 0 ',
                   layout: {
                     type: 'hbox',
@@ -677,7 +693,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Maquinaria',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange3'
+                    }
                   }
                 },
                 {
@@ -717,7 +736,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'innerLaboresCtrl',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolMaquinaria',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -765,8 +785,10 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
+                  cls: 'newButtons',
                   dock: 'bottom',
-                  itemId: 'newBox',
+                  hidden: true,
+                  itemId: 'newButtonsMaquinaria',
                   margin: '20px 0 0 0 ',
                   layout: {
                     type: 'hbox',
@@ -860,6 +882,25 @@ Ext.define('MyApp.view.LaboresForm', {
   ],
 
   onFormActivate: function(component, eOpts) {
+    var item = component.initialTitle;
+
+    f_crud.load_store('Depositos');
+    f_crud.load_store('Insumos');
+    f_crud.load_store('Personal');
+    f_crud.load_store('Maquinaria');
+
+    if(component.action === 'ADD') {
+      component.setTitle('Nueva ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  },
+
+  onFormRender: function(component, eOpts) {
     var form_panel = this;
     var item = component.initialTitle;
     var record = form_panel.getRecord();
@@ -869,26 +910,24 @@ Ext.define('MyApp.view.LaboresForm', {
       f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
     }
 
-    f_crud.load_store('Depositos');
-    f_crud.load_store('Insumos');
-    f_crud.load_store('Personal');
-    f_crud.load_store('Maquinaria');
-
     if(component.action === 'ADD') {
-      component.setTitle('Nueva ' + item);
       var today = new Date();
       this.down('#fecha').setValue(today);
     }
     else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
       var id = record.get('id');
       for (var i=1; i < form_panel.store_array.length; i++){
         f_crud.load_store(form_panel.store_array[i],'id_labores = ' + id);
       }
     }
-    else {
-      component.setTitle(item);
-    }
+  },
+
+  onComboboxChange1: function(field, newValue, oldValue, eOpts) {
+    field.blur();
+  },
+
+  onComboboxChange: function(field, newValue, oldValue, eOpts) {
+    field.blur();
   },
 
   onGridpanelSelectionChange: function(model, selected, eOpts) {
@@ -899,12 +938,20 @@ Ext.define('MyApp.view.LaboresForm', {
     f_crud.renderGridWidth(component);
   },
 
+  onComboboxChange2: function(field, newValue, oldValue, eOpts) {
+    field.blur();
+  },
+
   onGridpanelSelectionChange1: function(model, selected, eOpts) {
     this.down("#labores_personal_grid").record = selected[0];
   },
 
   onLabores_personal_gridBeforeRender: function(component, eOpts) {
     f_crud.renderGridWidth(component);
+  },
+
+  onComboboxChange3: function(field, newValue, oldValue, eOpts) {
+    field.blur();
   },
 
   onLabores_maquinaria_gridSelectionChange: function(model, selected, eOpts) {

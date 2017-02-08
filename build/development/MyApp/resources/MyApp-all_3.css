@@ -1,3 +1,18 @@
+/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:403 */
+.x-btn-default-toolbar-large-bc {
+    height: 1px;
+}
+/* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:407 */
+.x-btn-default-toolbar-large-tl,
+.x-btn-default-toolbar-large-bl,
+.x-btn-default-toolbar-large-tr,
+.x-btn-default-toolbar-large-br,
+.x-btn-default-toolbar-large-tc,
+.x-btn-default-toolbar-large-bc,
+.x-btn-default-toolbar-large-ml,
+.x-btn-default-toolbar-large-mr {
+    background-image: url(images/btn/btn-default-toolbar-large-corners.gif);
+}
 /* C:/wamp64/www/AgriManager/ext/classic/theme-base/sass/etc/mixins/frame.scss:453 */
 .x-btn-default-toolbar-large-ml,
 .x-btn-default-toolbar-large-mr {
@@ -15764,40 +15779,4 @@ div.x-border-layout-ct {
 /* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:77 */
 .fa-share-square-o:before {
     content: "\f045" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:78 */
-.fa-check-square-o:before {
-    content: "\f046" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:79 */
-.fa-arrows:before {
-    content: "\f047" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:80 */
-.fa-step-backward:before {
-    content: "\f048" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:81 */
-.fa-fast-backward:before {
-    content: "\f049" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:82 */
-.fa-backward:before {
-    content: "\f04a" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:83 */
-.fa-play:before {
-    content: "\f04b" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:84 */
-.fa-pause:before {
-    content: "\f04c" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:85 */
-.fa-stop:before {
-    content: "\f04d" !important;
-}
-/* C:/wamp64/www/AgriManager/ext/packages/font-awesome/sass/etc/_icons.scss:86 */
-.fa-forward:before {
-    content: "\f04e" !important;
 }
