@@ -231,13 +231,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID",
                         "width": "10%"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyNumberColumn26",
                     "designerId": "75e3693b-e4b3-4bdb-9e7e-d4747eab79a7"
@@ -283,6 +285,54 @@
                     },
                     "name": "MyColumn",
                     "designerId": "9ac60d55-2879-45d4-a5f2-d1b60fc187fc"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cod_tarea",
+                        "format": "00",
+                        "text": "Tarea",
+                        "width": "20%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyNumberColumn33",
+                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value, metaData, record, rowIndex, colIndex, store"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "return f_crud.getDisplayValue('Tareas', value, 'descripcion');"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "renderer",
+                            "designerId": "8dc93736-98fd-4c2d-98da-288b2a20c3ca"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.grid.column.Date",
@@ -410,6 +460,7 @@
                     "userConfig": {
                         "dataIndex": "cod_periodo",
                         "format": "00",
+                        "hidden": true,
                         "text": "Campaña",
                         "width": "20%"
                     },
@@ -417,7 +468,8 @@
                         "dataIndex": "datafield",
                         "format": "string",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyNumberColumn32",
                     "designerId": "79710ec8-e313-40bb-b30d-01975f2c97cb",
@@ -449,54 +501,6 @@
                     ]
                 },
                 {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "cod_tarea",
-                        "format": "00",
-                        "text": "Tarea",
-                        "width": "20%"
-                    },
-                    "configAlternates": {
-                        "dataIndex": "datafield",
-                        "format": "string",
-                        "text": "string",
-                        "width": "auto"
-                    },
-                    "name": "MyNumberColumn33",
-                    "designerId": "2675e2ee-eeb0-489d-bcbf-5cadb025ab70",
-                    "cn": [
-                        {
-                            "type": "basicfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "value, metaData, record, rowIndex, colIndex, store"
-                                ],
-                                "fn": "renderer",
-                                "implHandler": [
-                                    "return f_crud.getDisplayValue('Tareas', value, 'descripcion');"
-                                ]
-                            },
-                            "configAlternates": {
-                                "designer|params": "typedarray",
-                                "fn": "string",
-                                "implHandler": "code"
-                            },
-                            "name": "renderer",
-                            "designerId": "8dc93736-98fd-4c2d-98da-288b2a20c3ca"
-                        }
-                    ]
-                },
-                {
                     "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
@@ -505,13 +509,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "cantidad",
+                        "hidden": true,
                         "text": "Cantidad",
                         "width": "15%"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyColumn11",
                     "designerId": "21ab5a72-e0e8-4aa3-9a6b-21132608f31b"
@@ -525,13 +531,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "precio",
+                        "hidden": true,
                         "text": "Precio",
                         "width": "19%"
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
                     "name": "MyColumn12",
                     "designerId": "dd9b00d3-dfd7-4cd1-b508-0f3ab960dbb6"

@@ -61,7 +61,7 @@
                     "var item = component.initialTitle;",
                     "var record = form_panel.getRecord();",
                     "",
-                    "//empty labores_ tables",
+                    "//empty labores_ stores",
                     "for (var i=1; i < form_panel.store_array.length; i++){",
                     "  f_crud.load_store(form_panel.store_array[i],'id_labores = -1');",
                     "}",
@@ -1047,7 +1047,7 @@
                                     "userConfig": {
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "innerLaboresCtrl",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -1071,12 +1071,14 @@
                                             "userConfig": {
                                                 "cls": "",
                                                 "iconCls": "x-fa fa-plus",
+                                                "padding": null,
                                                 "text": ""
                                             },
                                             "configAlternates": {
                                                 "cls": "string",
                                                 "iconCls": "string",
-                                                "text": "string"
+                                                "text": "string",
+                                                "padding": "auto"
                                             },
                                             "name": "MyButton3",
                                             "designerId": "cd410300-54d3-4b83-9998-df299b24c29f",
@@ -1170,6 +1172,138 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "cbf6b9b0-5221-4d30-b607-ee7aaac0c18c"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "itemId": "newBox",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyContainer3",
+                                    "designerId": "f24dc24f-add3-4509-ab84-f109487183ad",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Insumo"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "ecc6694b-fcfe-401d-895c-5e479691121d",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('InsumosPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "cda56ac0-9256-4ba7-80ae-39788773be53"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Deposito"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "84289060-fc5e-489d-b047-74f4cb8ba9e3",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('DepositosPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "9ecc433a-92f0-4159-bc43-fe7e86e691e4"
                                                 }
                                             ]
                                         }
@@ -1701,7 +1835,7 @@
                                     "userConfig": {
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "innerLaboresCtrl",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -1826,6 +1960,87 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "7ebff83b-6e44-4a76-99b3-1ad8cd9d1033"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "itemId": "newBox",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyContainer4",
+                                    "designerId": "bb3610de-02cd-4d16-a0e2-de2c26297c86",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Personal"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "1d5faaa4-83ca-46b8-861e-1ff3aa1e30bc",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('PersonalPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "ee141966-c2ce-4604-9dc2-ae38f5aee4c1"
                                                 }
                                             ]
                                         }
@@ -2257,7 +2472,7 @@
                                     "userConfig": {
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "innerLaboresCtrl",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -2381,6 +2596,87 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "1315966d-230f-46f1-ae5d-96795f7d7931"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "itemId": "newBox",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyContainer5",
+                                    "designerId": "92e89f09-5f40-42ca-a172-b06885ccd3b2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Maquinaria"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "251d435c-a5e7-449b-a805-3c446ee733ff",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('MaquinariaPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "95c0df83-df24-4b6f-8c60-058a72057d2c"
                                                 }
                                             ]
                                         }

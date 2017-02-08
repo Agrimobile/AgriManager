@@ -319,7 +319,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  itemId: 'innerLaboresCtrl',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -358,6 +358,42 @@ Ext.define('MyApp.view.LaboresForm', {
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  dock: 'bottom',
+                  itemId: 'newBox',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('InsumosPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Insumo'
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('DepositosPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Deposito'
                     }
                   ]
                 }
@@ -500,7 +536,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  itemId: 'innerLaboresCtrl',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -541,6 +577,32 @@ Ext.define('MyApp.view.LaboresForm', {
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  dock: 'bottom',
+                  itemId: 'newBox',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('PersonalPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Personal'
                     }
                   ]
                 }
@@ -655,7 +717,7 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  itemId: 'innerLaboresCtrl',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -695,6 +757,32 @@ Ext.define('MyApp.view.LaboresForm', {
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  dock: 'bottom',
+                  itemId: 'newBox',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('MaquinariaPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Maquinaria'
                     }
                   ]
                 }
@@ -776,7 +864,7 @@ Ext.define('MyApp.view.LaboresForm', {
     var item = component.initialTitle;
     var record = form_panel.getRecord();
 
-    //empty labores_ tables
+    //empty labores_ stores
     for (var i=1; i < form_panel.store_array.length; i++){
       f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
     }
