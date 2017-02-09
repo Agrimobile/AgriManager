@@ -178,13 +178,20 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
   },
 
   onFormseveralBeforeRender: function(component, eOpts) {
-    f_crud.load_store("Establecimientos");
-    // TODO: FIND A BETTER WAY TO FIND THE COLUMN OBJECT!
-    component.items.items["0"].columns[6].renderer = function(value, metaData, record, rowIndex, colIndex, store){
-      debugger;
-      return f_crud.getDisplayValue('Establecimientos', value, 'nombre');
-    };
-    // how to get the fucking column
+    f_crud.load_store("Establecimientos");/*
+    var i, cols = component.down("#addinggrid").columns,
+        rendFn = function(value, metaData, record, rowIndex, colIndex, store){
+          return f_crud.getDisplayValue('Establecimientos', value, 'nombre');
+        };
+
+    for (i = cols.length - 1; i >= 0; i--) {
+      if(cols[i].dataIndex === "cod_establecimiento" ){
+        cols[i].renderer = rendFn;
+      }
+    }*/
+
+    f_crud.applyRenderer(component, "addinggrid", "Establecimientos", 'nombre', "cod_establecimiento");
+    // paramas: panel, gridId, storeName, targetField, colDataIndex
   }
 
 });
