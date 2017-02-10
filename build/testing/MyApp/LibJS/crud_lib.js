@@ -286,34 +286,28 @@ var f_crud = {
     
   form_open: function(grid_panel, action) {
     var form_panel = Ext.create(grid_panel.form_name), frm, 
-        // eventHandler's-code
+        // event onEnter handler
         onEnterHandler = function(textfield, e, eOpts) {
           if(e.keyCode === 13) {
-            //debugger;
             e.stopEvent();            
-            var nextField = textfield.next();
             textfield.blur();
-            /*
-            if(nextField) {
-              nextField.focus();
-            }
-            */
           }
         };
     
     if (action==='EDIT' && typeof grid_panel.record==='undefined') return;
     
     MyApp.pantalla_anterior = MyApp.main.getLayout().getActiveItem();
-    MyApp.main.add(form_panel);
-
     
     // Code for add an eventHandler in each input of any form
-    frmFields = form_panel.getForm().getFields().items;
-    for (var i = frmFields.length - 1; i >= 0; i--) {
-      frmFields[i].enableKeyEvents = true;
-      frmFields[i].addListener("keypress", onEnterHandler);
-    }
+    if(form_panel.getForm) {
+      frmFields = form_panel.getForm().getFields().items;
+      for (var i = frmFields.length - 1; i >= 0; i--) {
+        frmFields[i].enableKeyEvents = true;
+        frmFields[i].addListener("keypress", onEnterHandler);
+      }
     
+    }
+      
     if(grid_panel.parent) {
       form_panel.parent = grid_panel.parent;
     }
@@ -331,12 +325,14 @@ var f_crud = {
           newrecord.set('id', rtn);
           form_panel.loadRecord(newrecord);
           if (typeof newrecord.get('codigo') === 'undefined') {
+            MyApp.main.add(form_panel);
             MyApp.main.getLayout().setActiveItem(form_panel);
           } 
           else {
             f_crud.get_codigo(newrecord,function(rtn) {
               newrecord.set('codigo', rtn)
               form_panel.loadRecord(newrecord);
+              MyApp.main.add(form_panel);
               MyApp.main.getLayout().setActiveItem(form_panel);
             });
           }          
@@ -347,6 +343,7 @@ var f_crud = {
       if (action === 'EDIT') {
         form_panel.loadRecord(grid_panel.record);
       }
+      MyApp.main.add(form_panel);
       MyApp.main.getLayout().setActiveItem(form_panel);
     }
   },
@@ -515,9 +512,11 @@ var f_crud = {
     if (MyApp.main.getLayout().getLayoutItems().length > 1) {MyApp.main.getLayout().prev();
     }
     form.close();
-    // MyApp.main.down('#estado_editar').setHtml('');    
-    if (MyApp.estado_sinc === 'PENDIENTE'){
-      MyApp.main.down('#estado_sinc').setHtml('Sincronizado: Pendiente');
+    // MyApp.main.down('#estado_editar').setHtml(''); 
+    var sync = window.localStorage.getItem("estado_sinc");   
+    if (sync === 'Pendiente'){
+      MyApp.main.down('#estado_sinc').setHtml('Sincronizado: ' + sync);
+      window.localStorage.setItem("estado_sinc", "Pendiente");
     }
   },
 
@@ -641,8 +640,10 @@ var f_crud = {
       }
     });
     f_crud.close_form(form_panel);
-    if (MyApp.estado_sinc !== 'PENDIENTE') {
-      MyApp.estado_sinc = 'PENDIENTE' ;
+
+    var sync = window.localStorage.getItem("estado_sinc");
+    if (sync !== 'Pendiente') {
+      window.localStorage.setItem("estado_sinc", "Pendiente");
       MyApp.main.down('#estado_sinc').setHtml('Sincronizado: Pendiente');
       // f_sinc.defer_sinc();      
     }
@@ -1006,6 +1007,19 @@ var f_crud = {
         return 'REAL';
       case 'bool':
         return 'NUMERIC';
+    }
+  },
+
+  applyRenderer: function(panel, gridId, storeName, targetField, colDataIndex) {
+    var i, cols = panel.down("#" + gridId).columns,
+        rendFn = function(value, metaData, record, rowIndex, colIndex, store){
+          return f_crud.getDisplayValue(storeName, value, targetField);
+        };
+
+    for (i = cols.length - 1; i >= 0; i--) {
+      if(cols[i].dataIndex === colDataIndex) {
+        cols[i].renderer = rendFn;
+      }
     }
   },
 
