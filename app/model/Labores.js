@@ -22,10 +22,6 @@ Ext.define('MyApp.model.Labores', {
     'Ext.data.field.Date'
   ],
 
-  identifier: {
-    type: 'uuid'
-  },
-
   fields: [
     {
       type: 'int',

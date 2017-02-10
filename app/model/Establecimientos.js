@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Establecimientos', {
   ],
 
   aliasSQL: 'Establecimiento',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

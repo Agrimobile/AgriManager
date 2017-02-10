@@ -8,9 +8,7 @@
     "userConfig": {
         "aliasSQL": "Establecimiento",
         "designer|userClassName": "Establecimientos",
-        "identifier": [
-            "{type: 'uuid'}"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "sincronizar": "boolean",

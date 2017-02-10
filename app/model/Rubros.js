@@ -21,10 +21,6 @@ Ext.define('MyApp.model.Rubros', {
     'Ext.data.field.Integer'
   ],
 
-  identifier: {
-    type: 'uuid'
-  },
-
   fields: [
     {
       type: 'string',

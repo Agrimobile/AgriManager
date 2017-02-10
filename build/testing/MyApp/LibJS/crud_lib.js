@@ -323,6 +323,7 @@ var f_crud = {
       f_crud.secuencia(function(rtn){
         if (rtn !== -1) {
           newrecord.set('id', rtn);
+          debugger;
           form_panel.loadRecord(newrecord);
           if (typeof newrecord.get('codigo') === 'undefined') {
             MyApp.main.add(form_panel);

@@ -8,9 +8,7 @@
     "userConfig": {
         "aliasSQL": "labores_maquinarias",
         "designer|userClassName": "Labores_maquinaria",
-        "identifier": [
-            "{type: 'uuid'}"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "aliasSQL": "string",

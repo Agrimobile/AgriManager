@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Insumos', {
   ],
 
   aliasSQL: 'articulos',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

@@ -21,10 +21,6 @@ Ext.define('MyApp.model.Labores_personal', {
     'Ext.data.field.Number'
   ],
 
-  identifier: {
-    type: 'uuid'
-  },
-
   fields: [
     {
       type: 'string',
