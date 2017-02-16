@@ -8,11 +8,7 @@
     "userConfig": {
         "aliasSQL": "proveedores",
         "designer|userClassName": "Contratistas",
-        "identifier": [
-            "{",
-            "            type: 'uuid'",
-            "        }"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "aliasSQL": "string",

@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Maquinaria', {
   ],
 
   aliasSQL: 'maquinar',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

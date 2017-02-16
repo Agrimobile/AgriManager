@@ -23,7 +23,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     'Ext.grid.Panel',
     'Ext.view.Table',
     'Ext.grid.column.Number',
-    'Ext.grid.column.Check',
+    'Ext.selection.CheckboxModel',
     'Ext.form.Panel',
     'Ext.button.Button'
   ],
@@ -96,26 +96,24 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
         },
         {
           xtype: 'numbercolumn',
+          itemId: 'columnEstabl',
           width: '25%',
           dataIndex: 'cod_establecimiento',
           text: 'Cod Establecimiento',
           format: '00'
-        },
-        {
-          xtype: 'checkcolumn',
-          width: '25%',
-          dataIndex: 'agregar',
-          text: 'Agregar'
         }
       ],
       listeners: {
-        itemclick: 'onAddinggridItemClick',
         beforerender: 'onAddinggridBeforeRender'
+      },
+      selModel: {
+        selType: 'checkboxmodel'
       }
     }
   ],
   listeners: {
-    render: 'onPanelRender'
+    render: 'onPanelRender',
+    beforerender: 'onFormseveralBeforeRender'
   },
   dockedItems: [
     {
@@ -164,12 +162,6 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     thisPanel.close();
   },
 
-  onAddinggridItemClick: function(dataview, record, item, index, e, eOpts) {
-    // console.log(record.data.agregar);
-    // TODO: no basta con cambiar el valor de agregar, porque no se cambiar el
-    // tilde: hay que hacer un trabajito de 2-way-dataBinding.-
-  },
-
   onAddinggridBeforeRender: function(component, eOpts) {
     f_crud.renderGridWidth(component);
   },
@@ -181,7 +173,25 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
     //var store = Ext.getStore('Lotes_actividades');
     //this.form_store_array = [store];
 
-    f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
+    //f_crud.load_store(this.store_name,'',"select *,'' as agregar from Lotes");
+    f_crud.load_store(this.store_name,'',"select * from Lotes");
+  },
+
+  onFormseveralBeforeRender: function(component, eOpts) {
+    f_crud.load_store("Establecimientos");/*
+    var i, cols = component.down("#addinggrid").columns,
+        rendFn = function(value, metaData, record, rowIndex, colIndex, store){
+          return f_crud.getDisplayValue('Establecimientos', value, 'nombre');
+        };
+
+    for (i = cols.length - 1; i >= 0; i--) {
+      if(cols[i].dataIndex === "cod_establecimiento" ){
+        cols[i].renderer = rendFn;
+      }
+    }*/
+
+    f_crud.applyRenderer(component, "addinggrid", "Establecimientos", 'nombre', "cod_establecimiento");
+    // paramas: panel, gridId, storeName, targetField, colDataIndex
   }
 
 });

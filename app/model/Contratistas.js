@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Contratistas', {
   ],
 
   aliasSQL: 'proveedores',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

@@ -71,6 +71,7 @@ Ext.define('MyApp.view.LaboresPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           width: '10%',
           dataIndex: 'id',
           text: 'ID'
@@ -89,11 +90,21 @@ Ext.define('MyApp.view.LaboresPanel', {
           text: 'Estado Registro'
         },
         {
+          xtype: 'numbercolumn',
+          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
+          },
+          width: '20%',
+          dataIndex: 'cod_tarea',
+          text: 'Tarea',
+          format: '00'
+        },
+        {
           xtype: 'datecolumn',
           width: '15%',
           dataIndex: 'fecha',
           text: 'Fecha',
-          format: 'm/j/Y'
+          format: 'Y-m-d'
         },
         {
           xtype: 'numbercolumn',
@@ -130,29 +141,22 @@ Ext.define('MyApp.view.LaboresPanel', {
           renderer: function(value, metaData, record, rowIndex, colIndex, store) {
             return f_crud.getDisplayValue('Campanias', value, 'descripcion');
           },
+          hidden: true,
           width: '20%',
           dataIndex: 'cod_periodo',
           text: 'Campaña',
           format: '00'
         },
         {
-          xtype: 'numbercolumn',
-          renderer: function(value, metaData, record, rowIndex, colIndex, store) {
-            return f_crud.getDisplayValue('Tareas', value, 'descripcion');
-          },
-          width: '20%',
-          dataIndex: 'cod_tarea',
-          text: 'Tarea',
-          format: '00'
-        },
-        {
           xtype: 'gridcolumn',
+          hidden: true,
           width: '15%',
           dataIndex: 'cantidad',
           text: 'Cantidad'
         },
         {
           xtype: 'gridcolumn',
+          hidden: true,
           width: '19%',
           dataIndex: 'precio',
           text: 'Precio'

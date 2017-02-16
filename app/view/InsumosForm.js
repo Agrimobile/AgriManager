@@ -19,10 +19,10 @@ Ext.define('MyApp.view.InsumosForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel11',
-    'Ext.container.Container',
-    'Ext.button.Button',
     'Ext.form.field.Number',
-    'Ext.form.field.ComboBox'
+    'Ext.form.field.ComboBox',
+    'Ext.container.Container',
+    'Ext.button.Button'
   ],
 
   config: {
@@ -41,6 +41,96 @@ Ext.define('MyApp.view.InsumosForm', {
   layout: {
     type: 'vbox',
     align: 'stretch'
+  },
+  items: [
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Codigo',
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      editable: false,
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Descripcion',
+      name: 'descripcion',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Precio',
+      name: 'precio',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
+      decimalSeparator: ','
+    },
+    {
+      xtype: 'combobox',
+      itemId: 'unidadMedida',
+      fieldLabel: 'Unidad de Medida',
+      name: 'um',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true,
+      displayField: 'nombre',
+      forceSelection: true,
+      queryMode: 'local',
+      store: 'UnidadesMedida',
+      valueField: 'valor'
+    },
+    {
+      xtype: 'numberfield',
+      fieldLabel: 'Dias de Carencia',
+      name: 'dias_carencia',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'container',
+      layout: {
+        type: 'hbox',
+        align: 'stretch'
+      },
+      items: [
+        {
+          xtype: 'combobox',
+          itemId: 'fieldRubro',
+          width: '80%',
+          fieldLabel: 'Rubro',
+          name: 'cod_rubro',
+          allowBlank: false,
+          blankText: 'Este campo es obligatorio',
+          enableKeyEvents: true,
+          displayField: 'descripcion',
+          forceSelection: true,
+          queryMode: 'local',
+          store: 'Rubros',
+          valueField: 'codigo'
+        },
+        {
+          xtype: 'button',
+          handler: function(button, e) {
+            var formWrapper = this.up('[cls=formpanel]');
+            formWrapper.dropdownId = "fieldRubro";
+            f_crud.openNestedForm('RubrosPanel');
+          },
+          margins: '',
+          margin: '0 10',
+          width: '10%',
+          iconCls: 'x-fa fa-plus',
+          text: ''
+        }
+      ]
+    }
+  ],
+  listeners: {
+    activate: 'onFormActivate'
   },
   dockedItems: [
     {
@@ -77,89 +167,6 @@ Ext.define('MyApp.view.InsumosForm', {
       ]
     }
   ],
-  items: [
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Codigo',
-      name: 'codigo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      editable: false
-    },
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Descripcion',
-      name: 'descripcion',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'Precio',
-      name: 'precio',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'combobox',
-      itemId: 'unidadMedida',
-      fieldLabel: 'Unidad de Medida',
-      name: 'um',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      displayField: 'nombre',
-      forceSelection: true,
-      queryMode: 'local',
-      store: 'UnidadesMedida',
-      valueField: 'valor'
-    },
-    {
-      xtype: 'numberfield',
-      fieldLabel: 'Dias de Carencia',
-      name: 'dias_carencia',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
-    },
-    {
-      xtype: 'container',
-      layout: {
-        type: 'hbox',
-        align: 'stretch'
-      },
-      items: [
-        {
-          xtype: 'combobox',
-          itemId: 'fieldRubro',
-          width: '80%',
-          fieldLabel: 'Rubro',
-          name: 'cod_rubro',
-          allowBlank: false,
-          blankText: 'Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal',
-          displayField: 'descripcion',
-          forceSelection: true,
-          queryMode: 'local',
-          store: 'Rubros',
-          valueField: 'codigo'
-        },
-        {
-          xtype: 'button',
-          handler: function(button, e) {
-            var formWrapper = this.up('[cls=formpanel]');
-            formWrapper.dropdownId = "fieldRubro";
-            f_crud.openNestedForm('RubrosPanel');
-          },
-          margins: '',
-          margin: '0 10',
-          width: '10%',
-          iconCls: 'x-fa fa-plus',
-          text: ''
-        }
-      ]
-    }
-  ],
-  listeners: {
-    activate: 'onFormActivate'
-  },
 
   onFormActivate: function(component, eOpts) {
     f_crud.setFormTitle(component);

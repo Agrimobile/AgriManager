@@ -57,14 +57,7 @@
             "userConfig": {
                 "fn": "onFormActivate",
                 "implHandler": [
-                    "var form_panel = this;",
                     "var item = component.initialTitle;",
-                    "var record = form_panel.getRecord();",
-                    "",
-                    "//empty labores_ tables",
-                    "for (var i=1; i < form_panel.store_array.length; i++){",
-                    "  f_crud.load_store(form_panel.store_array[i],'id_labores = -1');",
-                    "}",
                     "",
                     "f_crud.load_store('Depositos');",
                     "f_crud.load_store('Insumos');",
@@ -73,15 +66,9 @@
                     "",
                     "if(component.action === 'ADD') {",
                     "  component.setTitle('Nueva ' + item);",
-                    "  var today = new Date();",
-                    "  this.down('#fecha').setValue(today);",
                     "}",
                     "else if(component.action === 'EDIT') {",
                     "  component.setTitle('Editar ' + item);",
-                    "  var id = record.get('id');",
-                    "  for (var i=1; i < form_panel.store_array.length; i++){",
-                    "    f_crud.load_store(form_panel.store_array[i],'id_labores = ' + id);",
-                    "  }",
                     "}",
                     "else {",
                     "  component.setTitle(item);",
@@ -98,6 +85,48 @@
             },
             "name": "onFormActivate",
             "designerId": "63cce2cf-7bf1-4a11-96b4-e52c811d6bb0"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormRender",
+                "implHandler": [
+                    "var form_panel = this;",
+                    "var item = component.initialTitle;",
+                    "var record = form_panel.getRecord();",
+                    "",
+                    "//empty labores_ stores",
+                    "for (var i=1; i < form_panel.store_array.length; i++){",
+                    "  f_crud.load_store(form_panel.store_array[i],'id_labores = -1');",
+                    "}",
+                    "",
+                    "if(component.action === 'ADD') {",
+                    "  var today = new Date();",
+                    "  this.down('#fecha').setValue(today);",
+                    "}",
+                    "else if(component.action === 'EDIT') {",
+                    "  var id = record.get('id');",
+                    "  for (var i=1; i < form_panel.store_array.length; i++){",
+                    "    f_crud.load_store(form_panel.store_array[i],'id_labores = ' + id);",
+                    "  }",
+                    "}"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onFormRender",
+            "designerId": "22bdbf49-4bd0-42cb-ae72-3350aecf6997"
         },
         {
             "type": "Ext.tab.Panel",
@@ -156,6 +185,7 @@
                                 "allowBlank": false,
                                 "blankText": "Este campo es obligatorio",
                                 "editable": false,
+                                "enableKeyEvents": true,
                                 "fieldLabel": "ID",
                                 "hidden": true,
                                 "name": "id"
@@ -166,7 +196,8 @@
                                 "editable": "boolean",
                                 "fieldLabel": "string",
                                 "hidden": "boolean",
-                                "name": "string"
+                                "name": "string",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyTextField15",
                             "designerId": "76392ea5-48e2-437a-be66-12a4fd4f285f"
@@ -180,7 +211,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "",
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Fecha",
+                                "format": "d-m-Y",
                                 "itemId": "fecha",
                                 "name": "fecha",
                                 "width": "100%"
@@ -190,7 +223,9 @@
                                 "fieldLabel": "string",
                                 "itemId": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "format": "string",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyDateField2",
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
@@ -224,9 +259,10 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "allowBlank": false,
-                                        "blankText": "Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal",
+                                        "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "descripcion",
+                                        "enableKeyEvents": true,
                                         "fieldLabel": "Tarea",
                                         "forceSelection": true,
                                         "itemId": "fieldTarea",
@@ -248,7 +284,8 @@
                                         "queryMode": "string",
                                         "store": "store",
                                         "valueField": "datafield",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "enableKeyEvents": "boolean"
                                     },
                                     "name": "MyComboBox",
                                     "designerId": "178006af-0e46-467c-8684-6b5356cbe66a"
@@ -318,6 +355,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Cantidad",
                                 "name": "cantidad",
                                 "width": "100%"
@@ -325,7 +363,8 @@
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyNumberField2",
                             "designerId": "3c213300-f246-4a56-878e-d9199fb5fead"
@@ -338,6 +377,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "enableKeyEvents": true,
                                 "fieldLabel": "Precio",
                                 "name": "precio",
                                 "width": "100%"
@@ -345,7 +385,8 @@
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "enableKeyEvents": "boolean"
                             },
                             "name": "MyNumberField4",
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
@@ -378,9 +419,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "blankText": "Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal",
+                                        "blankText": "Este campo es obligatorio",
                                         "defaultListenerScope": true,
                                         "displayField": "nombre",
+                                        "enableKeyEvents": true,
                                         "fieldLabel": "Contratista",
                                         "forceSelection": true,
                                         "itemId": "fieldContratista",
@@ -401,7 +443,8 @@
                                         "queryMode": "string",
                                         "store": "store",
                                         "valueField": "datafield",
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "enableKeyEvents": "boolean"
                                     },
                                     "name": "MyComboBox1",
                                     "designerId": "714b711d-9f6c-4fff-a617-d27ca2c3787c"
@@ -721,7 +764,33 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox4",
-                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488"
+                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onComboboxChange1",
+                                                        "implHandler": [
+                                                            "field.blur();"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onComboboxChange1",
+                                                    "designerId": "748240fc-fbd5-4e1e-9f02-389590d4638a"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "basicfunction",
@@ -859,7 +928,33 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox5",
-                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77"
+                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onComboboxChange",
+                                                        "implHandler": [
+                                                            "field.blur();"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onComboboxChange",
+                                                    "designerId": "23036495-8b7b-4d65-a654-ee8144bd2181"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "basicfunction",
@@ -982,6 +1077,16 @@
                                     },
                                     "name": "onLabores_insumos_gridBeforeRender",
                                     "designerId": "07ba93a3-0e81-4f8a-96e2-bfc85225ad37"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel",
+                                    "designerId": "46512f7d-82e0-471a-9fba-e45acf0022df"
                                 }
                             ]
                         },
@@ -1021,9 +1126,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "cls": [
+                                            "tabCtrol"
+                                        ],
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "tabCtrolInsumos",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -1032,7 +1140,8 @@
                                         "container|pack": "string",
                                         "itemId": "string",
                                         "layout": "string",
-                                        "layout|columnWidth": "auto"
+                                        "layout|columnWidth": "auto",
+                                        "cls": "typedarray"
                                     },
                                     "name": "MyContainer2",
                                     "designerId": "4143882f-d82c-41a3-8707-95ccbc3dde8e",
@@ -1047,12 +1156,14 @@
                                             "userConfig": {
                                                 "cls": "",
                                                 "iconCls": "x-fa fa-plus",
+                                                "padding": null,
                                                 "text": ""
                                             },
                                             "configAlternates": {
                                                 "cls": "string",
                                                 "iconCls": "string",
-                                                "text": "string"
+                                                "text": "string",
+                                                "padding": "auto"
                                             },
                                             "name": "MyButton3",
                                             "designerId": "cd410300-54d3-4b83-9998-df299b24c29f",
@@ -1133,9 +1244,10 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\"),",
+                                                            "//var gridSeletedRecord = this.up('#labores_insumos_tab').down(\"#labores_insumos_grid\").record;",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {
@@ -1145,6 +1257,144 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "cbf6b9b0-5221-4d30-b607-ee7aaac0c18c"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "newButtons"
+                                        ],
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "hidden": true,
+                                        "itemId": "newButtonsInsumos",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto",
+                                        "cls": "typedarray",
+                                        "hidden": "boolean"
+                                    },
+                                    "name": "MyContainer3",
+                                    "designerId": "f24dc24f-add3-4509-ab84-f109487183ad",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Insumo"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "ecc6694b-fcfe-401d-895c-5e479691121d",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('InsumosPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "cda56ac0-9256-4ba7-80ae-39788773be53"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Deposito"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "84289060-fc5e-489d-b047-74f4cb8ba9e3",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('DepositosPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "9ecc433a-92f0-4159-bc43-fe7e86e691e4"
                                                 }
                                             ]
                                         }
@@ -1404,7 +1654,33 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox6",
-                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2"
+                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onComboboxChange2",
+                                                        "implHandler": [
+                                                            "field.blur();"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onComboboxChange2",
+                                                    "designerId": "c237b262-71a0-4a09-ae7a-9f4264363302"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "basicfunction",
@@ -1569,6 +1845,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin6",
                                     "designerId": "612a6bbf-7653-464e-94cb-94437d85035d"
                                 },
@@ -1619,6 +1901,16 @@
                                     },
                                     "name": "onLabores_personal_gridBeforeRender",
                                     "designerId": "270e5168-ee9c-4f4b-800b-f8e2e873f5e6"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel2",
+                                    "designerId": "7a84d8b0-744d-4c9f-8e07-bde9738cbddf"
                                 }
                             ]
                         },
@@ -1658,9 +1950,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "cls": [
+                                            "tabCtrol"
+                                        ],
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "tabCtrolPersonal",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -1669,7 +1964,8 @@
                                         "container|pack": "string",
                                         "itemId": "string",
                                         "layout": "string",
-                                        "layout|columnWidth": "auto"
+                                        "layout|columnWidth": "auto",
+                                        "cls": "typedarray"
                                     },
                                     "name": "MyContainer2",
                                     "designerId": "e636be4a-f8a3-4a80-bdb3-3fc64568b9d6",
@@ -1770,9 +2066,12 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_personal_tab').down(\"#labores_personal_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_personal_tab').down(\"#labores_personal_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_personal_tab').down(\"#labores_personal_grid\"),",
+                                                            "    ",
+                                                            "/*var gridSeletedRecord = this.up('#labores_personal_tab').down(\"#labores_personal_grid\").record;",
+                                                            "grid.getStore().remove(gridSeletedRecord);*/",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {
@@ -1782,6 +2081,93 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "7ebff83b-6e44-4a76-99b3-1ad8cd9d1033"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "newButtons"
+                                        ],
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "hidden": true,
+                                        "itemId": "newButtonsPersonal",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto",
+                                        "cls": "typedarray",
+                                        "hidden": "boolean"
+                                    },
+                                    "name": "MyContainer4",
+                                    "designerId": "bb3610de-02cd-4d16-a0e2-de2c26297c86",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Personal"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "1d5faaa4-83ca-46b8-861e-1ff3aa1e30bc",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('PersonalPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "ee141966-c2ce-4604-9dc2-ae38f5aee4c1"
                                                 }
                                             ]
                                         }
@@ -2039,7 +2425,33 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox7",
-                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44"
+                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onComboboxChange3",
+                                                        "implHandler": [
+                                                            "field.blur();"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onComboboxChange3",
+                                                    "designerId": "3c84823b-d475-43ca-9068-b8c4740392ca"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "basicfunction",
@@ -2106,6 +2518,12 @@
                                         "type": "array"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "clicksToEdit": 1
+                                    },
+                                    "configAlternates": {
+                                        "clicksToEdit": "number"
+                                    },
                                     "name": "MyCellEditingPlugin",
                                     "designerId": "0b8e09d3-9a53-4b24-86d0-71122bc502f8"
                                 },
@@ -2156,6 +2574,16 @@
                                     },
                                     "name": "onLabores_maquinaria_gridBeforeRender",
                                     "designerId": "edc49065-f3d9-4035-a97c-9bfa6bf4ca44"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckboxSelectionModel1",
+                                    "designerId": "16a9da60-ea02-4f6e-80bf-e11176eb48a8"
                                 }
                             ]
                         },
@@ -2195,9 +2623,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "cls": [
+                                            "tabCtrol"
+                                        ],
                                         "container|align": "stretch",
                                         "container|pack": "center",
-                                        "itemId": "newBox",
+                                        "itemId": "tabCtrolMaquinaria",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1
                                     },
@@ -2206,7 +2637,8 @@
                                         "container|pack": "string",
                                         "itemId": "string",
                                         "layout": "string",
-                                        "layout|columnWidth": "auto"
+                                        "layout|columnWidth": "auto",
+                                        "cls": "typedarray"
                                     },
                                     "name": "MyContainer2",
                                     "designerId": "5e26ffff-1224-488c-93eb-e0453330f8ee",
@@ -2307,9 +2739,11 @@
                                                         ],
                                                         "fn": "handler",
                                                         "implHandler": [
-                                                            "var grid = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\");",
-                                                            "var gridSeletedRecord = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\").record;",
-                                                            "grid.getStore().remove(gridSeletedRecord);"
+                                                            "var grid = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\"),",
+                                                            "/*var gridSeletedRecord = this.up('#labores_maquinaria_tab').down(\"#labores_maquinaria_grid\").record;",
+                                                            "grid.getStore().remove(gridSeletedRecord);*/",
+                                                            "gridSeletedRecords = grid.getSelection();",
+                                                            "grid.getStore().remove(gridSeletedRecords);"
                                                         ]
                                                     },
                                                     "configAlternates": {
@@ -2319,6 +2753,93 @@
                                                     },
                                                     "name": "handler",
                                                     "designerId": "1315966d-230f-46f1-ae5d-96795f7d7931"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "newButtons"
+                                        ],
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "dock": "bottom",
+                                        "hidden": true,
+                                        "itemId": "newButtonsMaquinaria",
+                                        "layout": "hbox",
+                                        "layout|columnWidth": 1,
+                                        "margin": "20px 0 0 0 "
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "itemId": "string",
+                                        "layout": "string",
+                                        "layout|columnWidth": "auto",
+                                        "dock": "string",
+                                        "margin": "auto",
+                                        "cls": "typedarray",
+                                        "hidden": "boolean"
+                                    },
+                                    "name": "MyContainer5",
+                                    "designerId": "92e89f09-5f40-42ca-a172-b06885ccd3b2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "",
+                                                "iconCls": "x-fa fa-plus",
+                                                "layout|flex": null,
+                                                "margin": "0 0 0 10",
+                                                "text": "Maquinaria"
+                                            },
+                                            "configAlternates": {
+                                                "cls": "string",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "margin": "auto",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "251d435c-a5e7-449b-a805-3c446ee733ff",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "f_crud.openNestedForm('MaquinariaPanel');"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "95c0df83-df24-4b6f-8c60-058a72057d2c"
                                                 }
                                             ]
                                         }

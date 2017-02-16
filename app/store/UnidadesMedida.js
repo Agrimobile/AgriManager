@@ -29,22 +29,22 @@ Ext.define('MyApp.store.UnidadesMedida', {
       data: [
         {
           nombre: 'Litros',
-          valor: 'L',
+          valor: 'Lts',
           id: 1
         },
         {
           nombre: 'Kilos',
-          valor: 'K',
+          valor: 'Kgs',
           id: 2
         },
         {
           nombre: 'Metros',
-          valor: 'M',
+          valor: 'Mts',
           id: 3
         },
         {
           nombre: 'Horas',
-          valor: 'H',
+          valor: 'Horas',
           id: 4
         },
         {
@@ -61,6 +61,41 @@ Ext.define('MyApp.store.UnidadesMedida', {
           nombre: 'Toneladas',
           valor: 'T',
           id: 7
+        },
+        {
+          nombre: 'Cada Uno',
+          valor: 'c/u',
+          id: 8
+        },
+        {
+          nombre: 'litros',
+          valor: 'lts',
+          id: 9
+        },
+        {
+          nombre: 'kilos',
+          valor: 'kgs',
+          id: 10
+        },
+        {
+          nombre: 'Horas',
+          valor: 'Has',
+          id: 11
+        },
+        {
+          nombre: 'Milimetros',
+          valor: 'Mm',
+          id: 12
+        },
+        {
+          nombre: 'Tarea',
+          valor: 'Tarea',
+          id: 13
+        },
+        {
+          nombre: 'PesosAño',
+          valor: '$ año',
+          id: 14
         }
       ],
       fields: [

@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Campanias', {
   ],
 
   aliasSQL: 'periodos',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

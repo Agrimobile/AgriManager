@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Lotes_actividades', {
   ],
 
   aliasSQL: 'lote_actividad',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

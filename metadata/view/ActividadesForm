@@ -58,6 +58,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "editable": false,
+                "enableKeyEvents": true,
                 "fieldLabel": "Código",
                 "name": "codigo"
             },
@@ -66,7 +67,8 @@
                 "blankText": "string",
                 "editable": "boolean",
                 "fieldLabel": "string",
-                "name": "string"
+                "name": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyTextField5",
             "designerId": "80c98adb-93e3-4d9f-8f1b-991f3206bc7c"
@@ -81,6 +83,7 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
                 "fieldLabel": "Nombre",
                 "layout|flex": null,
                 "name": "nombre"
@@ -90,46 +93,130 @@
                 "blankText": "string",
                 "fieldLabel": "string",
                 "layout|flex": "number",
-                "name": "string"
+                "name": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyTextField",
             "designerId": "217bec27-e085-48cd-8eaa-29f85c424c1f"
         },
         {
-            "type": "Ext.form.field.ComboBox",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "allowBlank": false,
-                "blankText": "Este campo es obligatorio. Puedes agregar nuevos rubros ingresando en el item Rubros del menu principal",
-                "displayField": "descripcion",
-                "fieldLabel": "Campaña",
-                "forceSelection": true,
-                "itemId": "fieldPeriodo",
+                "container|align": "stretch",
+                "layout": "hbox",
                 "layout|flex": null,
-                "name": "cod_periodo",
-                "queryMode": "local",
-                "store": "Campanias",
-                "valueField": "codigo"
+                "margin": "10 0 10"
             },
             "configAlternates": {
-                "allowBlank": "boolean",
-                "blankText": "string",
-                "displayField": "datafield",
-                "fieldLabel": "string",
-                "forceSelection": "boolean",
-                "itemId": "string",
+                "container|align": "string",
+                "layout": "string",
                 "layout|flex": "number",
-                "name": "string",
-                "queryMode": "string",
-                "store": "store",
-                "valueField": "datafield"
+                "margin": "auto"
             },
-            "name": "MyComboBox8",
-            "designerId": "af47dfe7-2cf7-4d08-b02e-13c0dc010570"
+            "name": "MyContainer",
+            "designerId": "e1165870-107e-49fe-9478-d3ca79f36f65",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Este campo es obligatorio",
+                        "displayField": "descripcion",
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Campaña",
+                        "forceSelection": true,
+                        "itemId": "fieldPeriodo",
+                        "layout|flex": null,
+                        "name": "cod_periodo",
+                        "queryMode": "local",
+                        "store": "Campanias",
+                        "valueField": "codigo",
+                        "width": "80%"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "blankText": "string",
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "forceSelection": "boolean",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "width": "auto",
+                        "enableKeyEvents": "boolean"
+                    },
+                    "name": "MyComboBox8",
+                    "designerId": "af47dfe7-2cf7-4d08-b02e-13c0dc010570"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "layout|flex": null,
+                        "layout|margins": "",
+                        "margin": "0 10",
+                        "text": "",
+                        "width": "10%"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "layout|margins": "string",
+                        "margin": "auto",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "bf2904cb-ae13-40a5-a126-7497abb01d14",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var formWrapper = this.up('[cls=formpanel]');",
+                                    "formWrapper.dropdownId = \"fieldPeriodo\";",
+                                    "f_crud.openNestedForm('CampaniasPanel');"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "handler",
+                            "designerId": "04964a86-feb9-40ae-bdb8-a1e55bc1ea63"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.form.field.Date",
@@ -140,9 +227,11 @@
             "codeClass": null,
             "userConfig": {
                 "allowBlank": false,
+                "altFormats": "",
                 "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
                 "fieldLabel": "Desde",
-                "format": "Y-m-d",
+                "format": "d-m-Y",
                 "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
                 "itemId": "desde",
                 "layout|flex": null,
@@ -156,7 +245,9 @@
                 "itemId": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "format": "string"
+                "format": "string",
+                "altFormats": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyDateField",
             "designerId": "e1f219ad-67f3-446c-8a81-cda5a9a70650"
@@ -171,8 +262,9 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "enableKeyEvents": true,
                 "fieldLabel": "hasta",
-                "format": "Y-m-d",
+                "format": "d-m-Y",
                 "invalidText": "{0} No es un formato valido de fecha - Deberia tener el formato {1}",
                 "itemId": "hasta",
                 "layout|flex": null,
@@ -186,7 +278,8 @@
                 "itemId": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "format": "string"
+                "format": "string",
+                "enableKeyEvents": "boolean"
             },
             "name": "MyDateField1",
             "designerId": "6bcf2a7f-5570-4359-8df3-c65e8f053c99"

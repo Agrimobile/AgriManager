@@ -41,6 +41,11 @@ Ext.define('MyApp.store.TiposTarea', {
           nombre: 'Personal',
           valor: 'P',
           id: 3
+        },
+        {
+          nombre: 'L',
+          valor: 'L',
+          id: 4
         }
       ],
       fields: [

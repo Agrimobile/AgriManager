@@ -1,9 +1,29 @@
- .x-grid-cell-inner-treecolumn {
+.x-grid-cell-inner-treecolumn {
   text-align: left !important;
 }
 
 .paneltool {
   left: 0!important;
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.paneltool .x-tool-tool-el {
+  width: 25px;
+  height: 25px;
+}
+
+.configtool {
+  left: none!important;
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.configtool .x-tool-tool-el {
+  width: 25px;
+  height: 25px;
 }
 
 .x-grid-cell-inner {
@@ -12,6 +32,18 @@
 
 .x-panel-header-title {
   width: 100%!important;
+}
+
+.x-btn-default-small {
+  padding: 3px 7px !important;
+}
+
+.mainButtonBox .x-btn-default-small {
+  padding: 10px 7px !important;
+}
+
+.tabCtrol .x-btn-default-small {
+  padding: 10px 20px !important;
 }
 
 // Las propiedades seteadas con important arriba no pueden refactorearse
@@ -50,7 +82,7 @@
   left: -4px;
 }
 
-.x-title.x-panel-header-title-default {
+.x-title.x-panel-header-title-default, .x-btn-inner-default-small {
   line-height: 29px;
 }
 

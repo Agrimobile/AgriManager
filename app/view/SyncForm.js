@@ -19,9 +19,9 @@ Ext.define('MyApp.view.SyncForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel6',
-    'Ext.button.Button',
     'Ext.form.FieldSet',
-    'Ext.form.field.Text'
+    'Ext.form.field.Text',
+    'Ext.button.Button'
   ],
 
   config: {
@@ -41,6 +41,24 @@ Ext.define('MyApp.view.SyncForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  items: [
+    {
+      xtype: 'fieldset',
+      flex: 1,
+      title: 'Sincronizando tablas',
+      items: [
+        {
+          xtype: 'textfield',
+          itemId: 'tabla',
+          width: '100%',
+          fieldLabel: 'Tabla',
+          blankText: 'Este campo es obligatorio',
+          editable: false,
+          enableKeyEvents: true
+        }
+      ]
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -92,23 +110,6 @@ Ext.define('MyApp.view.SyncForm', {
     render: 'onFormRender',
     hide: 'onFormHide'
   },
-  items: [
-    {
-      xtype: 'fieldset',
-      flex: 1,
-      title: 'Sincronizando tablas',
-      items: [
-        {
-          xtype: 'textfield',
-          itemId: 'tabla',
-          width: '100%',
-          fieldLabel: 'Tabla',
-          blankText: 'Este campo es obligatorio',
-          editable: false
-        }
-      ]
-    }
-  ],
 
   onFormActivate: function(component, eOpts) {
     f_crud.setFormTitle(component);

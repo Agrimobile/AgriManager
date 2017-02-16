@@ -22,9 +22,6 @@ Ext.define('MyApp.model.Labores_maquinaria', {
   ],
 
   aliasSQL: 'labores_maquinarias',
-  identifier: {
-    type: 'uuid'
-  },
 
   fields: [
     {

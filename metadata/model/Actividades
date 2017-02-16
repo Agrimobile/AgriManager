@@ -8,9 +8,7 @@
     "userConfig": {
         "aliasSQL": "cuentas",
         "designer|userClassName": "Actividades",
-        "identifier": [
-            "{type: 'uuid'}"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "aliasSQL": "string",

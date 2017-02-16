@@ -11,6 +11,7 @@
         "id": null,
         "itemId": null,
         "padding": null,
+        "scrollable": true,
         "width": null
     },
     "configAlternates": {
@@ -19,7 +20,8 @@
         "id": "string",
         "itemId": "string",
         "padding": "auto",
-        "width": "auto"
+        "width": "auto",
+        "scrollable": "auto"
     },
     "name": "ConfigMenu1",
     "designerId": "bf75fea5-60f7-49b1-8a40-71ad8e230c07",

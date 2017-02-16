@@ -29,6 +29,7 @@ Ext.define('MyApp.view.LaboresForm', {
     'Ext.grid.column.Number',
     'Ext.form.field.Display',
     'Ext.grid.plugin.CellEditing',
+    'Ext.selection.CheckboxModel',
     'Ext.form.Panel'
   ],
 
@@ -49,7 +50,8 @@ Ext.define('MyApp.view.LaboresForm', {
     align: 'stretch'
   },
   listeners: {
-    activate: 'onFormActivate'
+    activate: 'onFormActivate',
+    render: 'onFormRender'
   },
   items: [
     {
@@ -69,14 +71,17 @@ Ext.define('MyApp.view.LaboresForm', {
               name: 'id',
               allowBlank: false,
               blankText: 'Este campo es obligatorio',
-              editable: false
+              editable: false,
+              enableKeyEvents: true
             },
             {
               xtype: 'datefield',
               itemId: 'fecha',
               width: '100%',
               fieldLabel: 'Fecha',
-              name: 'fecha'
+              name: 'fecha',
+              enableKeyEvents: true,
+              format: 'd-m-Y'
             },
             {
               xtype: 'container',
@@ -94,7 +99,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   fieldLabel: 'Tarea',
                   name: 'cod_tarea',
                   allowBlank: false,
-                  blankText: 'Este campo es obligatorio. Puedes agregar tareas ingresando en el item Tareas del menu principal',
+                  blankText: 'Este campo es obligatorio',
+                  enableKeyEvents: true,
                   displayField: 'descripcion',
                   forceSelection: true,
                   queryMode: 'local',
@@ -120,13 +126,15 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'numberfield',
               width: '100%',
               fieldLabel: 'Cantidad',
-              name: 'cantidad'
+              name: 'cantidad',
+              enableKeyEvents: true
             },
             {
               xtype: 'numberfield',
               width: '100%',
               fieldLabel: 'Precio',
-              name: 'precio'
+              name: 'precio',
+              enableKeyEvents: true
             },
             {
               xtype: 'container',
@@ -143,7 +151,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   width: '80%',
                   fieldLabel: 'Contratista',
                   name: 'cod_contratista',
-                  blankText: 'Este campo es obligatorio. Puedes agregar mas items ingresando en el item Contratistas del menu principal',
+                  blankText: 'Este campo es obligatorio',
+                  enableKeyEvents: true,
                   displayField: 'nombre',
                   forceSelection: true,
                   queryMode: 'local',
@@ -235,7 +244,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Insumos',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange1'
+                    }
                   }
                 },
                 {
@@ -271,7 +283,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Depositos',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange'
+                    }
                   }
                 },
                 {
@@ -293,6 +308,9 @@ Ext.define('MyApp.view.LaboresForm', {
               listeners: {
                 selectionchange: 'onGridpanelSelectionChange',
                 beforerender: 'onLabores_insumos_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -308,7 +326,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolInsumos',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -338,14 +357,53 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid");
-                        var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_insumos_tab').down("#labores_insumos_grid"),
+                        //var gridSeletedRecord = this.up('#labores_insumos_tab').down("#labores_insumos_grid").record;
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'newButtons',
+                  dock: 'bottom',
+                  hidden: true,
+                  itemId: 'newButtonsInsumos',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('InsumosPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Insumo'
+                    },
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('DepositosPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Deposito'
                     }
                   ]
                 }
@@ -420,7 +478,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Personal',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange2'
+                    }
                   }
                 },
                 {
@@ -463,12 +524,16 @@ Ext.define('MyApp.view.LaboresForm', {
               ],
               plugins: [
                 {
-                  ptype: 'cellediting'
+                  ptype: 'cellediting',
+                  clicksToEdit: 1
                 }
               ],
               listeners: {
                 selectionchange: 'onGridpanelSelectionChange1',
                 beforerender: 'onLabores_personal_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -484,7 +549,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolPersonal',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -514,14 +580,45 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_personal_tab').down("#labores_personal_grid");
-                        var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_personal_tab').down("#labores_personal_grid"),
+
+                        /*var gridSeletedRecord = this.up('#labores_personal_tab').down("#labores_personal_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);*/
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'newButtons',
+                  dock: 'bottom',
+                  hidden: true,
+                  itemId: 'newButtonsPersonal',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('PersonalPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Personal'
                     }
                   ]
                 }
@@ -596,7 +693,10 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Maquinaria',
-                    valueField: 'codigo'
+                    valueField: 'codigo',
+                    listeners: {
+                      change: 'onComboboxChange3'
+                    }
                   }
                 },
                 {
@@ -611,12 +711,16 @@ Ext.define('MyApp.view.LaboresForm', {
               ],
               plugins: [
                 {
-                  ptype: 'cellediting'
+                  ptype: 'cellediting',
+                  clicksToEdit: 1
                 }
               ],
               listeners: {
                 selectionchange: 'onLabores_maquinaria_gridSelectionChange',
                 beforerender: 'onLabores_maquinaria_gridBeforeRender'
+              },
+              selModel: {
+                selType: 'checkboxmodel'
               }
             }
           ],
@@ -632,7 +736,8 @@ Ext.define('MyApp.view.LaboresForm', {
                 {
                   xtype: 'container',
                   columnWidth: 1,
-                  itemId: 'newBox',
+                  cls: 'tabCtrol',
+                  itemId: 'tabCtrolMaquinaria',
                   layout: {
                     type: 'hbox',
                     align: 'stretch',
@@ -662,14 +767,44 @@ Ext.define('MyApp.view.LaboresForm', {
                     {
                       xtype: 'button',
                       handler: function(button, e) {
-                        var grid = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid");
-                        var gridSeletedRecord = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid").record;
-                        grid.getStore().remove(gridSeletedRecord);
+                        var grid = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid"),
+                        /*var gridSeletedRecord = this.up('#labores_maquinaria_tab').down("#labores_maquinaria_grid").record;
+                        grid.getStore().remove(gridSeletedRecord);*/
+                          gridSeletedRecords = grid.getSelection();
+                        grid.getStore().remove(gridSeletedRecords);
                       },
                       cls: '',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-trash',
                       text: ''
+                    }
+                  ]
+                }
+              ],
+              dockedItems: [
+                {
+                  xtype: 'container',
+                  columnWidth: 1,
+                  cls: 'newButtons',
+                  dock: 'bottom',
+                  hidden: true,
+                  itemId: 'newButtonsMaquinaria',
+                  margin: '20px 0 0 0 ',
+                  layout: {
+                    type: 'hbox',
+                    align: 'middle',
+                    pack: 'center'
+                  },
+                  items: [
+                    {
+                      xtype: 'button',
+                      handler: function(button, e) {
+                        f_crud.openNestedForm('MaquinariaPanel');
+                      },
+                      cls: '',
+                      margin: '0 0 0 10',
+                      iconCls: 'x-fa fa-plus',
+                      text: 'Maquinaria'
                     }
                   ]
                 }
@@ -747,14 +882,7 @@ Ext.define('MyApp.view.LaboresForm', {
   ],
 
   onFormActivate: function(component, eOpts) {
-    var form_panel = this;
     var item = component.initialTitle;
-    var record = form_panel.getRecord();
-
-    //empty labores_ tables
-    for (var i=1; i < form_panel.store_array.length; i++){
-      f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
-    }
 
     f_crud.load_store('Depositos');
     f_crud.load_store('Insumos');
@@ -763,19 +891,43 @@ Ext.define('MyApp.view.LaboresForm', {
 
     if(component.action === 'ADD') {
       component.setTitle('Nueva ' + item);
+    }
+    else if(component.action === 'EDIT') {
+      component.setTitle('Editar ' + item);
+    }
+    else {
+      component.setTitle(item);
+    }
+  },
+
+  onFormRender: function(component, eOpts) {
+    var form_panel = this;
+    var item = component.initialTitle;
+    var record = form_panel.getRecord();
+
+    //empty labores_ stores
+    for (var i=1; i < form_panel.store_array.length; i++){
+      f_crud.load_store(form_panel.store_array[i],'id_labores = -1');
+    }
+
+    if(component.action === 'ADD') {
       var today = new Date();
       this.down('#fecha').setValue(today);
     }
     else if(component.action === 'EDIT') {
-      component.setTitle('Editar ' + item);
       var id = record.get('id');
       for (var i=1; i < form_panel.store_array.length; i++){
         f_crud.load_store(form_panel.store_array[i],'id_labores = ' + id);
       }
     }
-    else {
-      component.setTitle(item);
-    }
+  },
+
+  onComboboxChange1: function(field, newValue, oldValue, eOpts) {
+    field.blur();
+  },
+
+  onComboboxChange: function(field, newValue, oldValue, eOpts) {
+    field.blur();
   },
 
   onGridpanelSelectionChange: function(model, selected, eOpts) {
@@ -786,12 +938,20 @@ Ext.define('MyApp.view.LaboresForm', {
     f_crud.renderGridWidth(component);
   },
 
+  onComboboxChange2: function(field, newValue, oldValue, eOpts) {
+    field.blur();
+  },
+
   onGridpanelSelectionChange1: function(model, selected, eOpts) {
     this.down("#labores_personal_grid").record = selected[0];
   },
 
   onLabores_personal_gridBeforeRender: function(component, eOpts) {
     f_crud.renderGridWidth(component);
+  },
+
+  onComboboxChange3: function(field, newValue, oldValue, eOpts) {
+    field.blur();
   },
 
   onLabores_maquinaria_gridSelectionChange: function(model, selected, eOpts) {

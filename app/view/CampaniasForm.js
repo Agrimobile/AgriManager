@@ -19,9 +19,9 @@ Ext.define('MyApp.view.CampaniasForm', {
 
   requires: [
     'MyApp.view.LotesFormViewModel2',
+    'Ext.form.field.Text',
     'Ext.container.Container',
-    'Ext.button.Button',
-    'Ext.form.field.Text'
+    'Ext.button.Button'
   ],
 
   config: {
@@ -41,6 +41,25 @@ Ext.define('MyApp.view.CampaniasForm', {
     type: 'vbox',
     align: 'stretch'
   },
+  items: [
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Codigo',
+      name: 'codigo',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      editable: false,
+      enableKeyEvents: true
+    },
+    {
+      xtype: 'textfield',
+      fieldLabel: 'Nombre',
+      name: 'descripcion',
+      allowBlank: false,
+      blankText: 'Este campo es obligatorio',
+      enableKeyEvents: true
+    }
+  ],
   dockedItems: [
     {
       xtype: 'container',
@@ -74,23 +93,6 @@ Ext.define('MyApp.view.CampaniasForm', {
           text: 'Cancelar'
         }
       ]
-    }
-  ],
-  items: [
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Codigo',
-      name: 'codigo',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio',
-      editable: false
-    },
-    {
-      xtype: 'textfield',
-      fieldLabel: 'Nombre',
-      name: 'descripcion',
-      allowBlank: false,
-      blankText: 'Este campo es obligatorio'
     }
   ],
   listeners: {

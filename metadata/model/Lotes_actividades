@@ -8,9 +8,7 @@
     "userConfig": {
         "aliasSQL": "lote_actividad",
         "designer|userClassName": "Lotes_actividades",
-        "identifier": [
-            "{type: 'uuid'}"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "aliasSQL": "string",

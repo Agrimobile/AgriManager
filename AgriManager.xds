@@ -7,7 +7,7 @@
             "frameworkVersion": "6.2.1.167"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:49988/",
+        "urlPrefix": "http://localhost:62854/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",

@@ -248,6 +248,7 @@
                     "userConfig": {
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
+                        "itemId": "columnEstabl",
                         "text": "Cod Establecimiento",
                         "width": "25%"
                     },
@@ -255,58 +256,11 @@
                         "dataIndex": "datafield",
                         "format": "string",
                         "text": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "itemId": "string"
                     },
                     "name": "MyNumberColumn25",
                     "designerId": "1808ff3b-8634-48b9-949f-5da4323b06de"
-                },
-                {
-                    "type": "Ext.grid.column.Check",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "agregar",
-                        "itemId": null,
-                        "text": "Agregar",
-                        "width": "25%"
-                    },
-                    "configAlternates": {
-                        "dataIndex": "datafield",
-                        "itemId": "string",
-                        "text": "string",
-                        "width": "auto"
-                    },
-                    "name": "MyCheck2",
-                    "designerId": "a6ee212d-70a9-4a9b-9623-61133cf84442"
-                },
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onAddinggridItemClick",
-                        "implHandler": [
-                            "// console.log(record.data.agregar); ",
-                            "// TODO: no basta con cambiar el valor de agregar, porque no se cambiar el ",
-                            "// tilde: hay que hacer un trabajito de 2-way-dataBinding.-"
-                        ],
-                        "name": "itemclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onAddinggridItemClick",
-                    "designerId": "7685da65-efea-4b87-9ce7-f72b291d58bb"
                 },
                 {
                     "type": "basiceventbinding",
@@ -331,6 +285,16 @@
                     },
                     "name": "onAddinggridBeforeRender",
                     "designerId": "f28bb353-2e5d-41a5-a94b-db019ed0bbc0"
+                },
+                {
+                    "type": "Ext.selection.CheckboxModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyCheckboxSelectionModel3",
+                    "designerId": "f67bc64b-a7ba-4e4b-8def-98fc3d64c297"
                 }
             ]
         },
@@ -350,7 +314,8 @@
                     "//var store = Ext.getStore('Lotes_actividades');",
                     "//this.form_store_array = [store];",
                     "",
-                    "f_crud.load_store(this.store_name,'',\"select *,'' as agregar from Lotes\");"
+                    "//f_crud.load_store(this.store_name,'',\"select *,'' as agregar from Lotes\");",
+                    "f_crud.load_store(this.store_name,'',\"select * from Lotes\");"
                 ],
                 "name": "render",
                 "scope": "me"
@@ -471,6 +436,43 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormseveralBeforeRender",
+                "implHandler": [
+                    "f_crud.load_store(\"Establecimientos\");/*",
+                    "var i, cols = component.down(\"#addinggrid\").columns,",
+                    "    rendFn = function(value, metaData, record, rowIndex, colIndex, store){",
+                    "      return f_crud.getDisplayValue('Establecimientos', value, 'nombre');",
+                    "    };",
+                    "",
+                    "for (i = cols.length - 1; i >= 0; i--) {",
+                    "  if(cols[i].dataIndex === \"cod_establecimiento\" ){",
+                    "    cols[i].renderer = rendFn;",
+                    "  }",
+                    "}*/",
+                    "",
+                    "f_crud.applyRenderer(component, \"addinggrid\", \"Establecimientos\", 'nombre', \"cod_establecimiento\");",
+                    "// paramas: panel, gridId, storeName, targetField, colDataIndex"
+                ],
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onFormseveralBeforeRender",
+            "designerId": "56e26b37-b675-4056-a520-6e67de81baaf"
         }
     ]
 }

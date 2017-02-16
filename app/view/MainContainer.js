@@ -19,11 +19,11 @@ Ext.define('MyApp.view.MainContainer', {
 
   requires: [
     'MyApp.view.MainContainerViewModel',
+    'Ext.panel.Panel',
     'Ext.panel.Tool',
-    'Ext.form.Panel',
-    'Ext.button.Button',
     'Ext.toolbar.Toolbar',
-    'Ext.form.Label'
+    'Ext.form.Label',
+    'Ext.button.Button'
   ],
 
   viewModel: {
@@ -36,11 +36,11 @@ Ext.define('MyApp.view.MainContainer', {
   items: [
     {
       xtype: 'panel',
-      id: 'agrimobile',
-      itemId: 'agrimobile',
+      id: 'agromobile',
+      itemId: 'agromobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agrimobile',
+      title: 'Agromobile',
       titleAlign: 'center',
       tools: [
         {
@@ -54,6 +54,7 @@ Ext.define('MyApp.view.MainContainer', {
         },
         {
           xtype: 'tool',
+          cls: 'configtool',
           itemId: 'configmenu-tool',
           iconCls: 'x-fa fa-gear',
           listeners: {
@@ -61,6 +62,24 @@ Ext.define('MyApp.view.MainContainer', {
           }
         }
       ],
+      dockedItems: [
+        {
+          xtype: 'toolbar',
+          cls: 'toolbar-color',
+          dock: 'bottom',
+          items: [
+            {
+              xtype: 'label',
+              itemId: 'estado_sinc',
+              text: 'Sincronizado okk'
+            }
+          ]
+        }
+      ],
+      listeners: {
+        render: 'onAgrimobileRender',
+        afterrender: 'onAgromobileAfterRender'
+      },
       items: [
         {
           xtype: 'panel',
@@ -88,155 +107,117 @@ Ext.define('MyApp.view.MainContainer', {
             }
             createPanel(panelClass);
           },
-          cls: 'gridpanel',
-          flex: 1,
           itemId: 'homePanel',
           scrollable: true,
           iconCls: 'x-fa fa-home',
           title: 'Home',
-          titleAlign: 'left',
-          dockedItems: [
+          items: [
             {
-              xtype: 'form',
-              dock: 'top',
-              layout: 'column',
-              bodyPadding: 10,
-              header: false,
-              title: 'My Form',
+              xtype: 'container',
+              cls: 'mainButtonBox',
+              itemId: 'EstabBox',
+              margin: '20px 20px 0 20px',
+              layout: {
+                type: 'hbox',
+                pack: 'center'
+              },
               items: [
                 {
-                  xtype: 'container',
-                  columnWidth: 1,
-                  cls: 'mainButtonBox',
-                  itemId: 'EstabBox',
-                  margin: '20px 20px 0 20px',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    button.up("#homePanel").openHomeItem(button);
                   },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        button.up("#homePanel").openHomeItem(button);
-                      },
-                      panelClass: 'EstablecimientosPanel',
-                      cls: '',
-                      padding: '20px',
-                      width: '100%',
-                      iconCls: 'x-fa fa-industry',
-                      text: 'Establecimientos'
-                    }
-                  ]
-                },
+                  panelClass: 'EstablecimientosPanel',
+                  cls: '',
+                  padding: '20px',
+                  width: '100%',
+                  iconCls: 'x-fa fa-industry',
+                  text: 'Establecimientos'
+                }
+              ]
+            },
+            {
+              xtype: 'container',
+              cls: 'mainButtonBox',
+              itemId: 'ActivBox',
+              margin: '20px 20px 0 20px',
+              layout: {
+                type: 'vbox',
+                align: 'stretch',
+                pack: 'center'
+              },
+              items: [
                 {
-                  xtype: 'container',
-                  columnWidth: 1,
-                  cls: 'mainButtonBox',
-                  itemId: 'ActivBox',
-                  margin: '20px 20px 0 20px',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    button.up("#homePanel").openHomeItem(button);
                   },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        button.up("#homePanel").openHomeItem(button);
-                      },
-                      panelClass: 'ActividadesPanel',
-                      cls: '',
-                      margin: '',
-                      padding: '20px',
-                      width: '100%',
-                      iconCls: 'x-fa fa-pagelines',
-                      text: 'Actividades'
-                    }
-                  ]
-                },
+                  panelClass: 'ActividadesPanel',
+                  cls: '',
+                  margin: '',
+                  padding: '20px',
+                  width: '100%',
+                  iconCls: 'x-fa fa-pagelines',
+                  text: 'Actividades'
+                }
+              ]
+            },
+            {
+              xtype: 'container',
+              cls: 'mainButtonBox',
+              itemId: 'SesionBox',
+              margin: '20px 20px 0 20px',
+              layout: {
+                type: 'vbox',
+                align: 'stretch',
+                pack: 'center'
+              },
+              items: [
                 {
-                  xtype: 'container',
-                  columnWidth: 1,
-                  cls: 'mainButtonBox',
-                  itemId: 'SesionBox',
-                  margin: '20px 20px 0 20px',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    button.up("#homePanel").openHomeItem(button);
                   },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        button.up("#homePanel").openHomeItem(button);
-                      },
-                      panelClass: 'LoginForm',
-                      cls: '',
-                      margin: '',
-                      padding: '20px',
-                      width: '100%',
-                      iconCls: 'x-fa fa-user',
-                      text: 'Iniciar Sesion'
-                    }
-                  ]
-                },
+                  panelClass: 'LoginForm',
+                  cls: '',
+                  margin: '',
+                  padding: '20px',
+                  width: '100%',
+                  iconCls: 'x-fa fa-user',
+                  text: 'Iniciar Sesion'
+                }
+              ]
+            },
+            {
+              xtype: 'container',
+              panelClass: '',
+              cls: 'mainButtonBox',
+              itemId: 'SyncBox',
+              margin: '20px 20px 20px 20px',
+              layout: {
+                type: 'vbox',
+                align: 'stretch',
+                pack: 'center'
+              },
+              items: [
                 {
-                  xtype: 'container',
-                  panelClass: '',
-                  columnWidth: 1,
-                  cls: 'mainButtonBox',
-                  itemId: 'SyncBox',
-                  margin: '20px 20px 0 20px',
-                  layout: {
-                    type: 'hbox',
-                    align: 'stretch',
-                    pack: 'center'
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    button.up("#homePanel").openHomeItem(button);
                   },
-                  items: [
-                    {
-                      xtype: 'button',
-                      handler: function(button, e) {
-                        button.up("#homePanel").openHomeItem(button);
-                      },
-                      panelClass: 'SyncForm',
-                      cls: '',
-                      margin: '',
-                      padding: '20px',
-                      width: '100%',
-                      iconCls: 'x-fa fa-rotate-right',
-                      text: 'Sincronizar'
-                    }
-                  ]
+                  panelClass: 'SyncForm',
+                  cls: '',
+                  margin: '',
+                  padding: '20px',
+                  width: '100%',
+                  iconCls: 'x-fa fa-rotate-right',
+                  text: 'Sincronizar'
                 }
               ]
             }
-          ],
-          listeners: {
-            render: 'onPanelRender'
-          }
-        }
-      ],
-      dockedItems: [
-        {
-          xtype: 'toolbar',
-          cls: 'toolbar-color',
-          dock: 'bottom',
-          items: [
-            {
-              xtype: 'label',
-              itemId: 'estado_sinc',
-              text: 'Sincronizado ok'
-            }
           ]
         }
-      ],
-      listeners: {
-        render: 'onAgrimobileRender'
-      }
+      ]
     }
   ],
   listeners: {
@@ -251,15 +232,6 @@ Ext.define('MyApp.view.MainContainer', {
   onToolClick1: function(tool, e, owner, eOpts) {
     var toolMenu = tool.menu;
     toolMenu.showBy(tool);
-  },
-
-  onPanelRender: function(component, eOpts) {
-    /*this.store_name = 'Personal';
-    this.model_name = 'MyApp.model.Personal';
-    this.form_name  = 'MyApp.view.PersonalForm';
-    var store = Ext.getStore(this.store_name);
-    this.form_store_array = [store];*/
-    //f_crud.load_store(this.store_name);
   },
 
   onAgrimobileRender: function(component, eOpts) {
@@ -301,19 +273,21 @@ Ext.define('MyApp.view.MainContainer', {
     MyApp.archivo_base = 'AgriManager';
     MyApp.screen_count = 0;
     MyApp.screen_name = [];
-    //MyApp.url_lib     = '../LibPHP/';
-    //MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
-    MyApp.url_lib       = 'http://localhost:8080/LibPHP/';
+    MyApp.url_lib       = 'http://inforeports.dnsalias.com/LibPHP/';
+    //MyApp.url_lib       = 'http://localhost:8080/LibPHP/';
     MyApp.usuario       = window.localStorage.getItem("agrimanager_usuario");
     MyApp.clave         = window.localStorage.getItem("agrimanager_clave");
     MyApp.base_nombre   = window.localStorage.getItem("agrimanager_base");
     MyApp.base_url      = window.localStorage.getItem("agrimanager_servidor");
+
     MyApp.base_usuario  = 'dba';
     MyApp.base_clave    = 'gestion525';
-    MyApp.estado_sinc   = '';
+    if(!window.localStorage.getItem("estado_sinc")){
+      window.localStorage.setItem("estado_sinc", "Pendiente");
+    }
     MyApp.sinc_array_store = [];
     MyApp.sinc_array_tabla = [];
-    MyApp.estado_editar = 'N';
+    MyApp.estado_editar = window.localStorage.getItem("estado_editar") || "OK";
 
     // loading data
     f_crud.load_store('Rubros');
@@ -324,7 +298,11 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
 
+    f_crud.checkSecuencia();
+  },
 
+  onAgromobileAfterRender: function(component, eOpts) {
+    MyApp.main.down('#estado_sinc').setHtml("Sincronizado: " + window.localStorage.getItem("estado_sinc"));
   },
 
   onViewportRender: function(component, eOpts) {

@@ -8,11 +8,7 @@
     "userConfig": {
         "aliasSQL": "articulos",
         "designer|userClassName": "Insumos",
-        "identifier": [
-            "{",
-            "            type: 'uuid'",
-            "        }"
-        ]
+        "identifier": null
     },
     "configAlternates": {
         "aliasSQL": "string",
