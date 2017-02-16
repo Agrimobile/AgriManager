@@ -1,6 +1,7 @@
 var f_crud = {
 
   cerrar_mensaje: function(tiempo){
+  // testing cerrar mensaje
     Ext.Function.defer(function(){
       Ext.Msg.hide();
     }, tiempo * 1000);    
@@ -285,7 +286,6 @@ var f_crud = {
   },
     
   form_open: function(grid_panel, action) {
-    debugger;
     var form_panel = Ext.create(grid_panel.form_name), frm, 
         // event onEnter handler
         onEnterHandler = function(textfield, e, eOpts) {

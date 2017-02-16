@@ -40,7 +40,7 @@ Ext.define('MyApp.view.MainContainer', {
       itemId: 'agromobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agromobile',
+      title: 'Agromoobile',
       titleAlign: 'center',
       tools: [
         {
