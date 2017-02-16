@@ -285,6 +285,7 @@ var f_crud = {
   },
     
   form_open: function(grid_panel, action) {
+    debugger;
     var form_panel = Ext.create(grid_panel.form_name), frm, 
         // event onEnter handler
         onEnterHandler = function(textfield, e, eOpts) {
@@ -323,7 +324,6 @@ var f_crud = {
       f_crud.secuencia(function(rtn){
         if (rtn !== -1) {
           newrecord.set('id', rtn);
-          debugger;
           form_panel.loadRecord(newrecord);
           if (typeof newrecord.get('codigo') === 'undefined') {
             MyApp.main.add(form_panel);
