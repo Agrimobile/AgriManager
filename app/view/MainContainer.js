@@ -40,7 +40,7 @@ Ext.define('MyApp.view.MainContainer', {
       itemId: 'agromobile',
       scrollable: true,
       layout: 'card',
-      title: 'Agromoobile',
+      title: 'Agromobile',
       titleAlign: 'center',
       tools: [
         {
@@ -240,7 +240,18 @@ Ext.define('MyApp.view.MainContainer', {
         mainMenuStoreRecords = Ext.getStore("MainMenu").getData().items,
         configMenuStoreRecords = Ext.getStore("ConfigMenu").getData().items,
         itemClicHandler = function(item, e) {
-          this.parentMenu.openCard(item, e);
+          if(item.panelClass){
+            this.parentMenu.openCard(item, e);
+          }
+          else {
+            if(item.action === "deleteTables") {
+              f_crud.drop_all_tables();
+            }
+            else {
+              console.log("Este item no tiene asociada ni una action");
+              console.log("ni un panelClass; Programe correctamente su menu.");
+            }
+          }
         };
 
     mainMenuTool.menu = Ext.create('MyApp.view.MainMenu');
@@ -253,7 +264,8 @@ Ext.define('MyApp.view.MainContainer', {
         text: mainMenuStoreRecords[i].data.text,
         panelClass: mainMenuStoreRecords[i].data.panelClass,
         padding: '10px 0px',
-        handler: itemClicHandler
+        handler: itemClicHandler,
+        action: mainMenuStoreRecords[i].data.action
       });
     }
 
@@ -264,7 +276,8 @@ Ext.define('MyApp.view.MainContainer', {
         text: configMenuStoreRecords[i].data.text,
         panelClass: configMenuStoreRecords[i].data.panelClass,
         padding: '10px 0px',
-        handler: itemClicHandler
+        handler: itemClicHandler,
+        action: configMenuStoreRecords[i].data.action
       });
     }
 
