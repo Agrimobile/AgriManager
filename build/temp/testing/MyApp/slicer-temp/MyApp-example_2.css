@@ -8321,55 +8321,77 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
-}
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:56 */
-.warning-message .x-form-display-field-default {
-    color: #cf4c35;
-    font-weight: 600;
-}
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:61 */
-.custom-contratistas-icon-style:before {
-    border: 1px solid;
-    border-radius: 35px;
-    padding: 0 2px;
-    left: -1px;
-    position: relative;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:69 */
+.warning-message .x-form-display-field-default {
+    color: #cf4c35;
+    font-weight: 600;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:74 */
+.custom-contratistas-icon-style:before {
+    border: 1px solid;
+    border-radius: 35px;
+    padding: 0 2px;
+    left: -1px;
+    position: relative;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/Component.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8419,16 +8441,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8436,38 +8471,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8517,16 +8561,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8534,38 +8591,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8615,16 +8681,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8632,38 +8711,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8713,16 +8801,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8730,38 +8831,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8811,16 +8921,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8828,38 +8951,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -8909,16 +9041,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -8926,38 +9071,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -9007,16 +9161,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -9024,38 +9191,47 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }
 /* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:1 */
 .x-grid-cell-inner-treecolumn {
@@ -9105,16 +9281,29 @@
 .tabCtrol .x-btn-default-small {
     padding: 10px 20px !important;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:52 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:49 */
+#agromobile .x-panel-body {
+    border: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:53 */
+.x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
+    margin-top: 0!important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:57 */
+.x-panel-header-default .x-tool-focus {
+    outline: 0px solid #fff!important;
+    outline-offset: 0px !important;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:65 */
 .gridAddLotes .x-grid-dirty-cell > .x-grid-cell-inner:after {
     color: transparent;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:56 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
 .warning-message .x-form-display-field-default {
     color: #cf4c35;
     font-weight: 600;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:61 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:74 */
 .custom-contratistas-icon-style:before {
     border: 1px solid;
     border-radius: 35px;
@@ -9122,36 +9311,45 @@
     left: -1px;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:69 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:82 */
 .fa-calendar-custom.fa-calendar-o:after {
     left: -14px;
     content: "\f133";
     font-family: FontAwesome;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:75 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:88 */
 .fa-calendar-custom.fa-calendar-o:after,
 .fa-calendar-custom.fa-calendar-o:before {
     background: white;
     position: relative;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:80 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:93 */
 .fa-calendar-custom.fa-calendar-o:before {
     top: -6px;
     left: -4px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:85 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:98 */
 .x-title.x-panel-header-title-default,
 .x-btn-inner-default-small {
     line-height: 29px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:89 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:102 */
 .x-menu-item-icon-default.mainmenu-icon {
     top: 14px;
     left: 10px;
 }
-/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:94 */
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:107 */
 .toolbar-color {
     background: #5fa2dd;
     color: #fff;
     padding: 10px;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:113 */
+.x-box-scroller-menu-default.x-box-scroller-top,
+.x-box-scroller-menu-default.x-box-scroller-bottom {
+    display: none;
+}
+/* C:/wamp64/www/AgriManager/packages/local/theme-triton-d01ec8fc-a7e2-420b-83c0-a85c68215197/sass/src/_architect_src.scss:118 */
+.x-menu-icon-separator-default {
+    border-width: 0px;
 }

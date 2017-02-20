@@ -2,19 +2,58 @@
 
 <html manifest="" lang="en-US">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <title>AgroMobile</title>
-    <link rel="stylesheet" type="text/css" href="ext_library/resources/preview-theme-triton.css">
-    <!-- Copy from [root]/resources/preview-theme-triton-....css -->
-    <!-- The line below must be kept intact for Sencha Command to build your application -->
-    <script type="text/javascript" src="ext_library/ext-all.js"></script> 
-    <!-- Copy from [root]/ext/build/ (copiar ext-all.js) -->
-    <script type="text/javascript" src="LibJS/crud_lib.js"></script> 
-    <script type="text/javascript" src="LibJS/sinc_lib.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <title>AgroMobile</title>
+  <link rel="stylesheet" type="text/css" href="ext_library/resources/preview-theme-triton.css">
+  <!-- Copy from [root]/resources/preview-theme-triton-....css -->
+  <!-- The line below must be kept intact for Sencha Command to build your application -->
+  <script type="text/javascript" src="cordova.js"></script>   
+  <script type="text/javascript" src="ext_library/ext-all-rtl-debug.js"></script>
+  <!-- Copy from [root]/ext/build/ (copiar ext-all.js) -->
+  <script type="text/javascript" src="LibJS/crud_lib.js"></script> 
+  <script type="text/javascript" src="LibJS/sinc_lib.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript">
+    function onLoad() {
+      document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    function onDeviceReady() {
+      document.addEventListener("backbutton", function(e) {
+        var hasPrev, opcion = function(btn) {
+              if (btn === 'yes'){
+                navigator.app.exitApp();
+              }
+            };
+        e.preventDefault();
+        hasPrev = MyApp.main.getLayout().getPrev();
+        if(hasPrev) {
+          var thisPanel = MyApp.main.getLayout().getActiveItem();
+          if(thisPanel.cls === "formpanel") {
+            f_crud.close_form(thisPanel);
+          }
+          else{
+            MyApp.main.getLayout().prev();
+            thisPanel.close();
+          }
+        }
+        else {
+          Ext.Msg.show({
+            title:'Desea salir de la aplicacion?',
+            buttons:  Ext.Msg.YESNO,
+            buttonText: {
+              yes: 'Ok',
+              no: 'Cancelar' 
+            },
+            iconCls: 'x-fa fa-warning',
+            fn: opcion
+          });
+        }
+      }, false);
+    }
+  </script>
+</head >
+<body onload="onLoad()">
 </body>
 </html>
