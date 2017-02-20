@@ -123,4 +123,5 @@ Ext.application({
   launch: function() {
     Ext.create('MyApp.view.MainContainer');
   }
+
 });

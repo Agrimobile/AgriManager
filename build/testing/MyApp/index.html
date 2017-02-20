@@ -2688,7 +2688,18 @@ Ext.manifest = Ext.manifest || "bootstrap";
 
 Ext.Microloader.run();
 </script>
+    <script type="text/javascript">
+    function onLoad() {
+      document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    function onDeviceReady() {
+      document.addEventListener("backbutton", function(e) {
+        e.preventDefault();
+        alert("OnBackButton");
+      }, false);
+    }
+  </script>
 </head>
-<body>
+<body onload="onLoad()">
 </body>
 </html>
