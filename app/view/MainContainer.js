@@ -245,7 +245,7 @@ Ext.define('MyApp.view.MainContainer', {
           }
           else {
             if(item.action === "deleteTables") {
-              f_crud.drop_all_tables();
+              f_crud.clean_all_tables();
             }
             else {
               console.log("Este item no tiene asociada ni una action");

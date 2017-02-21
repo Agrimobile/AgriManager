@@ -69,7 +69,6 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         },
         {
           xtype: 'numbercolumn',
-          hidden: true,
           dataIndex: 'id',
           text: 'ID'
         },
@@ -194,6 +193,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
                   msgTitle: 'Establecimiento no vacio',
                   message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero'
                 };
+                //debugger;
                 f_crud.grid_check_delete(gridPanel,checkConfig);
               },
               cls: '',

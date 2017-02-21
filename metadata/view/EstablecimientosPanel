@@ -189,7 +189,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
-                        "hidden": true,
                         "text": "ID"
                     },
                     "configAlternates": {
@@ -737,6 +736,7 @@
                                             "    msgTitle: 'Establecimiento no vacio',",
                                             "    message: 'No puede borrar un establecimiento con lotes, <br> borre todos sus lotes primero'",
                                             "};",
+                                            "//debugger;",
                                             "f_crud.grid_check_delete(gridPanel,checkConfig);"
                                         ]
                                     },

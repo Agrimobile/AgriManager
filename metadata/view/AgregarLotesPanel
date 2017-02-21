@@ -309,7 +309,7 @@
                 "fn": "onPanelRender",
                 "implHandler": [
                     "this.store_name = 'Lotes';",
-                    "this.model_name = 'MyApp.model.Lotes';",
+                    "this.model_name = 'MyApp.model.Lotes_actividades';",
                     "//var store = Ext.getStore(this.store_name);",
                     "//var store = Ext.getStore('Lotes_actividades');",
                     "//this.form_store_array = [store];",
@@ -415,11 +415,11 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "var lotesToAdd = this.up(\"#formseveral\");",
-                                            "var config = {",
-                                            "  gridRecordPK: 'cod_lote',",
-                                            "  pivotPK: 'cod_actividad'",
-                                            "};",
+                                            "var lotesToAdd = this.up(\"#formseveral\"),",
+                                            "    config = {",
+                                            "      gridRecordPK: 'cod_lote',",
+                                            "      pivotPK: 'cod_actividad'",
+                                            "    };",
                                             "f_crud.save_several_records(lotesToAdd, config);"
                                         ]
                                     },
