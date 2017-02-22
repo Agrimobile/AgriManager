@@ -53,11 +53,11 @@
 .x-menu-default-vertical-scroller .x-box-scroller-body-vertical {
     margin-top: 0!important;
 }
-
+/*
 .x-panel-header-default .x-tool-focus {
 	outline: 0px solid #FFFFFF!important;
 	outline-offset: 0px !important;
-}
+}*/
 
 // Las propiedades seteadas con important arriba no pueden refactorearse
 // ya que el codigo que se renderiza en el html tiene inline styles
