@@ -189,6 +189,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "id",
+                        "hidden": true,
                         "text": "ID"
                     },
                     "configAlternates": {

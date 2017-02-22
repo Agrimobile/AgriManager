@@ -69,6 +69,7 @@ Ext.define('MyApp.view.EstablecimientosPanel', {
         },
         {
           xtype: 'numbercolumn',
+          hidden: true,
           dataIndex: 'id',
           text: 'ID'
         },

@@ -1,6 +1,6 @@
 {
     "expandedState": {
-        "view": false,
+        "view": true,
         "8bf667af-506e-4b4d-9b3d-4fab35c22889": {
             "id": "8bf667af-506e-4b4d-9b3d-4fab35c22889",
             "cn": [
@@ -3821,7 +3821,7 @@
             ]
         },
         "controller": true,
-        "resource": true,
+        "resource": false,
         "1699dfd1-b5ed-4022-9c08-a92785a01c63": {
             "id": "1699dfd1-b5ed-4022-9c08-a92785a01c63"
         },
@@ -3858,8 +3858,8 @@
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "d01ec8fc-a7e2-420b-83c0-a85c68215197",
-        "selectedInstance": "007e1a9a-f999-48e4-9a82-f7e3667e2c3e"
+        "topInstance": "e6d755b9-948d-47c1-9761-ec74d2973b1e",
+        "selectedInstance": "b24f6117-b5fa-4814-ada2-66cb784f166f"
     },
     "editMode": "code",
     "userSettings": {
