@@ -20,6 +20,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -35,7 +36,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "ActividadesForm1",
     "designerId": "f5e9c88d-de7a-4e3e-af44-244e02c921d0",
@@ -61,7 +63,8 @@
                 "blankText": "Este campo es obligatorio",
                 "editable": false,
                 "enableKeyEvents": true,
-                "fieldLabel": "Código",
+                "fieldLabel": "Codigo",
+                "layout|flex": null,
                 "name": "codigo"
             },
             "configAlternates": {
@@ -69,11 +72,12 @@
                 "blankText": "string",
                 "editable": "boolean",
                 "fieldLabel": "string",
+                "layout|flex": "number",
                 "name": "string",
                 "enableKeyEvents": "boolean"
             },
-            "name": "MyTextField13",
-            "designerId": "949aab15-ca23-4402-94b2-9b41ac1fe571"
+            "name": "MyTextField2",
+            "designerId": "2884883e-b923-486e-ae51-138a37b4b0d8"
         },
         {
             "type": "Ext.form.field.Text",

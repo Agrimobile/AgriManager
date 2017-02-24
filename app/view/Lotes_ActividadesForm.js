@@ -35,6 +35,7 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
   scrollable: true,
   bodyPadding: 10,
   title: '',
+  trackResetOnLoad: true,
 
   layout: {
     type: 'vbox',

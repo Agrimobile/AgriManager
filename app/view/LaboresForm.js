@@ -43,6 +43,7 @@ Ext.define('MyApp.view.LaboresForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -376,7 +377,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsInsumos',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -390,7 +390,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('InsumosPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Insumo'
@@ -400,7 +400,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('DepositosPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Deposito'
@@ -601,7 +601,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsPersonal',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -615,7 +614,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('PersonalPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Personal'
@@ -787,7 +786,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsMaquinaria',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -801,7 +799,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('MaquinariaPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Maquinaria'

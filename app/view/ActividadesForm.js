@@ -36,6 +36,7 @@ Ext.define('MyApp.view.ActividadesForm', {
   cls: 'formpanel',
   flex: 1,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

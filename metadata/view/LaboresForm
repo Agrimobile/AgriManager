@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "LaboresForm1",
     "designerId": "609e31be-a99e-4abd-bc02-fca2cf301ace",
@@ -1276,7 +1278,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsInsumos",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -1304,7 +1305,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -1355,7 +1356,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -2100,7 +2101,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsPersonal",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -2128,7 +2128,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -2772,7 +2772,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsMaquinaria",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -2800,7 +2799,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",

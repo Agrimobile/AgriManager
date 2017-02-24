@@ -36,6 +36,7 @@ Ext.define('MyApp.view.InsumosForm', {
   scrollable: true,
   bodyPadding: 10,
   title: '',
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

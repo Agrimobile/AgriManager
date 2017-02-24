@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": "",
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "ContratistasForm1",
     "designerId": "3fec14cc-3541-4e02-8086-cb4af94a9aa5",

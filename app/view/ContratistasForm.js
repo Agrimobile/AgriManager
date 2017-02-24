@@ -34,6 +34,7 @@ Ext.define('MyApp.view.ContratistasForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

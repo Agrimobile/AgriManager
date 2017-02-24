@@ -34,6 +34,7 @@ Ext.define('MyApp.view.RubrosForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

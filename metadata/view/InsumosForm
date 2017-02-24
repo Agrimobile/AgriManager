@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": "",
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "LotesForm2",
     "designerId": "e8f3c35a-6a5f-4d0b-92b8-b37bd1c88f8e",

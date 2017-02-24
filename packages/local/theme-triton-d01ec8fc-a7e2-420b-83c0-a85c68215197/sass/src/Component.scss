@@ -118,3 +118,23 @@
 .x-menu-icon-separator-default {
 	border-width: 0px;
 }
+
+.sec-btn.x-btn-default-small {
+    background: white;
+}
+
+.sec-btn.x-btn-default-small .x-btn-inner-default-small {
+    color: #5fa2dd;
+}
+
+.sec-btn.x-btn-default-small .x-btn-icon-el-default-small {
+    color: #5fa2dd;
+}
+
+.sec-btn.x-btn-default-small.x-btn-pressed .x-btn-inner-default-small {
+    color: #FFFFFF;
+}
+
+.sec-btn.x-btn-default-small.x-btn-pressed .x-btn-icon-el-default-small {
+    color: #FFFFFF;
+}

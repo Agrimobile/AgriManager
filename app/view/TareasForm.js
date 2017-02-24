@@ -35,6 +35,7 @@ Ext.define('MyApp.view.TareasForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

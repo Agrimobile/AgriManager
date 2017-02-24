@@ -34,6 +34,7 @@ Ext.define('MyApp.view.PersonalForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {

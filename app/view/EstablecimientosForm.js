@@ -35,6 +35,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   flex: 1,
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -44,7 +45,7 @@ Ext.define('MyApp.view.EstablecimientosForm', {
   items: [
     {
       xtype: 'textfield',
-      fieldLabel: 'Código',
+      fieldLabel: 'Codigo',
       name: 'codigo',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

@@ -19,6 +19,7 @@
         "itemId": null,
         "layout": "vbox",
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "MyForm2",
     "designerId": "97804b88-8621-4c35-9050-1333382814b3",
