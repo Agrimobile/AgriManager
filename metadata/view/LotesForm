@@ -113,10 +113,13 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "decimalSeparator": ",",
                 "enableKeyEvents": true,
                 "fieldLabel": "Superficie",
                 "layout|flex": null,
-                "name": "superficie"
+                "minValue": 0,
+                "name": "superficie",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -124,7 +127,10 @@
                 "fieldLabel": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "decimalSeparator": "string",
+                "minValue": "number",
+                "negativeText": "string"
             },
             "name": "MyNumberField",
             "designerId": "3b8ae3e2-3f81-43f0-929b-58713b095319"

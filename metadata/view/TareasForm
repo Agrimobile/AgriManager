@@ -153,10 +153,13 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "decimalSeparator": ",",
                 "enableKeyEvents": true,
                 "fieldLabel": "Precio",
                 "layout|flex": null,
-                "name": "precio"
+                "minValue": 0,
+                "name": "precio",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -164,7 +167,10 @@
                 "fieldLabel": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "decimalSeparator": "string",
+                "minValue": "number",
+                "negativeText": "string"
             },
             "name": "MyNumberField3",
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"

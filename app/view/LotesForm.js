@@ -65,7 +65,10 @@ Ext.define('MyApp.view.LotesForm', {
       name: 'superficie',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      enableKeyEvents: true
+      enableKeyEvents: true,
+      decimalSeparator: ',',
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     }
   ],
   dockedItems: [

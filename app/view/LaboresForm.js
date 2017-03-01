@@ -128,14 +128,21 @@ Ext.define('MyApp.view.LaboresForm', {
               width: '100%',
               fieldLabel: 'Cantidad',
               name: 'cantidad',
-              enableKeyEvents: true
+              enableKeyEvents: true,
+              allowDecimals: false,
+              decimalPrecision: 0,
+              minValue: 0,
+              negativeText: 'Este valor debe ser positivo'
             },
             {
               xtype: 'numberfield',
               width: '100%',
               fieldLabel: 'Precio',
               name: 'precio',
-              enableKeyEvents: true
+              enableKeyEvents: true,
+              decimalSeparator: ',',
+              minValue: 0,
+              negativeText: 'Este valor debe ser positivo'
             },
             {
               xtype: 'container',

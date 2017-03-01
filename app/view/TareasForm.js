@@ -80,7 +80,10 @@ Ext.define('MyApp.view.TareasForm', {
       name: 'precio',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      enableKeyEvents: true
+      enableKeyEvents: true,
+      decimalSeparator: ',',
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'combobox',

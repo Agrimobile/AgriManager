@@ -117,7 +117,9 @@
                 "enableKeyEvents": true,
                 "fieldLabel": "Precio",
                 "layout|flex": null,
-                "name": "precio"
+                "minValue": 0,
+                "name": "precio",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -126,7 +128,9 @@
                 "layout|flex": "number",
                 "name": "string",
                 "decimalSeparator": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "minValue": "number",
+                "negativeText": "string"
             },
             "name": "MyNumberField6",
             "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
@@ -180,11 +184,14 @@
             "codeClass": null,
             "userConfig": {
                 "allowBlank": false,
+                "allowDecimals": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
                 "fieldLabel": "Dias de Carencia",
                 "layout|flex": null,
-                "name": "dias_carencia"
+                "minValue": 0,
+                "name": "dias_carencia",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -192,7 +199,10 @@
                 "fieldLabel": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "allowDecimals": "boolean",
+                "minValue": "number",
+                "negativeText": "string"
             },
             "name": "MyNumberField5",
             "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"

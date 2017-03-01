@@ -68,7 +68,9 @@ Ext.define('MyApp.view.InsumosForm', {
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,
-      decimalSeparator: ','
+      decimalSeparator: ',',
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'combobox',
@@ -90,7 +92,10 @@ Ext.define('MyApp.view.InsumosForm', {
       name: 'dias_carencia',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      enableKeyEvents: true
+      enableKeyEvents: true,
+      allowDecimals: false,
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'container',

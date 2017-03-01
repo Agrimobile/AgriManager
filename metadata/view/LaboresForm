@@ -357,16 +357,26 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowDecimals": false,
+                                "decimalPrecision": 0,
+                                "decimalSeparator": null,
                                 "enableKeyEvents": true,
                                 "fieldLabel": "Cantidad",
+                                "minValue": 0,
                                 "name": "cantidad",
+                                "negativeText": "Este valor debe ser positivo",
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
                                 "width": "auto",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "allowDecimals": "boolean",
+                                "decimalPrecision": "number",
+                                "decimalSeparator": "string",
+                                "minValue": "number",
+                                "negativeText": "string"
                             },
                             "name": "MyNumberField2",
                             "designerId": "3c213300-f246-4a56-878e-d9199fb5fead"
@@ -379,16 +389,22 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "decimalSeparator": ",",
                                 "enableKeyEvents": true,
                                 "fieldLabel": "Precio",
+                                "minValue": 0,
                                 "name": "precio",
+                                "negativeText": "Este valor debe ser positivo",
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
                                 "width": "auto",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "decimalSeparator": "string",
+                                "minValue": "number",
+                                "negativeText": "string"
                             },
                             "name": "MyNumberField4",
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
