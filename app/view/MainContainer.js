@@ -310,6 +310,7 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Depositos');
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
+    f_crud.load_store('Insumos');
 
     f_crud.checkSecuencia();
   },

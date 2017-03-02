@@ -61,11 +61,6 @@
                 "implHandler": [
                     "var item = component.initialTitle;",
                     "",
-                    "f_crud.load_store('Depositos');",
-                    "f_crud.load_store('Insumos');",
-                    "f_crud.load_store('Personal');",
-                    "f_crud.load_store('Maquinaria');",
-                    "",
                     "if(component.action === 'ADD') {",
                     "  component.setTitle('Nueva ' + item);",
                     "}",
@@ -782,33 +777,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox4",
-                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange1",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange1",
-                                                    "designerId": "748240fc-fbd5-4e1e-9f02-389590d4638a"
-                                                }
-                                            ]
+                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -946,33 +915,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox5",
-                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange",
-                                                    "designerId": "23036495-8b7b-4d65-a654-ee8144bd2181"
-                                                }
-                                            ]
+                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -1671,33 +1614,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox6",
-                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange2",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange2",
-                                                    "designerId": "c237b262-71a0-4a09-ae7a-9f4264363302"
-                                                }
-                                            ]
+                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -2441,33 +2358,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox7",
-                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange3",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange3",
-                                                    "designerId": "3c84823b-d475-43ca-9068-b8c4740392ca"
-                                                }
-                                            ]
+                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -2928,6 +2819,8 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
+                                    "",
+                                    "/*MyApp.currentEditingCell.blur();*/",
                                     "var formWrapper = this.up('[cls=formpanel]');",
                                     "var tarea_cod = formWrapper.down(\"#fieldTarea\").value;",
                                     "",

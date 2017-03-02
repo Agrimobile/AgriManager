@@ -99,7 +99,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
           itemId: 'columnEstabl',
           width: '25%',
           dataIndex: 'cod_establecimiento',
-          text: 'Cod Establecimiento',
+          text: 'Establecimiento',
           format: '00'
         }
       ],

@@ -249,7 +249,7 @@
                         "dataIndex": "cod_establecimiento",
                         "format": "00",
                         "itemId": "columnEstabl",
-                        "text": "Cod Establecimiento",
+                        "text": "Establecimiento",
                         "width": "25%"
                     },
                     "configAlternates": {
