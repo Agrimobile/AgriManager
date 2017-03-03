@@ -116,6 +116,7 @@
                 "decimalSeparator": ",",
                 "enableKeyEvents": true,
                 "fieldLabel": "Precio",
+                "inputType": "number",
                 "layout|flex": null,
                 "minValue": 0,
                 "name": "precio",
@@ -130,7 +131,8 @@
                 "decimalSeparator": "string",
                 "enableKeyEvents": "boolean",
                 "minValue": "number",
-                "negativeText": "string"
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField6",
             "designerId": "1b247abf-4560-4c14-9126-f836e5d5086c"
@@ -188,6 +190,7 @@
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
                 "fieldLabel": "Dias de Carencia",
+                "inputType": "number",
                 "layout|flex": null,
                 "minValue": 0,
                 "name": "dias_carencia",
@@ -202,7 +205,8 @@
                 "enableKeyEvents": "boolean",
                 "allowDecimals": "boolean",
                 "minValue": "number",
-                "negativeText": "string"
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField5",
             "designerId": "90355ad4-b560-4a4d-9c06-2f89abfc2744"

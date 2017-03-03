@@ -156,6 +156,7 @@
                 "decimalSeparator": ",",
                 "enableKeyEvents": true,
                 "fieldLabel": "Precio",
+                "inputType": "number",
                 "layout|flex": null,
                 "minValue": 0,
                 "name": "precio",
@@ -170,7 +171,8 @@
                 "enableKeyEvents": "boolean",
                 "decimalSeparator": "string",
                 "minValue": "number",
-                "negativeText": "string"
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField3",
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"

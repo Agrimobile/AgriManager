@@ -63,6 +63,7 @@ Ext.define('MyApp.view.LotesForm', {
       xtype: 'numberfield',
       fieldLabel: 'Superficie',
       name: 'superficie',
+      inputType: 'number',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,

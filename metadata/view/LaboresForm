@@ -357,6 +357,7 @@
                                 "decimalSeparator": null,
                                 "enableKeyEvents": true,
                                 "fieldLabel": "Cantidad",
+                                "inputType": "number",
                                 "minValue": 0,
                                 "name": "cantidad",
                                 "negativeText": "Este valor debe ser positivo",
@@ -371,7 +372,8 @@
                                 "decimalPrecision": "number",
                                 "decimalSeparator": "string",
                                 "minValue": "number",
-                                "negativeText": "string"
+                                "negativeText": "string",
+                                "inputType": "string"
                             },
                             "name": "MyNumberField2",
                             "designerId": "3c213300-f246-4a56-878e-d9199fb5fead"
@@ -387,6 +389,7 @@
                                 "decimalSeparator": ",",
                                 "enableKeyEvents": true,
                                 "fieldLabel": "Precio",
+                                "inputType": "number",
                                 "minValue": 0,
                                 "name": "precio",
                                 "negativeText": "Este valor debe ser positivo",
@@ -399,7 +402,8 @@
                                 "enableKeyEvents": "boolean",
                                 "decimalSeparator": "string",
                                 "minValue": "number",
-                                "negativeText": "string"
+                                "negativeText": "string",
+                                "inputType": "string"
                             },
                             "name": "MyNumberField4",
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
@@ -832,6 +836,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField10",
                                             "designerId": "ff7308e2-4937-45f2-b3b8-46cd1ee8dc72"
                                         }
@@ -864,6 +874,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField11",
                                             "designerId": "7fa2ff24-87ab-45be-8bd3-c8cd5adf1fd4"
                                         }
@@ -1703,6 +1719,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField14",
                                             "designerId": "6267dfee-00d2-474c-acfd-161b84c66d1a"
                                         }
@@ -1735,6 +1757,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField15",
                                             "designerId": "26f23459-ad51-46fc-b366-52724fb7bbea"
                                         }
@@ -1767,6 +1795,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField16",
                                             "designerId": "85ab760d-5d2b-4192-b033-8ff287706a98"
                                         }
@@ -2413,6 +2447,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "number"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField18",
                                             "designerId": "8d88ce9e-ed13-43d9-acd9-6a5b39e9a204"
                                         }

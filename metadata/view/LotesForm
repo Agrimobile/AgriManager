@@ -116,6 +116,7 @@
                 "decimalSeparator": ",",
                 "enableKeyEvents": true,
                 "fieldLabel": "Superficie",
+                "inputType": "number",
                 "layout|flex": null,
                 "minValue": 0,
                 "name": "superficie",
@@ -130,7 +131,8 @@
                 "enableKeyEvents": "boolean",
                 "decimalSeparator": "string",
                 "minValue": "number",
-                "negativeText": "string"
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField",
             "designerId": "3b8ae3e2-3f81-43f0-929b-58713b095319"
