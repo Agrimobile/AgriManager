@@ -58,7 +58,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Usuario",
+                "fieldLabel": "Usuario*",
                 "itemId": "usuario",
                 "layout|flex": null,
                 "name": "usuario"
@@ -86,7 +86,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Clave",
+                "fieldLabel": "Clave*",
                 "inputType": "password",
                 "itemId": "clave",
                 "layout|flex": null,
@@ -116,7 +116,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Base",
+                "fieldLabel": "Base*",
                 "itemId": "base",
                 "layout|flex": null,
                 "name": "base"
@@ -144,7 +144,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Servidor",
+                "fieldLabel": "Servidor*",
                 "itemId": "servidor",
                 "layout|flex": null,
                 "name": "servidor"
@@ -236,6 +236,7 @@
                                     "  MyApp.clave = val.clave;",
                                     "  MyApp.base_nombre = val.base;",
                                     "  MyApp.base_url = val.servidor;",
+                                    "  formWrapper.saved=true;",
                                     "  f_crud.close_form(formWrapper);",
                                     "}"
                                 ]

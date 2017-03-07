@@ -45,7 +45,7 @@ Ext.define('MyApp.view.LoginForm', {
     {
       xtype: 'textfield',
       itemId: 'usuario',
-      fieldLabel: 'Usuario',
+      fieldLabel: 'Usuario*',
       name: 'usuario',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -54,7 +54,7 @@ Ext.define('MyApp.view.LoginForm', {
     {
       xtype: 'textfield',
       itemId: 'clave',
-      fieldLabel: 'Clave',
+      fieldLabel: 'Clave*',
       name: 'clave',
       inputType: 'password',
       allowBlank: false,
@@ -64,7 +64,7 @@ Ext.define('MyApp.view.LoginForm', {
     {
       xtype: 'textfield',
       itemId: 'base',
-      fieldLabel: 'Base',
+      fieldLabel: 'Base*',
       name: 'base',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -73,7 +73,7 @@ Ext.define('MyApp.view.LoginForm', {
     {
       xtype: 'textfield',
       itemId: 'servidor',
-      fieldLabel: 'Servidor',
+      fieldLabel: 'Servidor*',
       name: 'servidor',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -106,6 +106,7 @@ Ext.define('MyApp.view.LoginForm', {
               MyApp.clave = val.clave;
               MyApp.base_nombre = val.base;
               MyApp.base_url = val.servidor;
+              formWrapper.saved=true;
               f_crud.close_form(formWrapper);
             }
           },

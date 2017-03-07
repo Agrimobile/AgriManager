@@ -53,7 +53,7 @@ Ext.define('MyApp.view.RubrosForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'descripcion',
+      fieldLabel: 'Descripcion*',
       name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

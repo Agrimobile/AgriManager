@@ -207,9 +207,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowBlank": false,
                                 "designer|displayName": "",
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Fecha",
+                                "fieldLabel": "Fecha*",
                                 "format": "d-m-Y",
                                 "itemId": "fecha",
                                 "name": "fecha",
@@ -222,7 +223,8 @@
                                 "name": "string",
                                 "width": "auto",
                                 "format": "string",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "allowBlank": "boolean"
                             },
                             "name": "MyDateField2",
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
@@ -260,7 +262,7 @@
                                         "defaultListenerScope": true,
                                         "displayField": "descripcion",
                                         "enableKeyEvents": true,
-                                        "fieldLabel": "Tarea",
+                                        "fieldLabel": "Tarea*",
                                         "forceSelection": true,
                                         "itemId": "fieldTarea",
                                         "name": "cod_tarea",
@@ -352,12 +354,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowBlank": false,
                                 "allowDecimals": false,
                                 "decimalPrecision": 0,
                                 "decimalSeparator": null,
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Cantidad",
-                                "inputType": "number",
+                                "fieldLabel": "Cantidad*",
+                                "inputType": "tel",
                                 "minValue": 0,
                                 "name": "cantidad",
                                 "negativeText": "Este valor debe ser positivo",
@@ -373,6 +376,7 @@
                                 "decimalSeparator": "string",
                                 "minValue": "number",
                                 "negativeText": "string",
+                                "allowBlank": "boolean",
                                 "inputType": "string"
                             },
                             "name": "MyNumberField2",
@@ -386,10 +390,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "decimalSeparator": ",",
+                                "allowBlank": false,
+                                "decimalSeparator": null,
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Precio",
-                                "inputType": "number",
+                                "fieldLabel": "Precio*",
+                                "inputType": null,
                                 "minValue": 0,
                                 "name": "precio",
                                 "negativeText": "Este valor debe ser positivo",
@@ -403,6 +408,7 @@
                                 "decimalSeparator": "string",
                                 "minValue": "number",
                                 "negativeText": "string",
+                                "allowBlank": "boolean",
                                 "inputType": "string"
                             },
                             "name": "MyNumberField4",
@@ -837,7 +843,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "inputType": null
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -875,7 +881,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "inputType": null
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -1720,9 +1726,11 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "allowDecimals": false,
+                                                "inputType": null
                                             },
                                             "configAlternates": {
+                                                "allowDecimals": "boolean",
                                                 "inputType": "string"
                                             },
                                             "name": "MyNumberField14",
@@ -1758,7 +1766,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "inputType": null
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -1796,7 +1804,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "inputType": null
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -2448,9 +2456,11 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": "number"
+                                                "allowDecimals": false,
+                                                "inputType": null
                                             },
                                             "configAlternates": {
+                                                "allowDecimals": "boolean",
                                                 "inputType": "string"
                                             },
                                             "name": "MyNumberField18",

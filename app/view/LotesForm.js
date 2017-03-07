@@ -53,7 +53,7 @@ Ext.define('MyApp.view.LotesForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -61,13 +61,11 @@ Ext.define('MyApp.view.LotesForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Superficie',
+      fieldLabel: 'Superficie*',
       name: 'superficie',
-      inputType: 'number',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,
-      decimalSeparator: ',',
       minValue: 0,
       negativeText: 'Este valor debe ser positivo'
     }

@@ -45,7 +45,7 @@ Ext.define('MyApp.view.TareasForm', {
   items: [
     {
       xtype: 'textfield',
-      fieldLabel: 'Codigo',
+      fieldLabel: 'Codigo*',
       name: 'codigo',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -54,7 +54,7 @@ Ext.define('MyApp.view.TareasForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Descripcion',
+      fieldLabel: 'Descripcion*',
       name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -63,7 +63,7 @@ Ext.define('MyApp.view.TareasForm', {
     {
       xtype: 'combobox',
       itemId: 'unidadMedida',
-      fieldLabel: 'Unidad de Medida',
+      fieldLabel: 'Unidad de Medida*',
       name: 'um',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -76,20 +76,18 @@ Ext.define('MyApp.view.TareasForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Precio',
+      fieldLabel: 'Precio*',
       name: 'precio',
-      inputType: 'number',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,
-      decimalSeparator: ',',
       minValue: 0,
       negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'combobox',
       itemId: 'tipoTarea',
-      fieldLabel: 'Tipo',
+      fieldLabel: 'Tipo*',
       name: 'tipo',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

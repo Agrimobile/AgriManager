@@ -90,7 +90,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Nombre*",
                 "layout|flex": null,
                 "name": "nombre"
             },

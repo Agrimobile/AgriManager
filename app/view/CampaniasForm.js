@@ -53,7 +53,7 @@ Ext.define('MyApp.view.CampaniasForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

@@ -79,8 +79,9 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'datefield',
               itemId: 'fecha',
               width: '100%',
-              fieldLabel: 'Fecha',
+              fieldLabel: 'Fecha*',
               name: 'fecha',
+              allowBlank: false,
               enableKeyEvents: true,
               format: 'd-m-Y'
             },
@@ -97,7 +98,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   defaultListenerScope: true,
                   itemId: 'fieldTarea',
                   width: '80%',
-                  fieldLabel: 'Tarea',
+                  fieldLabel: 'Tarea*',
                   name: 'cod_tarea',
                   allowBlank: false,
                   blankText: 'Este campo es obligatorio',
@@ -126,9 +127,10 @@ Ext.define('MyApp.view.LaboresForm', {
             {
               xtype: 'numberfield',
               width: '100%',
-              fieldLabel: 'Cantidad',
+              fieldLabel: 'Cantidad*',
               name: 'cantidad',
-              inputType: 'number',
+              inputType: 'tel',
+              allowBlank: false,
               enableKeyEvents: true,
               allowDecimals: false,
               decimalPrecision: 0,
@@ -138,11 +140,10 @@ Ext.define('MyApp.view.LaboresForm', {
             {
               xtype: 'numberfield',
               width: '100%',
-              fieldLabel: 'Precio',
+              fieldLabel: 'Precio*',
               name: 'precio',
-              inputType: 'number',
+              allowBlank: false,
               enableKeyEvents: true,
-              decimalSeparator: ',',
               minValue: 0,
               negativeText: 'Este valor debe ser positivo'
             },
@@ -263,8 +264,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'dosis',
                   text: 'Dosis',
                   editor: {
-                    xtype: 'numberfield',
-                    inputType: 'number'
+                    xtype: 'numberfield'
                   }
                 },
                 {
@@ -273,8 +273,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
-                    xtype: 'numberfield',
-                    inputType: 'number'
+                    xtype: 'numberfield'
                   }
                 },
                 {
@@ -503,7 +502,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   text: 'Cantidad',
                   editor: {
                     xtype: 'numberfield',
-                    inputType: 'number'
+                    allowDecimals: false
                   }
                 },
                 {
@@ -512,8 +511,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'precio',
                   text: 'Precio',
                   editor: {
-                    xtype: 'numberfield',
-                    inputType: 'number'
+                    xtype: 'numberfield'
                   }
                 },
                 {
@@ -522,8 +520,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'importe',
                   text: 'Importe',
                   editor: {
-                    xtype: 'numberfield',
-                    inputType: 'number'
+                    xtype: 'numberfield'
                   }
                 }
               ],
@@ -707,7 +704,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   text: 'Cantidad',
                   editor: {
                     xtype: 'numberfield',
-                    inputType: 'number'
+                    allowDecimals: false
                   }
                 }
               ],
