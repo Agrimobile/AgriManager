@@ -394,7 +394,7 @@
                                 "decimalSeparator": null,
                                 "enableKeyEvents": true,
                                 "fieldLabel": "Precio*",
-                                "inputType": null,
+                                "inputType": "tel",
                                 "minValue": 0,
                                 "name": "precio",
                                 "negativeText": "Este valor debe ser positivo",
@@ -843,7 +843,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": null
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -881,10 +881,12 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": null
+                                                "allowDecimals": false,
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
-                                                "inputType": "string"
+                                                "inputType": "string",
+                                                "allowDecimals": "boolean"
                                             },
                                             "name": "MyNumberField11",
                                             "designerId": "7fa2ff24-87ab-45be-8bd3-c8cd5adf1fd4"
@@ -1727,7 +1729,7 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "allowDecimals": false,
-                                                "inputType": null
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
                                                 "allowDecimals": "boolean",
@@ -1766,7 +1768,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": null
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -1804,7 +1806,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "inputType": null
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
                                                 "inputType": "string"
@@ -2457,7 +2459,7 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "allowDecimals": false,
-                                                "inputType": null
+                                                "inputType": "tel"
                                             },
                                             "configAlternates": {
                                                 "allowDecimals": "boolean",

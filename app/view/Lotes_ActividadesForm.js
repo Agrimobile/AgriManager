@@ -34,7 +34,7 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: '',
+  title: 'Actividad en un Lote',
   trackResetOnLoad: true,
 
   layout: {

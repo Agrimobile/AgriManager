@@ -142,6 +142,7 @@ Ext.define('MyApp.view.LaboresForm', {
               width: '100%',
               fieldLabel: 'Precio*',
               name: 'precio',
+              inputType: 'tel',
               allowBlank: false,
               enableKeyEvents: true,
               minValue: 0,
@@ -264,7 +265,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'dosis',
                   text: 'Dosis',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 },
                 {
@@ -273,7 +275,9 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel',
+                    allowDecimals: false
                   }
                 },
                 {
@@ -502,6 +506,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   text: 'Cantidad',
                   editor: {
                     xtype: 'numberfield',
+                    inputType: 'tel',
                     allowDecimals: false
                   }
                 },
@@ -511,7 +516,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'precio',
                   text: 'Precio',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 },
                 {
@@ -520,7 +526,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'importe',
                   text: 'Importe',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 }
               ],
@@ -704,6 +711,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   text: 'Cantidad',
                   editor: {
                     xtype: 'numberfield',
+                    inputType: 'tel',
                     allowDecimals: false
                   }
                 }

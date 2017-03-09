@@ -18,7 +18,7 @@
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "",
+        "title": "Actividad en un Lote",
         "trackResetOnLoad": true,
         "width": null
     },

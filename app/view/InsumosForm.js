@@ -65,6 +65,7 @@ Ext.define('MyApp.view.InsumosForm', {
       xtype: 'numberfield',
       fieldLabel: 'Precio*',
       name: 'precio',
+      inputType: 'tel',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,

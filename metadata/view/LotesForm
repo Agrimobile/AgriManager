@@ -116,7 +116,7 @@
                 "decimalSeparator": null,
                 "enableKeyEvents": true,
                 "fieldLabel": "Superficie*",
-                "inputType": null,
+                "inputType": "tel",
                 "layout|flex": null,
                 "minValue": 0,
                 "name": "superficie",
