@@ -34,6 +34,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -52,7 +53,7 @@ Ext.define('MyApp.view.MaquinariaForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

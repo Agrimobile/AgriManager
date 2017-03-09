@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "MyForm3",
     "designerId": "4fa39d2f-e014-4acb-b7f3-9d9100f4eaec",
@@ -86,7 +88,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Nombre*",
                 "layout|flex": null,
                 "name": "nombre"
             },
@@ -111,10 +113,14 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "decimalSeparator": null,
                 "enableKeyEvents": true,
-                "fieldLabel": "Superficie",
+                "fieldLabel": "Superficie*",
+                "inputType": "tel",
                 "layout|flex": null,
-                "name": "superficie"
+                "minValue": 0,
+                "name": "superficie",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -122,7 +128,11 @@
                 "fieldLabel": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "decimalSeparator": "string",
+                "minValue": "number",
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField",
             "designerId": "3b8ae3e2-3f81-43f0-929b-58713b095319"

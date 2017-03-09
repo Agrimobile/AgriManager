@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "RubrosForm1",
     "designerId": "94b847d6-3e3c-4ee2-878d-b27c93af816a",
@@ -86,7 +88,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Nombre*",
                 "layout|flex": null,
                 "name": "nombre"
             },

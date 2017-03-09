@@ -36,6 +36,7 @@ Ext.define('MyApp.view.ActividadesForm', {
   cls: 'formpanel',
   flex: 1,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -54,7 +55,7 @@ Ext.define('MyApp.view.ActividadesForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -72,7 +73,7 @@ Ext.define('MyApp.view.ActividadesForm', {
           xtype: 'combobox',
           itemId: 'fieldPeriodo',
           width: '80%',
-          fieldLabel: 'Campaña',
+          fieldLabel: 'Campaña*',
           name: 'cod_periodo',
           allowBlank: false,
           blankText: 'Este campo es obligatorio',
@@ -101,7 +102,7 @@ Ext.define('MyApp.view.ActividadesForm', {
     {
       xtype: 'datefield',
       itemId: 'desde',
-      fieldLabel: 'Desde',
+      fieldLabel: 'Desde*',
       name: 'desde',
       invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
       allowBlank: false,
@@ -113,7 +114,7 @@ Ext.define('MyApp.view.ActividadesForm', {
     {
       xtype: 'datefield',
       itemId: 'hasta',
-      fieldLabel: 'hasta',
+      fieldLabel: 'hasta*',
       name: 'hasta',
       invalidText: '{0} No es un formato valido de fecha - Deberia tener el formato {1}',
       allowBlank: false,

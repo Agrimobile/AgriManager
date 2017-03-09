@@ -34,6 +34,7 @@ Ext.define('MyApp.view.LotesForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -52,7 +53,7 @@ Ext.define('MyApp.view.LotesForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -60,11 +61,14 @@ Ext.define('MyApp.view.LotesForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Superficie',
+      fieldLabel: 'Superficie*',
       name: 'superficie',
+      inputType: 'tel',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      enableKeyEvents: true
+      enableKeyEvents: true,
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     }
   ],
   dockedItems: [

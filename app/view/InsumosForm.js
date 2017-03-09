@@ -36,6 +36,7 @@ Ext.define('MyApp.view.InsumosForm', {
   scrollable: true,
   bodyPadding: 10,
   title: '',
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -54,7 +55,7 @@ Ext.define('MyApp.view.InsumosForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Descripcion',
+      fieldLabel: 'Descripcion*',
       name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -62,17 +63,19 @@ Ext.define('MyApp.view.InsumosForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Precio',
+      fieldLabel: 'Precio*',
       name: 'precio',
+      inputType: 'tel',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
       enableKeyEvents: true,
-      decimalSeparator: ','
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'combobox',
       itemId: 'unidadMedida',
-      fieldLabel: 'Unidad de Medida',
+      fieldLabel: 'Unidad de Medida*',
       name: 'um',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
@@ -85,11 +88,15 @@ Ext.define('MyApp.view.InsumosForm', {
     },
     {
       xtype: 'numberfield',
-      fieldLabel: 'Dias de Carencia',
+      fieldLabel: 'Dias de Carencia*',
       name: 'dias_carencia',
+      inputType: 'tel',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
-      enableKeyEvents: true
+      enableKeyEvents: true,
+      allowDecimals: false,
+      minValue: 0,
+      negativeText: 'Este valor debe ser positivo'
     },
     {
       xtype: 'container',
@@ -102,7 +109,7 @@ Ext.define('MyApp.view.InsumosForm', {
           xtype: 'combobox',
           itemId: 'fieldRubro',
           width: '80%',
-          fieldLabel: 'Rubro',
+          fieldLabel: 'Rubro*',
           name: 'cod_rubro',
           allowBlank: false,
           blankText: 'Este campo es obligatorio',

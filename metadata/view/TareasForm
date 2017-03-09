@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "LotesForm2",
     "designerId": "4d279594-4a57-484c-a7d2-e21153e36c08",
@@ -59,7 +61,7 @@
                 "blankText": "Este campo es obligatorio",
                 "editable": false,
                 "enableKeyEvents": true,
-                "fieldLabel": "Codigo",
+                "fieldLabel": "Codigo*",
                 "layout|flex": null,
                 "name": "codigo"
             },
@@ -86,7 +88,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Descripcion",
+                "fieldLabel": "Descripcion*",
                 "layout|flex": null,
                 "name": "descripcion"
             },
@@ -113,7 +115,7 @@
                 "blankText": "Este campo es obligatorio",
                 "displayField": "nombre",
                 "enableKeyEvents": true,
-                "fieldLabel": "Unidad de Medida",
+                "fieldLabel": "Unidad de Medida*",
                 "forceSelection": true,
                 "itemId": "unidadMedida",
                 "layout|flex": null,
@@ -151,10 +153,14 @@
             "userConfig": {
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
+                "decimalSeparator": null,
                 "enableKeyEvents": true,
-                "fieldLabel": "Precio",
+                "fieldLabel": "Precio*",
+                "inputType": "tel",
                 "layout|flex": null,
-                "name": "precio"
+                "minValue": 0,
+                "name": "precio",
+                "negativeText": "Este valor debe ser positivo"
             },
             "configAlternates": {
                 "allowBlank": "boolean",
@@ -162,7 +168,11 @@
                 "fieldLabel": "string",
                 "layout|flex": "number",
                 "name": "string",
-                "enableKeyEvents": "boolean"
+                "enableKeyEvents": "boolean",
+                "decimalSeparator": "string",
+                "minValue": "number",
+                "negativeText": "string",
+                "inputType": "string"
             },
             "name": "MyNumberField3",
             "designerId": "51ca44e6-7906-4aba-9c92-69ed168af815"
@@ -179,7 +189,7 @@
                 "blankText": "Este campo es obligatorio",
                 "displayField": "nombre",
                 "enableKeyEvents": true,
-                "fieldLabel": "Tipo",
+                "fieldLabel": "Tipo*",
                 "forceSelection": true,
                 "itemId": "tipoTarea",
                 "layout|flex": null,

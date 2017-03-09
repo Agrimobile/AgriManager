@@ -34,6 +34,7 @@ Ext.define('MyApp.view.RubrosForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -52,7 +53,7 @@ Ext.define('MyApp.view.RubrosForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'descripcion',
+      fieldLabel: 'Descripcion*',
       name: 'descripcion',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "PersonalForm1",
     "designerId": "5fd1720d-89ec-466f-a594-91d0fdee3b4e",
@@ -86,7 +88,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Nombre*",
                 "layout|flex": null,
                 "name": "nombre"
             },

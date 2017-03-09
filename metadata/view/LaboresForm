@@ -19,6 +19,7 @@
         "layout": "vbox",
         "scrollable": true,
         "title": null,
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "LaboresForm1",
     "designerId": "609e31be-a99e-4abd-bc02-fca2cf301ace",
@@ -58,11 +60,6 @@
                 "fn": "onFormActivate",
                 "implHandler": [
                     "var item = component.initialTitle;",
-                    "",
-                    "f_crud.load_store('Depositos');",
-                    "f_crud.load_store('Insumos');",
-                    "f_crud.load_store('Personal');",
-                    "f_crud.load_store('Maquinaria');",
                     "",
                     "if(component.action === 'ADD') {",
                     "  component.setTitle('Nueva ' + item);",
@@ -210,9 +207,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowBlank": false,
                                 "designer|displayName": "",
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Fecha",
+                                "fieldLabel": "Fecha*",
                                 "format": "d-m-Y",
                                 "itemId": "fecha",
                                 "name": "fecha",
@@ -225,7 +223,8 @@
                                 "name": "string",
                                 "width": "auto",
                                 "format": "string",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "allowBlank": "boolean"
                             },
                             "name": "MyDateField2",
                             "designerId": "d9fc624e-1f78-478c-9982-753d6ce48476"
@@ -263,7 +262,7 @@
                                         "defaultListenerScope": true,
                                         "displayField": "descripcion",
                                         "enableKeyEvents": true,
-                                        "fieldLabel": "Tarea",
+                                        "fieldLabel": "Tarea*",
                                         "forceSelection": true,
                                         "itemId": "fieldTarea",
                                         "name": "cod_tarea",
@@ -355,16 +354,30 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowBlank": false,
+                                "allowDecimals": false,
+                                "decimalPrecision": 0,
+                                "decimalSeparator": null,
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Cantidad",
+                                "fieldLabel": "Cantidad*",
+                                "inputType": "tel",
+                                "minValue": 0,
                                 "name": "cantidad",
+                                "negativeText": "Este valor debe ser positivo",
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
                                 "width": "auto",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "allowDecimals": "boolean",
+                                "decimalPrecision": "number",
+                                "decimalSeparator": "string",
+                                "minValue": "number",
+                                "negativeText": "string",
+                                "allowBlank": "boolean",
+                                "inputType": "string"
                             },
                             "name": "MyNumberField2",
                             "designerId": "3c213300-f246-4a56-878e-d9199fb5fead"
@@ -377,16 +390,26 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "allowBlank": false,
+                                "decimalSeparator": null,
                                 "enableKeyEvents": true,
-                                "fieldLabel": "Precio",
+                                "fieldLabel": "Precio*",
+                                "inputType": "tel",
+                                "minValue": 0,
                                 "name": "precio",
+                                "negativeText": "Este valor debe ser positivo",
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "name": "string",
                                 "width": "auto",
-                                "enableKeyEvents": "boolean"
+                                "enableKeyEvents": "boolean",
+                                "decimalSeparator": "string",
+                                "minValue": "number",
+                                "negativeText": "string",
+                                "allowBlank": "boolean",
+                                "inputType": "string"
                             },
                             "name": "MyNumberField4",
                             "designerId": "d61eaa1f-7336-4ca0-8fad-f33ba2da6126"
@@ -764,33 +787,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox4",
-                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange1",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange1",
-                                                    "designerId": "748240fc-fbd5-4e1e-9f02-389590d4638a"
-                                                }
-                                            ]
+                                            "designerId": "1ae8f5b3-360d-4e1f-8e4c-3a965e615488"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -845,6 +842,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField10",
                                             "designerId": "ff7308e2-4937-45f2-b3b8-46cd1ee8dc72"
                                         }
@@ -877,6 +880,14 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "allowDecimals": false,
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string",
+                                                "allowDecimals": "boolean"
+                                            },
                                             "name": "MyNumberField11",
                                             "designerId": "7fa2ff24-87ab-45be-8bd3-c8cd5adf1fd4"
                                         }
@@ -928,33 +939,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox5",
-                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange",
-                                                    "designerId": "23036495-8b7b-4d65-a654-ee8144bd2181"
-                                                }
-                                            ]
+                                            "designerId": "8e058292-bc40-44a5-977a-534102163b77"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -1276,7 +1261,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsInsumos",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -1304,7 +1288,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -1355,7 +1339,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -1654,33 +1638,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox6",
-                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange2",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange2",
-                                                    "designerId": "c237b262-71a0-4a09-ae7a-9f4264363302"
-                                                }
-                                            ]
+                                            "designerId": "5f544dae-3506-4ac2-bf88-8702d4b624a2"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -1769,6 +1727,14 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "allowDecimals": false,
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "allowDecimals": "boolean",
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField14",
                                             "designerId": "6267dfee-00d2-474c-acfd-161b84c66d1a"
                                         }
@@ -1801,6 +1767,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField15",
                                             "designerId": "26f23459-ad51-46fc-b366-52724fb7bbea"
                                         }
@@ -1833,6 +1805,12 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField16",
                                             "designerId": "85ab760d-5d2b-4192-b033-8ff287706a98"
                                         }
@@ -2100,7 +2078,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsPersonal",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -2128,7 +2105,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -2425,33 +2402,7 @@
                                                 "valueField": "datafield"
                                             },
                                             "name": "MyComboBox7",
-                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44",
-                                            "cn": [
-                                                {
-                                                    "type": "basiceventbinding",
-                                                    "reference": {
-                                                        "name": "listeners",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "fn": "onComboboxChange3",
-                                                        "implHandler": [
-                                                            "field.blur();"
-                                                        ],
-                                                        "name": "change",
-                                                        "scope": "me"
-                                                    },
-                                                    "configAlternates": {
-                                                        "fn": "string",
-                                                        "implHandler": "code",
-                                                        "name": "string",
-                                                        "scope": "string"
-                                                    },
-                                                    "name": "onComboboxChange3",
-                                                    "designerId": "3c84823b-d475-43ca-9068-b8c4740392ca"
-                                                }
-                                            ]
+                                            "designerId": "0c1fd11e-5de1-4fc1-8ead-2a0f8b7b5d44"
                                         },
                                         {
                                             "type": "basicfunction",
@@ -2506,6 +2457,14 @@
                                                 "type": "object"
                                             },
                                             "codeClass": null,
+                                            "userConfig": {
+                                                "allowDecimals": false,
+                                                "inputType": "tel"
+                                            },
+                                            "configAlternates": {
+                                                "allowDecimals": "boolean",
+                                                "inputType": "string"
+                                            },
                                             "name": "MyNumberField18",
                                             "designerId": "8d88ce9e-ed13-43d9-acd9-6a5b39e9a204"
                                         }
@@ -2772,7 +2731,6 @@
                                         "container|align": "middle",
                                         "container|pack": "center",
                                         "dock": "bottom",
-                                        "hidden": true,
                                         "itemId": "newButtonsMaquinaria",
                                         "layout": "hbox",
                                         "layout|columnWidth": 1,
@@ -2800,7 +2758,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "cls": "",
+                                                "cls": "sec-btn",
                                                 "iconCls": "x-fa fa-plus",
                                                 "layout|flex": null,
                                                 "margin": "0 0 0 10",
@@ -2913,6 +2871,8 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
+                                    "",
+                                    "/*MyApp.currentEditingCell.blur();*/",
                                     "var formWrapper = this.up('[cls=formpanel]');",
                                     "var tarea_cod = formWrapper.down(\"#fieldTarea\").value;",
                                     "",

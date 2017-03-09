@@ -18,7 +18,8 @@
         "itemId": null,
         "layout": "vbox",
         "scrollable": true,
-        "title": "",
+        "title": "Actividad en un Lote",
+        "trackResetOnLoad": true,
         "width": null
     },
     "configAlternates": {
@@ -33,7 +34,8 @@
         "title": "string",
         "width": "auto",
         "cls": "typedarray",
-        "initialTitle": "string"
+        "initialTitle": "string",
+        "trackResetOnLoad": "boolean"
     },
     "name": "LotesForm1",
     "designerId": "d5645b8a-c62e-403c-8f26-6506faf86778",
@@ -86,7 +88,7 @@
                 "allowBlank": false,
                 "blankText": "Este campo es obligatorio",
                 "enableKeyEvents": true,
-                "fieldLabel": "Nombre",
+                "fieldLabel": "Nombre*",
                 "layout|flex": null,
                 "name": "nombre"
             },

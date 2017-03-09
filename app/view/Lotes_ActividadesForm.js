@@ -34,7 +34,8 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
-  title: '',
+  title: 'Actividad en un Lote',
+  trackResetOnLoad: true,
 
   layout: {
     type: 'vbox',
@@ -52,7 +53,7 @@ Ext.define('MyApp.view.Lotes_ActividadesForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',

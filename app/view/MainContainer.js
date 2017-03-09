@@ -245,7 +245,7 @@ Ext.define('MyApp.view.MainContainer', {
           }
           else {
             if(item.action === "deleteTables") {
-              f_crud.drop_all_tables();
+              f_crud.clean_all_tables();
             }
             else {
               console.log("Este item no tiene asociada ni una action");
@@ -310,6 +310,7 @@ Ext.define('MyApp.view.MainContainer', {
     f_crud.load_store('Depositos');
     f_crud.load_store('Campanias');
     f_crud.load_store('Tareas');
+    f_crud.load_store('Insumos');
 
     f_crud.checkSecuencia();
   },

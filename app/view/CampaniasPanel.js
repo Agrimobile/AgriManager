@@ -199,7 +199,9 @@ Ext.define('MyApp.view.CampaniasPanel', {
     this.form_name  = 'MyApp.view.CampaniasForm';
     var store = Ext.getStore(this.store_name);
     this.form_store_array = [store];
-    f_crud.load_store(this.store_name);
+    if(!this.fake){
+      f_crud.load_store(this.store_name);
+    }
   },
 
   onGridSelectionChange1: function(model, selected, eOpts) {

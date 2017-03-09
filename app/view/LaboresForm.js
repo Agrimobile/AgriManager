@@ -43,6 +43,7 @@ Ext.define('MyApp.view.LaboresForm', {
   cls: 'formpanel',
   scrollable: true,
   bodyPadding: 10,
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -78,8 +79,9 @@ Ext.define('MyApp.view.LaboresForm', {
               xtype: 'datefield',
               itemId: 'fecha',
               width: '100%',
-              fieldLabel: 'Fecha',
+              fieldLabel: 'Fecha*',
               name: 'fecha',
+              allowBlank: false,
               enableKeyEvents: true,
               format: 'd-m-Y'
             },
@@ -96,7 +98,7 @@ Ext.define('MyApp.view.LaboresForm', {
                   defaultListenerScope: true,
                   itemId: 'fieldTarea',
                   width: '80%',
-                  fieldLabel: 'Tarea',
+                  fieldLabel: 'Tarea*',
                   name: 'cod_tarea',
                   allowBlank: false,
                   blankText: 'Este campo es obligatorio',
@@ -125,16 +127,26 @@ Ext.define('MyApp.view.LaboresForm', {
             {
               xtype: 'numberfield',
               width: '100%',
-              fieldLabel: 'Cantidad',
+              fieldLabel: 'Cantidad*',
               name: 'cantidad',
-              enableKeyEvents: true
+              inputType: 'tel',
+              allowBlank: false,
+              enableKeyEvents: true,
+              allowDecimals: false,
+              decimalPrecision: 0,
+              minValue: 0,
+              negativeText: 'Este valor debe ser positivo'
             },
             {
               xtype: 'numberfield',
               width: '100%',
-              fieldLabel: 'Precio',
+              fieldLabel: 'Precio*',
               name: 'precio',
-              enableKeyEvents: true
+              inputType: 'tel',
+              allowBlank: false,
+              enableKeyEvents: true,
+              minValue: 0,
+              negativeText: 'Este valor debe ser positivo'
             },
             {
               xtype: 'container',
@@ -244,10 +256,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Insumos',
-                    valueField: 'codigo',
-                    listeners: {
-                      change: 'onComboboxChange1'
-                    }
+                    valueField: 'codigo'
                   }
                 },
                 {
@@ -256,7 +265,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'dosis',
                   text: 'Dosis',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 },
                 {
@@ -265,7 +275,9 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel',
+                    allowDecimals: false
                   }
                 },
                 {
@@ -283,10 +295,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     forceSelection: true,
                     queryMode: 'local',
                     store: 'Depositos',
-                    valueField: 'codigo',
-                    listeners: {
-                      change: 'onComboboxChange'
-                    }
+                    valueField: 'codigo'
                   }
                 },
                 {
@@ -376,7 +385,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsInsumos',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -390,7 +398,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('InsumosPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Insumo'
@@ -400,7 +408,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('DepositosPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Deposito'
@@ -478,10 +486,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Personal',
-                    valueField: 'codigo',
-                    listeners: {
-                      change: 'onComboboxChange2'
-                    }
+                    valueField: 'codigo'
                   }
                 },
                 {
@@ -500,7 +505,9 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel',
+                    allowDecimals: false
                   }
                 },
                 {
@@ -509,7 +516,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'precio',
                   text: 'Precio',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 },
                 {
@@ -518,7 +526,8 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'importe',
                   text: 'Importe',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel'
                   }
                 }
               ],
@@ -601,7 +610,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsPersonal',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -615,7 +623,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('PersonalPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Personal'
@@ -693,10 +701,7 @@ Ext.define('MyApp.view.LaboresForm', {
                     displayField: 'nombre',
                     queryMode: 'local',
                     store: 'Maquinaria',
-                    valueField: 'codigo',
-                    listeners: {
-                      change: 'onComboboxChange3'
-                    }
+                    valueField: 'codigo'
                   }
                 },
                 {
@@ -705,7 +710,9 @@ Ext.define('MyApp.view.LaboresForm', {
                   dataIndex: 'cantidad',
                   text: 'Cantidad',
                   editor: {
-                    xtype: 'numberfield'
+                    xtype: 'numberfield',
+                    inputType: 'tel',
+                    allowDecimals: false
                   }
                 }
               ],
@@ -787,7 +794,6 @@ Ext.define('MyApp.view.LaboresForm', {
                   columnWidth: 1,
                   cls: 'newButtons',
                   dock: 'bottom',
-                  hidden: true,
                   itemId: 'newButtonsMaquinaria',
                   margin: '20px 0 0 0 ',
                   layout: {
@@ -801,7 +807,7 @@ Ext.define('MyApp.view.LaboresForm', {
                       handler: function(button, e) {
                         f_crud.openNestedForm('MaquinariaPanel');
                       },
-                      cls: '',
+                      cls: 'sec-btn',
                       margin: '0 0 0 10',
                       iconCls: 'x-fa fa-plus',
                       text: 'Maquinaria'
@@ -828,6 +834,8 @@ Ext.define('MyApp.view.LaboresForm', {
         {
           xtype: 'button',
           handler: function(button, e) {
+
+            /*MyApp.currentEditingCell.blur();*/
             var formWrapper = this.up('[cls=formpanel]');
             var tarea_cod = formWrapper.down("#fieldTarea").value;
 
@@ -884,11 +892,6 @@ Ext.define('MyApp.view.LaboresForm', {
   onFormActivate: function(component, eOpts) {
     var item = component.initialTitle;
 
-    f_crud.load_store('Depositos');
-    f_crud.load_store('Insumos');
-    f_crud.load_store('Personal');
-    f_crud.load_store('Maquinaria');
-
     if(component.action === 'ADD') {
       component.setTitle('Nueva ' + item);
     }
@@ -922,14 +925,6 @@ Ext.define('MyApp.view.LaboresForm', {
     }
   },
 
-  onComboboxChange1: function(field, newValue, oldValue, eOpts) {
-    field.blur();
-  },
-
-  onComboboxChange: function(field, newValue, oldValue, eOpts) {
-    field.blur();
-  },
-
   onGridpanelSelectionChange: function(model, selected, eOpts) {
     this.down("#labores_insumos_grid").record = selected[0];
   },
@@ -938,20 +933,12 @@ Ext.define('MyApp.view.LaboresForm', {
     f_crud.renderGridWidth(component);
   },
 
-  onComboboxChange2: function(field, newValue, oldValue, eOpts) {
-    field.blur();
-  },
-
   onGridpanelSelectionChange1: function(model, selected, eOpts) {
     this.down("#labores_personal_grid").record = selected[0];
   },
 
   onLabores_personal_gridBeforeRender: function(component, eOpts) {
     f_crud.renderGridWidth(component);
-  },
-
-  onComboboxChange3: function(field, newValue, oldValue, eOpts) {
-    field.blur();
   },
 
   onLabores_maquinaria_gridSelectionChange: function(model, selected, eOpts) {

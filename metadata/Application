@@ -102,8 +102,7 @@
             "ConfigMenu",
             "MainMenu",
             "LoginForm",
-            "SyncForm",
-            "MenuPanel"
+            "SyncForm"
         ]
     },
     "configAlternates": {

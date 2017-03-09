@@ -99,7 +99,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
           itemId: 'columnEstabl',
           width: '25%',
           dataIndex: 'cod_establecimiento',
-          text: 'Cod Establecimiento',
+          text: 'Establecimiento',
           format: '00'
         }
       ],
@@ -140,11 +140,11 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
             {
               xtype: 'button',
               handler: function(button, e) {
-                var lotesToAdd = this.up("#formseveral");
-                var config = {
-                  gridRecordPK: 'cod_lote',
-                  pivotPK: 'cod_actividad'
-                };
+                var lotesToAdd = this.up("#formseveral"),
+                  config = {
+                    gridRecordPK: 'cod_lote',
+                    pivotPK: 'cod_actividad'
+                  };
                 f_crud.save_several_records(lotesToAdd, config);
               },
               flex: 1,
@@ -168,7 +168,7 @@ Ext.define('MyApp.view.AgregarLotesPanel', {
 
   onPanelRender: function(component, eOpts) {
     this.store_name = 'Lotes';
-    this.model_name = 'MyApp.model.Lotes';
+    this.model_name = 'MyApp.model.Lotes_actividades';
     //var store = Ext.getStore(this.store_name);
     //var store = Ext.getStore('Lotes_actividades');
     //this.form_store_array = [store];

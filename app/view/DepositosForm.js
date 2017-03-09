@@ -35,6 +35,7 @@ Ext.define('MyApp.view.DepositosForm', {
   scrollable: true,
   bodyPadding: 10,
   title: '',
+  trackResetOnLoad: true,
   defaultListenerScope: true,
 
   layout: {
@@ -53,7 +54,7 @@ Ext.define('MyApp.view.DepositosForm', {
     },
     {
       xtype: 'textfield',
-      fieldLabel: 'Nombre',
+      fieldLabel: 'Nombre*',
       name: 'nombre',
       allowBlank: false,
       blankText: 'Este campo es obligatorio',
